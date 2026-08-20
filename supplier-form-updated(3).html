@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Land Intelligence — Supplier Profile</title>
+<style>
+  :root {
+    --ink: #1c1c1a;
+    --muted: #6b6b64;
+    --line: #ddddd6;
+    --bg: #fdfdfb;
+    --accent: #2f5233;
+    --accent-soft: #e9efe9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  header { margin-bottom: 32px; }
+  header .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  h1 { font-size: 22px; margin: 0 0 8px; }
+  header p { color: var(--muted); margin: 0; font-size: 14px; }
+
+  fieldset { border: none; padding: 0; margin: 0 0 28px; }
+  legend {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    padding: 0 0 10px;
+    width: 100%;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 14px;
+  }
+  .sublabel {
+    font-size: 12.5px;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+
+  label.field { display: block; font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+  input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    margin-bottom: 14px;
+    background: #fff;
+  }
+  input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
+  @media (max-width: 480px) { .grid2 { grid-template-columns: 1fr; } }
+
+  /* category tree (services/products) */
+  .category { margin-bottom: 4px; }
+  .cat-row {
+    display: flex; align-items: center; gap: 8px;
+    padding: 7px 4px; cursor: pointer; border-radius: 4px;
+  }
+  .cat-row:hover { background: #f2f2ee; }
+  .cat-row .chev {
+    width: 14px; color: var(--muted);
+    transition: transform 0.15s ease; font-size: 11px; flex-shrink: 0;
+  }
+  .category.open > .cat-row .chev { transform: rotate(90deg); }
+  .cat-row label { font-weight: 600; font-size: 14px; cursor: pointer; flex: 1; }
+  .children { display: none; padding-left: 30px; margin: 2px 0 8px; }
+  .category.open > .children { display: block; }
+  .child-row { display: flex; align-items: center; gap: 8px; padding: 5px 4px; }
+  .child-row label { font-size: 13.5px; color: var(--ink); cursor: pointer; }
+
+  input[type="checkbox"] {
+    width: 15px; height: 15px; accent-color: var(--accent);
+    flex-shrink: 0; cursor: pointer;
+  }
+
+  /* service area selector */
+  .chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .chip {
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 12.5px;
+    cursor: pointer;
+    color: var(--ink);
+  }
+  .chip:hover { border-color: var(--accent); }
+  .chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  .area-group { margin-bottom: 4px; }
+  .area-group-row {
+    display: flex; align-items: center; gap: 8px;
+    padding: 7px 4px; cursor: pointer; border-radius: 4px;
+  }
+  .area-group-row:hover { background: #f2f2ee; }
+  .area-group-row .chev {
+    width: 14px; color: var(--muted); font-size: 11px;
+    transition: transform 0.15s ease; flex-shrink: 0;
+  }
+  .area-group.open > .area-group-row .chev { transform: rotate(90deg); }
+  .area-group-row span.gname { font-weight: 600; font-size: 13.5px; }
+  .area-children { display: none; padding-left: 22px; margin: 2px 0 10px; }
+  .area-group.open > .area-children { display: block; }
+  .area-subcol {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px 14px;
+  }
+  @media (max-width: 480px) { .area-subcol { grid-template-columns: 1fr; } }
+  .area-item { display: flex; align-items: center; gap: 7px; padding: 3px 0; }
+  .area-item label { font-size: 13px; cursor: pointer; }
+
+  .area-counter {
+    font-size: 12.5px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  textarea {
+    width: 100%; min-height: 70px; padding: 8px 10px;
+    border: 1px solid var(--line); border-radius: 4px;
+    font-family: inherit; font-size: 14px; resize: vertical;
+  }
+
+  button[type="submit"] {
+    background: var(--accent); color: #fff; border: none;
+    padding: 11px 20px; border-radius: 4px; font-size: 14px;
+    font-weight: 600; cursor: pointer;
+  }
+  button[type="submit"]:hover { opacity: 0.92; }
+
+  .footnote { font-size: 12px; color: var(--muted); margin-top: 10px; }
+
+  #confirm { display: none; text-align: center; padding: 60px 20px; }
+  #confirm h2 { font-size: 18px; margin-bottom: 6px; }
+  #confirm p { color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div id="formview">
+    <header>
+      <div class="eyebrow">Land Intelligence · Supplier Directory</div>
+      <h1>Update your supplier profile</h1>
+      <p>Confirm your details and select what your business offers. Takes about 3 minutes.</p>
+    </header>
+
+    <form id="supplierForm">
+      <fieldset>
+        <legend>Business information</legend>
+        <label class="field" for="bizName">Business name</label>
+        <input type="text" id="bizName" name="bizName">
+
+        <div class="grid2">
+          <div>
+            <label class="field" for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div>
+            <label class="field" for="email">Email</label>
+            <input type="email" id="email" name="email">
+          </div>
+        </div>
+
+        <label class="field" for="website">Website</label>
+        <input type="url" id="website" name="website" placeholder="https://">
+
+        <label class="field" for="address">Address / business base</label>
+        <input type="text" id="address" name="address">
+      </fieldset>
+
+      <fieldset>
+        <legend>What do you offer?</legend>
+        <div id="categoryTree"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Where do you provide services?</legend>
+        <p class="sublabel">Pick a preset or select individual areas below.</p>
+        <div class="chip-row" id="presetChips"></div>
+        <div class="area-counter" id="areaCounter">0 areas selected</div>
+        <div id="areaTree"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Anything else</legend>
+        <label class="field" for="notes">Notes (lead time, financing, capacity, etc.)</label>
+        <textarea id="notes" name="notes"></textarea>
+      </fieldset>
+
+      <button type="submit">Submit profile</button>
+      <div class="footnote">No cost to be listed. You can update this anytime.</div>
+    </form>
+  </div>
+
+  <div id="confirm">
+    <h2>Thanks — your profile is in review</h2>
+    <p>We'll publish it to the Land Intelligence supplier directory once verified.</p>
+  </div>
+
+</div>
+
+<script>
+/* ---------------- What suppliers offer ---------------- */
+const CATEGORIES = [
+  { name: "Earthworks & drilling", items: [
+    "Excavation / dirt moving", "Swale construction", "Pond construction", "Well drilling",
+    "Land clearing / brush clearing / reclamation", "Grading & levelling",
+    "Road / driveway / access road construction", "Culvert installation & drainage",
+    "Bridge installation", "Hydrovac excavation", "Directional drilling / trenchless utilities",
+    "Underground utilities (water, sewer, electrical, fibre)",
+    "Septic system design, installation & maintenance", "Private well & water systems",
+    "Water hauling & potable water delivery"
+  ]},
+  { name: "Building & construction", items: [
+    "General contracting", "Foundation work", "Concrete", "Framing", "Roofing", "Electrical",
+    "Plumbing", "Steel trusses / structural components", "Doors, windows & overhead doors",
+    "Barn / outbuilding construction", "Greenhouse construction", "Off-grid cabin building",
+    "Portable / modular shelters", "Container covers / sea-can shelters"
+  ]},
+  { name: "Surveying & testing", items: [
+    "Land surveying", "Light Detection and Ranging (LiDAR) scanning", "Photogrammetry", "Aerial photography / drone imagery",
+    "Soil testing", "Water testing"
+  ]},
+  { name: "Crops & livestock", items: [
+    "Field crops (grain / oilseed)", "Forage & hay", "Orchard / fruit", "Vegetable / market garden",
+    "Cattle", "Poultry", "Sheep & goats", "Swine", "Apiary / beekeeping"
+  ]},
+  { name: "Food processing", items: [
+    "Slaughter & dressing", "Canning & preserving", "Packaging", "Drying / dehydration", "Fermentation", "Cold storage"
+  ]},
+  { name: "Energy systems", items: [
+    "Solar installation", "Wind", "Battery storage", "Backup generators"
+  ]},
+  { name: "Fencing", items: [
+    "Security fencing", "Cattle / livestock fencing", "Gate systems", "Access control"
+  ]},
+  { name: "Mineral, oil & gas exploration", items: [
+    "Mineral exploration", "Oil & gas exploration", "Exploratory drilling", "Geological surveying"
+  ]},
+  { name: "Materials & equipment", items: [
+    "Building material supply (lumber, insulation, metal)", "Aggregate supply & hauling",
+    "Geotextiles / erosion control materials", "Equipment rental", "Trucking / material hauling",
+    "Custom fabrication & welding", "Concrete & foundation supply",
+    "Post-frame / pole-barn construction", "Building-material delivery",
+    "Forestry mulching", "Trail construction & maintenance"
+  ]}
+];
+
+const tree = document.getElementById('categoryTree');
+
+CATEGORIES.forEach((cat, ci) => {
+  const catId = `cat-${ci}`;
+  const wrap = document.createElement('div');
+  wrap.className = 'category';
+  wrap.innerHTML = `
+    <div class="cat-row">
+      <span class="chev">▶</span>
+      <input type="checkbox" id="${catId}">
+      <label for="${catId}">${cat.name}</label>
+    </div>
+    <div class="children">
+      ${cat.items.map((item, ii) => `
+        <div class="child-row">
+          <input type="checkbox" id="${catId}-${ii}" data-parent="${catId}">
+          <label for="${catId}-${ii}">${item}</label>
+        </div>
+      `).join('')}
+    </div>
+  `;
+  tree.appendChild(wrap);
+
+  const parentCheckbox = wrap.querySelector(`#${catId}`);
+  const childCheckboxes = wrap.querySelectorAll(`[data-parent="${catId}"]`);
+  const catRow = wrap.querySelector('.cat-row');
+
+  catRow.querySelector('.chev').addEventListener('click', () => wrap.classList.toggle('open'));
+  wrap.querySelector('label').addEventListener('click', () => wrap.classList.add('open'));
+
+  parentCheckbox.addEventListener('change', () => {
+    childCheckboxes.forEach(cb => cb.checked = parentCheckbox.checked);
+    if (parentCheckbox.checked) wrap.classList.add('open');
+  });
+
+  childCheckboxes.forEach(cb => {
+    cb.addEventListener('change', () => {
+      const checkedCount = [...childCheckboxes].filter(c => c.checked).length;
+      parentCheckbox.checked = checkedCount === childCheckboxes.length;
+      parentCheckbox.indeterminate = checkedCount > 0 && checkedCount < childCheckboxes.length;
+    });
+  });
+});
+
+/* ---------------- Service area selector ---------------- */
+// region: n (north) / c (central) / s (south)
+const CITIES = [
+  { name: "Edmonton", region: "c" }, { name: "St. Albert", region: "c" },
+  { name: "Spruce Grove", region: "c" }, { name: "Stony Plain", region: "c" },
+  { name: "Leduc", region: "c" }, { name: "Beaumont", region: "c" },
+  { name: "Fort Saskatchewan", region: "c" }, { name: "Red Deer", region: "c" },
+  { name: "Calgary", region: "s" }, { name: "Airdrie", region: "s" },
+  { name: "Cochrane", region: "s" }, { name: "Okotoks", region: "s" },
+  { name: "Lethbridge", region: "s" }, { name: "Medicine Hat", region: "s" },
+  { name: "Grande Prairie", region: "n" }, { name: "Fort McMurray", region: "n" },
+  { name: "Lloydminster", region: "c" }
+];
+
+const COUNTIES = [
+  { name: "Mackenzie County", region: "n" }, { name: "Northern Sunrise County", region: "n" },
+  { name: "Big Lakes County", region: "n" }, { name: "MD of Greenview", region: "n" },
+  { name: "Saddle Hills County", region: "n" }, { name: "County of Grande Prairie", region: "n" },
+  { name: "Woodlands County", region: "n" }, { name: "Athabasca County", region: "n" },
+  { name: "Regional Municipality of Wood Buffalo", region: "n" },
+  { name: "Yellowhead County", region: "c" }, { name: "Parkland County", region: "c" },
+  { name: "Lac Ste. Anne County", region: "c" }, { name: "Sturgeon County", region: "c" },
+  { name: "Red Deer County", region: "c" }, { name: "Leduc County", region: "c" },
+  { name: "Strathcona County", region: "c" }, { name: "Camrose County", region: "c" },
+  { name: "Lacombe County", region: "c" },
+  { name: "Rocky View County", region: "s" }, { name: "Foothills County", region: "s" },
+  { name: "Wheatland County", region: "s" }, { name: "Vulcan County", region: "s" },
+  { name: "Lethbridge County", region: "s" }, { name: "Cypress County", region: "s" },
+  { name: "Newell County", region: "s" }, { name: "Cardston County", region: "s" }
+];
+
+const areaTree = document.getElementById('areaTree');
+const allAreaCheckboxes = [];
+
+function buildAreaGroup(id, title, list) {
+  const group = document.createElement('div');
+  group.className = 'area-group';
+  group.innerHTML = `
+    <div class="area-group-row">
+      <span class="chev">▶</span>
+      <span class="gname">${title}</span>
+    </div>
+    <div class="area-children">
+      <div class="area-subcol">
+        ${list.map((a, i) => `
+          <div class="area-item">
+            <input type="checkbox" id="${id}-${i}" data-region="${a.region}">
+            <label for="${id}-${i}">${a.name}</label>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+  group.querySelector('.area-group-row').addEventListener('click', () => group.classList.toggle('open'));
+  areaTree.appendChild(group);
+  group.querySelectorAll('input[type="checkbox"]').forEach(cb => allAreaCheckboxes.push(cb));
+}
+
+buildAreaGroup('city', 'Cities & towns', CITIES);
+buildAreaGroup('county', 'Counties & Municipal Districts (MDs)', COUNTIES);
+
+const counter = document.getElementById('areaCounter');
+function updateCounter() {
+  const n = allAreaCheckboxes.filter(cb => cb.checked).length;
+  counter.textContent = `${n} area${n === 1 ? '' : 's'} selected`;
+}
+allAreaCheckboxes.forEach(cb => cb.addEventListener('change', () => { updateCounter(); refreshChipStates(); }));
+
+// metro presets — explicit member lists (city + surrounding counties)
+const METRO_PRESETS = {
+  "Edmonton & Area": ["Edmonton", "St. Albert", "Spruce Grove", "Stony Plain", "Leduc", "Beaumont", "Fort Saskatchewan", "Parkland County", "Leduc County", "Sturgeon County", "Strathcona County"],
+  "Calgary & Area": ["Calgary", "Airdrie", "Cochrane", "Okotoks", "Rocky View County", "Foothills County"],
+  "Red Deer & Area": ["Red Deer", "Red Deer County", "Lacombe County"],
+  "Grande Prairie & Area": ["Grande Prairie", "County of Grande Prairie"],
+  "Lethbridge & Area": ["Lethbridge", "Lethbridge County"],
+  "Medicine Hat & Area": ["Medicine Hat", "Cypress County"],
+  "Fort McMurray & Area": ["Fort McMurray", "Regional Municipality of Wood Buffalo"]
+};
+
+function checkboxByName(name) {
+  return allAreaCheckboxes.find(cb => cb.nextElementSibling.textContent === name);
+}
+
+function setRegion(regionCode, checked) {
+  allAreaCheckboxes.forEach(cb => {
+    if (regionCode === 'all' || cb.dataset.region === regionCode) cb.checked = checked;
+  });
+}
+
+function setMetro(names, checked) {
+  names.forEach(n => { const cb = checkboxByName(n); if (cb) cb.checked = checked; });
+}
+
+const PRESETS = [
+  { label: "All Alberta", apply: (on) => setRegion('all', on) },
+  { label: "Northern Alberta", apply: (on) => setRegion('n', on) },
+  { label: "Central Alberta", apply: (on) => setRegion('c', on) },
+  { label: "Southern Alberta", apply: (on) => setRegion('s', on) },
+  ...Object.entries(METRO_PRESETS).map(([label, names]) => ({
+    label, apply: (on) => setMetro(names, on)
+  }))
+];
+
+const chipRow = document.getElementById('presetChips');
+PRESETS.forEach(preset => {
+  const chip = document.createElement('button');
+  chip.type = 'button';
+  chip.className = 'chip';
+  chip.textContent = preset.label;
+  chip.addEventListener('click', () => {
+    const turningOn = !chip.classList.contains('active');
+    preset.apply(turningOn);
+    chip.classList.toggle('active', turningOn);
+    // open groups so the selection is visible
+    document.querySelectorAll('.area-group').forEach(g => g.classList.add('open'));
+    updateCounter();
+    refreshChipStates();
+  });
+  chipRow.appendChild(chip);
+});
+
+function refreshChipStates() {
+  // a chip shows active only if every one of its members is currently checked
+  document.querySelectorAll('.chip').forEach((chip, idx) => {
+    const preset = PRESETS[idx];
+    let members = [];
+    if (preset.label === "All Alberta") members = allAreaCheckboxes;
+    else if (["Northern Alberta", "Central Alberta", "Southern Alberta"].includes(preset.label)) {
+      const code = preset.label[0].toLowerCase();
+      members = allAreaCheckboxes.filter(cb => cb.dataset.region === code);
+    } else {
+      members = (METRO_PRESETS[preset.label] || []).map(checkboxByName).filter(Boolean);
+    }
+    chip.classList.toggle('active', members.length > 0 && members.every(cb => cb.checked));
+  });
+}
+
+updateCounter();
+
+/* ---------------- Submit ---------------- */
+document.getElementById('supplierForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  document.getElementById('formview').style.display = 'none';
+  document.getElementById('confirm').style.display = 'block';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+/* Physiological Fitness Landscape Custom Styles */
+
+/* Ensure font-family fallbacks and standard icon ligatures */
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Touch & Mobile UX Improvements */
+button, select, input, a {
+    touch-action: manipulation;
+}
+
+.table-responsive-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+/* Tab & Card animations */
+.biomarker-item {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.biomarker-item:hover {
+    background-color: #1e293b;
+}
+
+.biomarker-item.active {
+    background-color: #1e1b4b;
+    border-left: 4px solid #6366f1;
+}
+
+/* Badge glow effects */
+.badge-glow-emerald {
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+}
+
+.badge-glow-rose {
+    box-shadow: 0 0 10px rgba(244, 63, 94, 0.2);
+}
+
+.badge-glow-indigo {
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
+}
+
+/* Disease Intelligence & Multi-Scale Alteration Badges */
+.badge-type-a {
+    background-color: rgba(244, 63, 94, 0.15);
+    color: #fda4af;
+    border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.badge-type-b {
+    background-color: rgba(99, 102, 241, 0.15);
+    color: #a5b4fc;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.badge-type-c {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-type-d {
+    background-color: rgba(168, 85, 247, 0.15);
+    color: #d8b4fe;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.badge-type-e {
+    background-color: rgba(6, 182, 212, 0.15);
+    color: #67e8f9;
+    border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+/* Direction indicators */
+.direction-elevated {
+    color: #f87171;
+}
+
+.direction-reduced {
+    color: #60a5fa;
+}
+
+.direction-altered {
+    color: #fbbf24;
+}
+
+/* Evidence Badges */
+.evidence-definitive {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.evidence-strong {
+    background-color: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.evidence-moderate {
+    background-color: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.evidence-emerging {
+    background-color: rgba(148, 163, 184, 0.15);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+/* Disease Cards */
+.disease-card {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.disease-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+/* Modal dialog animation */
+.modal-backdrop {
+    backdrop-filter: blur(8px);
+    background-color: rgba(3, 7, 18, 0.75);
+}
+
+/* Plotly overrides for sleek dark theme */
+.js-plotly-plot .plotly .modebar {
+    left: 8px !important;
+    top: 8px !important;
+}
+
+.js-plotly-plot .plotly .modebar-btn path {
+    fill: #94a3b8 !important;
+}
+
+.js-plotly-plot .plotly .modebar-btn:hover path {
+    fill: #ffffff !important;
+}
+
+/* Responsiveness media queries for mobile devices */
+@media (max-width: 768px) {
+    header .max-w-7xl {
+        height: auto;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    nav {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 4px;
+    }
+
+    .tab-btn {
+        flex-shrink: 0;
+    }
+
+    .metric-card-gradient {
+        min-width: 130px;
+    }
+
+    /* Plotly responsiveness */
+    .js-plotly-plot {
+        width: 100% !important;
+    }
+}

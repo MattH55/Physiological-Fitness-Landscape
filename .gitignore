@@ -1,0 +1,21 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Environment / Secret files
+.env
+.env.*
+*.secret
+credentials*
+ftp_config*
+
+# Database & raw data if needed
+*.db-journal
+*.sqlite3-journal
+
+# Build / OS artifacts
+.DS_Store
+Thumbs.db
