@@ -1,0 +1,20 @@
+.env
+__pycache__/
+.pytest_cache/
+.claude/
+*.zip
+pytest_out.txt
+pytest_err.txt
+
+# Third-party matrices. Regenerated from the public sources named in the README.
+data/prism/
+data/gdsc/
+data/ctrp/
+data/combofm/
+data/geo/
+data/geo_platforms/
+data/lincs_phase1_raw/
+
+# Generated static snapshot. The app is the Python package.
+npxp-repo/
+npxp-zip/
