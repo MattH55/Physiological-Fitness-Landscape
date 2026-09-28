@@ -1739,6 +1739,32 @@ INTERACTIONS = [
         "43 degC, 60 min, viability TER.",
     ),
     dict(
+        modifier_id="MOD-HT-43C-60M-HIPEC", drug_id="cisplatin",
+        cell_line_id="RKO_LARGE_INTESTINE",
+        combined_effect_metric=3.5,
+        interaction_type=InteractionType.synergistic,
+        evidence_tier=EvidenceTier.tier_1_direct,
+        mechanism_key=None,
+        source_study=["doi:10.3390/cells9081775", "pmid:32722384"],
+        curator_notes="Helderman et al. 2020: TER values increased at higher "
+        "temperatures, starting at 41 degC, to 3.5, 2.8, and 3.9 in RKO, "
+        "HCT116, and COLO320 (Figure S4). Stored at 43 degC, the top of that "
+        "range, matching the oxaliplatin sentence in the same section which "
+        "names 43 degC for its peak values. TER = IC50(37)/IC50(heated), 60 min. "
+        "COLO320 is not in the curated cell-line table.",
+    ),
+    dict(
+        modifier_id="MOD-HT-43C-60M-HIPEC", drug_id="cisplatin",
+        cell_line_id="HCT116_LARGE_INTESTINE",
+        combined_effect_metric=2.8,
+        interaction_type=InteractionType.synergistic,
+        evidence_tier=EvidenceTier.tier_1_direct,
+        mechanism_key=None,
+        source_study=["doi:10.3390/cells9081775", "pmid:32722384"],
+        curator_notes="Same Helderman sentence as the RKO cisplatin 3.5 row. "
+        "HCT116, 43 degC, 60 min.",
+    ),
+    dict(
         modifier_id="MOD-HT-42C-60M-HIPEC", drug_id="5-fluorouracil",
         cell_line_id="RKO_LARGE_INTESTINE",
         combined_effect_metric=None,
