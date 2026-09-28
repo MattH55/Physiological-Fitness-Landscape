@@ -40,10 +40,10 @@ def evaluate_hr(x: float, curve_type: str, reference_value: float, parameters: D
         return float(np.exp(np.clip(log_hr, -5.0, 5.0)))
 
     elif curve_type == "quadratic":
-        # ln(HR(x)) = a * (x - x_opt)^2
+        # ln(HR(x)) = a * (x - x_opt)^2 - a * (ref - x_opt)^2  (HR(ref) == 1.0, matches frontend evaluateHR)
         a = parameters.get("a", 0.001)
         x_opt = optimal_value if optimal_value is not None else parameters.get("x_opt", reference_value)
-        log_hr = a * ((x - x_opt) ** 2)
+        log_hr = a * ((x - x_opt) ** 2) - a * ((reference_value - x_opt) ** 2)
         return float(np.exp(np.clip(log_hr, -5.0, 5.0)))
 
     elif curve_type == "log_log":

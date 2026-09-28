@@ -10,3 +10,6 @@ httpx>=0.27
 # Synergy scoring engine (Loewe/ZIP Hill-curve fits; POST /api/scoring/synergy)
 numpy>=1.26
 scipy>=1.11
+
+# Domain-shift diagnostics (PCA + Ledoit-Wolf; synlethality/domain_shift.py)
+scikit-learn>=1.3

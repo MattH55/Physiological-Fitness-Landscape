@@ -53,9 +53,9 @@ def db_session():
     session.close()
 
 
-def test_database_has_all_50_biomarkers(db_session):
+def test_database_has_all_125_biomarkers(db_session):
     count = db_session.query(Biomarker).count()
-    assert count == 50, f"Expected 50 biomarkers in database, found {count}"
+    assert count == 125, f"Expected 125 biomarkers in database, found {count}"
 
 
 def test_all_biomarkers_have_distribution_and_curve(db_session):
@@ -100,7 +100,7 @@ def test_biomarker_distribution_percentile_monotonicity(db_session):
 
 def test_hazard_ratio_reference_point_normalization(db_session):
     curves = db_session.query(BiomarkerHRCurve).all()
-    assert len(curves) == 50
+    assert len(curves) >= db_session.query(Biomarker).count()
 
     for curve in curves:
         bm = curve.biomarker
@@ -213,7 +213,7 @@ def test_baseline_expected_hazard_is_valid_and_consistent(db_session):
 
 def test_every_biomarker_has_verified_literature_references(db_session):
     """
-    Validates that each of the 50 biomarkers has:
+    Validates that each of the 125 biomarkers has:
     1. An explicit academic HR curve citation summary.
     2. At least one linked MortalityAssociation.
     3. Every linked MortalityAssociation has a verified Source with:
@@ -224,7 +224,7 @@ def test_every_biomarker_has_verified_literature_references(db_session):
        - Descriptive cohort name
     """
     biomarkers = db_session.query(Biomarker).all()
-    assert len(biomarkers) == 50, f"Expected 50 biomarkers, found {len(biomarkers)}"
+    assert len(biomarkers) == 125, f"Expected 125 biomarkers, found {len(biomarkers)}"
 
     for bm in biomarkers:
         # 1. HR Curve citation summary check

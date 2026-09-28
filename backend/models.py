@@ -56,7 +56,15 @@ class Biomarker(Base):
     mortality_associations = relationship("MortalityAssociation", back_populates="biomarker", cascade="all, delete-orphan")
     population_distributions = relationship("PopulationDistribution", back_populates="biomarker", cascade="all, delete-orphan")
     interventions = relationship("Intervention", back_populates="biomarker", cascade="all, delete-orphan")
-    hr_curve = relationship("BiomarkerHRCurve", back_populates="biomarker", uselist=False, cascade="all, delete-orphan")
+    hr_curves = relationship("BiomarkerHRCurve", back_populates="biomarker", cascade="all, delete-orphan")
+    # Population-wide (sex='all', age_band='all') curve; stratified curves live in hr_curves
+    hr_curve = relationship(
+        "BiomarkerHRCurve",
+        primaryjoin="and_(Biomarker.id == BiomarkerHRCurve.biomarker_id, "
+                    "BiomarkerHRCurve.sex == 'all', BiomarkerHRCurve.age_band == 'all')",
+        uselist=False,
+        viewonly=True,
+    )
     optimization_model = relationship("BiomarkerOptimizationModel", back_populates="biomarker", uselist=False, cascade="all, delete-orphan")
     expected_values = relationship("BiomarkerExpectedValue", back_populates="biomarker", cascade="all, delete-orphan")
     disease_alterations = relationship("DiseaseAlteration", back_populates="biomarker", cascade="all, delete-orphan")
@@ -268,8 +276,10 @@ class BiomarkerHRCurve(Base):
     __tablename__ = "biomarker_hr_curve"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    biomarker_id = Column(Integer, ForeignKey("biomarker.id"), unique=True, nullable=False, index=True)
-    
+    biomarker_id = Column(Integer, ForeignKey("biomarker.id"), nullable=False, index=True)
+    sex = Column(String(10), nullable=False, default="all")        # 'all', 'M', 'F'
+    age_band = Column(String(50), nullable=False, default="all")   # 'all', '20-39', '40-59', '60+'
+
     curve_type = Column(String(50), nullable=False)  # 'linear_log', 'quadratic', 'log_log', 'piecewise'
     reference_value = Column(Float, nullable=False)  # x_ref where HR=1.0
     optimal_value = Column(Float, nullable=True)     # x* (nadir of risk)
@@ -285,12 +295,14 @@ class BiomarkerHRCurve(Base):
     citation_summary = Column(String(300), nullable=True)
 
     # Relationships
-    biomarker = relationship("Biomarker", back_populates="hr_curve")
+    biomarker = relationship("Biomarker", back_populates="hr_curves")
 
     def to_dict(self):
         return {
             "id": self.id,
             "biomarker_id": self.biomarker_id,
+            "sex": self.sex,
+            "age_band": self.age_band,
             "curve_type": self.curve_type,
             "reference_value": self.reference_value,
             "optimal_value": self.optimal_value,
