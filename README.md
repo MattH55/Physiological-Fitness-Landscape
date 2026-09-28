@@ -6,6 +6,8 @@
 [![SQLite](https://img.shields.io/badge/SQLite-3-003B57.svg)](https://www.sqlite.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+> **🌐 Live Dashboard:** [https://landscape.opensourcemed.info](https://landscape.opensourcemed.info)
+
 An evidence-based, interactive scientific dashboard mapping the continuous non-linear relationship between 25 physiological biomarkers and all-cause / cause-specific mortality hazard ratios (HR), juxtaposed with NHANES empirical population distributions, stratified demographics, evidence sources, and grade-ranked clinical and lifestyle interventions.
 
 ---

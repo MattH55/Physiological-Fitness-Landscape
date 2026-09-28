@@ -1,0 +1,688 @@
+{
+  "biomarker_id": "urine_flow_rate",
+  "biomarker_name": "Urinary Flow Rate",
+  "biomarker_units": "mL/min",
+  "interventions": [
+    {
+      "intervention_id": "adequate_oral_and_intravenous_volume_resuscitation_in_shock",
+      "canonical_name": "Adequate oral and intravenous volume resuscitation in shock",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Adequate oral and intravenous volume resuscitation in shock (Clinical) — favorable effect on Urinary Flow Rate",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "adequate_oral_and_intravenous_volume_resuscitation_in_shock_standard",
+          "regimen": {
+            "regimen_id": "adequate_oral_and_intravenous_volume_resuscitation_in_shock_standard",
+            "intervention_id": "adequate_oral_and_intravenous_volume_resuscitation_in_shock",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Adequate oral and intravenous volume resuscitation in shock",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "adequate_oral_and_intravenous_volume_resuscitation_in_shock_urine_flow_rate_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-11794169_adults",
+                "evidence_id": "PMID-11794169",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-11794169",
+                "source_type": "RCT",
+                "title": "Rivers E, et al. N Engl J Med. 2001;345:1368-1377. PMID: 11794169",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2001,
+                "doi": null,
+                "pmid": "11794169",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:21.676826",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "adequate_oral_and_intravenous_volume_resuscitation_in_shock_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_water_intake_25_lday_in_recurrent_nephrolithiasis",
+      "canonical_name": "High water intake (>2.5 L/day) in recurrent nephrolithiasis",
+      "intervention_type": "DIET",
+      "description": "High water intake (>2.5 L/day) in recurrent nephrolithiasis (Diet) — favorable effect on Urinary Flow Rate",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_water_intake_25_lday_in_recurrent_nephrolithiasis_standard",
+          "regimen": {
+            "regimen_id": "high_water_intake_25_lday_in_recurrent_nephrolithiasis_standard",
+            "intervention_id": "high_water_intake_25_lday_in_recurrent_nephrolithiasis",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High water intake (>2.5 L/day) in recurrent nephrolithiasis",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_water_intake_25_lday_in_recurrent_nephrolithiasis_urine_flow_rate_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 75.0,
+                "lower": 50.0,
+                "upper": 100.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_water_intake_25_lday_in_recurrent_nephrolithiasis_urine_flow_rate_favorable",
+                "original_value": 75.0,
+                "original_lower": 50.0,
+                "original_upper": 100.0,
+                "original_unit": "%",
+                "canonical_value": 75.0,
+                "canonical_lower": 50.0,
+                "canonical_upper": 100.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-8583588_adults",
+                "evidence_id": "PMID-8583588",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-8583588",
+                "source_type": "RCT",
+                "title": "Borghi L, et al. J Urol. 1996;155:839-843. PMID: 8583588",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1996,
+                "doi": null,
+                "pmid": "8583588",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:21.802503",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_water_intake_25_lday_in_recurrent_nephrolithiasis_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "sglt2_inhibitors_inducing_mild_osmotic_natriuresis",
+      "canonical_name": "SGLT2 inhibitors inducing mild osmotic natriuresis",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "SGLT2 inhibitors inducing mild osmotic natriuresis (Pharmacologic) — favorable effect on Urinary Flow Rate",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "sglt2_inhibitors_inducing_mild_osmotic_natriuresis_standard",
+          "regimen": {
+            "regimen_id": "sglt2_inhibitors_inducing_mild_osmotic_natriuresis_standard",
+            "intervention_id": "sglt2_inhibitors_inducing_mild_osmotic_natriuresis",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for SGLT2 inhibitors inducing mild osmotic natriuresis",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "sglt2_inhibitors_inducing_mild_osmotic_natriuresis_urine_flow_rate_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-27470929_adults",
+                "evidence_id": "PMID-27470929",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-27470929",
+                "source_type": "RCT",
+                "title": "Heerspink HJ, et al. Circulation. 2016;134:752-772. PMID: 27470929",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2016,
+                "doi": null,
+                "pmid": "27470929",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:21.965503",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "sglt2_inhibitors_inducing_mild_osmotic_natriuresis_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "acute_tubular_necrosis_or_complete_urinary_tract_outflow_obstruction",
+      "canonical_name": "Acute tubular necrosis or complete urinary tract outflow obstruction",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Acute tubular necrosis or complete urinary tract outflow obstruction (Clinical) — unfavorable effect on Urinary Flow Rate",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "acute_tubular_necrosis_or_complete_urinary_tract_outflow_obstruction_standard",
+          "regimen": {
+            "regimen_id": "acute_tubular_necrosis_or_complete_urinary_tract_outflow_obstruction_standard",
+            "intervention_id": "acute_tubular_necrosis_or_complete_urinary_tract_outflow_obstruction",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Acute tubular necrosis or complete urinary tract outflow obstruction",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "acute_tubular_necrosis_or_complete_urinary_tract_outflow_obstruction_urine_flow_rate_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 0.3,
+                "lower": 0.3,
+                "upper": 0.3,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mL/min",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "acute_tubular_necrosis_or_complete_urinary_tract_outflow_obstruction_urine_flow_rate_unfavorable",
+                "original_value": 0.3,
+                "original_lower": 0.3,
+                "original_upper": 0.3,
+                "original_unit": "mL/min",
+                "canonical_value": 0.3,
+                "canonical_lower": 0.3,
+                "canonical_upper": 0.3,
+                "canonical_unit": "mL/min",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-15312219_adults",
+                "evidence_id": "PMID-15312219",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-15312219",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Bellomo R, et al. Crit Care. 2004;8:R204-R212. PMID: 15312219",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2004,
+                "doi": null,
+                "pmid": "15312219",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:22.331233",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "acute_tubular_necrosis_or_complete_urinary_tract_outflow_obstruction_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_uncompensated_hypovolemic_or_septic_shock",
+      "canonical_name": "Severe uncompensated hypovolemic or septic shock",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe uncompensated hypovolemic or septic shock (Clinical) — unfavorable effect on Urinary Flow Rate",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_uncompensated_hypovolemic_or_septic_shock_standard",
+          "regimen": {
+            "regimen_id": "severe_uncompensated_hypovolemic_or_septic_shock_standard",
+            "intervention_id": "severe_uncompensated_hypovolemic_or_septic_shock",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe uncompensated hypovolemic or septic shock",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_uncompensated_hypovolemic_or_septic_shock_urine_flow_rate_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -90.0,
+                "lower": -100.0,
+                "upper": -80.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_uncompensated_hypovolemic_or_septic_shock_urine_flow_rate_unfavorable",
+                "original_value": -90.0,
+                "original_lower": -100.0,
+                "original_upper": -80.0,
+                "original_unit": "%",
+                "canonical_value": -90.0,
+                "canonical_lower": -100.0,
+                "canonical_upper": -80.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-28101605_adults",
+                "evidence_id": "PMID-28101605",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-28101605",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Rhodes A, et al. Intensive Care Med. 2017;43:304-377. PMID: 28101605",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2017,
+                "doi": null,
+                "pmid": "28101605",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:22.992422",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_uncompensated_hypovolemic_or_septic_shock_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "modifier_id": "gse153830_mcf7_bhb10mm",
+  "protocol": "bhb_10mm_96h_on_glucose_deprivation",
+  "biological_context": "mcf7",
+  "tissue": "MCF-7",
+  "study_id": "GSE153830",
+  "species": "human",
+  "dose": {
+    "modality": "dietary_metabolic",
+    "unit": "mM BHB",
+    "bhb_mM": 10.0,
+    "baseline_glucose_gL": 0.225,
+    "duration_hr": 96.0
+  },
+  "duration_hr": 96.0,
+  "timepoint_hr": 96.0,
+  "platform": "RNA-seq (study's own FPKM matrix)",
+  "n_replicates": 1,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

@@ -1,0 +1,287 @@
+"""
+Publication linkage for CT.gov trials.
+
+Links trials to their publications via:
+  1. CT.gov's own reference list (resultsSection.referenceModule)
+  2. Europe PMC search by NCT ID
+  3. PubMed E-utilities search by NCT ID
+
+For each linked publication, extract:
+  - PMID, DOI, title, journal, year
+  - Whether it's a primary publication
+  - Whether it reports the biomarker outcome
+"""
+
+import json
+import logging
+import time
+from dataclasses import dataclass, field
+from typing import Dict, List, Optional
+
+import requests
+
+from .config import EUROPEPMC_BASE, PUBMED_ESEARCH_BASE, PUBMED_ESUMMARY_BASE
+
+logger = logging.getLogger(__name__)
+
+
+@dataclass
+class PublicationLink:
+    """A publication linked to a trial."""
+    nct_id: str
+    pmid: str = ""
+    doi: str = ""
+    title: str = ""
+    journal: str = ""
+    year: str = ""
+    is_primary: bool = False
+    source: str = ""  # "ctgov_reference" | "europepmc" | "pubmed"
+    url: str = ""
+
+    def to_dict(self) -> dict:
+        return {
+            "nct_id": self.nct_id,
+            "pmid": self.pmid,
+            "doi": self.doi,
+            "title": self.title,
+            "journal": self.journal,
+            "year": self.year,
+            "is_primary": self.is_primary,
+            "source": self.source,
+            "url": self.url,
+        }
+
+
+def get_publications_from_ctgov(study_json: dict) -> List[PublicationLink]:
+    """
+    Extract publication references from a CT.gov study record.
+    These are in resultsSection.referenceModule.references.
+    """
+    nct_id = study_json.get("protocolSection", {}).get(
+        "identificationModule", {}).get("nctId", "")
+
+    refs_module = study_json.get("resultsSection", {}).get("referenceModule", {})
+    references = refs_module.get("references", [])
+
+    links = []
+    for ref in references:
+        pmid = ref.get("pmid", "")
+        doi = ref.get("doi", "")
+        title = ref.get("citation", "")
+        journal = ref.get("journal", "")
+        year = ref.get("year", "")
+        is_primary = ref.get("type") == "PRIMARY"
+
+        links.append(PublicationLink(
+            nct_id=nct_id,
+            pmid=pmid,
+            doi=doi,
+            title=title,
+            journal=journal,
+            year=year,
+            is_primary=is_primary,
+            source="ctgov_reference",
+            url=f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/" if pmid else
+                (f"https://doi.org/{doi}" if doi else ""),
+        ))
+
+    return links
+
+
+def search_europepmc_by_nct(nct_id: str, page_size: int = 20) -> List[PublicationLink]:
+    """
+    Search Europe PMC for publications that mention the NCT ID.
+    """
+    query = f"TITLE_ABSTRACT:{nct_id}"
+    params = {
+        "query": query,
+        "resultType": "core",
+        "pageSize": page_size,
+        "format": "json",
+    }
+
+    try:
+        resp = requests.get(EUROPEPMC_BASE, params=params, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+    except Exception as e:
+        logger.warning(f"Europe PMC search failed for {nct_id}: {e}")
+        return []
+
+    links = []
+    for result in data.get("resultList", {}).get("result", []):
+        pmid = result.get("pmid", "")
+        doi = result.get("doi", "")
+        title = result.get("title", "")
+        journal = result.get("journalTitle", "")
+        year = str(result.get("pubYear", ""))
+
+        links.append(PublicationLink(
+            nct_id=nct_id,
+            pmid=pmid,
+            doi=doi,
+            title=title,
+            journal=journal,
+            year=year,
+            is_primary=False,
+            source="europepmc",
+            url=f"https://europepmc.org/article/MED/{pmid}" if pmid else
+                (f"https://doi.org/{doi}" if doi else ""),
+        ))
+
+    return links
+
+
+def search_pubmed_by_nct(nct_id: str) -> List[PublicationLink]:
+    """
+    Search PubMed for publications that mention the NCT ID.
+    """
+    # E-utilities search
+    params = {
+        "db": "pubmed",
+        "term": nct_id,
+        "retmax": 20,
+        "retmode": "json",
+    }
+
+    try:
+        resp = requests.get(PUBMED_ESEARCH_BASE, params=params, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+        id_list = data.get("esearchresult", {}).get("idlist", [])
+    except Exception as e:
+        logger.warning(f"PubMed search failed for {nct_id}: {e}")
+        return []
+
+    if not id_list:
+        return []
+
+    # Get summaries
+    params = {
+        "db": "pubmed",
+        "id": ",".join(id_list),
+        "retmode": "json",
+    }
+
+    try:
+        resp = requests.get(PUBMED_ESUMMARY_BASE, params=params, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+    except Exception as e:
+        logger.warning(f"PubMed esummary failed for {nct_id}: {e}")
+        return []
+
+    links = []
+    result_dict = data.get("result", {})
+    for pmid in id_list:
+        info = result_dict.get(pmid, {})
+        title = info.get("title", "")
+        journal = info.get("fulljournalname", "")
+        year = info.get("pubdate", "")[:4] if info.get("pubdate") else ""
+        doi = ""
+        for aid in info.get("articleids", []):
+            if aid.get("idtype") == "doi":
+                doi = aid.get("value", "")
+
+        links.append(PublicationLink(
+            nct_id=nct_id,
+            pmid=pmid,
+            doi=doi,
+            title=title,
+            journal=journal,
+            year=year,
+            is_primary=False,
+            source="pubmed",
+            url=f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+        ))
+
+    return links
+
+
+def link_publications(
+    nct_id: str,
+    study_json: Optional[dict] = None,
+    use_europepmc: bool = True,
+    use_pubmed: bool = True,
+    pause_seconds: float = 0.3,
+) -> List[PublicationLink]:
+    """
+    Link all publications for a trial using all available sources.
+    Deduplicates by PMID/DOI.
+    """
+    all_links: List[PublicationLink] = []
+    seen_keys: set = set()
+
+    # 1. CT.gov references (from the study record itself)
+    if study_json:
+        for link in get_publications_from_ctgov(study_json):
+            key = link.pmid or link.doi or link.title
+            if key and key not in seen_keys:
+                seen_keys.add(key)
+                all_links.append(link)
+
+    time.sleep(pause_seconds)
+
+    # 2. Europe PMC
+    if use_europepmc:
+        for link in search_europepmc_by_nct(nct_id):
+            key = link.pmid or link.doi or link.title
+            if key and key not in seen_keys:
+                seen_keys.add(key)
+                all_links.append(link)
+
+        time.sleep(pause_seconds)
+
+    # 3. PubMed
+    if use_pubmed:
+        for link in search_pubmed_by_nct(nct_id):
+            key = link.pmid or link.doi or link.title
+            if key and key not in seen_keys:
+                seen_keys.add(key)
+                all_links.append(link)
+
+    return all_links
+
+
+def link_publications_for_candidates(
+    candidates: List[dict],
+    max_trials: int = 30,
+    pause_seconds: float = 0.5,
+) -> Dict[str, List[PublicationLink]]:
+    """
+    Link publications for a list of candidates.
+    Returns a dict mapping nct_id -> list of PublicationLink.
+    """
+    results: Dict[str, List[PublicationLink]] = {}
+    processed = 0
+
+    for cand in candidates:
+        if processed >= max_trials:
+            break
+        nct_id = cand["nct_id"]
+        logger.info(f"Linking publications for {nct_id} ({processed + 1}/{max_trials})")
+
+        links = link_publications(nct_id)
+        if links:
+            results[nct_id] = links
+            processed += 1
+
+        time.sleep(pause_seconds)
+
+    return results
+
+
+def save_publication_links(
+    links: Dict[str, List[PublicationLink]],
+    output_path: str,
+) -> None:
+    """Save publication links to JSON."""
+    import os
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    data = {
+        nct_id: [l.to_dict() for l in link_list]
+        for nct_id, link_list in links.items()
+    }
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, default=str)
+    logger.info(f"Saved publication links for {len(links)} trials to {output_path}")

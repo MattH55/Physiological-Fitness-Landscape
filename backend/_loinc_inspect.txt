@@ -1,0 +1,84 @@
+TOTAL ROWS: 112406
+HEADER:
+  [0] LOINC_NUM
+  [1] COMPONENT
+  [2] PROPERTY
+  [3] TIME_ASPCT
+  [4] SYSTEM
+  [5] SCALE_TYP
+  [6] METHOD_TYP
+  [7] CLASS
+  [8] VersionLastChanged
+  [9] CHNG_TYPE
+  [10] DefinitionDescription
+  [11] STATUS
+  [12] CONSUMER_NAME
+  [13] CLASSTYPE
+  [14] FORMULA
+  [15] EXMPL_ANSWERS
+  [16] SURVEY_QUEST_TEXT
+  [17] SURVEY_QUEST_SRC
+  [18] UNITSREQUIRED
+  [19] RELATEDNAMES2
+  [20] SHORTNAME
+  [21] ORDER_OBS
+  [22] HL7_FIELD_SUBFIELD_ID
+  [23] EXTERNAL_COPYRIGHT_NOTICE
+  [24] EXAMPLE_UNITS
+  [25] LONG_COMMON_NAME
+  [26] EXAMPLE_UCUM_UNITS
+  [27] STATUS_REASON
+  [28] STATUS_TEXT
+  [29] CHANGE_REASON_PUBLIC
+  [30] COMMON_TEST_RANK
+  [31] COMMON_ORDER_RANK
+  [32] HL7_ATTACHMENT_STRUCTURE
+  [33] EXTERNAL_COPYRIGHT_LINK
+  [34] PanelType
+  [35] AskAtOrderEntry
+  [36] AssociatedObservations
+  [37] VersionFirstReleased
+  [38] ValidHL7AttachmentRequest
+  [39] DisplayName
+
+SAMPLE ROW 1:
+  [0] LOINC_NUM = 100000-9
+  [1] COMPONENT = Health informatics pioneer and the father of LOINC
+  [2] PROPERTY = Hx
+  [3] TIME_ASPCT = Pt
+  [4] SYSTEM = ^Patient
+  [5] SCALE_TYP = Nar
+  [6] METHOD_TYP = 
+  [7] CLASS = H&P.HX
+  [8] VersionLastChanged = 2.74
+  [9] CHNG_TYPE = ADD
+  [10] DefinitionDescription = This term honors the long-standing contributions of Dr. Clement J. McDonald, the founder of LOINC and health informatics pioneer. Dr. McDonald's dedication, innovation, and hands-on contributions helped develop and continually improve medical informatics and health data standards.
+  [11] STATUS = ACTIVE
+  [12] CONSUMER_NAME = 
+  [13] CLASSTYPE = 2
+  [14] FORMULA = 
+  [15] EXMPL_ANSWERS = 
+  [16] SURVEY_QUEST_TEXT = 
+  [17] SURVEY_QUEST_SRC = 
+  [18] UNITSREQUIRED = N
+  [19] RELATEDNAMES2 = Clem McDonald; Dr. Clement J. McDonald Jr.; H+P; H+P.HX; Health Info Pioneer+Father of LOINC; History; Honorary; Logical Observation Identifiers Names and Codes; Narrative; P prime; Point in time; Random; Report
+  [20] SHORTNAME = Health Info Pioneer+Father of LOINC
+  [21] ORDER_OBS = Observation
+  [22] HL7_FIELD_SUBFIELD_ID = 
+  [23] EXTERNAL_COPYRIGHT_NOTICE = 
+  [24] EXAMPLE_UNITS = 
+  [25] LONG_COMMON_NAME = Health informatics pioneer and the father of LOINC
+  [26] EXAMPLE_UCUM_UNITS = 
+  [27] STATUS_REASON = 
+  [28] STATUS_TEXT = 
+  [29] CHANGE_REASON_PUBLIC = 
+  [30] COMMON_TEST_RANK = 0
+  [31] COMMON_ORDER_RANK = 0
+  [32] HL7_ATTACHMENT_STRUCTURE = 
+  [33] EXTERNAL_COPYRIGHT_LINK = 
+  [34] PanelType = 
+  [35] AskAtOrderEntry = 
+  [36] AssociatedObservations = 
+  [37] VersionFirstReleased = 2.74
+  [38] ValidHL7AttachmentRequest = 
+  [39] DisplayName = 

@@ -1,0 +1,21 @@
+{
+  "modifier_id": "gse153830_t47d_glucose_deprivation",
+  "protocol": "glucose_deprivation_0.225gL_96h",
+  "biological_context": "t47d",
+  "tissue": "T47D",
+  "study_id": "GSE153830",
+  "species": "human",
+  "dose": {
+    "modality": "dietary_metabolic",
+    "unit": "g/L glucose",
+    "glucose_gL": 0.225,
+    "control_glucose_gL": 4.5,
+    "duration_hr": 96.0
+  },
+  "duration_hr": 96.0,
+  "timepoint_hr": 96.0,
+  "platform": "RNA-seq (study's own FPKM matrix)",
+  "n_replicates": 2,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

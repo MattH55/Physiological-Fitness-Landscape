@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "urine_albumin_creatinine_ratio",
+  "biomarker_name": "Urine Albumin-to-Creatinine Ratio (uACR)",
+  "biomarker_units": "mg/g",
+  "interventions": [
+    {
+      "intervention_id": "sglt2_inhibitors_dapagliflozin_empagliflozin",
+      "canonical_name": "SGLT2 inhibitors (Dapagliflozin / Empagliflozin)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "SGLT2 inhibitors (Dapagliflozin / Empagliflozin) (Pharmacologic) — favorable effect on Serum Cystatin C",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "sglt2_inhibitors_dapagliflozin_empagliflozin_standard",
+          "regimen": {
+            "regimen_id": "sglt2_inhibitors_dapagliflozin_empagliflozin_standard",
+            "intervention_id": "sglt2_inhibitors_dapagliflozin_empagliflozin",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for SGLT2 inhibitors (Dapagliflozin / Empagliflozin)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "sglt2_inhibitors_dapagliflozin_empagliflozin_urine_albumin_creatinine_ratio_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -37.5,
+                "lower": -45.0,
+                "upper": -30.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "sglt2_inhibitors_dapagliflozin_empagliflozin_urine_albumin_creatinine_ratio_favorable",
+                "original_value": -37.5,
+                "original_lower": -45.0,
+                "original_upper": -30.0,
+                "original_unit": "%",
+                "canonical_value": -37.5,
+                "canonical_lower": -45.0,
+                "canonical_upper": -30.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-27179878_adults",
+                "evidence_id": "PMID-27179878",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-27179878",
+                "source_type": "RCT",
+                "title": "Heerspink HJL, et al. Lancet Diabetes Endocrinol. 2016;4:393-406. PMID: 27179878",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2016,
+                "doi": null,
+                "pmid": "27179878",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:16.856979",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "sglt2_inhibitors_dapagliflozin_empagliflozin_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "ace_inhibitors_arbs_titrated_to_maximally_tolerated_doses",
+      "canonical_name": "ACE inhibitors / ARBs titrated to maximally tolerated doses",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "ACE inhibitors / ARBs titrated to maximally tolerated doses (Pharmacologic) — favorable effect on Urine Albumin-to-Creatinine Ratio (uACR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "ace_inhibitors_arbs_titrated_to_maximally_tolerated_doses_standard",
+          "regimen": {
+            "regimen_id": "ace_inhibitors_arbs_titrated_to_maximally_tolerated_doses_standard",
+            "intervention_id": "ace_inhibitors_arbs_titrated_to_maximally_tolerated_doses",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for ACE inhibitors / ARBs titrated to maximally tolerated doses",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "ace_inhibitors_arbs_titrated_to_maximally_tolerated_doses_urine_albumin_creatinine_ratio_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -42.5,
+                "lower": -50.0,
+                "upper": -35.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "ace_inhibitors_arbs_titrated_to_maximally_tolerated_doses_urine_albumin_creatinine_ratio_favorable",
+                "original_value": -42.5,
+                "original_lower": -50.0,
+                "original_upper": -35.0,
+                "original_unit": "%",
+                "canonical_value": -42.5,
+                "canonical_lower": -50.0,
+                "canonical_upper": -35.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-11565518_adults",
+                "evidence_id": "PMID-11565518",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-11565518",
+                "source_type": "RCT",
+                "title": "Brenner BM, et al. N Engl J Med. 2001;345:861-869. PMID: 11565518",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2001,
+                "doi": null,
+                "pmid": "11565518",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:07.577108",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "ace_inhibitors_arbs_titrated_to_maximally_tolerated_doses_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "non_steroidal_mra_finerenone_10_20_mg",
+      "canonical_name": "Non-steroidal MRA (Finerenone 10-20 mg)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Non-steroidal MRA (Finerenone 10-20 mg) (Pharmacologic) — favorable effect on Urine Albumin-to-Creatinine Ratio (uACR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "non_steroidal_mra_finerenone_10_20_mg_standard",
+          "regimen": {
+            "regimen_id": "non_steroidal_mra_finerenone_10_20_mg_standard",
+            "intervention_id": "non_steroidal_mra_finerenone_10_20_mg",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Non-steroidal MRA (Finerenone 10-20 mg)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "non_steroidal_mra_finerenone_10_20_mg_urine_albumin_creatinine_ratio_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -31.0,
+                "lower": -31.0,
+                "upper": -31.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "non_steroidal_mra_finerenone_10_20_mg_urine_albumin_creatinine_ratio_favorable",
+                "original_value": -31.0,
+                "original_lower": -31.0,
+                "original_upper": -31.0,
+                "original_unit": "%",
+                "canonical_value": -31.0,
+                "canonical_lower": -31.0,
+                "canonical_upper": -31.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-33264289_adults",
+                "evidence_id": "PMID-33264289",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-33264289",
+                "source_type": "RCT",
+                "title": "Bakris GL, et al. N Engl J Med. 2020;383:2219-2229. PMID: 33264289",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2020,
+                "doi": null,
+                "pmid": "33264289",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:11.976932",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "non_steroidal_mra_finerenone_10_20_mg_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "diabetic_nephropathy_with_advanced_podocytopathy",
+      "canonical_name": "Diabetic nephropathy with advanced podocytopathy",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Diabetic nephropathy with advanced podocytopathy (Clinical) — unfavorable effect on Urine Albumin-to-Creatinine Ratio (uACR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "diabetic_nephropathy_with_advanced_podocytopathy_standard",
+          "regimen": {
+            "regimen_id": "diabetic_nephropathy_with_advanced_podocytopathy_standard",
+            "intervention_id": "diabetic_nephropathy_with_advanced_podocytopathy",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Diabetic nephropathy with advanced podocytopathy",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "diabetic_nephropathy_with_advanced_podocytopathy_urine_albumin_creatinine_ratio_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 1650.0,
+                "lower": 300.0,
+                "upper": 3000.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "diabetic_nephropathy_with_advanced_podocytopathy_urine_albumin_creatinine_ratio_unfavorable",
+                "original_value": 1650.0,
+                "original_lower": 300.0,
+                "original_upper": 3000.0,
+                "original_unit": "%",
+                "canonical_value": 1650.0,
+                "canonical_lower": 300.0,
+                "canonical_upper": 3000.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-15149343_adults",
+                "evidence_id": "PMID-15149343",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-15149343",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "de Zeeuw D, et al. Kidney Int. 2004;65:2309-2320. PMID: 15149343",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2004,
+                "doi": null,
+                "pmid": "15149343",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:17.953564",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "diabetic_nephropathy_with_advanced_podocytopathy_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "uncontrolled_malignant_hypertension_with_glomerular_hyperfiltration",
+      "canonical_name": "Uncontrolled malignant hypertension with glomerular hyperfiltration",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Uncontrolled malignant hypertension with glomerular hyperfiltration (Clinical) — unfavorable effect on Urine Albumin-to-Creatinine Ratio (uACR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "uncontrolled_malignant_hypertension_with_glomerular_hyperfiltration_standard",
+          "regimen": {
+            "regimen_id": "uncontrolled_malignant_hypertension_with_glomerular_hyperfiltration_standard",
+            "intervention_id": "uncontrolled_malignant_hypertension_with_glomerular_hyperfiltration",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Uncontrolled malignant hypertension with glomerular hyperfiltration",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "uncontrolled_malignant_hypertension_with_glomerular_hyperfiltration_urine_albumin_creatinine_ratio_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 600.0,
+                "lower": 200.0,
+                "upper": 1000.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "uncontrolled_malignant_hypertension_with_glomerular_hyperfiltration_urine_albumin_creatinine_ratio_unfavorable",
+                "original_value": 600.0,
+                "original_lower": 200.0,
+                "original_upper": 1000.0,
+                "original_unit": "%",
+                "canonical_value": 600.0,
+                "canonical_lower": 200.0,
+                "canonical_upper": 1000.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-15288884_adults",
+                "evidence_id": "PMID-15288884",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-15288884",
+                "source_type": "OBSERVATIONAL",
+                "title": "Yuyun MF, et al. Am J Hypertens. 2004;17:669-676. PMID: 15288884",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2004,
+                "doi": null,
+                "pmid": "15288884",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:18.122847",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "uncontrolled_malignant_hypertension_with_glomerular_hyperfiltration_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

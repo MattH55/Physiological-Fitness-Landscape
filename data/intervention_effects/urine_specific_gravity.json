@@ -1,0 +1,652 @@
+{
+  "biomarker_id": "urine_specific_gravity",
+  "biomarker_name": "Urine Specific Gravity",
+  "biomarker_units": "ratio",
+  "interventions": [
+    {
+      "intervention_id": "structured_consistent_hydration_25_35_lday_water_intake",
+      "canonical_name": "Structured consistent hydration (2.5-3.5 L/day water intake)",
+      "intervention_type": "LIFESTYLE",
+      "description": "Structured consistent hydration (2.5-3.5 L/day water intake) (Lifestyle) — favorable effect on Urine Specific Gravity",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "structured_consistent_hydration_25_35_lday_water_intake_standard",
+          "regimen": {
+            "regimen_id": "structured_consistent_hydration_25_35_lday_water_intake_standard",
+            "intervention_id": "structured_consistent_hydration_25_35_lday_water_intake",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Structured consistent hydration (2.5-3.5 L/day water intake)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "structured_consistent_hydration_25_35_lday_water_intake_urine_specific_gravity_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-21228415_adults",
+                "evidence_id": "PMID-21228415",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-21228415",
+                "source_type": "RCT",
+                "title": "Armstrong LE, et al. Int J Sport Nutr Exerc Metab. 2010;20:471-479. PMID: 21228415",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2010,
+                "doi": null,
+                "pmid": "21228415",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:19.934296",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "structured_consistent_hydration_25_35_lday_water_intake_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "desmopressin_ddavp_therapy_in_central_diabetes_insipidus",
+      "canonical_name": "Desmopressin (dDAVP) therapy in central diabetes insipidus",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Desmopressin (dDAVP) therapy in central diabetes insipidus (Pharmacologic) — favorable effect on Urine Specific Gravity",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "desmopressin_ddavp_therapy_in_central_diabetes_insipidus_standard",
+          "regimen": {
+            "regimen_id": "desmopressin_ddavp_therapy_in_central_diabetes_insipidus_standard",
+            "intervention_id": "desmopressin_ddavp_therapy_in_central_diabetes_insipidus",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Desmopressin (dDAVP) therapy in central diabetes insipidus",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "desmopressin_ddavp_therapy_in_central_diabetes_insipidus_urine_specific_gravity_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-30067926_adults",
+                "evidence_id": "PMID-30067926",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-30067926",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Fenske W, et al. N Engl J Med. 2018;379:428-439. PMID: 30067926",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2018,
+                "doi": null,
+                "pmid": "30067926",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:20.199298",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "desmopressin_ddavp_therapy_in_central_diabetes_insipidus_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "electrolyte_and_fluid_replacement_during_heavy_endurance_exercise",
+      "canonical_name": "Electrolyte and fluid replacement during heavy endurance exercise",
+      "intervention_type": "EXERCISE",
+      "description": "Electrolyte and fluid replacement during heavy endurance exercise (Exercise) — favorable effect on Urine Specific Gravity",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "electrolyte_and_fluid_replacement_during_heavy_endurance_exercise_standard",
+          "regimen": {
+            "regimen_id": "electrolyte_and_fluid_replacement_during_heavy_endurance_exercise_standard",
+            "intervention_id": "electrolyte_and_fluid_replacement_during_heavy_endurance_exercise",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Electrolyte and fluid replacement during heavy endurance exercise",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "electrolyte_and_fluid_replacement_during_heavy_endurance_exercise_urine_specific_gravity_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17277604_adults",
+                "evidence_id": "PMID-17277604",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17277604",
+                "source_type": "RCT",
+                "title": "Sawka MN, et al. Med Sci Sports Exerc. 2007;39:377-390. PMID: 17277604",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2007,
+                "doi": null,
+                "pmid": "17277604",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:20.628492",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "electrolyte_and_fluid_replacement_during_heavy_endurance_exercise_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_hypertonic_dehydration_and_heat_exhaustion",
+      "canonical_name": "Severe hypertonic dehydration and heat exhaustion",
+      "intervention_type": "ENVIRONMENTAL",
+      "description": "Severe hypertonic dehydration and heat exhaustion (Environmental) — unfavorable effect on Urine Specific Gravity",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_hypertonic_dehydration_and_heat_exhaustion_standard",
+          "regimen": {
+            "regimen_id": "severe_hypertonic_dehydration_and_heat_exhaustion_standard",
+            "intervention_id": "severe_hypertonic_dehydration_and_heat_exhaustion",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe hypertonic dehydration and heat exhaustion",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_hypertonic_dehydration_and_heat_exhaustion_urine_specific_gravity_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-16558638_adults",
+                "evidence_id": "PMID-16558638",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-16558638",
+                "source_type": "OBSERVATIONAL",
+                "title": "Casa DJ, et al. J Athl Train. 2000;35:212-224. PMID: 16558638",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2000,
+                "doi": null,
+                "pmid": "16558638",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:21.047532",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_hypertonic_dehydration_and_heat_exhaustion_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "end_stage_renal_medullary_destruction_isosthenuria",
+      "canonical_name": "End-stage renal medullary destruction / isosthenuria",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "End-stage renal medullary destruction / isosthenuria (Clinical) — unfavorable effect on Urine Specific Gravity",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "end_stage_renal_medullary_destruction_isosthenuria_standard",
+          "regimen": {
+            "regimen_id": "end_stage_renal_medullary_destruction_isosthenuria_standard",
+            "intervention_id": "end_stage_renal_medullary_destruction_isosthenuria",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for End-stage renal medullary destruction / isosthenuria",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "end_stage_renal_medullary_destruction_isosthenuria_urine_specific_gravity_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-11158580_adults",
+                "evidence_id": "PMID-11158580",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-11158580",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Rose BD, et al. Clinical Physiology of Acid-Base and Electrolyte Disorders. 2001. PMID: 11158580",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2001,
+                "doi": null,
+                "pmid": "11158580",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:21.461018",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "end_stage_renal_medullary_destruction_isosthenuria_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

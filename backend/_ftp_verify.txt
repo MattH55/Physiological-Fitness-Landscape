@@ -1,0 +1,8 @@
+Connected. PWD: /
+Local file: C:\Users\matth\OneDrive\Documents\OpenSourceMed\Physiological Fitness Landscape\dist\index.html (10915.1 KB)
+Root index.html size: 10009.1 KB
+dist/index.html size: 10009.1 KB
+Uploading to /...
+Upload to / complete!
+Verified root index.html size: 10915.1 KB
+Done.

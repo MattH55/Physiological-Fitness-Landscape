@@ -1,0 +1,21 @@
+{
+  "modifier_id": "gse300765_u87_hypoxia1pct48h",
+  "protocol": "hypoxia_1pct_o2_48h",
+  "biological_context": "u87mg",
+  "tissue": "U87MG",
+  "study_id": "GSE300765",
+  "species": "human",
+  "dose": {
+    "modality": "hypoxic",
+    "unit": "% O2",
+    "o2_percent": 1.0,
+    "control_o2_percent": 21.0,
+    "duration_hr": 48.0
+  },
+  "duration_hr": 48.0,
+  "timepoint_hr": 48.0,
+  "platform": "GPL10558",
+  "n_replicates": 3,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

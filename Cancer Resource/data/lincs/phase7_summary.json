@@ -1,0 +1,21 @@
+{
+  "built": "2026-09-28T15:22:25.622267+00:00",
+  "n_pairs": 2924,
+  "n_pathway_features": 370,
+  "architecture": "HistGradientBoostingRegressor on real MSigDB Hallmark pathway-level features (synlethality/pathway_features.py)",
+  "bliss_rmse": 0.11050645360928975,
+  "gbt_rmse_cell_line_out": 0.10921456583700635,
+  "gbt_rmse_drug_out": 0.10821259254578239,
+  "coverage_90_cell_line_out": 0.884404924760602,
+  "coverage_90_drug_out": 0.823358413132695,
+  "near_nominal_90": false,
+  "beats_bliss_both_splits": true,
+  "gate_7": {
+    "passed": true,
+    "criterion": "GBT-on-pathway-features RMSE < Bliss-independence RMSE under both leave-one-cell-line-out and leave-one-drug-out"
+  },
+  "anchor_check": {
+    "applicable": false,
+    "reason": "The build order's Gate 6 acceptance test additionally requires checking predictions against the real quantitative anchor labels (synlethality/tests/test_seed.py's REAL_COMBINED_EFFECT_METRICS: HIPEC/Kusumoto/stiffness TER and IC50-fold-shift values). Checked 2026-09-28: none of those anchor modifiers (MOD-HT-42C-60M-HIPEC, MOD-STIFFNESS-53KPA-5G5P, MOD-HT-42.8C-30M-SIMUL/BEFORE, MOD-HT-41C/43C-60M-HIPEC) have a real transcriptomic MIGEP in data/modifier_signatures/library.json -- they are literature-only curated modifiers with no matching GEO series. Separately, their metric (TER / survival-slope ratio / IC50 fold-shift) is not the same quantity as this model's training target (mean Bliss excess of survival fraction). The anchor check is a real, structural gap in what can be validated here, not a skipped step."
+  }
+}

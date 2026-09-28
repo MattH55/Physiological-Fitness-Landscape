@@ -1,0 +1,65 @@
+{
+  "built": "2026-09-27T18:21:37.196549+00:00",
+  "n_pairs": 2924,
+  "n_cell_lines": 56,
+  "n_drugs": 90,
+  "gate_4_note": "Phase 4 gate failed at 2352 pairs. Phase 5 uses that corpus.",
+  "target": "mean Bliss excess of survival fraction; 0 is independence",
+  "models": {
+    "a_global_mean": {
+      "leave_one_cell_line_out": {
+        "rmse": 0.11151706258828546,
+        "coverage_90": 0.893296853625171,
+        "n_predictions": 2924
+      },
+      "leave_one_drug_out": {
+        "rmse": 0.11058886100150758,
+        "coverage_90": 0.8765389876880985,
+        "n_predictions": 5848
+      }
+    },
+    "b_bliss": {
+      "leave_one_cell_line_out": {
+        "rmse": 0.11050645360928972,
+        "coverage_90": 0.893296853625171,
+        "n_predictions": 2924
+      },
+      "leave_one_drug_out": {
+        "rmse": 0.11050645360928972,
+        "coverage_90": 0.8784199726402189,
+        "n_predictions": 5848
+      }
+    },
+    "c_gbt": {
+      "leave_one_cell_line_out": {
+        "rmse": 0.1184193600428169,
+        "coverage_90": 0.8867989056087552,
+        "n_predictions": 2924
+      },
+      "leave_one_drug_out": {
+        "rmse": 0.10934774788480146,
+        "coverage_90": 0.8479822161422709,
+        "n_predictions": 5848
+      }
+    },
+    "d_dual_arm": {
+      "leave_one_cell_line_out": {
+        "rmse": 0.46853068069123344,
+        "coverage_90": 0.9487004103967168,
+        "n_predictions": 2924
+      },
+      "leave_one_drug_out": {
+        "rmse": 2.183100726080127,
+        "coverage_90": 0.4042407660738714,
+        "n_predictions": 5848
+      }
+    }
+  },
+  "chosen": "b_bliss",
+  "beats_bliss_both_splits": false,
+  "near_nominal_90": true,
+  "gate_5": {
+    "passed": false,
+    "criterion": "chosen model beats Bliss RMSE on both splits, and 90% intervals cover 0.85-0.95"
+  }
+}

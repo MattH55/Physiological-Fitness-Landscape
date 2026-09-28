@@ -1,0 +1,652 @@
+{
+  "biomarker_id": "white_blood_cells",
+  "biomarker_name": "White Blood Cell Count (WBC)",
+  "biomarker_units": "10^3 cells/uL",
+  "interventions": [
+    {
+      "intervention_id": "smoking_cessation",
+      "canonical_name": "Smoking cessation",
+      "intervention_type": "BEHAVIORAL",
+      "description": "Smoking cessation (Behavioral) — favorable effect on HDL Cholesterol",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "smoking_cessation_standard",
+          "regimen": {
+            "regimen_id": "smoking_cessation_standard",
+            "intervention_id": "smoking_cessation",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Smoking cessation",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "smoking_cessation_white_blood_cells_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-8943867_adults",
+                "evidence_id": "PMID-8943867",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-8943867",
+                "source_type": "OBSERVATIONAL",
+                "title": "Bain BJ. Br J Haematol. 1996;95:439-446. PMID: 8943867",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1996,
+                "doi": null,
+                "pmid": "8943867",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:10.247867",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "smoking_cessation_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "anti_inflammatory_mediterranean_diet_and_exercise",
+      "canonical_name": "Anti-inflammatory Mediterranean diet and exercise",
+      "intervention_type": "DIET",
+      "description": "Anti-inflammatory Mediterranean diet and exercise (Diet) — favorable effect on White Blood Cell Count (WBC)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "anti_inflammatory_mediterranean_diet_and_exercise_standard",
+          "regimen": {
+            "regimen_id": "anti_inflammatory_mediterranean_diet_and_exercise_standard",
+            "intervention_id": "anti_inflammatory_mediterranean_diet_and_exercise",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Anti-inflammatory Mediterranean diet and exercise",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "anti_inflammatory_mediterranean_diet_and_exercise_white_blood_cells_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-15383514_adults",
+                "evidence_id": "PMID-15383514",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-15383514",
+                "source_type": "RCT",
+                "title": "Esposito K, et al. JAMA. 2004;292:1440-1446. PMID: 15383514",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2004,
+                "doi": null,
+                "pmid": "15383514",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:10.604025",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "anti_inflammatory_mediterranean_diet_and_exercise_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "targeted_treatment_of_chronic_focal_infections_dental_sinus",
+      "canonical_name": "Targeted treatment of chronic focal infections (dental / sinus)",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Targeted treatment of chronic focal infections (dental / sinus) (Clinical) — favorable effect on White Blood Cell Count (WBC)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "targeted_treatment_of_chronic_focal_infections_dental_sinus_standard",
+          "regimen": {
+            "regimen_id": "targeted_treatment_of_chronic_focal_infections_dental_sinus_standard",
+            "intervention_id": "targeted_treatment_of_chronic_focal_infections_dental_sinus",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Targeted treatment of chronic focal infections (dental / sinus)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "targeted_treatment_of_chronic_focal_infections_dental_sinus_white_blood_cells_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17329698_adults",
+                "evidence_id": "PMID-17329698",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17329698",
+                "source_type": "SYSTEMATIC_REVIEW",
+                "title": "Tonetti MS, et al. N Engl J Med. 2007;356:911-920. PMID: 17329698",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2007,
+                "doi": null,
+                "pmid": "17329698",
+                "nct_id": null,
+                "url": null,
+                "study_design": "systematic_review",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:10.903020",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "targeted_treatment_of_chronic_focal_infections_dental_sinus_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_acute_bacterial_infection_or_septic_shock",
+      "canonical_name": "Severe acute bacterial infection or septic shock",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe acute bacterial infection or septic shock (Clinical) — unfavorable effect on White Blood Cell Count (WBC)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_acute_bacterial_infection_or_septic_shock_standard",
+          "regimen": {
+            "regimen_id": "severe_acute_bacterial_infection_or_septic_shock_standard",
+            "intervention_id": "severe_acute_bacterial_infection_or_septic_shock",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe acute bacterial infection or septic shock",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_acute_bacterial_infection_or_septic_shock_white_blood_cells_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-26903338_adults",
+                "evidence_id": "PMID-26903338",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-26903338",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Singer M, et al. JAMA. 2016;315:801-810. PMID: 26903338",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2016,
+                "doi": null,
+                "pmid": "26903338",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:11.205857",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_acute_bacterial_infection_or_septic_shock_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "myelosuppressive_chemotherapy_or_aplastic_bone_marrow_failure",
+      "canonical_name": "Myelosuppressive chemotherapy or aplastic bone marrow failure",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Myelosuppressive chemotherapy or aplastic bone marrow failure (Pharmacologic) — unfavorable effect on White Blood Cell Count (WBC)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "myelosuppressive_chemotherapy_or_aplastic_bone_marrow_failure_standard",
+          "regimen": {
+            "regimen_id": "myelosuppressive_chemotherapy_or_aplastic_bone_marrow_failure_standard",
+            "intervention_id": "myelosuppressive_chemotherapy_or_aplastic_bone_marrow_failure",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Myelosuppressive chemotherapy or aplastic bone marrow failure",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "myelosuppressive_chemotherapy_or_aplastic_bone_marrow_failure_white_blood_cells_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-21258094_adults",
+                "evidence_id": "PMID-21258094",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-21258094",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Freifeld AG, et al. Clin Infect Dis. 2011;52:e56-e93. PMID: 21258094",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2011,
+                "doi": null,
+                "pmid": "21258094",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:11.556312",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "myelosuppressive_chemotherapy_or_aplastic_bone_marrow_failure_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

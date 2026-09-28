@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "serum_ferritin",
+  "biomarker_name": "Serum Ferritin",
+  "biomarker_units": "ug/L",
+  "interventions": [
+    {
+      "intervention_id": "therapeutic_phlebotomy_regular_voluntary_blood_donation_in_iron_overload",
+      "canonical_name": "Therapeutic phlebotomy / regular voluntary blood donation in iron overload",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Therapeutic phlebotomy / regular voluntary blood donation in iron overload (Clinical) — favorable effect on Serum Ferritin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "therapeutic_phlebotomy_regular_voluntary_blood_donation_in_iron_overload_standard",
+          "regimen": {
+            "regimen_id": "therapeutic_phlebotomy_regular_voluntary_blood_donation_in_iron_overload_standard",
+            "intervention_id": "therapeutic_phlebotomy_regular_voluntary_blood_donation_in_iron_overload",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Therapeutic phlebotomy / regular voluntary blood donation in iron overload",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "therapeutic_phlebotomy_regular_voluntary_blood_donation_in_iron_overload_serum_ferritin_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -45.0,
+                "lower": -60.0,
+                "upper": -30.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "therapeutic_phlebotomy_regular_voluntary_blood_donation_in_iron_overload_serum_ferritin_favorable",
+                "original_value": -45.0,
+                "original_lower": -60.0,
+                "original_upper": -30.0,
+                "original_unit": "%",
+                "canonical_value": -45.0,
+                "canonical_lower": -60.0,
+                "canonical_upper": -30.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-22647464_adults",
+                "evidence_id": "PMID-22647464",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-22647464",
+                "source_type": "RCT",
+                "title": "Houschyar KS, et al. BMC Med. 2012;10:54. PMID: 22647464",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2012,
+                "doi": null,
+                "pmid": "22647464",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:05.269635",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "therapeutic_phlebotomy_regular_voluntary_blood_donation_in_iron_overload_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "oral_iron_supplementation_ferrous_sulfate_bisglycinate_in_iron_deficiency",
+      "canonical_name": "Oral iron supplementation (Ferrous sulfate / bisglycinate) in iron deficiency",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Oral iron supplementation (Ferrous sulfate / bisglycinate) in iron deficiency (Nutraceutical) — favorable effect on Serum Ferritin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "oral_iron_supplementation_ferrous_sulfate_bisglycinate_in_iron_deficiency_standard",
+          "regimen": {
+            "regimen_id": "oral_iron_supplementation_ferrous_sulfate_bisglycinate_in_iron_deficiency_standard",
+            "intervention_id": "oral_iron_supplementation_ferrous_sulfate_bisglycinate_in_iron_deficiency",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Oral iron supplementation (Ferrous sulfate / bisglycinate) in iron deficiency",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "oral_iron_supplementation_ferrous_sulfate_bisglycinate_in_iron_deficiency_serum_ferritin_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 50.0,
+                "lower": 50.0,
+                "upper": 50.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "ng/mL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "oral_iron_supplementation_ferrous_sulfate_bisglycinate_in_iron_deficiency_serum_ferritin_favorable",
+                "original_value": 50.0,
+                "original_lower": 50.0,
+                "original_upper": 50.0,
+                "original_unit": "ng/mL",
+                "canonical_value": 50.0,
+                "canonical_lower": 50.0,
+                "canonical_upper": 50.0,
+                "canonical_unit": "ng/mL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-28988648_adults",
+                "evidence_id": "PMID-28988648",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-28988648",
+                "source_type": "META_ANALYSIS",
+                "title": "Stoffel NU, et al. Lancet Haematol. 2017;4:e524-e533. PMID: 28988648",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2017,
+                "doi": null,
+                "pmid": "28988648",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:05.562328",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "oral_iron_supplementation_ferrous_sulfate_bisglycinate_in_iron_deficiency_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "dietary_restriction_of_heme_iron_and_red_meat_intake",
+      "canonical_name": "Dietary restriction of heme iron and red meat intake",
+      "intervention_type": "DIET",
+      "description": "Dietary restriction of heme iron and red meat intake (Diet) — favorable effect on Serum Ferritin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "dietary_restriction_of_heme_iron_and_red_meat_intake_standard",
+          "regimen": {
+            "regimen_id": "dietary_restriction_of_heme_iron_and_red_meat_intake_standard",
+            "intervention_id": "dietary_restriction_of_heme_iron_and_red_meat_intake",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Dietary restriction of heme iron and red meat intake",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "dietary_restriction_of_heme_iron_and_red_meat_intake_serum_ferritin_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -25.0,
+                "lower": -35.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "dietary_restriction_of_heme_iron_and_red_meat_intake_serum_ferritin_favorable",
+                "original_value": -25.0,
+                "original_lower": -35.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -25.0,
+                "canonical_lower": -35.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-12450906_adults",
+                "evidence_id": "PMID-12450906",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-12450906",
+                "source_type": "RCT",
+                "title": "Fleming DJ, et al. Am J Clin Nutr. 2002;76:1375-1384. PMID: 12450906",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2002,
+                "doi": null,
+                "pmid": "12450906",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:05.652214",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "dietary_restriction_of_heme_iron_and_red_meat_intake_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "genetic_hemochromatosis_hfe_c282y_mutation_homozygosity",
+      "canonical_name": "Genetic Hemochromatosis (HFE C282Y mutation homozygosity)",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Genetic Hemochromatosis (HFE C282Y mutation homozygosity) (Clinical) — unfavorable effect on Serum Ferritin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "genetic_hemochromatosis_hfe_c282y_mutation_homozygosity_standard",
+          "regimen": {
+            "regimen_id": "genetic_hemochromatosis_hfe_c282y_mutation_homozygosity_standard",
+            "intervention_id": "genetic_hemochromatosis_hfe_c282y_mutation_homozygosity",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Genetic Hemochromatosis (HFE C282Y mutation homozygosity)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "genetic_hemochromatosis_hfe_c282y_mutation_homozygosity_serum_ferritin_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 650.0,
+                "lower": 300.0,
+                "upper": 1000.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "genetic_hemochromatosis_hfe_c282y_mutation_homozygosity_serum_ferritin_unfavorable",
+                "original_value": 650.0,
+                "original_lower": 300.0,
+                "original_upper": 1000.0,
+                "original_unit": "%",
+                "canonical_value": 650.0,
+                "canonical_lower": 300.0,
+                "canonical_upper": 1000.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-21452290_adults",
+                "evidence_id": "PMID-21452290",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-21452290",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Bacon BR, et al. Hepatology. 2011;54:328-343. PMID: 21452290",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2011,
+                "doi": null,
+                "pmid": "21452290",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:06.092817",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "genetic_hemochromatosis_hfe_c282y_mutation_homozygosity_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_dose_chronic_unmonitored_iron_supplementation",
+      "canonical_name": "High-dose chronic unmonitored iron supplementation",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "High-dose chronic unmonitored iron supplementation (Nutraceutical) — unfavorable effect on Serum Ferritin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_dose_chronic_unmonitored_iron_supplementation_standard",
+          "regimen": {
+            "regimen_id": "high_dose_chronic_unmonitored_iron_supplementation_standard",
+            "intervention_id": "high_dose_chronic_unmonitored_iron_supplementation",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High-dose chronic unmonitored iron supplementation",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_dose_chronic_unmonitored_iron_supplementation_serum_ferritin_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 200.0,
+                "lower": 100.0,
+                "upper": 300.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_dose_chronic_unmonitored_iron_supplementation_serum_ferritin_unfavorable",
+                "original_value": 200.0,
+                "original_lower": 100.0,
+                "original_upper": 300.0,
+                "original_unit": "%",
+                "canonical_value": 200.0,
+                "canonical_lower": 100.0,
+                "canonical_upper": 300.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-6112609_adults",
+                "evidence_id": "PMID-6112609",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-6112609",
+                "source_type": "OBSERVATIONAL",
+                "title": "Sullivan JL. Lancet. 1981;1:1293-1294. PMID: 6112609",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1981,
+                "doi": null,
+                "pmid": "6112609",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:06.715129",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_dose_chronic_unmonitored_iron_supplementation_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

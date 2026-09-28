@@ -1,0 +1,20 @@
+{
+  "modifier_id": "gse129843_muscle_trf8h_vs_15h",
+  "protocol": "trf_8h_vs_15h_5days",
+  "biological_context": "skeletal_muscle",
+  "tissue": "human vastus lateralis",
+  "study_id": "GSE129843",
+  "species": "human",
+  "dose": {
+    "unit": "hours",
+    "duration_hr": 120.0,
+    "eating_window_hr": 8.0,
+    "control_window_hr": 15.0
+  },
+  "duration_hr": 120.0,
+  "timepoint_hr": 120.0,
+  "platform": "RNA-seq",
+  "n_replicates": 63,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

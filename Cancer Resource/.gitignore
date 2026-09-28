@@ -14,6 +14,8 @@ data/combofm/
 data/geo/
 data/geo_platforms/
 data/lincs_phase1_raw/
+data/lincs/phase4/
+data/nci60/
 
 # Generated static snapshot. The app is the Python package.
 npxp-repo/

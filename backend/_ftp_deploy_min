@@ -1,0 +1,27 @@
+"""Minimal FTP deploy - TLS, login before prot_p, no listing."""
+import ftplib
+from pathlib import Path
+
+HOST = "opensourcemed.info"
+PORT = 21
+USER = "LandscapeAccess@landscape.opensourcemed.info"
+PASS = "VUlovelovelove69"
+LOCAL_FILE = Path(__file__).resolve().parent.parent / "dist" / "index.html"
+
+def main():
+    ftp = ftplib.FTP_TLS()
+    ftp.connect(HOST, PORT, timeout=300)
+    ftp.login(USER, PASS)
+    ftp.prot_p()
+    print(f"Logged in. PWD: {ftp.pwd()}", flush=True)
+    
+    size = LOCAL_FILE.stat().st_size
+    print(f"Uploading {size/1024:.1f} KB...", flush=True)
+    with open(LOCAL_FILE, "rb") as f:
+        ftp.storbinary(f"STOR index.html", f)
+    print("Upload complete!", flush=True)
+    ftp.quit()
+    print("Done.", flush=True)
+
+if __name__ == "__main__":
+    main()

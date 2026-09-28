@@ -1,0 +1,37 @@
+population_distribution columns:
+  (0, 'id', 'INTEGER', 1, None, 1)
+  (1, 'biomarker_id', 'INTEGER', 1, None, 0)
+  (2, 'source_id', 'INTEGER', 1, None, 0)
+  (3, 'sex', 'VARCHAR(10)', 1, None, 0)
+  (4, 'age_band', 'VARCHAR(50)', 1, None, 0)
+  (5, 'mean', 'FLOAT', 1, None, 0)
+  (6, 'sd', 'FLOAT', 1, None, 0)
+  (7, 'p5', 'FLOAT', 0, None, 0)
+  (8, 'p25', 'FLOAT', 0, None, 0)
+  (9, 'p50', 'FLOAT', 1, None, 0)
+  (10, 'p75', 'FLOAT', 0, None, 0)
+  (11, 'p95', 'FLOAT', 0, None, 0)
+  (12, 'unit', 'VARCHAR(50)', 1, None, 0)
+  (13, 'sample_n', 'INTEGER', 1, None, 0)
+  (14, 'survey_cycle', 'VARCHAR(100)', 0, None, 0)
+  (15, 'is_low_confidence', 'INTEGER', 0, None, 0)
+
+Sample columns: ['id', 'biomarker_id', 'source_id', 'sex', 'age_band', 'mean', 'sd', 'p5', 'p25', 'p50', 'p75', 'p95', 'unit', 'sample_n', 'survey_cycle', 'is_low_confidence']
+  (1, 13, 1, 'all', 'all', 191.0, 41.2, 131.0, 162.0, 188.0, 216.0, 264.0, 'mg/dL', 8120, '2017-2018', 0)
+  (2, 13, 1, 'M', 'all', 187.0, 40.5, 128.0, 159.0, 184.0, 212.0, 258.0, 'mg/dL', 3940, '2017-2018', 0)
+  (3, 13, 1, 'F', 'all', 195.0, 41.5, 134.0, 165.0, 192.0, 221.0, 270.0, 'mg/dL', 4180, '2017-2018', 0)
+
+By source:
+  (1, 300)
+
+=== NHANES Toolkit BIOMARKERS ===
+Count: 9
+  albumin: Biomarker(name='albumin', component='BIOPRO', variable='LBXSAL', label='Serum albumin', units='g/dL', component_overrides={}, variable_overrides={})
+  creatinine: Biomarker(name='creatinine', component='BIOPRO', variable='LBXSCR', label='Serum creatinine', units='mg/dL', component_overrides={}, variable_overrides={})
+  crp: Biomarker(name='crp', component='CRP', variable='LBXCRP', label='C-reactive protein', units='mg/dL', component_overrides={'2015-2016': 'HSCRP', '2017-2018': 'HSCRP'}, variable_overrides={'2015-2016': 'LBXHSCRP', '2017-2018': 'LBXHSCRP'})
+  glucose: Biomarker(name='glucose', component='BIOPRO', variable='LBXSGL', label='Serum glucose (random)', units='mg/dL', component_overrides={}, variable_overrides={})
+  hdl: Biomarker(name='hdl', component='HDL', variable='LBDHDD', label='HDL cholesterol', units='mg/dL', component_overrides={}, variable_overrides={})
+  hemoglobin: Biomarker(name='hemoglobin', component='CBC', variable='LBXHGB', label='Hemoglobin', units='g/dL', component_overrides={}, variable_overrides={})
+  platelet: Biomarker(name='platelet', component='CBC', variable='LBXPLTSI', label='Platelet count', units='1000 cells/uL', component_overrides={}, variable_overrides={})
+  total_cholesterol: Biomarker(name='total_cholesterol', component='TCHOL', variable='LBXTC', label='Total cholesterol', units='mg/dL', component_overrides={}, variable_overrides={})
+  wbc: Biomarker(name='wbc', component='CBC', variable='LBXWBCSI', label='White blood cell count', units='1000 cells/uL', component_overrides={}, variable_overrides={})

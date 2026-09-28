@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "nt_pro_bnp",
+  "biomarker_name": "N-Terminal Pro-B-Type Natriuretic Peptide (NT-proBNP)",
+  "biomarker_units": "pg/mL",
+  "interventions": [
+    {
+      "intervention_id": "angiotensin_receptor_neprilysin_inhibitor_sacubitrilvalsartan",
+      "canonical_name": "Angiotensin Receptor-Neprilysin Inhibitor (Sacubitril/Valsartan)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Angiotensin Receptor-Neprilysin Inhibitor (Sacubitril/Valsartan) (Pharmacologic) — favorable effect on N-Terminal Pro-B-Type Natriuretic Peptide (NT-proBNP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "angiotensin_receptor_neprilysin_inhibitor_sacubitrilvalsartan_standard",
+          "regimen": {
+            "regimen_id": "angiotensin_receptor_neprilysin_inhibitor_sacubitrilvalsartan_standard",
+            "intervention_id": "angiotensin_receptor_neprilysin_inhibitor_sacubitrilvalsartan",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Angiotensin Receptor-Neprilysin Inhibitor (Sacubitril/Valsartan)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "angiotensin_receptor_neprilysin_inhibitor_sacubitrilvalsartan_nt_pro_bnp_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -15.0,
+                "lower": -50.0,
+                "upper": 20.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "angiotensin_receptor_neprilysin_inhibitor_sacubitrilvalsartan_nt_pro_bnp_favorable",
+                "original_value": -15.0,
+                "original_lower": -50.0,
+                "original_upper": 20.0,
+                "original_unit": "%",
+                "canonical_value": -15.0,
+                "canonical_lower": -50.0,
+                "canonical_upper": 20.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-25176015_adults",
+                "evidence_id": "PMID-25176015",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-25176015",
+                "source_type": "RCT",
+                "title": "McMurray JJ, et al. N Engl J Med. 2014;371:993-1004. PMID: 25176015",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "25176015",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:49.830081",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "angiotensin_receptor_neprilysin_inhibitor_sacubitrilvalsartan_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_in_heart_failure_hfrefhfpef",
+      "canonical_name": "SGLT2 inhibitors (Empagliflozin / Dapagliflozin) in Heart Failure (HFrEF/HFpEF)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "SGLT2 inhibitors (Empagliflozin / Dapagliflozin) in Heart Failure (HFrEF/HFpEF) (Pharmacologic) — favorable effect on N-Terminal Pro-B-Type Natriuretic Peptide (NT-proBNP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_in_heart_failure_hfrefhfpef_standard",
+          "regimen": {
+            "regimen_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_in_heart_failure_hfrefhfpef_standard",
+            "intervention_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_in_heart_failure_hfrefhfpef",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for SGLT2 inhibitors (Empagliflozin / Dapagliflozin) in Heart Failure (HFrEF/HFpEF)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_in_heart_failure_hfrefhfpef_nt_pro_bnp_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -27.5,
+                "lower": -35.0,
+                "upper": -20.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_in_heart_failure_hfrefhfpef_nt_pro_bnp_favorable",
+                "original_value": -27.5,
+                "original_lower": -35.0,
+                "original_upper": -20.0,
+                "original_unit": "%",
+                "canonical_value": -27.5,
+                "canonical_lower": -35.0,
+                "canonical_upper": -20.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-32865377_adults",
+                "evidence_id": "PMID-32865377",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-32865377",
+                "source_type": "RCT",
+                "title": "Packer M, et al. N Engl J Med. 2020;383:1413-1424. PMID: 32865377",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2020,
+                "doi": null,
+                "pmid": "32865377",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:50.320345",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_in_heart_failure_hfrefhfpef_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "dietary_sodium_restriction_2000_mgday_and_structured_cardiac_rehabilitation",
+      "canonical_name": "Dietary sodium restriction (<2000 mg/day) and structured cardiac rehabilitation",
+      "intervention_type": "LIFESTYLE",
+      "description": "Dietary sodium restriction (<2000 mg/day) and structured cardiac rehabilitation (Lifestyle) — favorable effect on N-Terminal Pro-B-Type Natriuretic Peptide (NT-proBNP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "dietary_sodium_restriction_2000_mgday_and_structured_cardiac_rehabilitation_standard",
+          "regimen": {
+            "regimen_id": "dietary_sodium_restriction_2000_mgday_and_structured_cardiac_rehabilitation_standard",
+            "intervention_id": "dietary_sodium_restriction_2000_mgday_and_structured_cardiac_rehabilitation",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Dietary sodium restriction (<2000 mg/day) and structured cardiac rehabilitation",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "dietary_sodium_restriction_2000_mgday_and_structured_cardiac_rehabilitation_nt_pro_bnp_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -22.5,
+                "lower": -30.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "dietary_sodium_restriction_2000_mgday_and_structured_cardiac_rehabilitation_nt_pro_bnp_favorable",
+                "original_value": -22.5,
+                "original_lower": -30.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -22.5,
+                "canonical_lower": -30.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-19351941_adults",
+                "evidence_id": "PMID-19351941",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-19351941",
+                "source_type": "RCT",
+                "title": "O'Connor CM, et al. JAMA. 2009;301:1439-1450. PMID: 19351941",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2009,
+                "doi": null,
+                "pmid": "19351941",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:50.736692",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "dietary_sodium_restriction_2000_mgday_and_structured_cardiac_rehabilitation_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "acute_decompensated_congestive_heart_failure",
+      "canonical_name": "Acute decompensated congestive heart failure",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Acute decompensated congestive heart failure (Clinical) — unfavorable effect on N-Terminal Pro-B-Type Natriuretic Peptide (NT-proBNP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "acute_decompensated_congestive_heart_failure_standard",
+          "regimen": {
+            "regimen_id": "acute_decompensated_congestive_heart_failure_standard",
+            "intervention_id": "acute_decompensated_congestive_heart_failure",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Acute decompensated congestive heart failure",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "acute_decompensated_congestive_heart_failure_nt_pro_bnp_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 1650.0,
+                "lower": 300.0,
+                "upper": 3000.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "acute_decompensated_congestive_heart_failure_nt_pro_bnp_unfavorable",
+                "original_value": 1650.0,
+                "original_lower": 300.0,
+                "original_upper": 3000.0,
+                "original_unit": "%",
+                "canonical_value": 1650.0,
+                "canonical_lower": 300.0,
+                "canonical_upper": 3000.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-29544603_adults",
+                "evidence_id": "PMID-29544603",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-29544603",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Januzzi JL Jr, et al. J Am Coll Cardiol. 2018;71:1191-1200. PMID: 29544603",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2018,
+                "doi": null,
+                "pmid": "29544603",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:51.108751",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "acute_decompensated_congestive_heart_failure_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_pulmonary_arterial_hypertension_and_right_ventricular_strain",
+      "canonical_name": "Severe pulmonary arterial hypertension and right ventricular strain",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe pulmonary arterial hypertension and right ventricular strain (Clinical) — unfavorable effect on N-Terminal Pro-B-Type Natriuretic Peptide (NT-proBNP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_pulmonary_arterial_hypertension_and_right_ventricular_strain_standard",
+          "regimen": {
+            "regimen_id": "severe_pulmonary_arterial_hypertension_and_right_ventricular_strain_standard",
+            "intervention_id": "severe_pulmonary_arterial_hypertension_and_right_ventricular_strain",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe pulmonary arterial hypertension and right ventricular strain",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_pulmonary_arterial_hypertension_and_right_ventricular_strain_nt_pro_bnp_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 600.0,
+                "lower": 200.0,
+                "upper": 1000.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_pulmonary_arterial_hypertension_and_right_ventricular_strain_nt_pro_bnp_unfavorable",
+                "original_value": 600.0,
+                "original_lower": 200.0,
+                "original_upper": 1000.0,
+                "original_unit": "%",
+                "canonical_value": 600.0,
+                "canonical_lower": 200.0,
+                "canonical_upper": 1000.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17015792_adults",
+                "evidence_id": "PMID-17015792",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17015792",
+                "source_type": "OBSERVATIONAL",
+                "title": "Fijalkowska A, et al. Circulation. 2006;114:1637-1645. PMID: 17015792",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2006,
+                "doi": null,
+                "pmid": "17015792",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:51.336118",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_pulmonary_arterial_hypertension_and_right_ventricular_strain_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

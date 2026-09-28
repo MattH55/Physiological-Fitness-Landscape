@@ -56,6 +56,15 @@ REQUIRED_DOSE_KEYS = {
     "acidotic": {"unit", "ph", "duration_hr"},
     "dietary_metabolic": {"unit", "duration_hr"},
     "serum_starvation": {"unit", "serum_percent", "duration_hr"},
+    # Human-physiology series. Fasting has no measured glucose nadir, cold is
+    # not a CEM43 heat dose, and sauna temperature is air temperature.
+    "fasting": {"unit", "duration_hr", "fasting_hr"},
+    "meal_timing": {"unit", "duration_hr", "eating_window_hr"},
+    "exercise": {"unit", "duration_hr"},
+    "cold": {"unit", "temperature_c", "duration_hr"},
+    "cold_immersion": {"unit", "duration_hr"},
+    "local_heat": {"unit", "duration_hr"},
+    "sauna": {"unit", "temperature_c", "duration_hr"},
 }
 
 

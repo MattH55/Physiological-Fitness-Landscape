@@ -1,0 +1,652 @@
+{
+  "biomarker_id": "pulse_wave_velocity",
+  "biomarker_name": "Carotid-Femoral Pulse Wave Velocity (PWV)",
+  "biomarker_units": "m/s",
+  "interventions": [
+    {
+      "intervention_id": "long_term_aerobic_endurance_and_cycling_running_exercise",
+      "canonical_name": "Long-term aerobic endurance and cycling / running exercise",
+      "intervention_type": "EXERCISE",
+      "description": "Long-term aerobic endurance and cycling / running exercise (Exercise) — favorable effect on Carotid-Femoral Pulse Wave Velocity (PWV)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "long_term_aerobic_endurance_and_cycling_running_exercise_standard",
+          "regimen": {
+            "regimen_id": "long_term_aerobic_endurance_and_cycling_running_exercise_standard",
+            "intervention_id": "long_term_aerobic_endurance_and_cycling_running_exercise",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Long-term aerobic endurance and cycling / running exercise",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "long_term_aerobic_endurance_and_cycling_running_exercise_pulse_wave_velocity_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-25245041_adults",
+                "evidence_id": "PMID-25245041",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-25245041",
+                "source_type": "META_ANALYSIS",
+                "title": "Ashor AW, et al. Sports Med. 2014;44:1773-1788. PMID: 25245041",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "25245041",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:59.631075",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "long_term_aerobic_endurance_and_cycling_running_exercise_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "raas_inhibitor_therapy_ace_inhibitors_arbs",
+      "canonical_name": "RAAS inhibitor therapy (ACE inhibitors / ARBs)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "RAAS inhibitor therapy (ACE inhibitors / ARBs) (Pharmacologic) — favorable effect on Carotid-Femoral Pulse Wave Velocity (PWV)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "raas_inhibitor_therapy_ace_inhibitors_arbs_standard",
+          "regimen": {
+            "regimen_id": "raas_inhibitor_therapy_ace_inhibitors_arbs_standard",
+            "intervention_id": "raas_inhibitor_therapy_ace_inhibitors_arbs",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for RAAS inhibitor therapy (ACE inhibitors / ARBs)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "raas_inhibitor_therapy_ace_inhibitors_arbs_pulse_wave_velocity_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-21666491_adults",
+                "evidence_id": "PMID-21666491",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-21666491",
+                "source_type": "META_ANALYSIS",
+                "title": "Ong KT, et al. J Hypertens. 2011;29:1439-1449. PMID: 21666491",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2011,
+                "doi": null,
+                "pmid": "21666491",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:00.113834",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "raas_inhibitor_therapy_ace_inhibitors_arbs_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "dietary_sodium_restriction_and_dietary_nitrate_polyphenol_supplementation",
+      "canonical_name": "Dietary sodium restriction and dietary nitrate / polyphenol supplementation",
+      "intervention_type": "DIET",
+      "description": "Dietary sodium restriction and dietary nitrate / polyphenol supplementation (Diet) — favorable effect on Carotid-Femoral Pulse Wave Velocity (PWV)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "dietary_sodium_restriction_and_dietary_nitrate_polyphenol_supplementation_standard",
+          "regimen": {
+            "regimen_id": "dietary_sodium_restriction_and_dietary_nitrate_polyphenol_supplementation_standard",
+            "intervention_id": "dietary_sodium_restriction_and_dietary_nitrate_polyphenol_supplementation",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Dietary sodium restriction and dietary nitrate / polyphenol supplementation",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "dietary_sodium_restriction_and_dietary_nitrate_polyphenol_supplementation_pulse_wave_velocity_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-29191322_adults",
+                "evidence_id": "PMID-29191322",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-29191322",
+                "source_type": "RCT",
+                "title": "Juraschek SP, et al. J Am Coll Cardiol. 2017;70:2748-2757. PMID: 29191322",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2017,
+                "doi": null,
+                "pmid": "29191322",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:00.856295",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "dietary_sodium_restriction_and_dietary_nitrate_polyphenol_supplementation_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "advanced_vascular_calcification_in_chronic_kidney_disease_diabetes",
+      "canonical_name": "Advanced vascular calcification in chronic kidney disease / diabetes",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Advanced vascular calcification in chronic kidney disease / diabetes (Clinical) — unfavorable effect on Carotid-Femoral Pulse Wave Velocity (PWV)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "advanced_vascular_calcification_in_chronic_kidney_disease_diabetes_standard",
+          "regimen": {
+            "regimen_id": "advanced_vascular_calcification_in_chronic_kidney_disease_diabetes_standard",
+            "intervention_id": "advanced_vascular_calcification_in_chronic_kidney_disease_diabetes",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Advanced vascular calcification in chronic kidney disease / diabetes",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "advanced_vascular_calcification_in_chronic_kidney_disease_diabetes_pulse_wave_velocity_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-10318666_adults",
+                "evidence_id": "PMID-10318666",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-10318666",
+                "source_type": "OBSERVATIONAL",
+                "title": "Blacher J, et al. Circulation. 1999;99:2434-2439. PMID: 10318666",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1999,
+                "doi": null,
+                "pmid": "10318666",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:01.150417",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "advanced_vascular_calcification_in_chronic_kidney_disease_diabetes_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "chronic_heavy_cigarette_smoking",
+      "canonical_name": "Chronic heavy cigarette smoking",
+      "intervention_type": "BEHAVIORAL",
+      "description": "Chronic heavy cigarette smoking (Behavioral) — unfavorable effect on Carotid-Femoral Pulse Wave Velocity (PWV)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "chronic_heavy_cigarette_smoking_standard",
+          "regimen": {
+            "regimen_id": "chronic_heavy_cigarette_smoking_standard",
+            "intervention_id": "chronic_heavy_cigarette_smoking",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Chronic heavy cigarette smoking",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "chronic_heavy_cigarette_smoking_pulse_wave_velocity_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-20338492_adults",
+                "evidence_id": "PMID-20338492",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-20338492",
+                "source_type": "META_ANALYSIS",
+                "title": "Vlachopoulos C, et al. J Am Coll Cardiol. 2010;55:1318-1327. PMID: 20338492",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2010,
+                "doi": null,
+                "pmid": "20338492",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:01.553752",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "chronic_heavy_cigarette_smoking_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

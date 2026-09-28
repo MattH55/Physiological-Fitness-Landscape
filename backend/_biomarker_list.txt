@@ -1,0 +1,74 @@
+ 68  8-Hydroxy-2'-deoxyguanosine (8-OHdG)           Oxidative Stress      pmol/mol DNA  lower_better
+ 24  Alanine Aminotransferase (ALT)                 Liver & Nutritional   U/L         u_shaped
+ 27  Alkaline Phosphatase (ALP)                     Liver & Nutritional   U/L         lower_better
+ 18  Apolipoprotein A1 (ApoA1)                      Lipids & Apolipoproteins  mg/dL       higher_better
+ 17  Apolipoprotein B (ApoB)                        Lipids & Apolipoproteins  mg/dL       lower_better
+ 25  Aspartate Aminotransferase (AST)               Liver & Nutritional   U/L         lower_better
+ 55  Beta-2 Microglobulin                           Renal & Purine        mg/L        lower_better
+  9  Blood Urea Nitrogen (BUN)                      Renal & Purine        mg/dL       lower_better
+ 41  Cardiorespiratory Fitness (VO2 Max)            Functional Fitness    mL/kg/min   higher_better
+ 39  Carotid-Femoral Pulse Wave Velocity (PWV)      Cardiac & Hemodynamics  m/s         lower_better
+ 59  Copeptin                                       Cardiac & Hemodynamics  pmol/L      lower_better
+ 65  Dehydroepiandrosterone Sulfate (DHEA-S)        Vitamins & Endocrine  ug/dL       higher_better
+ 37  Diastolic Blood Pressure (DBP)                 Cardiac & Hemodynamics  mmHg        u_shaped
+ 67  Eosinophil Count                               Hematology            10^3 cells/uL  higher_better
+  5  Erythrocyte Sedimentation Rate (ESR)           Inflammation          mm/hr       lower_better
+ 11  Estimated Glomerular Filtration Rate (eGFR)    Renal & Purine        mL/min/1.73m2  higher_better
+ 61  FIB-4 Index (NAFLD Fibrosis Score)             Liver & Nutritional   index       lower_better
+ 20  Fasting Plasma Glucose                         Glycemic & Metabolic  mg/dL       u_shaped
+ 22  Fasting Serum Insulin                          Glycemic & Metabolic  uIU/mL      lower_better
+  4  Fibrinogen                                     Inflammation          mg/dL       lower_better
+ 62  Free Triiodothyronine (Free T3)                Vitamins & Endocrine  pg/mL       u_shaped
+ 56  Galectin-3                                     Cardiac & Hemodynamics  ng/mL       lower_better
+ 26  Gamma-Glutamyl Transferase (GGT)               Liver & Nutritional   U/L         lower_better
+ 21  Glycated Hemoglobin (HbA1c)                    Glycemic & Metabolic  %           u_shaped
+ 51  Growth Differentiation Factor-15 (GDF-15)      Inflammation          pg/mL       lower_better
+ 14  HDL Cholesterol                                Lipids & Apolipoproteins  mg/dL       u_shaped
+ 42  Hemoglobin Concentration                       Hematology            g/dL        u_shaped
+  1  High-Sensitivity C-Reactive Protein (hs-CRP)   Inflammation          mg/L        lower_better
+ 35  High-Sensitivity Cardiac Troponin T (hs-cTnT)  Cardiac & Hemodynamics  ng/L        lower_better
+ 23  Homeostatic Model Assessment of Insulin Resistance (HOMA-IR)  Glycemic & Metabolic  index       lower_better
+ 60  Homocysteine                                   Metabolic             umol/L      lower_better
+ 64  Insulin-like Growth Factor 1 (IGF-1)           Vitamins & Endocrine  ng/mL       u_shaped
+  2  Interleukin-6 (IL-6)                           Inflammation          pg/mL       lower_better
+ 15  LDL Cholesterol                                Lipids & Apolipoproteins  mg/dL       lower_better
+ 19  Lipoprotein(a) [Lp(a)]                         Lipids & Apolipoproteins  nmol/L      lower_better
+ 53  Lymphocyte-to-Monocyte Ratio (LMR)             Inflammation          ratio       higher_better
+ 40  Maximal Grip Strength                          Functional Fitness    kg          higher_better
+ 66  Mean Platelet Volume (MPV)                     Hematology            fL          u_shaped
+ 58  Mid-Regional Pro-Adrenomedullin (MR-proADM)    Cardiac & Hemodynamics  pmol/L      lower_better
+ 34  N-Terminal Pro-B-Type Natriuretic Peptide (NT-proBNP)  Cardiac & Hemodynamics  pg/mL       lower_better
+  6  Neutrophil-to-Lymphocyte Ratio (NLR)           Inflammation          ratio       lower_better
+ 45  Platelet Count                                 Hematology            10^3 cells/uL  u_shaped
+ 44  Red Cell Distribution Width (RDW)              Hematology            %           lower_better
+ 38  Resting Heart Rate (RHR)                       Cardiac & Hemodynamics  bpm         lower_better
+ 57  ST2 Soluble (sST2)                             Cardiac & Hemodynamics  ng/mL       lower_better
+ 50  Serum 25-Hydroxyvitamin D                      Vitamins & Endocrine  nmol/L      higher_better
+ 29  Serum Albumin                                  Liver & Nutritional   g/dL        higher_better
+ 32  Serum Calcium                                  Electrolytes & Minerals  mg/dL       u_shaped
+  8  Serum Creatinine                               Renal & Purine        mg/dL       u_shaped
+ 10  Serum Cystatin C                               Renal & Purine        mg/L        lower_better
+  7  Serum Ferritin                                 Inflammation          ug/L        u_shaped
+ 69  Serum Folate                                   Vitamins & Endocrine  ng/mL       higher_better
+ 33  Serum Phosphate                                Electrolytes & Minerals  mg/dL       lower_better
+ 31  Serum Potassium                                Electrolytes & Minerals  mmol/L      u_shaped
+ 71  Serum Selenium                                 Electrolytes & Minerals  ug/L        u_shaped
+ 30  Serum Sodium                                   Electrolytes & Minerals  mmol/L      u_shaped
+ 28  Serum Total Bilirubin                          Liver & Nutritional   mg/dL       u_shaped
+ 16  Serum Triglycerides                            Lipids & Apolipoproteins  mg/dL       lower_better
+ 12  Serum Uric Acid                                Renal & Purine        mg/dL       lower_better
+ 72  Serum Zinc                                     Electrolytes & Minerals  ug/dL       u_shaped
+ 52  Soluble Tumor Necrosis Factor Receptor 1 (sTNFR1)  Inflammation          pg/mL       lower_better
+ 36  Systolic Blood Pressure (SBP)                  Cardiac & Hemodynamics  mmHg        lower_better
+ 63  Thyroid-Stimulating Hormone (TSH)              Vitamins & Endocrine  mIU/L       u_shaped
+ 13  Total Cholesterol                              Lipids & Apolipoproteins  mg/dL       u_shaped
+  3  Tumor Necrosis Factor-alpha (TNF-alpha)        Inflammation          pg/mL       lower_better
+ 47  Urinary Creatinine Concentration               Urine Biomarkers      mg/dL       higher_better
+ 49  Urinary Flow Rate                              Urine Biomarkers      mL/min      u_shaped
+ 46  Urine Albumin-to-Creatinine Ratio (uACR)       Urine Biomarkers      mg/g        lower_better
+ 48  Urine Specific Gravity                         Urine Biomarkers      ratio       u_shaped
+ 70  Vitamin B12 (Cobalamin)                        Vitamins & Endocrine  pg/mL       higher_better
+ 43  White Blood Cell Count (WBC)                   Hematology            10^3 cells/uL  lower_better
+ 54  YKL-40 (CHI3L1)                                Inflammation          ng/mL       lower_better
+
+Total: 72 biomarkers

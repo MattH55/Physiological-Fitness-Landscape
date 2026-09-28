@@ -1,0 +1,652 @@
+{
+  "biomarker_id": "serum_potassium",
+  "biomarker_name": "Serum Potassium",
+  "biomarker_units": "mmol/L",
+  "interventions": [
+    {
+      "intervention_id": "novel_non_absorbed_potassium_binders_patiromer_sodium_zirconium_cyclosilicate",
+      "canonical_name": "Novel non-absorbed potassium binders (Patiromer / Sodium Zirconium Cyclosilicate)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Novel non-absorbed potassium binders (Patiromer / Sodium Zirconium Cyclosilicate) (Pharmacologic) — favorable effect on Serum Potassium",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "novel_non_absorbed_potassium_binders_patiromer_sodium_zirconium_cyclosilicate_standard",
+          "regimen": {
+            "regimen_id": "novel_non_absorbed_potassium_binders_patiromer_sodium_zirconium_cyclosilicate_standard",
+            "intervention_id": "novel_non_absorbed_potassium_binders_patiromer_sodium_zirconium_cyclosilicate",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Novel non-absorbed potassium binders (Patiromer / Sodium Zirconium Cyclosilicate)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "novel_non_absorbed_potassium_binders_patiromer_sodium_zirconium_cyclosilicate_serum_potassium_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-25415805_adults",
+                "evidence_id": "PMID-25415805",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-25415805",
+                "source_type": "RCT",
+                "title": "Weir MR, et al. N Engl J Med. 2015;372:211-221. PMID: 25415805",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2015,
+                "doi": null,
+                "pmid": "25415805",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:43.752056",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "novel_non_absorbed_potassium_binders_patiromer_sodium_zirconium_cyclosilicate_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "dash_diet_rich_in_potassium_from_fruits_and_leafy_vegetables_35_47_gday",
+      "canonical_name": "DASH diet rich in potassium from fruits and leafy vegetables (3.5-4.7 g/day)",
+      "intervention_type": "DIET",
+      "description": "DASH diet rich in potassium from fruits and leafy vegetables (3.5-4.7 g/day) (Diet) — favorable effect on Serum Potassium",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "dash_diet_rich_in_potassium_from_fruits_and_leafy_vegetables_35_47_gday_standard",
+          "regimen": {
+            "regimen_id": "dash_diet_rich_in_potassium_from_fruits_and_leafy_vegetables_35_47_gday_standard",
+            "intervention_id": "dash_diet_rich_in_potassium_from_fruits_and_leafy_vegetables_35_47_gday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for DASH diet rich in potassium from fruits and leafy vegetables (3.5-4.7 g/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "dash_diet_rich_in_potassium_from_fruits_and_leafy_vegetables_35_47_gday_serum_potassium_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-9099655_adults",
+                "evidence_id": "PMID-9099655",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-9099655",
+                "source_type": "RCT",
+                "title": "Appel LJ, et al. N Engl J Med. 1997;336:1117-1124. PMID: 9099655",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1997,
+                "doi": null,
+                "pmid": "9099655",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:44.252355",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "dash_diet_rich_in_potassium_from_fruits_and_leafy_vegetables_35_47_gday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "mineralocorticoid_receptor_antagonist_titration_spironolactone_25mg",
+      "canonical_name": "Mineralocorticoid Receptor Antagonist titration (Spironolactone 25mg)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Mineralocorticoid Receptor Antagonist titration (Spironolactone 25mg) (Pharmacologic) — favorable effect on Serum Potassium",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "mineralocorticoid_receptor_antagonist_titration_spironolactone_25mg_standard",
+          "regimen": {
+            "regimen_id": "mineralocorticoid_receptor_antagonist_titration_spironolactone_25mg_standard",
+            "intervention_id": "mineralocorticoid_receptor_antagonist_titration_spironolactone_25mg",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Mineralocorticoid Receptor Antagonist titration (Spironolactone 25mg)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "mineralocorticoid_receptor_antagonist_titration_spironolactone_25mg_serum_potassium_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-10471456_adults",
+                "evidence_id": "PMID-10471456",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-10471456",
+                "source_type": "RCT",
+                "title": "Pitt B, et al. N Engl J Med. 1999;341:709-717. PMID: 10471456",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1999,
+                "doi": null,
+                "pmid": "10471456",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:44.722331",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "mineralocorticoid_receptor_antagonist_titration_spironolactone_25mg_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "combined_raas_inhibitors_and_potassium_sparing_agents_in_advanced_ckd",
+      "canonical_name": "Combined RAAS inhibitors and potassium-sparing agents in advanced CKD",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Combined RAAS inhibitors and potassium-sparing agents in advanced CKD (Pharmacologic) — unfavorable effect on Serum Potassium",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "combined_raas_inhibitors_and_potassium_sparing_agents_in_advanced_ckd_standard",
+          "regimen": {
+            "regimen_id": "combined_raas_inhibitors_and_potassium_sparing_agents_in_advanced_ckd_standard",
+            "intervention_id": "combined_raas_inhibitors_and_potassium_sparing_agents_in_advanced_ckd",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Combined RAAS inhibitors and potassium-sparing agents in advanced CKD",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "combined_raas_inhibitors_and_potassium_sparing_agents_in_advanced_ckd_serum_potassium_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-24206457_adults",
+                "evidence_id": "PMID-24206457",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-24206457",
+                "source_type": "RCT",
+                "title": "Fried LF, et al. N Engl J Med. 2013;369:1892-1903. PMID: 24206457",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2013,
+                "doi": null,
+                "pmid": "24206457",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:45.166500",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "combined_raas_inhibitors_and_potassium_sparing_agents_in_advanced_ckd_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_dose_loop_diuretics_without_potassium_replacement",
+      "canonical_name": "High-dose loop diuretics without potassium replacement",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "High-dose loop diuretics without potassium replacement (Pharmacologic) — unfavorable effect on Serum Potassium",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_dose_loop_diuretics_without_potassium_replacement_standard",
+          "regimen": {
+            "regimen_id": "high_dose_loop_diuretics_without_potassium_replacement_standard",
+            "intervention_id": "high_dose_loop_diuretics_without_potassium_replacement",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High-dose loop diuretics without potassium replacement",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_dose_loop_diuretics_without_potassium_replacement_serum_potassium_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-9700180_adults",
+                "evidence_id": "PMID-9700180",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-9700180",
+                "source_type": "SYSTEMATIC_REVIEW",
+                "title": "Gennari FJ. N Engl J Med. 1998;339:451-458. PMID: 9700180",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1998,
+                "doi": null,
+                "pmid": "9700180",
+                "nct_id": null,
+                "url": null,
+                "study_design": "systematic_review",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:45.668866",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_dose_loop_diuretics_without_potassium_replacement_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

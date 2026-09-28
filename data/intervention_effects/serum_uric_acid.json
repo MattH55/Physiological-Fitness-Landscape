@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "serum_uric_acid",
+  "biomarker_name": "Serum Uric Acid",
+  "biomarker_units": "mg/dL",
+  "interventions": [
+    {
+      "intervention_id": "xanthine_oxidase_inhibitors_allopurinol_100_300_mg_febuxostat_40_80_mg",
+      "canonical_name": "Xanthine oxidase inhibitors (Allopurinol 100-300 mg / Febuxostat 40-80 mg)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Xanthine oxidase inhibitors (Allopurinol 100-300 mg / Febuxostat 40-80 mg) (Pharmacologic) — favorable effect on Serum Uric Acid",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "xanthine_oxidase_inhibitors_allopurinol_100_300_mg_febuxostat_40_80_mg_standard",
+          "regimen": {
+            "regimen_id": "xanthine_oxidase_inhibitors_allopurinol_100_300_mg_febuxostat_40_80_mg_standard",
+            "intervention_id": "xanthine_oxidase_inhibitors_allopurinol_100_300_mg_febuxostat_40_80_mg",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Xanthine oxidase inhibitors (Allopurinol 100-300 mg / Febuxostat 40-80 mg)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "xanthine_oxidase_inhibitors_allopurinol_100_300_mg_febuxostat_40_80_mg_serum_uric_acid_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -45.0,
+                "lower": -55.0,
+                "upper": -35.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "xanthine_oxidase_inhibitors_allopurinol_100_300_mg_febuxostat_40_80_mg_serum_uric_acid_favorable",
+                "original_value": -45.0,
+                "original_lower": -55.0,
+                "original_upper": -35.0,
+                "original_unit": "%",
+                "canonical_value": -45.0,
+                "canonical_lower": -55.0,
+                "canonical_upper": -35.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-16339094_adults",
+                "evidence_id": "PMID-16339094",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-16339094",
+                "source_type": "RCT",
+                "title": "Becker MA, et al. N Engl J Med. 2005;353:2450-2461. PMID: 16339094",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2005,
+                "doi": null,
+                "pmid": "16339094",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:13.446457",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "xanthine_oxidase_inhibitors_allopurinol_100_300_mg_febuxostat_40_80_mg_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "elimination_of_high_fructose_corn_syrup_beverages_and_beer",
+      "canonical_name": "Elimination of high-fructose corn syrup beverages and beer",
+      "intervention_type": "DIET",
+      "description": "Elimination of high-fructose corn syrup beverages and beer (Diet) — favorable effect on Serum Uric Acid",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "elimination_of_high_fructose_corn_syrup_beverages_and_beer_standard",
+          "regimen": {
+            "regimen_id": "elimination_of_high_fructose_corn_syrup_beverages_and_beer_standard",
+            "intervention_id": "elimination_of_high_fructose_corn_syrup_beverages_and_beer",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Elimination of high-fructose corn syrup beverages and beer",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "elimination_of_high_fructose_corn_syrup_beverages_and_beer_serum_uric_acid_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -17.5,
+                "lower": -25.0,
+                "upper": -10.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "elimination_of_high_fructose_corn_syrup_beverages_and_beer_serum_uric_acid_favorable",
+                "original_value": -17.5,
+                "original_lower": -25.0,
+                "original_upper": -10.0,
+                "original_unit": "%",
+                "canonical_value": -17.5,
+                "canonical_lower": -25.0,
+                "canonical_upper": -10.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-18244959_adults",
+                "evidence_id": "PMID-18244959",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-18244959",
+                "source_type": "OBSERVATIONAL",
+                "title": "Choi HK, et al. BMJ. 2008;336:309-312. PMID: 18244959",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2008,
+                "doi": null,
+                "pmid": "18244959",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:13.632543",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "elimination_of_high_fructose_corn_syrup_beverages_and_beer_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "vitamin_c_supplementation_500_1000_mgday",
+      "canonical_name": "Vitamin C supplementation (500-1000 mg/day)",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Vitamin C supplementation (500-1000 mg/day) (Nutraceutical) — favorable effect on Serum Uric Acid",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "vitamin_c_supplementation_500_1000_mgday_standard",
+          "regimen": {
+            "regimen_id": "vitamin_c_supplementation_500_1000_mgday_standard",
+            "intervention_id": "vitamin_c_supplementation_500_1000_mgday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Vitamin C supplementation (500-1000 mg/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "vitamin_c_supplementation_500_1000_mgday_serum_uric_acid_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -1.0,
+                "lower": -1.0,
+                "upper": -1.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mg/dL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "vitamin_c_supplementation_500_1000_mgday_serum_uric_acid_favorable",
+                "original_value": -1.0,
+                "original_lower": -1.0,
+                "original_upper": -1.0,
+                "original_unit": "mg/dL",
+                "canonical_value": -1.0,
+                "canonical_lower": -1.0,
+                "canonical_upper": -1.0,
+                "canonical_unit": "mg/dL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-21671358_adults",
+                "evidence_id": "PMID-21671358",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-21671358",
+                "source_type": "META_ANALYSIS",
+                "title": "Juraschek SP, et al. Arthritis Care Res. 2011;63:1295-1306. PMID: 21671358",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2011,
+                "doi": null,
+                "pmid": "21671358",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:13.982876",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "vitamin_c_supplementation_500_1000_mgday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "heavy_alcohol_consumption_particularly_beer_and_spirits",
+      "canonical_name": "Heavy alcohol consumption, particularly beer and spirits",
+      "intervention_type": "DIET",
+      "description": "Heavy alcohol consumption, particularly beer and spirits (Diet) — unfavorable effect on Serum Uric Acid",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "heavy_alcohol_consumption_particularly_beer_and_spirits_standard",
+          "regimen": {
+            "regimen_id": "heavy_alcohol_consumption_particularly_beer_and_spirits_standard",
+            "intervention_id": "heavy_alcohol_consumption_particularly_beer_and_spirits",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Heavy alcohol consumption, particularly beer and spirits",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "heavy_alcohol_consumption_particularly_beer_and_spirits_serum_uric_acid_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 37.5,
+                "lower": 25.0,
+                "upper": 50.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "heavy_alcohol_consumption_particularly_beer_and_spirits_serum_uric_acid_unfavorable",
+                "original_value": 37.5,
+                "original_lower": 25.0,
+                "original_upper": 50.0,
+                "original_unit": "%",
+                "canonical_value": 37.5,
+                "canonical_lower": 25.0,
+                "canonical_upper": 50.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-15094272_adults",
+                "evidence_id": "PMID-15094272",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-15094272",
+                "source_type": "OBSERVATIONAL",
+                "title": "Choi HK, et al. Lancet. 2004;363:1277-1281. PMID: 15094272",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2004,
+                "doi": null,
+                "pmid": "15094272",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:14.248900",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "heavy_alcohol_consumption_particularly_beer_and_spirits_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "thiazide_and_loop_diuretic_therapy_without_uricosuric_co_therapy",
+      "canonical_name": "Thiazide and loop diuretic therapy without uricosuric co-therapy",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Thiazide and loop diuretic therapy without uricosuric co-therapy (Pharmacologic) — unfavorable effect on Serum Uric Acid",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "thiazide_and_loop_diuretic_therapy_without_uricosuric_co_therapy_standard",
+          "regimen": {
+            "regimen_id": "thiazide_and_loop_diuretic_therapy_without_uricosuric_co_therapy_standard",
+            "intervention_id": "thiazide_and_loop_diuretic_therapy_without_uricosuric_co_therapy",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Thiazide and loop diuretic therapy without uricosuric co-therapy",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "thiazide_and_loop_diuretic_therapy_without_uricosuric_co_therapy_serum_uric_acid_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 2.5,
+                "lower": 2.5,
+                "upper": 2.5,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mg/dL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "thiazide_and_loop_diuretic_therapy_without_uricosuric_co_therapy_serum_uric_acid_unfavorable",
+                "original_value": 2.5,
+                "original_lower": 2.5,
+                "original_upper": 2.5,
+                "original_unit": "mg/dL",
+                "canonical_value": 2.5,
+                "canonical_lower": 2.5,
+                "canonical_upper": 2.5,
+                "canonical_unit": "mg/dL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-28181347_adults",
+                "evidence_id": "PMID-28181347",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-28181347",
+                "source_type": "SYSTEMATIC_REVIEW",
+                "title": "Ben Salem C, et al. Pharmacoepidemiol Drug Saf. 2017;26:578-583. PMID: 28181347",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2017,
+                "doi": null,
+                "pmid": "28181347",
+                "nct_id": null,
+                "url": null,
+                "study_design": "systematic_review",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:14.521027",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "thiazide_and_loop_diuretic_therapy_without_uricosuric_co_therapy_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

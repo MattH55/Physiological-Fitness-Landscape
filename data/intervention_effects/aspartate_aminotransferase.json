@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "aspartate_aminotransferase",
+  "biomarker_name": "Aspartate Aminotransferase (AST)",
+  "biomarker_units": "U/L",
+  "interventions": [
+    {
+      "intervention_id": "ethanol_abstinence_in_alcohol_associated_liver_disease",
+      "canonical_name": "Ethanol abstinence in alcohol-associated liver disease",
+      "intervention_type": "BEHAVIORAL",
+      "description": "Ethanol abstinence in alcohol-associated liver disease (Behavioral) — favorable effect on Aspartate Aminotransferase (AST)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "ethanol_abstinence_in_alcohol_associated_liver_disease_standard",
+          "regimen": {
+            "regimen_id": "ethanol_abstinence_in_alcohol_associated_liver_disease_standard",
+            "intervention_id": "ethanol_abstinence_in_alcohol_associated_liver_disease",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Ethanol abstinence in alcohol-associated liver disease",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "ethanol_abstinence_in_alcohol_associated_liver_disease_aspartate_aminotransferase_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -65.0,
+                "lower": -80.0,
+                "upper": -50.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "ethanol_abstinence_in_alcohol_associated_liver_disease_aspartate_aminotransferase_favorable",
+                "original_value": -65.0,
+                "original_lower": -80.0,
+                "original_upper": -50.0,
+                "original_unit": "%",
+                "canonical_value": -65.0,
+                "canonical_lower": -80.0,
+                "canonical_upper": -50.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-19553649_adults",
+                "evidence_id": "PMID-19553649",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-19553649",
+                "source_type": "OBSERVATIONAL",
+                "title": "Lucey MR, et al. N Engl J Med. 2009;360:2758-2769. PMID: 19553649",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2009,
+                "doi": null,
+                "pmid": "19553649",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:30.608498",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "ethanol_abstinence_in_alcohol_associated_liver_disease_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "resolution_of_hepatic_steatosis_via_hypocaloric_mediterranean_diet",
+      "canonical_name": "Resolution of hepatic steatosis via hypocaloric Mediterranean diet",
+      "intervention_type": "DIET",
+      "description": "Resolution of hepatic steatosis via hypocaloric Mediterranean diet (Diet) — favorable effect on Aspartate Aminotransferase (AST)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "resolution_of_hepatic_steatosis_via_hypocaloric_mediterranean_diet_standard",
+          "regimen": {
+            "regimen_id": "resolution_of_hepatic_steatosis_via_hypocaloric_mediterranean_diet_standard",
+            "intervention_id": "resolution_of_hepatic_steatosis_via_hypocaloric_mediterranean_diet",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Resolution of hepatic steatosis via hypocaloric Mediterranean diet",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "resolution_of_hepatic_steatosis_via_hypocaloric_mediterranean_diet_aspartate_aminotransferase_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -35.0,
+                "lower": -45.0,
+                "upper": -25.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "resolution_of_hepatic_steatosis_via_hypocaloric_mediterranean_diet_aspartate_aminotransferase_favorable",
+                "original_value": -35.0,
+                "original_lower": -45.0,
+                "original_upper": -25.0,
+                "original_unit": "%",
+                "canonical_value": -35.0,
+                "canonical_lower": -45.0,
+                "canonical_upper": -25.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-23485520_adults",
+                "evidence_id": "PMID-23485520",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-23485520",
+                "source_type": "RCT",
+                "title": "Ryan MC, et al. J Hepatol. 2013;59:138-143. PMID: 23485520",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2013,
+                "doi": null,
+                "pmid": "23485520",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:30.947551",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "resolution_of_hepatic_steatosis_via_hypocaloric_mediterranean_diet_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "vitamin_e_supplementation_800_iuday_in_non_diabetic_nash",
+      "canonical_name": "Vitamin E supplementation (800 IU/day) in non-diabetic NASH",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Vitamin E supplementation (800 IU/day) in non-diabetic NASH (Nutraceutical) — favorable effect on Aspartate Aminotransferase (AST)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "vitamin_e_supplementation_800_iuday_in_non_diabetic_nash_standard",
+          "regimen": {
+            "regimen_id": "vitamin_e_supplementation_800_iuday_in_non_diabetic_nash_standard",
+            "intervention_id": "vitamin_e_supplementation_800_iuday_in_non_diabetic_nash",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Vitamin E supplementation (800 IU/day) in non-diabetic NASH",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "vitamin_e_supplementation_800_iuday_in_non_diabetic_nash_aspartate_aminotransferase_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -27.5,
+                "lower": -35.0,
+                "upper": -20.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "vitamin_e_supplementation_800_iuday_in_non_diabetic_nash_aspartate_aminotransferase_favorable",
+                "original_value": -27.5,
+                "original_lower": -35.0,
+                "original_upper": -20.0,
+                "original_unit": "%",
+                "canonical_value": -27.5,
+                "canonical_lower": -35.0,
+                "canonical_upper": -20.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-20427778_adults",
+                "evidence_id": "PMID-20427778",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-20427778",
+                "source_type": "RCT",
+                "title": "Sanyal AJ, et al. N Engl J Med. 2010;362:1675-1685. PMID: 20427778",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2010,
+                "doi": null,
+                "pmid": "20427778",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:29.788393",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "vitamin_e_supplementation_800_iuday_in_non_diabetic_nash_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "acute_rhabdomyolysis_or_severe_unaccustomed_eccentric_muscle_damage",
+      "canonical_name": "Acute rhabdomyolysis or severe unaccustomed eccentric muscle damage",
+      "intervention_type": "PHYSIOLOGICAL",
+      "description": "Acute rhabdomyolysis or severe unaccustomed eccentric muscle damage (Physiological) — unfavorable effect on Aspartate Aminotransferase (AST)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "acute_rhabdomyolysis_or_severe_unaccustomed_eccentric_muscle_damage_standard",
+          "regimen": {
+            "regimen_id": "acute_rhabdomyolysis_or_severe_unaccustomed_eccentric_muscle_damage_standard",
+            "intervention_id": "acute_rhabdomyolysis_or_severe_unaccustomed_eccentric_muscle_damage",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Acute rhabdomyolysis or severe unaccustomed eccentric muscle damage",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "acute_rhabdomyolysis_or_severe_unaccustomed_eccentric_muscle_damage_aspartate_aminotransferase_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 600.0,
+                "lower": 200.0,
+                "upper": 1000.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "acute_rhabdomyolysis_or_severe_unaccustomed_eccentric_muscle_damage_aspartate_aminotransferase_unfavorable",
+                "original_value": 600.0,
+                "original_lower": 200.0,
+                "original_upper": 1000.0,
+                "original_unit": "%",
+                "canonical_value": 600.0,
+                "canonical_lower": 200.0,
+                "canonical_upper": 1000.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17764474_adults",
+                "evidence_id": "PMID-17764474",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17764474",
+                "source_type": "SYSTEMATIC_REVIEW",
+                "title": "Pettersson J, et al. Br J Clin Pharmacol. 2008;65:253-259. PMID: 17764474",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2008,
+                "doi": null,
+                "pmid": "17764474",
+                "nct_id": null,
+                "url": null,
+                "study_design": "systematic_review",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:31.371210",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "acute_rhabdomyolysis_or_severe_unaccustomed_eccentric_muscle_damage_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "acute_myocardial_infarction_or_ischemic_hepatitis_shock_liver",
+      "canonical_name": "Acute myocardial infarction or ischemic hepatitis ('shock liver')",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Acute myocardial infarction or ischemic hepatitis ('shock liver') (Clinical) — unfavorable effect on Aspartate Aminotransferase (AST)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "acute_myocardial_infarction_or_ischemic_hepatitis_shock_liver_standard",
+          "regimen": {
+            "regimen_id": "acute_myocardial_infarction_or_ischemic_hepatitis_shock_liver_standard",
+            "intervention_id": "acute_myocardial_infarction_or_ischemic_hepatitis_shock_liver",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Acute myocardial infarction or ischemic hepatitis ('shock liver')",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "acute_myocardial_infarction_or_ischemic_hepatitis_shock_liver_aspartate_aminotransferase_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 1750.0,
+                "lower": 500.0,
+                "upper": 3000.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "acute_myocardial_infarction_or_ischemic_hepatitis_shock_liver_aspartate_aminotransferase_unfavorable",
+                "original_value": 1750.0,
+                "original_lower": 500.0,
+                "original_upper": 3000.0,
+                "original_unit": "%",
+                "canonical_value": 1750.0,
+                "canonical_lower": 500.0,
+                "canonical_upper": 3000.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-14663328_adults",
+                "evidence_id": "PMID-14663328",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-14663328",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Henrion J, et al. Medicine (Baltimore). 2003;82:392-406. PMID: 14663328",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2003,
+                "doi": null,
+                "pmid": "14663328",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:31.730282",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "acute_myocardial_infarction_or_ischemic_hepatitis_shock_liver_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

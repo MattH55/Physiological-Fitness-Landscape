@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "apolipoprotein_a1",
+  "biomarker_name": "Apolipoprotein A1 (ApoA1)",
+  "biomarker_units": "mg/dL",
+  "interventions": [
+    {
+      "intervention_id": "aerobic_endurance_training_and_vigorous_physical_activity",
+      "canonical_name": "Aerobic endurance training and vigorous physical activity",
+      "intervention_type": "EXERCISE",
+      "description": "Aerobic endurance training and vigorous physical activity (Exercise) — favorable effect on Apolipoprotein A1 (ApoA1)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "aerobic_endurance_training_and_vigorous_physical_activity_standard",
+          "regimen": {
+            "regimen_id": "aerobic_endurance_training_and_vigorous_physical_activity_standard",
+            "intervention_id": "aerobic_endurance_training_and_vigorous_physical_activity",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Aerobic endurance training and vigorous physical activity",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "aerobic_endurance_training_and_vigorous_physical_activity_apolipoprotein_a1_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 13.0,
+                "lower": 8.0,
+                "upper": 18.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "aerobic_endurance_training_and_vigorous_physical_activity_apolipoprotein_a1_favorable",
+                "original_value": 13.0,
+                "original_lower": 8.0,
+                "original_upper": 18.0,
+                "original_unit": "%",
+                "canonical_value": 13.0,
+                "canonical_lower": 8.0,
+                "canonical_upper": 18.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-10949023_adults",
+                "evidence_id": "PMID-10949023",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-10949023",
+                "source_type": "META_ANALYSIS",
+                "title": "Leon AS, et al. Med Sci Sports Exerc. 2000;32:1511-1520. PMID: 10949023",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2000,
+                "doi": null,
+                "pmid": "10949023",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:19.148230",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "aerobic_endurance_training_and_vigorous_physical_activity_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "mediterranean_dietary_pattern_rich_in_polyphenols_and_virgin_olive_oil",
+      "canonical_name": "Mediterranean dietary pattern rich in polyphenols and virgin olive oil",
+      "intervention_type": "DIET",
+      "description": "Mediterranean dietary pattern rich in polyphenols and virgin olive oil (Diet) — favorable effect on Apolipoprotein A1 (ApoA1)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "mediterranean_dietary_pattern_rich_in_polyphenols_and_virgin_olive_oil_standard",
+          "regimen": {
+            "regimen_id": "mediterranean_dietary_pattern_rich_in_polyphenols_and_virgin_olive_oil_standard",
+            "intervention_id": "mediterranean_dietary_pattern_rich_in_polyphenols_and_virgin_olive_oil",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Mediterranean dietary pattern rich in polyphenols and virgin olive oil",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "mediterranean_dietary_pattern_rich_in_polyphenols_and_virgin_olive_oil_apolipoprotein_a1_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 10.0,
+                "lower": 6.0,
+                "upper": 14.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "mediterranean_dietary_pattern_rich_in_polyphenols_and_virgin_olive_oil_apolipoprotein_a1_favorable",
+                "original_value": 10.0,
+                "original_lower": 6.0,
+                "original_upper": 14.0,
+                "original_unit": "%",
+                "canonical_value": 10.0,
+                "canonical_lower": 6.0,
+                "canonical_upper": 14.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-25485640_adults",
+                "evidence_id": "PMID-25485640",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-25485640",
+                "source_type": "RCT",
+                "title": "Babio N, et al. Ann Intern Med. 2014;161:815-824. PMID: 25485640",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "25485640",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:19.310826",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "mediterranean_dietary_pattern_rich_in_polyphenols_and_virgin_olive_oil_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "niacin_therapy_extended_release_1000_2000_mgday",
+      "canonical_name": "Niacin therapy (Extended-release 1000-2000 mg/day)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Niacin therapy (Extended-release 1000-2000 mg/day) (Pharmacologic) — favorable effect on Apolipoprotein A1 (ApoA1)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "niacin_therapy_extended_release_1000_2000_mgday_standard",
+          "regimen": {
+            "regimen_id": "niacin_therapy_extended_release_1000_2000_mgday_standard",
+            "intervention_id": "niacin_therapy_extended_release_1000_2000_mgday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Niacin therapy (Extended-release 1000-2000 mg/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "niacin_therapy_extended_release_1000_2000_mgday_apolipoprotein_a1_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 20.0,
+                "lower": 15.0,
+                "upper": 25.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "niacin_therapy_extended_release_1000_2000_mgday_apolipoprotein_a1_favorable",
+                "original_value": 20.0,
+                "original_lower": 15.0,
+                "original_upper": 25.0,
+                "original_unit": "%",
+                "canonical_value": 20.0,
+                "canonical_lower": 15.0,
+                "canonical_upper": 25.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-22085343_adults",
+                "evidence_id": "PMID-22085343",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-22085343",
+                "source_type": "RCT",
+                "title": "Boden WE, et al. N Engl J Med. 2011;365:2255-2267. PMID: 22085343",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2011,
+                "doi": null,
+                "pmid": "22085343",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:19.507776",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "niacin_therapy_extended_release_1000_2000_mgday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "cigarette_smoking_and_chronic_tobacco_exposure",
+      "canonical_name": "Cigarette smoking and chronic tobacco exposure",
+      "intervention_type": "BEHAVIORAL",
+      "description": "Cigarette smoking and chronic tobacco exposure (Behavioral) — unfavorable effect on Apolipoprotein A1 (ApoA1)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "cigarette_smoking_and_chronic_tobacco_exposure_standard",
+          "regimen": {
+            "regimen_id": "cigarette_smoking_and_chronic_tobacco_exposure_standard",
+            "intervention_id": "cigarette_smoking_and_chronic_tobacco_exposure",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Cigarette smoking and chronic tobacco exposure",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "cigarette_smoking_and_chronic_tobacco_exposure_apolipoprotein_a1_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -21.5,
+                "lower": -28.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "cigarette_smoking_and_chronic_tobacco_exposure_apolipoprotein_a1_unfavorable",
+                "original_value": -21.5,
+                "original_lower": -28.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -21.5,
+                "canonical_lower": -28.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-209539_adults",
+                "evidence_id": "PMID-209539",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-209539",
+                "source_type": "OBSERVATIONAL",
+                "title": "Garrison RJ, et al. Atherosclerosis. 1978;30:17-25. PMID: 209539",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1978,
+                "doi": null,
+                "pmid": "209539",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:19.718221",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "cigarette_smoking_and_chronic_tobacco_exposure_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_hypertriglyceridemic_metabolic_syndrome",
+      "canonical_name": "Severe hypertriglyceridemic metabolic syndrome",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe hypertriglyceridemic metabolic syndrome (Clinical) — unfavorable effect on Apolipoprotein A1 (ApoA1)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_hypertriglyceridemic_metabolic_syndrome_standard",
+          "regimen": {
+            "regimen_id": "severe_hypertriglyceridemic_metabolic_syndrome_standard",
+            "intervention_id": "severe_hypertriglyceridemic_metabolic_syndrome",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe hypertriglyceridemic metabolic syndrome",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_hypertriglyceridemic_metabolic_syndrome_apolipoprotein_a1_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -30.0,
+                "lower": -40.0,
+                "upper": -20.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_hypertriglyceridemic_metabolic_syndrome_apolipoprotein_a1_unfavorable",
+                "original_value": -30.0,
+                "original_lower": -40.0,
+                "original_upper": -20.0,
+                "original_unit": "%",
+                "canonical_value": -30.0,
+                "canonical_lower": -40.0,
+                "canonical_upper": -20.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-15364185_adults",
+                "evidence_id": "PMID-15364185",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-15364185",
+                "source_type": "META_ANALYSIS",
+                "title": "Yusuf S, et al. Lancet. 2004;364:937-952. PMID: 15364185",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2004,
+                "doi": null,
+                "pmid": "15364185",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:20.718531",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_hypertriglyceridemic_metabolic_syndrome_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -36,6 +36,7 @@ from synlethality.modifier_signatures import (
     gse70976_serum_starvation,
     gse75127_hyperthermia,
     gse10043_mild_hyperthermia,
+    human_physiology,
     gse153830_metabolic,
     gse300765_hypoxia_acidosis,
 )
@@ -52,6 +53,7 @@ PARSER_MODULES = [
     gse48398_heat_shock,
     gse10043_mild_hyperthermia,
     gse75127_hyperthermia,
+    human_physiology,
 ]
 
 LIBRARY_PATH = os.path.join(config.DATA_DIR, "modifier_signatures", "library.json")

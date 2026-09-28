@@ -1,0 +1,700 @@
+{
+  "biomarker_id": "diastolic_blood_pressure",
+  "biomarker_name": "Diastolic Blood Pressure (DBP)",
+  "biomarker_units": "mmHg",
+  "interventions": [
+    {
+      "intervention_id": "calcium_channel_blockers_amlodipine_5_10_mg_ace_inhibitors",
+      "canonical_name": "Calcium channel blockers (Amlodipine 5-10 mg) / ACE inhibitors",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Calcium channel blockers (Amlodipine 5-10 mg) / ACE inhibitors (Pharmacologic) — favorable effect on Diastolic Blood Pressure (DBP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "calcium_channel_blockers_amlodipine_5_10_mg_ace_inhibitors_standard",
+          "regimen": {
+            "regimen_id": "calcium_channel_blockers_amlodipine_5_10_mg_ace_inhibitors_standard",
+            "intervention_id": "calcium_channel_blockers_amlodipine_5_10_mg_ace_inhibitors",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Calcium channel blockers (Amlodipine 5-10 mg) / ACE inhibitors",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "calcium_channel_blockers_amlodipine_5_10_mg_ace_inhibitors_diastolic_blood_pressure_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -14.0,
+                "lower": -14.0,
+                "upper": -14.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mmHg",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "calcium_channel_blockers_amlodipine_5_10_mg_ace_inhibitors_diastolic_blood_pressure_favorable",
+                "original_value": -14.0,
+                "original_lower": -14.0,
+                "original_upper": -14.0,
+                "original_unit": "mmHg",
+                "canonical_value": -14.0,
+                "canonical_lower": -14.0,
+                "canonical_upper": -14.0,
+                "canonical_unit": "mmHg",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-19454737_adults",
+                "evidence_id": "PMID-19454737",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-19454737",
+                "source_type": "META_ANALYSIS",
+                "title": "Law MR, et al. BMJ. 2009;338:b1665. PMID: 19454737",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2009,
+                "doi": null,
+                "pmid": "19454737",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:54.916543",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "calcium_channel_blockers_amlodipine_5_10_mg_ace_inhibitors_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "aerobic_conditioning_and_5_10_weight_loss",
+      "canonical_name": "Aerobic conditioning and 5-10% weight loss",
+      "intervention_type": "EXERCISE",
+      "description": "Aerobic conditioning and 5-10% weight loss (Exercise) — favorable effect on Diastolic Blood Pressure (DBP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "aerobic_conditioning_and_5_10_weight_loss_standard",
+          "regimen": {
+            "regimen_id": "aerobic_conditioning_and_5_10_weight_loss_standard",
+            "intervention_id": "aerobic_conditioning_and_5_10_weight_loss",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Aerobic conditioning and 5-10% weight loss",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "aerobic_conditioning_and_5_10_weight_loss_diastolic_blood_pressure_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -8.0,
+                "lower": -8.0,
+                "upper": -8.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mmHg",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "aerobic_conditioning_and_5_10_weight_loss_diastolic_blood_pressure_favorable",
+                "original_value": -8.0,
+                "original_lower": -8.0,
+                "original_upper": -8.0,
+                "original_unit": "mmHg",
+                "canonical_value": -8.0,
+                "canonical_lower": -8.0,
+                "canonical_upper": -8.0,
+                "canonical_unit": "mmHg",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-12975389_adults",
+                "evidence_id": "PMID-12975389",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-12975389",
+                "source_type": "META_ANALYSIS",
+                "title": "Neter JE, et al. Hypertension. 2003;42:878-884. PMID: 12975389",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2003,
+                "doi": null,
+                "pmid": "12975389",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:55.559194",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "aerobic_conditioning_and_5_10_weight_loss_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "stress_management_slow_deep_breathing_6_breathsmin_and_meditation",
+      "canonical_name": "Stress management, slow deep breathing (6 breaths/min), and meditation",
+      "intervention_type": "BEHAVIORAL",
+      "description": "Stress management, slow deep breathing (6 breaths/min), and meditation (Behavioral) — favorable effect on Diastolic Blood Pressure (DBP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "stress_management_slow_deep_breathing_6_breathsmin_and_meditation_standard",
+          "regimen": {
+            "regimen_id": "stress_management_slow_deep_breathing_6_breathsmin_and_meditation_standard",
+            "intervention_id": "stress_management_slow_deep_breathing_6_breathsmin_and_meditation",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Stress management, slow deep breathing (6 breaths/min), and meditation",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "stress_management_slow_deep_breathing_6_breathsmin_and_meditation_diastolic_blood_pressure_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -6.0,
+                "lower": -6.0,
+                "upper": -6.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mmHg",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "stress_management_slow_deep_breathing_6_breathsmin_and_meditation_diastolic_blood_pressure_favorable",
+                "original_value": -6.0,
+                "original_lower": -6.0,
+                "original_upper": -6.0,
+                "original_unit": "mmHg",
+                "canonical_value": -6.0,
+                "canonical_lower": -6.0,
+                "canonical_upper": -6.0,
+                "canonical_unit": "mmHg",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-11319675_adults",
+                "evidence_id": "PMID-11319675",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-11319675",
+                "source_type": "RCT",
+                "title": "Grossman E, et al. J Hum Hypertens. 2001;15:263-269. PMID: 11319675",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2001,
+                "doi": null,
+                "pmid": "11319675",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:56.134176",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "stress_management_slow_deep_breathing_6_breathsmin_and_meditation_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "chronic_sympathoadrenal_stress_and_poor_sleep",
+      "canonical_name": "Chronic sympathoadrenal stress and poor sleep",
+      "intervention_type": "SLEEP",
+      "description": "Chronic sympathoadrenal stress and poor sleep (Sleep) — unfavorable effect on Diastolic Blood Pressure (DBP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "chronic_sympathoadrenal_stress_and_poor_sleep_standard",
+          "regimen": {
+            "regimen_id": "chronic_sympathoadrenal_stress_and_poor_sleep_standard",
+            "intervention_id": "chronic_sympathoadrenal_stress_and_poor_sleep",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Chronic sympathoadrenal stress and poor sleep",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "chronic_sympathoadrenal_stress_and_poor_sleep_diastolic_blood_pressure_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 12.0,
+                "lower": 12.0,
+                "upper": 12.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mmHg",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "chronic_sympathoadrenal_stress_and_poor_sleep_diastolic_blood_pressure_unfavorable",
+                "original_value": 12.0,
+                "original_lower": 12.0,
+                "original_upper": 12.0,
+                "original_unit": "mmHg",
+                "canonical_value": 12.0,
+                "canonical_lower": 12.0,
+                "canonical_upper": 12.0,
+                "canonical_unit": "mmHg",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-16585410_adults",
+                "evidence_id": "PMID-16585410",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-16585410",
+                "source_type": "OBSERVATIONAL",
+                "title": "Gangwisch JE, et al. Hypertension. 2006;47:833-839. PMID: 16585410",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2006,
+                "doi": null,
+                "pmid": "16585410",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:56.695159",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "chronic_sympathoadrenal_stress_and_poor_sleep_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "excessive_over_titration_of_multi_agent_vasodilators_causing_dbp_55_mmhg",
+      "canonical_name": "Excessive over-titration of multi-agent vasodilators causing DBP < 55 mmHg",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Excessive over-titration of multi-agent vasodilators causing DBP < 55 mmHg (Pharmacologic) — unfavorable effect on Diastolic Blood Pressure (DBP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "excessive_over_titration_of_multi_agent_vasodilators_causing_dbp_55_mmhg_standard",
+          "regimen": {
+            "regimen_id": "excessive_over_titration_of_multi_agent_vasodilators_causing_dbp_55_mmhg_standard",
+            "intervention_id": "excessive_over_titration_of_multi_agent_vasodilators_causing_dbp_55_mmhg",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Excessive over-titration of multi-agent vasodilators causing DBP < 55 mmHg",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "excessive_over_titration_of_multi_agent_vasodilators_causing_dbp_55_mmhg_diastolic_blood_pressure_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17161244_adults",
+                "evidence_id": "PMID-17161244",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17161244",
+                "source_type": "OBSERVATIONAL",
+                "title": "Messerli FH, et al. J Am Coll Cardiol. 2006;48:2198-2200. PMID: 17161244",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2006,
+                "doi": null,
+                "pmid": "17161244",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:56.942891",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "excessive_over_titration_of_multi_agent_vasodilators_causing_dbp_55_mmhg_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

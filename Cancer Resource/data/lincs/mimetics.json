@@ -1,0 +1,436 @@
+{
+  "built": "2026-09-25T00:55:23.445922+00:00",
+  "source": {
+    "diagnostics": "C:\\Users\\matth\\OneDrive\\Documents\\OpenSourceMed\\Physiological Fitness Landscape\\Cancer Resource\\data\\lincs\\phase2_diagnostics.json",
+    "combination_screen": "C:\\Users\\matth\\OneDrive\\Documents\\OpenSourceMed\\Physiological Fitness Landscape\\Cancer Resource\\data\\combofm\\CombALMANAC_555300.csv",
+    "screen": "NCI-ALMANAC via comboFM CombALMANAC_555300.csv",
+    "n_screen_drugs": 50,
+    "pair_definition": "distinct (partner drug, cell line) rows containing the mimetic"
+  },
+  "expected_and_not_observed": {
+    "hyperthermia": "HSP90 inhibitors (geldanamycin, 17-AAG, radicicol) were not top-20 neighbours",
+    "fasting": "rapamycin, metformin, and 2-DG were not top-20 neighbours"
+  },
+  "gate_3": {
+    "passed": true,
+    "n_modifiers_with_usable_mimetic": 4,
+    "n_negative_controls": 3,
+    "criterion": ">=4 modifiers with a mimetic that has >=50 pairs, and >=2 negative controls"
+  },
+  "negative_controls": [
+    {
+      "signature_id": "gse28016_muscle_fast40h_vs_fed",
+      "top_neighbor": "KUC111109N",
+      "top_pearson": 0.1128799130257976,
+      "reason": "Among the three weakest top-neighbour Pearson scores in this Phase 2 run."
+    },
+    {
+      "signature_id": "gse85620_cwi_post_vs_pre",
+      "top_neighbor": "BRD-A74983348",
+      "top_pearson": 0.12143393549561901,
+      "reason": "Among the three weakest top-neighbour Pearson scores in this Phase 2 run."
+    },
+    {
+      "signature_id": "gse153830_t47d_bhb25mm",
+      "top_neighbor": "9-methyl-5H-6-thia-4,5-diaza-chrysene-6,6-dioxide",
+      "top_pearson": 0.14344673506323333,
+      "reason": "Among the three weakest top-neighbour Pearson scores in this Phase 2 run."
+    }
+  ],
+  "modifiers": [
+    {
+      "signature_id": "gse153830_t47d_glucose_deprivation",
+      "modifier_class": "dietary_metabolic",
+      "verdict": "in-distribution",
+      "top_neighbor": "ZK-164015",
+      "top_pearson": 0.5798652243313546,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse153830_mcf7_glucose_deprivation",
+      "modifier_class": "dietary_metabolic",
+      "verdict": "in-distribution",
+      "top_neighbor": "niguldipine",
+      "top_pearson": 0.36595559797032573,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse153830_mcf7_bhb10mm",
+      "modifier_class": "dietary_metabolic",
+      "verdict": "in-distribution",
+      "top_neighbor": "fusaric-acid",
+      "top_pearson": 0.2134485629325541,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse153830_t47d_bhb25mm",
+      "modifier_class": "dietary_metabolic",
+      "verdict": "in-distribution",
+      "top_neighbor": "9-methyl-5H-6-thia-4,5-diaza-chrysene-6,6-dioxide",
+      "top_pearson": 0.14344673506323333,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": true
+    },
+    {
+      "signature_id": "gse300765_u87_hypoxia1pct48h",
+      "modifier_class": "hypoxic",
+      "verdict": "in-distribution",
+      "top_neighbor": "BRD-K08307026",
+      "top_pearson": 0.4425606297390794,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse300765_u87_acidosis_ph64_48h",
+      "modifier_class": "acidotic",
+      "verdict": "in-distribution",
+      "top_neighbor": "triflupromazine",
+      "top_pearson": 0.42422360622639016,
+      "mimetics": [
+        {
+          "compound": "Tamoxifen citrate",
+          "lincs_name": "tamoxifen",
+          "rank": 4,
+          "pearson": 0.3941366730811588,
+          "cosine": 0.3938038833379325,
+          "n_partner_drugs": 17,
+          "n_pairs": 1020,
+          "usable": true,
+          "pleiotropy_flag": false,
+          "rationale": "Connectivity only. HSP90-client pleiotropy is flagged when the matched name is a known HSP90 inhibitor."
+        }
+      ],
+      "has_usable_mimetic": true,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse300765_u87_acidosis_ph64_10wk",
+      "modifier_class": "acidotic",
+      "verdict": "in-distribution",
+      "top_neighbor": "BRD-K81795824",
+      "top_pearson": 0.2601682406464126,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse70976_lovo_serumfree96h",
+      "modifier_class": "serum_starvation",
+      "verdict": "in-distribution",
+      "top_neighbor": "pyrvinium",
+      "top_pearson": 0.5565060095167834,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse48398_mcf10a_heat45c30min",
+      "modifier_class": "thermal",
+      "verdict": "in-distribution",
+      "top_neighbor": "NU-1025",
+      "top_pearson": 0.20993506427072853,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse48398_mcf7_heat45c30min",
+      "modifier_class": "thermal",
+      "verdict": "in-distribution",
+      "top_neighbor": "RITA",
+      "top_pearson": 0.33745432284811044,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse48398_mda231_heat45c30min",
+      "modifier_class": "thermal",
+      "verdict": "in-distribution",
+      "top_neighbor": "RITA",
+      "top_pearson": 0.3121182692670552,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse48398_mda468_heat45c30min",
+      "modifier_class": "thermal",
+      "verdict": "in-distribution",
+      "top_neighbor": "RITA",
+      "top_pearson": 0.22169605113324348,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse10043_u937_mildhyperthermia41c30min",
+      "modifier_class": "thermal",
+      "verdict": "in-distribution",
+      "top_neighbor": "MD-041",
+      "top_pearson": 0.18268217563992298,
+      "mimetics": [
+        {
+          "compound": "Cladribine",
+          "lincs_name": "cladribine",
+          "rank": 6,
+          "pearson": 0.14525651429035097,
+          "cosine": 0.15312282089836193,
+          "n_partner_drugs": 18,
+          "n_pairs": 1080,
+          "usable": true,
+          "pleiotropy_flag": false,
+          "rationale": "Connectivity only. HSP90-client pleiotropy is flagged when the matched name is a known HSP90 inhibitor."
+        },
+        {
+          "compound": "Bortezomib",
+          "lincs_name": "bortezomib",
+          "rank": 12,
+          "pearson": 0.12939233707178446,
+          "cosine": 0.13072989688046213,
+          "n_partner_drugs": 17,
+          "n_pairs": 1020,
+          "usable": true,
+          "pleiotropy_flag": false,
+          "rationale": "Connectivity only. HSP90-client pleiotropy is flagged when the matched name is a known HSP90 inhibitor."
+        }
+      ],
+      "has_usable_mimetic": true,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse75127_hsc3_hyperthermia44c90min",
+      "modifier_class": "thermal",
+      "verdict": "in-distribution",
+      "top_neighbor": "BRD-K49010888",
+      "top_pearson": 0.35560032806736147,
+      "mimetics": [
+        {
+          "compound": "Tamoxifen citrate",
+          "lincs_name": "tamoxifen",
+          "rank": 14,
+          "pearson": 0.2986806839080015,
+          "cosine": 0.29864118098098835,
+          "n_partner_drugs": 17,
+          "n_pairs": 1020,
+          "usable": true,
+          "pleiotropy_flag": false,
+          "rationale": "Connectivity only. HSP90-client pleiotropy is flagged when the matched name is a known HSP90 inhibitor."
+        }
+      ],
+      "has_usable_mimetic": true,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse55924_muscle_fast24h_vs_1p5h",
+      "modifier_class": "fasting",
+      "verdict": "in-distribution",
+      "top_neighbor": "tegaserod",
+      "top_pearson": 0.31035849804437016,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse156248_muscle_cold10d",
+      "modifier_class": "cold",
+      "verdict": "in-distribution",
+      "top_neighbor": "BRD-K89451433",
+      "top_pearson": 0.1862041372109707,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse156247_muscle_exercise12w",
+      "modifier_class": "exercise",
+      "verdict": "in-distribution",
+      "top_neighbor": "ER-27319",
+      "top_pearson": 0.22499723168051403,
+      "mimetics": [
+        {
+          "compound": "Dactinomycin",
+          "lincs_name": "dactinomycin",
+          "rank": 20,
+          "pearson": 0.1966686037316545,
+          "cosine": 0.17397452429422633,
+          "n_partner_drugs": 16,
+          "n_pairs": 960,
+          "usable": true,
+          "pleiotropy_flag": false,
+          "rationale": "Connectivity only. HSP90-client pleiotropy is flagged when the matched name is a known HSP90 inhibitor."
+        }
+      ],
+      "has_usable_mimetic": true,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse12474_muscle_heat_sheet10w",
+      "modifier_class": "local_heat",
+      "verdict": "in-distribution",
+      "top_neighbor": "MDL-29951",
+      "top_pearson": 0.19908097949593478,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse90763_pbmc_sauna_15min_after",
+      "modifier_class": "sauna",
+      "verdict": "in-distribution",
+      "top_neighbor": "BRD-K30459086",
+      "top_pearson": 0.1616462166570476,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse129843_muscle_trf8h_vs_15h",
+      "modifier_class": "meal_timing",
+      "verdict": "in-distribution",
+      "top_neighbor": "BRD-K00289828",
+      "top_pearson": 0.18070961236852648,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse168705_adipose_tre10h_8w",
+      "modifier_class": "meal_timing",
+      "verdict": "in-distribution",
+      "top_neighbor": "SA-1922796",
+      "top_pearson": 0.24283659885380016,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse3606_wbc_exhaustive_1h",
+      "modifier_class": "exercise",
+      "verdict": "in-distribution",
+      "top_neighbor": "BRD-A43155244",
+      "top_pearson": 0.21078681363857366,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse3606_wbc_moderate_1h",
+      "modifier_class": "exercise",
+      "verdict": "in-distribution",
+      "top_neighbor": "VU-0418947-2",
+      "top_pearson": 0.17814548802378585,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse252357_muscle_resistance_3h",
+      "modifier_class": "exercise",
+      "verdict": "in-distribution",
+      "top_neighbor": "BRD-A49848186",
+      "top_pearson": 0.2756971609762379,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse252357_muscle_resistance_24h",
+      "modifier_class": "exercise",
+      "verdict": "in-distribution",
+      "top_neighbor": "prostratin",
+      "top_pearson": 0.21524141329538463,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse28016_muscle_fast40h_vs_fed",
+      "modifier_class": "fasting",
+      "verdict": "in-distribution",
+      "top_neighbor": "KUC111109N",
+      "top_pearson": 0.1128799130257976,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": true
+    },
+    {
+      "signature_id": "gse111551_muscle_running18w",
+      "modifier_class": "exercise",
+      "verdict": "in-distribution",
+      "top_neighbor": "narciclasine",
+      "top_pearson": 0.1626309927644412,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse111552_pbmc_running18w",
+      "modifier_class": "exercise",
+      "verdict": "in-distribution",
+      "top_neighbor": "BRD-K44931544",
+      "top_pearson": 0.25716284333880157,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse82323_muscle_heat",
+      "modifier_class": "thermal",
+      "verdict": "in-distribution",
+      "top_neighbor": "profenamine",
+      "top_pearson": 0.1810093760059701,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse82323_soleus_contraction",
+      "modifier_class": "exercise",
+      "verdict": "in-distribution",
+      "top_neighbor": "withaferin-a",
+      "top_pearson": 0.26684729168379506,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse82323_soleus_vibration",
+      "modifier_class": "exercise",
+      "verdict": "in-distribution",
+      "top_neighbor": "avicin-g",
+      "top_pearson": 0.16219336162038758,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    },
+    {
+      "signature_id": "gse85620_cwi_post_vs_pre",
+      "modifier_class": "cold_immersion",
+      "verdict": "in-distribution",
+      "top_neighbor": "BRD-A74983348",
+      "top_pearson": 0.12143393549561901,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": true
+    },
+    {
+      "signature_id": "gse85620_placebo_post_vs_pre",
+      "modifier_class": "exercise",
+      "verdict": "in-distribution",
+      "top_neighbor": "IBC-293",
+      "top_pearson": 0.19251144920690863,
+      "mimetics": [],
+      "has_usable_mimetic": false,
+      "negative_control": false
+    }
+  ]
+}

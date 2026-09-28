@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "fasting_insulin",
+  "biomarker_name": "Fasting Serum Insulin",
+  "biomarker_units": "uIU/mL",
+  "interventions": [
+    {
+      "intervention_id": "therapeutic_intermittent_fasting_and_prolonged_fasting_168_to_24hr",
+      "canonical_name": "Therapeutic intermittent fasting and prolonged fasting (16:8 to 24hr)",
+      "intervention_type": "DIET",
+      "description": "Therapeutic intermittent fasting and prolonged fasting (16:8 to 24hr) (Diet) — favorable effect on Fasting Serum Insulin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "therapeutic_intermittent_fasting_and_prolonged_fasting_168_to_24hr_standard",
+          "regimen": {
+            "regimen_id": "therapeutic_intermittent_fasting_and_prolonged_fasting_168_to_24hr_standard",
+            "intervention_id": "therapeutic_intermittent_fasting_and_prolonged_fasting_168_to_24hr",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Therapeutic intermittent fasting and prolonged fasting (16:8 to 24hr)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "therapeutic_intermittent_fasting_and_prolonged_fasting_168_to_24hr_fasting_insulin_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -45.0,
+                "lower": -60.0,
+                "upper": -30.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "therapeutic_intermittent_fasting_and_prolonged_fasting_168_to_24hr_fasting_insulin_favorable",
+                "original_value": -45.0,
+                "original_lower": -60.0,
+                "original_upper": -30.0,
+                "original_unit": "%",
+                "canonical_value": -45.0,
+                "canonical_lower": -60.0,
+                "canonical_upper": -30.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-31881139_adults",
+                "evidence_id": "PMID-31881139",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-31881139",
+                "source_type": "RCT",
+                "title": "de Cabo R, et al. N Engl J Med. 2019;381:2541-2551. PMID: 31881139",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2019,
+                "doi": null,
+                "pmid": "31881139",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:27.478257",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "therapeutic_intermittent_fasting_and_prolonged_fasting_168_to_24hr_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "intensive_resistance_hypertrophy_training",
+      "canonical_name": "Intensive resistance hypertrophy training",
+      "intervention_type": "EXERCISE",
+      "description": "Intensive resistance hypertrophy training (Exercise) — favorable effect on Fasting Serum Insulin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "intensive_resistance_hypertrophy_training_standard",
+          "regimen": {
+            "regimen_id": "intensive_resistance_hypertrophy_training_standard",
+            "intervention_id": "intensive_resistance_hypertrophy_training",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Intensive resistance hypertrophy training",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "intensive_resistance_hypertrophy_training_fasting_insulin_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -30.0,
+                "lower": -40.0,
+                "upper": -20.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "intensive_resistance_hypertrophy_training_fasting_insulin_favorable",
+                "original_value": -30.0,
+                "original_lower": -40.0,
+                "original_upper": -20.0,
+                "original_unit": "%",
+                "canonical_value": -30.0,
+                "canonical_lower": -40.0,
+                "canonical_upper": -20.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-35834114_adults",
+                "evidence_id": "PMID-35834114",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-35834114",
+                "source_type": "META_ANALYSIS",
+                "title": "Jalo E, et al. Sports Med. 2022;52:2789-2811. PMID: 35834114",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2022,
+                "doi": null,
+                "pmid": "35834114",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:27.632706",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "intensive_resistance_hypertrophy_training_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "sglt2_inhibitors_empagliflozin_dapagliflozin",
+      "canonical_name": "SGLT2 inhibitors (Empagliflozin / Dapagliflozin)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "SGLT2 inhibitors (Empagliflozin / Dapagliflozin) (Pharmacologic) — favorable effect on Fasting Serum Insulin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_standard",
+          "regimen": {
+            "regimen_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_standard",
+            "intervention_id": "sglt2_inhibitors_empagliflozin_dapagliflozin",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for SGLT2 inhibitors (Empagliflozin / Dapagliflozin)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_fasting_insulin_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -22.5,
+                "lower": -30.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_fasting_insulin_favorable",
+                "original_value": -22.5,
+                "original_lower": -30.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -22.5,
+                "canonical_lower": -30.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-24812482_adults",
+                "evidence_id": "PMID-24812482",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-24812482",
+                "source_type": "RCT",
+                "title": "Ferrannini E, et al. Diabetes Care. 2014;37:2084-2090. PMID: 24812482",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "24812482",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:27.771412",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "excessive_visceral_fat_accretion_and_hepatic_steatosis",
+      "canonical_name": "Excessive visceral fat accretion and hepatic steatosis",
+      "intervention_type": "LIFESTYLE",
+      "description": "Excessive visceral fat accretion and hepatic steatosis (Lifestyle) — unfavorable effect on Fasting Serum Insulin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "excessive_visceral_fat_accretion_and_hepatic_steatosis_standard",
+          "regimen": {
+            "regimen_id": "excessive_visceral_fat_accretion_and_hepatic_steatosis_standard",
+            "intervention_id": "excessive_visceral_fat_accretion_and_hepatic_steatosis",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Excessive visceral fat accretion and hepatic steatosis",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "excessive_visceral_fat_accretion_and_hepatic_steatosis_fasting_insulin_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 200.0,
+                "lower": 100.0,
+                "upper": 300.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "excessive_visceral_fat_accretion_and_hepatic_steatosis_fasting_insulin_unfavorable",
+                "original_value": 200.0,
+                "original_lower": 100.0,
+                "original_upper": 300.0,
+                "original_unit": "%",
+                "canonical_value": 200.0,
+                "canonical_lower": 100.0,
+                "canonical_upper": 300.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17167471_adults",
+                "evidence_id": "PMID-17167471",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17167471",
+                "source_type": "OBSERVATIONAL",
+                "title": "Kahn SE, et al. Nature. 2006;444:840-846. PMID: 17167471",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2006,
+                "doi": null,
+                "pmid": "17167471",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:28.113531",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "excessive_visceral_fat_accretion_and_hepatic_steatosis_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "frequent_snacking_with_refined_high_glycemic_carbohydrates",
+      "canonical_name": "Frequent snacking with refined high-glycemic carbohydrates",
+      "intervention_type": "DIET",
+      "description": "Frequent snacking with refined high-glycemic carbohydrates (Diet) — unfavorable effect on Fasting Serum Insulin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "frequent_snacking_with_refined_high_glycemic_carbohydrates_standard",
+          "regimen": {
+            "regimen_id": "frequent_snacking_with_refined_high_glycemic_carbohydrates_standard",
+            "intervention_id": "frequent_snacking_with_refined_high_glycemic_carbohydrates",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Frequent snacking with refined high-glycemic carbohydrates",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "frequent_snacking_with_refined_high_glycemic_carbohydrates_fasting_insulin_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 65.0,
+                "lower": 40.0,
+                "upper": 90.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "frequent_snacking_with_refined_high_glycemic_carbohydrates_fasting_insulin_unfavorable",
+                "original_value": 65.0,
+                "original_lower": 40.0,
+                "original_upper": 90.0,
+                "original_unit": "%",
+                "canonical_value": 65.0,
+                "canonical_lower": 40.0,
+                "canonical_upper": 90.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-16087971_adults",
+                "evidence_id": "PMID-16087971",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-16087971",
+                "source_type": "RCT",
+                "title": "Koopman R, et al. Am J Clin Nutr. 2005;82:298-306. PMID: 16087971",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2005,
+                "doi": null,
+                "pmid": "16087971",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:28.334000",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "frequent_snacking_with_refined_high_glycemic_carbohydrates_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "neutrophil_lymphocyte_ratio",
+  "biomarker_name": "Neutrophil-to-Lymphocyte Ratio (NLR)",
+  "biomarker_units": "ratio",
+  "interventions": [
+    {
+      "intervention_id": "aerobic_endurance_training_and_cardiovascular_conditioning",
+      "canonical_name": "Aerobic endurance training and cardiovascular conditioning",
+      "intervention_type": "EXERCISE",
+      "description": "Aerobic endurance training and cardiovascular conditioning (Exercise) — favorable effect on Neutrophil-to-Lymphocyte Ratio (NLR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "aerobic_endurance_training_and_cardiovascular_conditioning_standard",
+          "regimen": {
+            "regimen_id": "aerobic_endurance_training_and_cardiovascular_conditioning_standard",
+            "intervention_id": "aerobic_endurance_training_and_cardiovascular_conditioning",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Aerobic endurance training and cardiovascular conditioning",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "aerobic_endurance_training_and_cardiovascular_conditioning_neutrophil_lymphocyte_ratio_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -22.5,
+                "lower": -30.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "aerobic_endurance_training_and_cardiovascular_conditioning_neutrophil_lymphocyte_ratio_favorable",
+                "original_value": -22.5,
+                "original_lower": -30.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -22.5,
+                "canonical_lower": -30.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-31696452_adults",
+                "evidence_id": "PMID-31696452",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-31696452",
+                "source_type": "RCT",
+                "title": "Nieman DC, et al. Sports Med. 2019;49:29-37. PMID: 31696452",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2019,
+                "doi": null,
+                "pmid": "31696452",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:03.169458",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "aerobic_endurance_training_and_cardiovascular_conditioning_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "comprehensive_stress_reduction_and_mindfulness_based_stress_intervention",
+      "canonical_name": "Comprehensive stress reduction and mindfulness-based stress intervention",
+      "intervention_type": "BEHAVIORAL",
+      "description": "Comprehensive stress reduction and mindfulness-based stress intervention (Behavioral) — favorable effect on Neutrophil-to-Lymphocyte Ratio (NLR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "comprehensive_stress_reduction_and_mindfulness_based_stress_intervention_standard",
+          "regimen": {
+            "regimen_id": "comprehensive_stress_reduction_and_mindfulness_based_stress_intervention_standard",
+            "intervention_id": "comprehensive_stress_reduction_and_mindfulness_based_stress_intervention",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Comprehensive stress reduction and mindfulness-based stress intervention",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "comprehensive_stress_reduction_and_mindfulness_based_stress_intervention_neutrophil_lymphocyte_ratio_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -17.5,
+                "lower": -25.0,
+                "upper": -10.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "comprehensive_stress_reduction_and_mindfulness_based_stress_intervention_neutrophil_lymphocyte_ratio_favorable",
+                "original_value": -17.5,
+                "original_lower": -25.0,
+                "original_upper": -10.0,
+                "original_unit": "%",
+                "canonical_value": -17.5,
+                "canonical_lower": -25.0,
+                "canonical_upper": -10.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-26524386_adults",
+                "evidence_id": "PMID-26524386",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-26524386",
+                "source_type": "RCT",
+                "title": "Black DS, et al. Psychoneuroendocrinology. 2016;63:342-351. PMID: 26524386",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2016,
+                "doi": null,
+                "pmid": "26524386",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:03.483617",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "comprehensive_stress_reduction_and_mindfulness_based_stress_intervention_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "anti_inflammatory_botanical_extracts_green_tea_egcg_curcumin",
+      "canonical_name": "Anti-inflammatory botanical extracts (Green Tea EGCG / Curcumin)",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Anti-inflammatory botanical extracts (Green Tea EGCG / Curcumin) (Nutraceutical) — favorable effect on Neutrophil-to-Lymphocyte Ratio (NLR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "anti_inflammatory_botanical_extracts_green_tea_egcg_curcumin_standard",
+          "regimen": {
+            "regimen_id": "anti_inflammatory_botanical_extracts_green_tea_egcg_curcumin_standard",
+            "intervention_id": "anti_inflammatory_botanical_extracts_green_tea_egcg_curcumin",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Anti-inflammatory botanical extracts (Green Tea EGCG / Curcumin)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "anti_inflammatory_botanical_extracts_green_tea_egcg_curcumin_neutrophil_lymphocyte_ratio_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -15.0,
+                "lower": -20.0,
+                "upper": -10.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "anti_inflammatory_botanical_extracts_green_tea_egcg_curcumin_neutrophil_lymphocyte_ratio_favorable",
+                "original_value": -15.0,
+                "original_lower": -20.0,
+                "original_upper": -10.0,
+                "original_unit": "%",
+                "canonical_value": -15.0,
+                "canonical_lower": -20.0,
+                "canonical_upper": -10.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-33774431_adults",
+                "evidence_id": "PMID-33774431",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-33774431",
+                "source_type": "META_ANALYSIS",
+                "title": "Farhadi A, et al. Phytomedicine. 2021;85:153549. PMID: 33774431",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2021,
+                "doi": null,
+                "pmid": "33774431",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:03.644847",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "anti_inflammatory_botanical_extracts_green_tea_egcg_curcumin_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_sepsis_acute_bacterial_infection_or_critical_care_shock",
+      "canonical_name": "Severe Sepsis, Acute Bacterial Infection, or Critical Care Shock",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe Sepsis, Acute Bacterial Infection, or Critical Care Shock (Clinical) — unfavorable effect on Neutrophil-to-Lymphocyte Ratio (NLR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_sepsis_acute_bacterial_infection_or_critical_care_shock_standard",
+          "regimen": {
+            "regimen_id": "severe_sepsis_acute_bacterial_infection_or_critical_care_shock_standard",
+            "intervention_id": "severe_sepsis_acute_bacterial_infection_or_critical_care_shock",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe Sepsis, Acute Bacterial Infection, or Critical Care Shock",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_sepsis_acute_bacterial_infection_or_critical_care_shock_neutrophil_lymphocyte_ratio_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 325.0,
+                "lower": 150.0,
+                "upper": 500.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_sepsis_acute_bacterial_infection_or_critical_care_shock_neutrophil_lymphocyte_ratio_unfavorable",
+                "original_value": 325.0,
+                "original_lower": 150.0,
+                "original_upper": 500.0,
+                "original_unit": "%",
+                "canonical_value": 325.0,
+                "canonical_lower": 150.0,
+                "canonical_upper": 500.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-11464731_adults",
+                "evidence_id": "PMID-11464731",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-11464731",
+                "source_type": "META_ANALYSIS",
+                "title": "Zahorec R. Bratisl Lek Listy. 2001;102:5-14. PMID: 11464731",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2001,
+                "doi": null,
+                "pmid": "11464731",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:04.046595",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_sepsis_acute_bacterial_infection_or_critical_care_shock_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "chronic_severe_psychological_burnout_and_sleep_disruption",
+      "canonical_name": "Chronic severe psychological burnout and sleep disruption",
+      "intervention_type": "SLEEP",
+      "description": "Chronic severe psychological burnout and sleep disruption (Sleep) — unfavorable effect on Neutrophil-to-Lymphocyte Ratio (NLR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "chronic_severe_psychological_burnout_and_sleep_disruption_standard",
+          "regimen": {
+            "regimen_id": "chronic_severe_psychological_burnout_and_sleep_disruption_standard",
+            "intervention_id": "chronic_severe_psychological_burnout_and_sleep_disruption",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Chronic severe psychological burnout and sleep disruption",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "chronic_severe_psychological_burnout_and_sleep_disruption_neutrophil_lymphocyte_ratio_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 37.5,
+                "lower": 25.0,
+                "upper": 50.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "chronic_severe_psychological_burnout_and_sleep_disruption_neutrophil_lymphocyte_ratio_unfavorable",
+                "original_value": 37.5,
+                "original_lower": 25.0,
+                "original_upper": 50.0,
+                "original_unit": "%",
+                "canonical_value": 37.5,
+                "canonical_lower": 25.0,
+                "canonical_upper": 50.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-32001334_adults",
+                "evidence_id": "PMID-32001334",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-32001334",
+                "source_type": "OBSERVATIONAL",
+                "title": "Gidron Y, et al. Brain Behav Immun. 2020;87:21-23. PMID: 32001334",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2020,
+                "doi": null,
+                "pmid": "32001334",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:04.573706",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "chronic_severe_psychological_burnout_and_sleep_disruption_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

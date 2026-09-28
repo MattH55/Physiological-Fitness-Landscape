@@ -1,0 +1,21 @@
+{
+  "modifier_id": "gse12474_muscle_heat_sheet10w",
+  "protocol": "heat_sheet_8h_day_10w",
+  "biological_context": "skeletal_muscle",
+  "tissue": "human vastus lateralis",
+  "study_id": "GSE12474",
+  "species": "human",
+  "dose": {
+    "unit": "hours_per_day",
+    "duration_hr": 8.0,
+    "days_per_week": 4,
+    "weeks": 10,
+    "note": "No temperature is stated in the abstract or the series record."
+  },
+  "duration_hr": 8.0,
+  "timepoint_hr": 24.0,
+  "platform": "GPL570",
+  "n_replicates": 5,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

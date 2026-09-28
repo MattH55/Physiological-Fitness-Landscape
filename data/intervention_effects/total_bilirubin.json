@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "total_bilirubin",
+  "biomarker_name": "Serum Total Bilirubin",
+  "biomarker_units": "mg/dL",
+  "interventions": [
+    {
+      "intervention_id": "mild_benign_hyperbilirubinemia_gilbert_syndrome_phenotype_ugt1a128",
+      "canonical_name": "Mild benign hyperbilirubinemia (Gilbert syndrome phenotype / UGT1A1*28)",
+      "intervention_type": "PHYSIOLOGICAL",
+      "description": "Mild benign hyperbilirubinemia (Gilbert syndrome phenotype / UGT1A1*28) (Physiological) — favorable effect on Serum Total Bilirubin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "mild_benign_hyperbilirubinemia_gilbert_syndrome_phenotype_ugt1a128_standard",
+          "regimen": {
+            "regimen_id": "mild_benign_hyperbilirubinemia_gilbert_syndrome_phenotype_ugt1a128_standard",
+            "intervention_id": "mild_benign_hyperbilirubinemia_gilbert_syndrome_phenotype_ugt1a128",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Mild benign hyperbilirubinemia (Gilbert syndrome phenotype / UGT1A1*28)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "mild_benign_hyperbilirubinemia_gilbert_syndrome_phenotype_ugt1a128_total_bilirubin_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 0.8,
+                "lower": 0.8,
+                "upper": 0.8,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mg/dL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "mild_benign_hyperbilirubinemia_gilbert_syndrome_phenotype_ugt1a128_total_bilirubin_favorable",
+                "original_value": 0.8,
+                "original_lower": 0.8,
+                "original_upper": 0.8,
+                "original_unit": "mg/dL",
+                "canonical_value": 0.8,
+                "canonical_lower": 0.8,
+                "canonical_upper": 0.8,
+                "canonical_unit": "mg/dL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-11849769_adults",
+                "evidence_id": "PMID-11849769",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-11849769",
+                "source_type": "OBSERVATIONAL",
+                "title": "Vitek L, et al. Atherosclerosis. 2002;160:449-456. PMID: 11849769",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2002,
+                "doi": null,
+                "pmid": "11849769",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:35.598731",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "mild_benign_hyperbilirubinemia_gilbert_syndrome_phenotype_ugt1a128_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "biliary_decompression_and_stent_placement_in_obstructive_jaundice",
+      "canonical_name": "Biliary decompression and stent placement in obstructive jaundice",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Biliary decompression and stent placement in obstructive jaundice (Clinical) — favorable effect on Serum Total Bilirubin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "biliary_decompression_and_stent_placement_in_obstructive_jaundice_standard",
+          "regimen": {
+            "regimen_id": "biliary_decompression_and_stent_placement_in_obstructive_jaundice_standard",
+            "intervention_id": "biliary_decompression_and_stent_placement_in_obstructive_jaundice",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Biliary decompression and stent placement in obstructive jaundice",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "biliary_decompression_and_stent_placement_in_obstructive_jaundice_total_bilirubin_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -75.0,
+                "lower": -90.0,
+                "upper": -60.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "biliary_decompression_and_stent_placement_in_obstructive_jaundice_total_bilirubin_favorable",
+                "original_value": -75.0,
+                "original_lower": -90.0,
+                "original_upper": -60.0,
+                "original_unit": "%",
+                "canonical_value": -75.0,
+                "canonical_lower": -90.0,
+                "canonical_upper": -60.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-30149411_adults",
+                "evidence_id": "PMID-30149411",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-30149411",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Dumonceau JM, et al. Endoscopy. 2018;50:910-930. PMID: 30149411",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2018,
+                "doi": null,
+                "pmid": "30149411",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:35.986467",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "biliary_decompression_and_stent_placement_in_obstructive_jaundice_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "moderate_aerobic_exercise_conditioning_and_dietary_zinc_optimization",
+      "canonical_name": "Moderate aerobic exercise conditioning and dietary zinc optimization",
+      "intervention_type": "LIFESTYLE",
+      "description": "Moderate aerobic exercise conditioning and dietary zinc optimization (Lifestyle) — favorable effect on Serum Total Bilirubin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "moderate_aerobic_exercise_conditioning_and_dietary_zinc_optimization_standard",
+          "regimen": {
+            "regimen_id": "moderate_aerobic_exercise_conditioning_and_dietary_zinc_optimization_standard",
+            "intervention_id": "moderate_aerobic_exercise_conditioning_and_dietary_zinc_optimization",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Moderate aerobic exercise conditioning and dietary zinc optimization",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "moderate_aerobic_exercise_conditioning_and_dietary_zinc_optimization_total_bilirubin_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -0.9,
+                "lower": -0.9,
+                "upper": -0.9,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mg/dL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "moderate_aerobic_exercise_conditioning_and_dietary_zinc_optimization_total_bilirubin_favorable",
+                "original_value": -0.9,
+                "original_lower": -0.9,
+                "original_upper": -0.9,
+                "original_unit": "mg/dL",
+                "canonical_value": -0.9,
+                "canonical_lower": -0.9,
+                "canonical_upper": -0.9,
+                "canonical_unit": "mg/dL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-25165181_adults",
+                "evidence_id": "PMID-25165181",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-25165181",
+                "source_type": "META_ANALYSIS",
+                "title": "Horsfall LJ, et al. J Am Heart Assoc. 2014;3:e001087. PMID: 25165181",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "25165181",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:36.293217",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "moderate_aerobic_exercise_conditioning_and_dietary_zinc_optimization_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "decompensated_liver_cirrhosis_or_acute_liver_failure",
+      "canonical_name": "Decompensated liver cirrhosis or acute liver failure",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Decompensated liver cirrhosis or acute liver failure (Clinical) — unfavorable effect on Serum Total Bilirubin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "decompensated_liver_cirrhosis_or_acute_liver_failure_standard",
+          "regimen": {
+            "regimen_id": "decompensated_liver_cirrhosis_or_acute_liver_failure_standard",
+            "intervention_id": "decompensated_liver_cirrhosis_or_acute_liver_failure",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Decompensated liver cirrhosis or acute liver failure",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "decompensated_liver_cirrhosis_or_acute_liver_failure_total_bilirubin_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 1150.0,
+                "lower": 300.0,
+                "upper": 2000.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "decompensated_liver_cirrhosis_or_acute_liver_failure_total_bilirubin_unfavorable",
+                "original_value": 1150.0,
+                "original_lower": 300.0,
+                "original_upper": 2000.0,
+                "original_unit": "%",
+                "canonical_value": 1150.0,
+                "canonical_lower": 300.0,
+                "canonical_upper": 2000.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-20638564_adults",
+                "evidence_id": "PMID-20638564",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-20638564",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Bernal W, et al. Lancet. 2010;376:190-201. PMID: 20638564",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2010,
+                "doi": null,
+                "pmid": "20638564",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:36.646546",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "decompensated_liver_cirrhosis_or_acute_liver_failure_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_intravascular_autoimmune_hemolytic_anemia",
+      "canonical_name": "Severe intravascular autoimmune hemolytic anemia",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe intravascular autoimmune hemolytic anemia (Clinical) — unfavorable effect on Serum Total Bilirubin",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_intravascular_autoimmune_hemolytic_anemia_standard",
+          "regimen": {
+            "regimen_id": "severe_intravascular_autoimmune_hemolytic_anemia_standard",
+            "intervention_id": "severe_intravascular_autoimmune_hemolytic_anemia",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe intravascular autoimmune hemolytic anemia",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_intravascular_autoimmune_hemolytic_anemia_total_bilirubin_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 325.0,
+                "lower": 150.0,
+                "upper": 500.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_intravascular_autoimmune_hemolytic_anemia_total_bilirubin_unfavorable",
+                "original_value": 325.0,
+                "original_lower": 150.0,
+                "original_upper": 500.0,
+                "original_unit": "%",
+                "canonical_value": 325.0,
+                "canonical_lower": 150.0,
+                "canonical_upper": 500.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17904260_adults",
+                "evidence_id": "PMID-17904260",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17904260",
+                "source_type": "SYSTEMATIC_REVIEW",
+                "title": "Packman CH. Blood Rev. 2008;22:1-16. PMID: 17904260",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2008,
+                "doi": null,
+                "pmid": "17904260",
+                "nct_id": null,
+                "url": null,
+                "study_design": "systematic_review",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:37.061899",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_intravascular_autoimmune_hemolytic_anemia_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

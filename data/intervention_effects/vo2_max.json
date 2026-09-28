@@ -1,0 +1,688 @@
+{
+  "biomarker_id": "vo2_max",
+  "biomarker_name": "Cardiorespiratory Fitness (VO2 Max)",
+  "biomarker_units": "mL/kg/min",
+  "interventions": [
+    {
+      "intervention_id": "high_intensity_interval_training_hiit_4x4_min_90_hrmax",
+      "canonical_name": "High-Intensity Interval Training (HIIT 4x4 min @ 90% HRmax)",
+      "intervention_type": "EXERCISE",
+      "description": "High-Intensity Interval Training (HIIT 4x4 min @ 90% HRmax) (Exercise) — favorable effect on Cardiorespiratory Fitness (VO2 Max)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_intensity_interval_training_hiit_4x4_min_90_hrmax_standard",
+          "regimen": {
+            "regimen_id": "high_intensity_interval_training_hiit_4x4_min_90_hrmax_standard",
+            "intervention_id": "high_intensity_interval_training_hiit_4x4_min_90_hrmax",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High-Intensity Interval Training (HIIT 4x4 min @ 90% HRmax)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_intensity_interval_training_hiit_4x4_min_90_hrmax_vo2_max_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 17.0,
+                "lower": 12.0,
+                "upper": 22.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_intensity_interval_training_hiit_4x4_min_90_hrmax_vo2_max_favorable",
+                "original_value": 17.0,
+                "original_lower": 12.0,
+                "original_upper": 22.0,
+                "original_unit": "%",
+                "canonical_value": 17.0,
+                "canonical_lower": 12.0,
+                "canonical_upper": 22.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-26243014_adults",
+                "evidence_id": "PMID-26243014",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-26243014",
+                "source_type": "META_ANALYSIS",
+                "title": "Milanović Z, et al. Sports Med. 2015;45:1469-1481. PMID: 26243014",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2015,
+                "doi": null,
+                "pmid": "26243014",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:05.200242",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_intensity_interval_training_hiit_4x4_min_90_hrmax_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_volume_polarized_aerobic_base_training_zone_2_endurance",
+      "canonical_name": "High-volume polarized aerobic base training (Zone 2 endurance)",
+      "intervention_type": "EXERCISE",
+      "description": "High-volume polarized aerobic base training (Zone 2 endurance) (Exercise) — favorable effect on Cardiorespiratory Fitness (VO2 Max)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_volume_polarized_aerobic_base_training_zone_2_endurance_standard",
+          "regimen": {
+            "regimen_id": "high_volume_polarized_aerobic_base_training_zone_2_endurance_standard",
+            "intervention_id": "high_volume_polarized_aerobic_base_training_zone_2_endurance",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High-volume polarized aerobic base training (Zone 2 endurance)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_volume_polarized_aerobic_base_training_zone_2_endurance_vo2_max_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-24567716_adults",
+                "evidence_id": "PMID-24567716",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-24567716",
+                "source_type": "RCT",
+                "title": "Stöggl T, et al. Front Physiol. 2014;5:33. PMID: 24567716",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "24567716",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:05.674868",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_volume_polarized_aerobic_base_training_zone_2_endurance_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "dietary_inorganic_nitrate_beetroot_juice_supplementation",
+      "canonical_name": "Dietary inorganic nitrate / Beetroot juice supplementation",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Dietary inorganic nitrate / Beetroot juice supplementation (Nutraceutical) — favorable effect on Cardiorespiratory Fitness (VO2 Max)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "dietary_inorganic_nitrate_beetroot_juice_supplementation_standard",
+          "regimen": {
+            "regimen_id": "dietary_inorganic_nitrate_beetroot_juice_supplementation_standard",
+            "intervention_id": "dietary_inorganic_nitrate_beetroot_juice_supplementation",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Dietary inorganic nitrate / Beetroot juice supplementation",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "dietary_inorganic_nitrate_beetroot_juice_supplementation_vo2_max_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-24791915_adults",
+                "evidence_id": "PMID-24791915",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-24791915",
+                "source_type": "META_ANALYSIS",
+                "title": "Jones AM. Sports Med. 2014;44:S35-S45. PMID: 24791915",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "24791915",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:05.899668",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "dietary_inorganic_nitrate_beetroot_juice_supplementation_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "sedentary_lifestyle_and_continuous_physical_inactivity",
+      "canonical_name": "Sedentary lifestyle and continuous physical inactivity",
+      "intervention_type": "LIFESTYLE",
+      "description": "Sedentary lifestyle and continuous physical inactivity (Lifestyle) — unfavorable effect on Cardiorespiratory Fitness (VO2 Max)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "sedentary_lifestyle_and_continuous_physical_inactivity_standard",
+          "regimen": {
+            "regimen_id": "sedentary_lifestyle_and_continuous_physical_inactivity_standard",
+            "intervention_id": "sedentary_lifestyle_and_continuous_physical_inactivity",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Sedentary lifestyle and continuous physical inactivity",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "sedentary_lifestyle_and_continuous_physical_inactivity_vo2_max_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -10.0,
+                "lower": -10.0,
+                "upper": -10.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "sedentary_lifestyle_and_continuous_physical_inactivity_vo2_max_unfavorable",
+                "original_value": -10.0,
+                "original_lower": -10.0,
+                "original_upper": -10.0,
+                "original_unit": "%",
+                "canonical_value": -10.0,
+                "canonical_lower": -10.0,
+                "canonical_upper": -10.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-30646262_adults",
+                "evidence_id": "PMID-30646262",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-30646262",
+                "source_type": "OBSERVATIONAL",
+                "title": "Mandsager K, et al. JAMA Netw Open. 2018;1:e183605. PMID: 30646262",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2018,
+                "doi": null,
+                "pmid": "30646262",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:06.589775",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "sedentary_lifestyle_and_continuous_physical_inactivity_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_chronic_obstructive_pulmonary_disease_copd_or_hfref",
+      "canonical_name": "Severe chronic obstructive pulmonary disease (COPD) or HFrEF",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe chronic obstructive pulmonary disease (COPD) or HFrEF (Clinical) — unfavorable effect on Cardiorespiratory Fitness (VO2 Max)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_chronic_obstructive_pulmonary_disease_copd_or_hfref_standard",
+          "regimen": {
+            "regimen_id": "severe_chronic_obstructive_pulmonary_disease_copd_or_hfref_standard",
+            "intervention_id": "severe_chronic_obstructive_pulmonary_disease_copd_or_hfref",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe chronic obstructive pulmonary disease (COPD) or HFrEF",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_chronic_obstructive_pulmonary_disease_copd_or_hfref_vo2_max_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -55.0,
+                "lower": -70.0,
+                "upper": -40.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_chronic_obstructive_pulmonary_disease_copd_or_hfref_vo2_max_unfavorable",
+                "original_value": -55.0,
+                "original_lower": -70.0,
+                "original_upper": -40.0,
+                "original_unit": "%",
+                "canonical_value": -55.0,
+                "canonical_lower": -70.0,
+                "canonical_upper": -40.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-1999029_adults",
+                "evidence_id": "PMID-1999029",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-1999029",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Mancini DM, et al. Circulation. 1991;83:778-786. PMID: 1999029",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1991,
+                "doi": null,
+                "pmid": "1999029",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:07.155394",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_chronic_obstructive_pulmonary_disease_copd_or_hfref_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

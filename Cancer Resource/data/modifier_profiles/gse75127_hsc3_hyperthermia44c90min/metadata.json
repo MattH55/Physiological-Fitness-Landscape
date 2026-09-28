@@ -1,0 +1,22 @@
+{
+  "modifier_id": "gse75127_hsc3_hyperthermia44c90min",
+  "protocol": "hyperthermia_44c_90min",
+  "biological_context": "hsc3",
+  "tissue": "HSC-3",
+  "study_id": "GSE75127",
+  "species": "human",
+  "dose": {
+    "modality": "thermal",
+    "unit": "CEM43",
+    "value": 180.0,
+    "temperature_c": 44.0,
+    "duration_hr": 1.5,
+    "context": "luciferase siRNA in both arms (BAG3-KD arms excluded)"
+  },
+  "duration_hr": 1.5,
+  "timepoint_hr": 1.5,
+  "platform": "GPL570",
+  "n_replicates": 2,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

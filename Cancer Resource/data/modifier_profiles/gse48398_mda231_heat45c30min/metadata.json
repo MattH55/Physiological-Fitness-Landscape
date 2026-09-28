@@ -1,0 +1,22 @@
+{
+  "modifier_id": "gse48398_mda231_heat45c30min",
+  "protocol": "hyperthermia_45c_30min_rna+4h",
+  "biological_context": "mdamb231",
+  "tissue": "MDA-MB-231",
+  "study_id": "GSE48398",
+  "species": "human",
+  "dose": {
+    "modality": "thermal",
+    "unit": "CEM43",
+    "value": 120.0,
+    "temperature_c": 45.0,
+    "duration_hr": 0.5,
+    "recovery_hr": 4.0
+  },
+  "duration_hr": 0.5,
+  "timepoint_hr": 4.5,
+  "platform": "GPL10558",
+  "n_replicates": 3,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

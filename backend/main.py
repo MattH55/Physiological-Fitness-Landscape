@@ -36,10 +36,12 @@ from backend.models import (
     BiomarkerSignature,
     DistributionFit,
     HRFunction,
+    VoiPolicyConfig,
     get_engine,
     init_db
 )
 from backend.optimization_engine import compute_shift_optimization, run_voi_monte_carlo_simulation
+from backend.monte_carlo_engine import run_monte_carlo_optimization
 from backend.disease_signature_engine import (
     build_disease_signatures,
     find_top_similar_diseases,
@@ -47,6 +49,7 @@ from backend.disease_signature_engine import (
 )
 from backend.citation_audit import audit_citations
 from backend.discrepancy_report import run_spline_discrepancy_audit
+from backend.hazard_curve_service import get_hazard_curve
 from backend.interventions_catalog import INTERVENTIONS_CATALOG
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -155,6 +158,8 @@ def get_optimization_leaderboard(
 @app.get("/api/biomarkers/{id_or_slug}/optimization")
 def get_biomarker_optimization(
     id_or_slug: str,
+    sex: Optional[str] = Query("all", description="Sex stratum: M, F, or all"),
+    age_band: Optional[str] = Query("all", description="Age band: 20-39, 40-59, 60+, or all"),
     db: Session = Depends(get_db)
 ):
     """Return complete optimization model, HR curve, and precomputed scenarios for a biomarker."""
@@ -166,7 +171,15 @@ def get_biomarker_optimization(
     if not b:
         raise HTTPException(status_code=404, detail="Biomarker not found")
 
-    curves = db.query(BiomarkerHRCurve).filter(BiomarkerHRCurve.biomarker_id == b.id).all()
+    curve_query = db.query(BiomarkerHRCurve).filter(BiomarkerHRCurve.biomarker_id == b.id)
+    if sex and sex != "all":
+        curve_query = curve_query.filter(BiomarkerHRCurve.sex == sex)
+    if age_band and age_band != "all":
+        curve_query = curve_query.filter(BiomarkerHRCurve.age_band == age_band)
+    curves = curve_query.all()
+    # Fallback to overall if no stratum-specific curves found
+    if not curves:
+        curves = db.query(BiomarkerHRCurve).filter(BiomarkerHRCurve.biomarker_id == b.id).all()
     models = db.query(BiomarkerOptimizationModel).filter(BiomarkerOptimizationModel.biomarker_id == b.id).all()
     
     expected_values = (
@@ -197,6 +210,8 @@ def get_biomarker_optimization(
 def simulate_biomarker_shift(
     id_or_slug: str,
     shift_sd: float = Query(1.0, ge=-3.0, le=3.0, description="Shift in standard deviations"),
+    sex: Optional[str] = Query("all", description="Sex stratum: M, F, or all"),
+    age_band: Optional[str] = Query("all", description="Age band: 20-39, 40-59, 60+, or all"),
     db: Session = Depends(get_db)
 ):
     """Dynamically compute expected hazard reduction for an arbitrary shift magnitude."""
@@ -210,12 +225,29 @@ def simulate_biomarker_shift(
     if not b:
         raise HTTPException(status_code=404, detail="Biomarker not found")
 
-    curve = db.query(BiomarkerHRCurve).filter(BiomarkerHRCurve.biomarker_id == b.id).first()
-    pop_dist = db.query(PopulationDistribution).filter(
-        PopulationDistribution.biomarker_id == b.id,
-        PopulationDistribution.sex == "all",
-        PopulationDistribution.age_band == "all"
-    ).first()
+    # Look up stratum-specific HR curve
+    curve_query = db.query(BiomarkerHRCurve).filter(BiomarkerHRCurve.biomarker_id == b.id)
+    if sex and sex != "all":
+        curve_query = curve_query.filter(BiomarkerHRCurve.sex == sex)
+    if age_band and age_band != "all":
+        curve_query = curve_query.filter(BiomarkerHRCurve.age_band == age_band)
+    curve = curve_query.first()
+    if not curve:
+        curve = db.query(BiomarkerHRCurve).filter(BiomarkerHRCurve.biomarker_id == b.id).first()
+
+    # Look up stratum-specific population distribution
+    pop_dist_query = db.query(PopulationDistribution).filter(PopulationDistribution.biomarker_id == b.id)
+    if sex and sex != "all":
+        pop_dist_query = pop_dist_query.filter(PopulationDistribution.sex == sex)
+    if age_band and age_band != "all":
+        pop_dist_query = pop_dist_query.filter(PopulationDistribution.age_band == age_band)
+    pop_dist = pop_dist_query.first()
+    if not pop_dist:
+        pop_dist = db.query(PopulationDistribution).filter(
+            PopulationDistribution.biomarker_id == b.id,
+            PopulationDistribution.sex == "all",
+            PopulationDistribution.age_band == "all"
+        ).first()
 
     if not curve or not pop_dist:
         raise HTTPException(status_code=400, detail="Biomarker missing curve or population distribution data")
@@ -235,7 +267,8 @@ def simulate_biomarker_shift(
         curve_type=curve.curve_type,
         reference_value=curve.reference_value,
         parameters=curve.parameters or {},
-        optimal_value=curve.optimal_value
+        optimal_value=curve.optimal_value,
+        domain_min=curve.valid_min,
     )
 
     res = compute_shift_optimization(
@@ -455,6 +488,47 @@ def get_hr_distribution(id_or_slug: str, db: Session = Depends(get_db)):
     }
 
 
+@app.get("/api/biomarkers/{id_or_slug}/hazard-curve")
+def get_hazard_curve_endpoint(
+    id_or_slug: str,
+    age: Optional[float] = Query(None, description="Continuous age in years (e.g., 45.0)"),
+    sex: Optional[str] = Query(None, description="Sex: M or F"),
+    n_points: int = Query(100, ge=10, le=500, description="Number of grid points"),
+    db: Session = Depends(get_db)
+):
+    """
+    Return age/sex-conditional hazard ratio curve evaluated on a value grid.
+    
+    The curve is derived from the parametric HRFunction model for the best-matching
+    stratum (sex × age_band). If no stratum-specific model exists, falls back to
+    the population-level (all, all) model and flags curve_specificity accordingly.
+    
+    Query params:
+    - age: continuous age in years (mapped to 20-39, 40-59, 60+ bands)
+    - sex: 'M' or 'F'
+    - n_points: grid resolution (default 100)
+    
+    Returns:
+    - points: [{value, hr}, ...] — 100-point curve
+    - stratum: which stratum was used (e.g., "M_40-59")
+    - curve_specificity: "stratum_specific" or "population_fallback"
+    """
+    if id_or_slug.isdigit():
+        b = db.query(Biomarker).filter(Biomarker.id == int(id_or_slug)).first()
+    else:
+        b = db.query(Biomarker).filter(Biomarker.slug == id_or_slug).first()
+
+    if not b:
+        raise HTTPException(status_code=404, detail="Biomarker not found")
+
+    try:
+        result = get_hazard_curve(db, b, age=age, sex=sex, n_points=n_points)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+    return result
+
+
 @app.get("/api/biomarkers/{id_or_slug}/population-distribution")
 def get_pop_distribution(
     id_or_slug: str,
@@ -663,14 +737,15 @@ def get_disease_detail(id_or_slug: str, db: Session = Depends(get_db)):
     detail["alterations"] = [alt.to_dict() for alt in alterations]
     detail["matched_biomarkers_count"] = sum(1 for alt in alterations if alt.is_biomarker_match)
 
-    # Group alterations by type
-    by_type = {}
+    # Group alterations by prioritized type order (Functional & Lab/Clinical first, Molecular lowest)
+    type_order = ["Functional", "Lab / Clinical", "Pathology", "Scales & PROs", "Molecular", "Other"]
+    by_type = {k: [] for k in type_order}
     for alt in alterations:
         t = alt.alteration_type or "Other"
         if t not in by_type:
             by_type[t] = []
         by_type[t].append(alt.to_dict())
-    detail["alterations_by_type"] = by_type
+    detail["alterations_by_type"] = {k: v for k, v in by_type.items() if len(v) > 0}
 
     return detail
 
@@ -969,7 +1044,23 @@ def get_continuous_fit(
     if not dist_fit:
         dist_fit = db.query(DistributionFit).filter(DistributionFit.biomarker_id == bm.id).first()
 
-    all_hr_funcs = db.query(HRFunction).filter(HRFunction.biomarker_id == bm.id).all()
+    # Filter HR functions by stratum
+    hr_func_query = db.query(HRFunction).filter(HRFunction.biomarker_id == bm.id)
+    if stratum_group and stratum_group != "Overall":
+        # Map stratum_group to sex/age_band
+        if stratum_group in ("Male", "M"):
+            hr_func_query = hr_func_query.filter(HRFunction.sex == "M")
+        elif stratum_group in ("Female", "F"):
+            hr_func_query = hr_func_query.filter(HRFunction.sex == "F")
+        elif stratum_group in ("Age 20-39", "20-39"):
+            hr_func_query = hr_func_query.filter(HRFunction.age_band == "20-39")
+        elif stratum_group in ("Age 40-59", "40-59"):
+            hr_func_query = hr_func_query.filter(HRFunction.age_band == "40-59")
+        elif stratum_group in ("Age 60+", "60+"):
+            hr_func_query = hr_func_query.filter(HRFunction.age_band == "60+")
+    all_hr_funcs = hr_func_query.all()
+    if not all_hr_funcs:
+        all_hr_funcs = db.query(HRFunction).filter(HRFunction.biomarker_id == bm.id).all()
     hr_func = all_hr_funcs[0] if all_hr_funcs else None
 
     all_fits = db.query(DistributionFit).filter(DistributionFit.biomarker_id == bm.id).all()
@@ -1040,7 +1131,22 @@ def simulate_biomarker_voi(
     if not dist_fit:
         dist_fit = db.query(DistributionFit).filter(DistributionFit.biomarker_id == bm.id).first()
 
-    hr_func = db.query(HRFunction).filter(HRFunction.biomarker_id == bm.id).first()
+    # Look up stratum-specific HR function
+    hr_func_query = db.query(HRFunction).filter(HRFunction.biomarker_id == bm.id)
+    if selected_stratum and selected_stratum != "Overall":
+        if selected_stratum in ("Male", "M"):
+            hr_func_query = hr_func_query.filter(HRFunction.sex == "M")
+        elif selected_stratum in ("Female", "F"):
+            hr_func_query = hr_func_query.filter(HRFunction.sex == "F")
+        elif selected_stratum in ("Age 20-39", "20-39"):
+            hr_func_query = hr_func_query.filter(HRFunction.age_band == "20-39")
+        elif selected_stratum in ("Age 40-59", "40-59"):
+            hr_func_query = hr_func_query.filter(HRFunction.age_band == "40-59")
+        elif selected_stratum in ("Age 60+", "60+"):
+            hr_func_query = hr_func_query.filter(HRFunction.age_band == "60+")
+    hr_func = hr_func_query.first()
+    if not hr_func:
+        hr_func = db.query(HRFunction).filter(HRFunction.biomarker_id == bm.id).first()
 
     if not dist_fit or not hr_func:
         raise HTTPException(
@@ -1111,6 +1217,729 @@ def simulate_biomarker_voi(
         **results_copy
     }
     return output
+
+
+# =======================================================================
+# Monte Carlo Biomarker Optimization Endpoint
+# =======================================================================
+
+class MonteCarloOptimizationRequest(BaseModel):
+    biomarker: str
+    observed_value: float
+    age: int
+    sex: str = "M"
+    age_band: Optional[str] = "all"
+    optimization_sd: Optional[float] = 1.0
+    n_simulations: Optional[int] = 10000
+    seed: Optional[int] = 20260821
+    t_max: Optional[float] = 100.0
+    measurement_error_enabled: Optional[bool] = False
+    test_measurement_error: Optional[float] = None
+
+
+@app.post("/api/nhanes/optimization")
+def api_monte_carlo_optimization(
+    req: MonteCarloOptimizationRequest,
+    db: Session = Depends(get_db)
+):
+    """
+    Runs a Monte Carlo biomarker optimization simulation.
+
+    Estimates the distribution of expected years of life gained (YLG) if a
+    person's biomarker could be shifted by 1 SD toward the favorable direction.
+
+    This is a COUNTERFACTUAL biomarker optimization scenario, NOT a causal
+    intervention model.
+    """
+    # Look up biomarker
+    bm = db.query(Biomarker).filter(Biomarker.slug == req.biomarker).first()
+    if not bm:
+        bm = db.query(Biomarker).filter(Biomarker.name == req.biomarker).first()
+    if not bm:
+        raise HTTPException(status_code=404, detail=f"Biomarker '{req.biomarker}' not found")
+
+    # Look up stratum-specific HR function
+    hr_func_query = db.query(HRFunction).filter(HRFunction.biomarker_id == bm.id)
+    if req.sex and req.sex != "all":
+        hr_func_query = hr_func_query.filter(HRFunction.sex == req.sex)
+    if req.age_band and req.age_band != "all":
+        hr_func_query = hr_func_query.filter(HRFunction.age_band == req.age_band)
+    hr_func = hr_func_query.first()
+    if not hr_func:
+        hr_func = db.query(HRFunction).filter(HRFunction.biomarker_id == bm.id).first()
+    if not hr_func:
+        raise HTTPException(status_code=400, detail=f"Biomarker '{bm.name}' has no HR function")
+
+    # Look up population distribution (overall)
+    pop_dist = (
+        db.query(PopulationDistribution)
+        .filter(
+            PopulationDistribution.biomarker_id == bm.id,
+            PopulationDistribution.sex == "all",
+            PopulationDistribution.age_band == "all"
+        )
+        .first()
+    )
+    if not pop_dist:
+        pop_dist = db.query(PopulationDistribution).filter(
+            PopulationDistribution.biomarker_id == bm.id
+        ).first()
+    if not pop_dist:
+        raise HTTPException(status_code=400, detail=f"Biomarker '{bm.name}' has no population distribution")
+
+    # Get directionality from biomarker
+    directionality = getattr(bm, "directionality", "lower_better") or "lower_better"
+
+    # Get valid domain
+    valid_min = getattr(bm, "valid_domain_min", None)
+    valid_max = getattr(bm, "valid_domain_max", None)
+
+    # Get P1 and P99 from population distribution if available
+    p1 = getattr(pop_dist, "p1", None)
+    p99 = getattr(pop_dist, "p99", None)
+
+    # Build HR function dict
+    hr_func_dict = hr_func.to_dict()
+
+    # Build population distribution dict
+    pop_dist_dict = {
+        "mean": pop_dist.mean,
+        "sd": pop_dist.sd,
+        "p5": pop_dist.p5,
+        "p25": pop_dist.p25,
+        "p50": pop_dist.p50,
+        "p75": pop_dist.p75,
+        "p95": pop_dist.p95,
+    }
+
+    # Run simulation
+    result = run_monte_carlo_optimization(
+        biomarker_slug=bm.slug,
+        observed_value=req.observed_value,
+        age=req.age,
+        sex=req.sex,
+        hr_function=hr_func_dict,
+        population_distribution=pop_dist_dict,
+        directionality=directionality,
+        valid_min=valid_min,
+        valid_max=valid_max,
+        p1=p1,
+        p99=p99,
+        optimization_sd=req.optimization_sd or 1.0,
+        n_simulations=req.n_simulations or 10000,
+        seed=req.seed or 20260821,
+        t_max=req.t_max or 100.0,
+        measurement_error_enabled=req.measurement_error_enabled or False,
+        test_measurement_error=req.test_measurement_error,
+    )
+
+    # Add biomarker metadata
+    result["biomarker_name"] = bm.name
+    result["biomarker_unit"] = getattr(bm, "units", getattr(bm, "unit", ""))
+    result["biomarker_category"] = bm.category
+
+    return result
+
+
+# ======================================================================
+# Test Cost + EHIV Endpoints
+# ======================================================================
+
+from backend.test_cost_models import (
+    LabTest,
+    LabTestIdentifier,
+    TestBillingCode,
+    TestPrice,
+    TestCostSummary,
+    BiomarkerTestValue,
+    init_test_cost_tables,
+)
+from backend.ehiv_engine import (
+    compute_ehiv_from_empirical_biomarker,
+    compute_ehiv_from_empirical_biomarker_lognormal,
+    compute_ehiv_from_empirical_biomarker_piecewise,
+    compute_ehiv_from_empirical_biomarker_log_log,
+    compute_ehiv_from_empirical_biomarker_quadratic,
+    compute_ehiv_from_empirical_biomarker_linear_log,
+    compute_ehiv_from_empirical_biomarker_empirical_hr,
+    compute_ehiv_from_empirical_biomarker_stratified,
+)
+
+# Initialize test cost tables
+init_test_cost_tables(engine)
+
+from backend.consumer_price_sources import registry_status_report
+from backend.test_cost_models import SOURCE_REGISTRY
+from backend.turquoise_health import LICENSING_STATUS as TURQUOISE_LICENSING_STATUS
+
+
+@app.get("/api/price-sources/status")
+def get_price_sources_status():
+    """
+    Status/audit view of the multi-source pricing layer
+    (price-data-sources-build-spec.md): which sources are implemented,
+    which consumer cash-pay sites are blocked pending human ToS review,
+    and the Turquoise Health licensing decision that hasn't been made yet.
+    Not a data endpoint — this is for engineers/reviewers checking build
+    state, not the dashboard.
+    """
+    return {
+        "authoritative": {
+            "cms_clfs": SOURCE_REGISTRY["cms_clfs"],
+        },
+        "aggregator_transparency": {
+            "turquoise_health": {
+                **SOURCE_REGISTRY["turquoise_health"],
+                "licensing_status": TURQUOISE_LICENSING_STATUS,
+            },
+        },
+        "consumer_cash_pay": registry_status_report(),
+    }
+
+
+@app.get("/api/biomarkers/{id_or_slug}/test-value")
+def get_biomarker_test_value(
+    id_or_slug: str,
+    age: Optional[int] = None,
+    sex: Optional[str] = None,
+    race_ethnicity: Optional[str] = None,
+    db: Session = Depends(get_db)
+):
+    """
+    Return EHIV/REHIV results and test cost information for a biomarker.
+    
+    This endpoint returns:
+    - EHIV: Expected Hazard Information Value (mean absolute deviation of HR)
+    - REHIV: Relative EHIV (EHIV / expected HR)
+    - Test cost summary (D2C, Medicare, private payer)
+    - Descriptive ratio: REHIV / reference_consumer_price
+      (labeled "hazard-information units per dollar", NOT "ROI")
+    
+    IMPORTANT: This is INFORMATION VALUE, not economic value.
+    Do NOT interpret the ratio as cost-effectiveness or ROI.
+    """
+    # Find biomarker
+    bm = db.query(Biomarker).filter(
+        or_(Biomarker.id == int(id_or_slug) if id_or_slug.isdigit() else False,
+            Biomarker.slug == id_or_slug)
+    ).first()
+    
+    if not bm:
+        raise HTTPException(status_code=404, detail="Biomarker not found")
+    
+    # Find all tests for this biomarker
+    tests = db.query(LabTest).filter(
+        LabTest.canonical_biomarker_id == bm.id
+    ).all()
+    
+    if not tests:
+        return {
+            "biomarker_id": bm.id,
+            "biomarker_name": bm.name,
+            "test_values": [],
+            "message": "No test cost data available for this biomarker yet."
+        }
+    
+    # Build response
+    test_values = []
+    for test in tests:
+        # Get cost summary
+        cost_summary = db.query(TestCostSummary).filter(
+            TestCostSummary.test_id == test.test_id
+        ).first()
+        
+        # Get EHIV results (filter by age/sex/race if provided)
+        # Fall back to population-wide results (age=None, sex=None) if no
+        # age/sex-specific results exist.
+        ehiv_query = db.query(BiomarkerTestValue).filter(
+            BiomarkerTestValue.biomarker_id == bm.id,
+            BiomarkerTestValue.test_id == test.test_id
+        )
+        
+        if age is not None:
+            ehiv_query = ehiv_query.filter(BiomarkerTestValue.age == age)
+        if sex is not None:
+            ehiv_query = ehiv_query.filter(BiomarkerTestValue.sex == sex)
+        if race_ethnicity is not None:
+            ehiv_query = ehiv_query.filter(BiomarkerTestValue.race_ethnicity == race_ethnicity)
+        
+        ehiv_results = ehiv_query.all()
+        
+        # If no age/sex-specific results, fall back to population-wide
+        if not ehiv_results and (age is not None or sex is not None or race_ethnicity is not None):
+            ehiv_query = db.query(BiomarkerTestValue).filter(
+                BiomarkerTestValue.biomarker_id == bm.id,
+                BiomarkerTestValue.test_id == test.test_id,
+                BiomarkerTestValue.age == None,
+                BiomarkerTestValue.sex == None,
+                BiomarkerTestValue.race_ethnicity == None,
+            )
+            ehiv_results = ehiv_query.all()
+        
+        # Get identifiers
+        identifiers = db.query(LabTestIdentifier).filter(
+            LabTestIdentifier.test_id == test.test_id
+        ).all()
+        
+        # Get billing codes
+        billing_codes = db.query(TestBillingCode).filter(
+            TestBillingCode.test_id == test.test_id
+        ).all()
+        
+        test_value_entry = {
+            "test_id": test.test_id,
+            "test_name": test.test_name,
+            "test_type": test.test_type,
+            "specimen": test.specimen,
+            "method": test.method,
+            "canonical_unit": test.canonical_unit,
+            "loinc_code": test.loinc_code,
+            "loinc_status": test.loinc_status,
+            "identifiers": [i.to_dict() for i in identifiers],
+            "billing_codes": [b.to_dict() for b in billing_codes],
+            "cost_summary": cost_summary.to_dict() if cost_summary else None,
+            "ehiv_results": [r.to_dict() for r in ehiv_results],
+        }
+        
+        # Add descriptive ratio if both REHIV and price are available
+        if ehiv_results and cost_summary and cost_summary.reference_consumer_price:
+            latest_ehiv = ehiv_results[0]
+            if latest_ehiv.rehiv is not None and cost_summary.reference_consumer_price > 0:
+                test_value_entry["hazard_information_per_dollar"] = (
+                    latest_ehiv.rehiv / cost_summary.reference_consumer_price
+                )
+                test_value_entry["hazard_information_per_dollar_label"] = (
+                    "hazard-information units per dollar (descriptive, NOT ROI)"
+                )
+        
+        test_values.append(test_value_entry)
+    
+    return {
+        "biomarker_id": bm.id,
+        "biomarker_name": bm.name,
+        "biomarker_slug": bm.slug,
+        "test_values": test_values,
+        "disclaimer": (
+            "EHIV/REHIV measures INFORMATION VALUE (how much mortality-risk "
+            "heterogeneity the test reveals), not economic value. The ratio "
+            "'hazard-information units per dollar' is descriptive only and "
+            "must NOT be interpreted as ROI, cost-effectiveness, or value for money."
+        )
+    }
+
+
+@app.get("/api/tests")
+def list_lab_tests(
+    biomarker_id: Optional[int] = None,
+    search: Optional[str] = None,
+    db: Session = Depends(get_db)
+):
+    """
+    List all lab tests, optionally filtered by biomarker or search term.
+    """
+    query = db.query(LabTest)
+    
+    if biomarker_id is not None:
+        query = query.filter(LabTest.canonical_biomarker_id == biomarker_id)
+    
+    if search:
+        query = query.filter(LabTest.test_name.ilike(f"%{search}%"))
+    
+    tests = query.all()
+    
+    return [
+        {
+            **t.to_dict(),
+            "cost_summary": (
+                db.query(TestCostSummary)
+                .filter(TestCostSummary.test_id == t.test_id)
+                .first()
+                .to_dict()
+                if db.query(TestCostSummary).filter(TestCostSummary.test_id == t.test_id).first()
+                else None
+            )
+        }
+        for t in tests
+    ]
+
+
+@app.get("/api/tests/{test_id}")
+def get_lab_test(test_id: str, db: Session = Depends(get_db)):
+    """
+    Get full details for a specific lab test, including identifiers,
+    billing codes, prices, and cost summary.
+    """
+    test = db.query(LabTest).filter(LabTest.test_id == test_id).first()
+    
+    if not test:
+        raise HTTPException(status_code=404, detail="Test not found")
+    
+    identifiers = db.query(LabTestIdentifier).filter(
+        LabTestIdentifier.test_id == test_id
+    ).all()
+    
+    billing_codes = db.query(TestBillingCode).filter(
+        TestBillingCode.test_id == test_id
+    ).all()
+    
+    prices = db.query(TestPrice).filter(
+        TestPrice.test_id == test_id
+    ).all()
+    
+    cost_summary = db.query(TestCostSummary).filter(
+        TestCostSummary.test_id == test_id
+    ).first()
+    
+    return {
+        **test.to_dict(),
+        "identifiers": [i.to_dict() for i in identifiers],
+        "billing_codes": [b.to_dict() for b in billing_codes],
+        "prices": [p.to_dict() for p in prices],
+        "cost_summary": cost_summary.to_dict() if cost_summary else None,
+    }
+
+
+# ======================================================================
+# VOI / EHIV (DALY-dollar) layer — additive to the existing RHR simulator
+# ======================================================================
+
+from backend.voi import EPSILON_DEFAULT, LAMBDA_DEFAULT, C_INT_DALY_DEFAULT
+from backend.voi_service import compute_individual_and_expected, public_config
+
+
+def _age_band_from_age(age: Optional[float]) -> str:
+    if age is None:
+        return "all"
+    if age < 40:
+        return "20-39"
+    if age < 60:
+        return "40-59"
+    return "60+"
+
+
+@app.get("/api/voi/config")
+def get_voi_config(db: Session = Depends(get_db)):
+    cfg = public_config()
+    row = db.query(VoiPolicyConfig).first()
+    if row:
+        cfg.update(row.to_dict())
+    return cfg
+
+
+@app.get("/api/biomarkers/{id_or_slug}/voi")
+def get_biomarker_voi(
+    id_or_slug: str,
+    age: float = Query(50, description="Attained age for the life table"),
+    sex: str = Query("all"),
+    epsilon: float = Query(EPSILON_DEFAULT),
+    lambda_: float = Query(LAMBDA_DEFAULT, alias="lambda"),
+    c_int_daly: float = Query(C_INT_DALY_DEFAULT),
+    db: Session = Depends(get_db),
+):
+    """Value-of-information / EHIV for one biomarker. Reuses HR curves and NHANES bins."""
+    bm = db.query(Biomarker).filter(
+        or_(Biomarker.id == int(id_or_slug) if id_or_slug.isdigit() else False,
+            Biomarker.slug == id_or_slug)
+    ).first()
+    if not bm:
+        raise HTTPException(status_code=404, detail="Biomarker not found")
+
+    curves = [c.to_dict() for c in db.query(BiomarkerHRCurve).filter(BiomarkerHRCurve.biomarker_id == bm.id).all()]
+    dists = [d.to_dict() for d in db.query(PopulationDistribution).filter(PopulationDistribution.biomarker_id == bm.id).all()]
+    age_band = _age_band_from_age(age)
+    result = compute_individual_and_expected(
+        bm.to_dict(),
+        curves,
+        dists,
+        age=age,
+        sex=sex,
+        age_band=age_band,
+        epsilon=epsilon,
+        c_int_daly=c_int_daly,
+        lam=lambda_,
+        c_test=bm.test_price_usd,
+    )
+    result["biomarker_id"] = bm.id
+    result["biomarker_slug"] = bm.slug
+    result["biomarker_name"] = bm.name
+    return result
+
+
+@app.get("/api/voi/leaderboard")
+def get_voi_leaderboard(
+    epsilon: float = Query(EPSILON_DEFAULT),
+    lambda_: float = Query(LAMBDA_DEFAULT, alias="lambda"),
+    c_int_daly: float = Query(C_INT_DALY_DEFAULT),
+    db: Session = Depends(get_db),
+):
+    """Population VOI / EHIV ranking. Default UI sort remains RHR; this is an additional ranking."""
+    biomarkers = db.query(Biomarker).all()
+    rows = []
+    for bm in biomarkers:
+        curves = [c.to_dict() for c in db.query(BiomarkerHRCurve).filter(BiomarkerHRCurve.biomarker_id == bm.id).all()]
+        dists = [d.to_dict() for d in db.query(PopulationDistribution).filter(PopulationDistribution.biomarker_id == bm.id).all()]
+        if not curves or not dists:
+            continue
+        computed = compute_individual_and_expected(
+            bm.to_dict(), curves, dists,
+            age=50, sex="all", age_band="all",
+            epsilon=epsilon, c_int_daly=c_int_daly, lam=lambda_,
+            c_test=bm.test_price_usd,
+        )
+        if not computed.get("available"):
+            continue
+        rows.append({
+            "biomarker_id": bm.id,
+            "biomarker_slug": bm.slug,
+            "biomarker_name": bm.name,
+            "category": bm.category,
+            "ehiv": computed["ehiv"]["ehiv"],
+            "expected_voi": computed["expected"]["voi"],
+            "population_voi": computed["population"]["totalVOI"],
+            "population_ehiv": computed["population"]["totalEHIV"],
+            "c_test": computed["cTest"],
+            "lambda": lambda_,
+        })
+    rows.sort(key=lambda r: r["population_ehiv"], reverse=True)
+    for i, r in enumerate(rows, 1):
+        r["rank"] = i
+    return {"count": len(rows), "leaderboard": rows}
+
+
+# =======================================================================
+# Intervention → Biomarker Effects API
+# =======================================================================
+
+@app.get("/api/biomarkers/{biomarker_slug}/intervention-effects")
+def get_biomarker_intervention_effects(biomarker_slug: str, db: Session = Depends(get_db)):
+    """
+    Get all intervention effects for a specific biomarker.
+    Returns interventions grouped by regimen with full effect, evidence,
+    population, and comparator details.
+    """
+    from backend.models import (
+        InterventionEntity,
+        InterventionRegimen,
+        InterventionBiomarkerEffect,
+        InterventionEvidence,
+        EvidencePopulation,
+        InterventionComparator,
+        EffectMeasurement,
+    )
+    from sqlalchemy.orm import joinedload
+
+    biomarker = db.query(Biomarker).filter(Biomarker.slug == biomarker_slug).first()
+    if not biomarker:
+        raise HTTPException(status_code=404, detail="Biomarker not found")
+
+    effects = (
+        db.query(InterventionBiomarkerEffect)
+        .options(
+            joinedload(InterventionBiomarkerEffect.intervention),
+            joinedload(InterventionBiomarkerEffect.regimen),
+            joinedload(InterventionBiomarkerEffect.evidence),
+            joinedload(InterventionBiomarkerEffect.comparator),
+            joinedload(InterventionBiomarkerEffect.measurement),
+        )
+        .filter(InterventionBiomarkerEffect.biomarker_id == biomarker.id)
+        .all()
+    )
+
+    # Group by intervention → regimen
+    interventions_map = {}
+    for eff in effects:
+        intv = eff.intervention
+        if not intv:
+            continue
+        intv_id = intv.intervention_id
+        if intv_id not in interventions_map:
+            interventions_map[intv_id] = {
+                "intervention_id": intv_id,
+                "canonical_name": intv.canonical_name,
+                "intervention_type": intv.intervention_type,
+                "description": intv.description,
+                "mechanism": intv.mechanism,
+                "synonyms": intv.synonyms or [],
+                "regimens": {},
+            }
+
+        reg_id = eff.regimen_id or "unspecified"
+        if reg_id not in interventions_map[intv_id]["regimens"]:
+            reg = eff.regimen
+            interventions_map[intv_id]["regimens"][reg_id] = {
+                "regimen_id": reg_id,
+                "regimen": reg.to_dict() if reg else None,
+                "effects": [],
+            }
+
+        evidence = eff.evidence
+        population = None
+        if evidence:
+            pop = (
+                db.query(EvidencePopulation)
+                .filter(EvidencePopulation.evidence_id == evidence.evidence_id)
+                .first()
+            )
+            if pop:
+                population = pop.to_dict()
+
+        effect_entry = {
+            "effect_id": eff.effect_id,
+            "effect": {
+                "type": eff.effect_type,
+                "value": eff.effect_value,
+                "lower": eff.effect_lower,
+                "upper": eff.effect_upper,
+                "standard_error": eff.standard_error,
+                "p_value": eff.p_value,
+                "unit": eff.effect_unit,
+                "scale": eff.effect_scale,
+                "timepoint_value": eff.timepoint_value,
+                "timepoint_unit": eff.timepoint_unit,
+            },
+            "measurement": eff.measurement.to_dict() if eff.measurement else None,
+            "baseline": {"value": eff.baseline_biomarker, "sd": eff.baseline_biomarker_sd},
+            "post": {"value": eff.post_biomarker, "sd": eff.post_biomarker_sd},
+            "sample_size": eff.sample_size,
+            "intervention_sample_size": eff.intervention_sample_size,
+            "comparator_sample_size": eff.comparator_sample_size,
+            "population": population,
+            "evidence": evidence.to_dict() if evidence else None,
+            "comparator": eff.comparator.to_dict() if eff.comparator else None,
+        }
+
+        interventions_map[intv_id]["regimens"][reg_id]["effects"].append(effect_entry)
+
+    interventions_list = []
+    for intv_data in interventions_map.values():
+        interventions_list.append({
+            **intv_data,
+            "regimens": list(intv_data["regimens"].values()),
+        })
+
+    return {
+        "biomarker_id": biomarker.slug,
+        "biomarker_name": biomarker.name,
+        "biomarker_units": biomarker.units,
+        "interventions": interventions_list,
+    }
+
+
+@app.get("/api/intervention-entities")
+def list_intervention_entities(
+    intervention_type: Optional[str] = None,
+    search: Optional[str] = None,
+    db: Session = Depends(get_db),
+):
+    """
+    List all intervention entities with optional filtering.
+    """
+    from backend.models import InterventionEntity
+
+    query = db.query(InterventionEntity)
+    if intervention_type:
+        query = query.filter(InterventionEntity.intervention_type == intervention_type.upper())
+    if search:
+        search_term = f"%{search}%"
+        query = query.filter(
+            (InterventionEntity.canonical_name.ilike(search_term)) |
+            (InterventionEntity.description.ilike(search_term))
+        )
+
+    interventions = query.order_by(InterventionEntity.canonical_name).all()
+    return {
+        "count": len(interventions),
+        "interventions": [i.to_dict() for i in interventions],
+    }
+
+
+@app.get("/api/intervention-entities/{intervention_id}")
+def get_intervention_entity(intervention_id: str, db: Session = Depends(get_db)):
+    """
+    Get full details for a specific intervention entity, including
+    all regimens and effects across all biomarkers.
+    """
+    from backend.models import (
+        InterventionEntity,
+        InterventionRegimen,
+        InterventionBiomarkerEffect,
+        InterventionEvidence,
+        EvidencePopulation,
+        InterventionComparator,
+        EffectMeasurement,
+    )
+    from sqlalchemy.orm import joinedload
+
+    intervention = db.query(InterventionEntity).filter(
+        InterventionEntity.intervention_id == intervention_id
+    ).first()
+    if not intervention:
+        raise HTTPException(status_code=404, detail="Intervention not found")
+
+    regimens = db.query(InterventionRegimen).filter(
+        InterventionRegimen.intervention_id == intervention_id
+    ).all()
+
+    effects = (
+        db.query(InterventionBiomarkerEffect)
+        .options(
+            joinedload(InterventionBiomarkerEffect.biomarker),
+            joinedload(InterventionBiomarkerEffect.regimen),
+            joinedload(InterventionBiomarkerEffect.evidence),
+            joinedload(InterventionBiomarkerEffect.comparator),
+            joinedload(InterventionBiomarkerEffect.measurement),
+        )
+        .filter(InterventionBiomarkerEffect.intervention_id == intervention_id)
+        .all()
+    )
+
+    # Group effects by regimen
+    effects_by_regimen = {}
+    for eff in effects:
+        reg_id = eff.regimen_id or "unspecified"
+        if reg_id not in effects_by_regimen:
+            effects_by_regimen[reg_id] = []
+
+        evidence = eff.evidence
+        population = None
+        if evidence:
+            pop = (
+                db.query(EvidencePopulation)
+                .filter(EvidencePopulation.evidence_id == evidence.evidence_id)
+                .first()
+            )
+            if pop:
+                population = pop.to_dict()
+
+        effects_by_regimen[reg_id].append({
+            "effect_id": eff.effect_id,
+            "biomarker": eff.biomarker.to_dict() if eff.biomarker else None,
+            "effect": {
+                "type": eff.effect_type,
+                "value": eff.effect_value,
+                "lower": eff.effect_lower,
+                "upper": eff.effect_upper,
+                "standard_error": eff.standard_error,
+                "p_value": eff.p_value,
+                "unit": eff.effect_unit,
+                "scale": eff.effect_scale,
+                "timepoint_value": eff.timepoint_value,
+                "timepoint_unit": eff.timepoint_unit,
+            },
+            "measurement": eff.measurement.to_dict() if eff.measurement else None,
+            "baseline": {"value": eff.baseline_biomarker, "sd": eff.baseline_biomarker_sd},
+            "post": {"value": eff.post_biomarker, "sd": eff.post_biomarker_sd},
+            "sample_size": eff.sample_size,
+            "population": population,
+            "evidence": evidence.to_dict() if evidence else None,
+            "comparator": eff.comparator.to_dict() if eff.comparator else None,
+        })
+
+    return {
+        **intervention.to_dict(),
+        "regimens": [r.to_dict() for r in regimens],
+        "effects_by_regimen": effects_by_regimen,
+    }
 
 
 # Serve frontend static assets if directory exists

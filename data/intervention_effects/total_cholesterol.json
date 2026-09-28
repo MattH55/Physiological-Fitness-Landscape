@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "total_cholesterol",
+  "biomarker_name": "Total Cholesterol",
+  "biomarker_units": "mg/dL",
+  "interventions": [
+    {
+      "intervention_id": "hmg_coa_reductase_inhibitors_statins",
+      "canonical_name": "HMG-CoA reductase inhibitors (Statins)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "HMG-CoA reductase inhibitors (Statins) (Pharmacologic) — favorable effect on Total Cholesterol",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "hmg_coa_reductase_inhibitors_statins_standard",
+          "regimen": {
+            "regimen_id": "hmg_coa_reductase_inhibitors_statins_standard",
+            "intervention_id": "hmg_coa_reductase_inhibitors_statins",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for HMG-CoA reductase inhibitors (Statins)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "hmg_coa_reductase_inhibitors_statins_total_cholesterol_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -35.0,
+                "lower": -45.0,
+                "upper": -25.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "hmg_coa_reductase_inhibitors_statins_total_cholesterol_favorable",
+                "original_value": -35.0,
+                "original_lower": -45.0,
+                "original_upper": -25.0,
+                "original_unit": "%",
+                "canonical_value": -35.0,
+                "canonical_lower": -45.0,
+                "canonical_upper": -25.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-21067800_adults",
+                "evidence_id": "PMID-21067800",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-21067800",
+                "source_type": "META_ANALYSIS",
+                "title": "Baigent C, et al. Lancet. 2010;376:1670-1681. PMID: 21067800",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2010,
+                "doi": null,
+                "pmid": "21067800",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:14.744339",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "hmg_coa_reductase_inhibitors_statins_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "dietary_soluble_viscous_fiber_beta_glucan_psyllium_10_15gday",
+      "canonical_name": "Dietary soluble viscous fiber (Beta-glucan / Psyllium 10-15g/day)",
+      "intervention_type": "DIET",
+      "description": "Dietary soluble viscous fiber (Beta-glucan / Psyllium 10-15g/day) (Diet) — favorable effect on Total Cholesterol",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "dietary_soluble_viscous_fiber_beta_glucan_psyllium_10_15gday_standard",
+          "regimen": {
+            "regimen_id": "dietary_soluble_viscous_fiber_beta_glucan_psyllium_10_15gday_standard",
+            "intervention_id": "dietary_soluble_viscous_fiber_beta_glucan_psyllium_10_15gday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Dietary soluble viscous fiber (Beta-glucan / Psyllium 10-15g/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "dietary_soluble_viscous_fiber_beta_glucan_psyllium_10_15gday_total_cholesterol_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -8.5,
+                "lower": -12.0,
+                "upper": -5.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "dietary_soluble_viscous_fiber_beta_glucan_psyllium_10_15gday_total_cholesterol_favorable",
+                "original_value": -8.5,
+                "original_lower": -12.0,
+                "original_upper": -5.0,
+                "original_unit": "%",
+                "canonical_value": -8.5,
+                "canonical_lower": -12.0,
+                "canonical_upper": -5.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-9925120_adults",
+                "evidence_id": "PMID-9925120",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-9925120",
+                "source_type": "META_ANALYSIS",
+                "title": "Brown L, et al. Am J Clin Nutr. 1999;69:30-42. PMID: 9925120",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1999,
+                "doi": null,
+                "pmid": "9925120",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:14.938202",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "dietary_soluble_viscous_fiber_beta_glucan_psyllium_10_15gday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "plant_sterols_and_stanols_2_gday",
+      "canonical_name": "Plant sterols and stanols (2 g/day)",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Plant sterols and stanols (2 g/day) (Nutraceutical) — favorable effect on Total Cholesterol",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "plant_sterols_and_stanols_2_gday_standard",
+          "regimen": {
+            "regimen_id": "plant_sterols_and_stanols_2_gday_standard",
+            "intervention_id": "plant_sterols_and_stanols_2_gday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Plant sterols and stanols (2 g/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "plant_sterols_and_stanols_2_gday_total_cholesterol_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -11.0,
+                "lower": -14.0,
+                "upper": -8.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "plant_sterols_and_stanols_2_gday_total_cholesterol_favorable",
+                "original_value": -11.0,
+                "original_lower": -14.0,
+                "original_upper": -8.0,
+                "original_unit": "%",
+                "canonical_value": -11.0,
+                "canonical_lower": -14.0,
+                "canonical_upper": -8.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-31376662_adults",
+                "evidence_id": "PMID-31376662",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-31376662",
+                "source_type": "META_ANALYSIS",
+                "title": "Plat J, et al. Atherosclerosis. 2019;288:149-160. PMID: 31376662",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2019,
+                "doi": null,
+                "pmid": "31376662",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:15.035022",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "plant_sterols_and_stanols_2_gday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_dietary_saturated_fat_and_industrial_trans_fatty_acids",
+      "canonical_name": "High dietary saturated fat and industrial trans-fatty acids",
+      "intervention_type": "DIET",
+      "description": "High dietary saturated fat and industrial trans-fatty acids (Diet) — unfavorable effect on Total Cholesterol",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_dietary_saturated_fat_and_industrial_trans_fatty_acids_standard",
+          "regimen": {
+            "regimen_id": "high_dietary_saturated_fat_and_industrial_trans_fatty_acids_standard",
+            "intervention_id": "high_dietary_saturated_fat_and_industrial_trans_fatty_acids",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High dietary saturated fat and industrial trans-fatty acids",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_dietary_saturated_fat_and_industrial_trans_fatty_acids_total_cholesterol_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 25.0,
+                "lower": 15.0,
+                "upper": 35.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_dietary_saturated_fat_and_industrial_trans_fatty_acids_total_cholesterol_unfavorable",
+                "original_value": 25.0,
+                "original_lower": 15.0,
+                "original_upper": 35.0,
+                "original_unit": "%",
+                "canonical_value": 25.0,
+                "canonical_lower": 15.0,
+                "canonical_upper": 35.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-12716665_adults",
+                "evidence_id": "PMID-12716665",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-12716665",
+                "source_type": "META_ANALYSIS",
+                "title": "Mensink RP, et al. Am J Clin Nutr. 2003;77:1146-1155. PMID: 12716665",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2003,
+                "doi": null,
+                "pmid": "12716665",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:15.130107",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_dietary_saturated_fat_and_industrial_trans_fatty_acids_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "untreated_primary_hypothyroidism",
+      "canonical_name": "Untreated primary hypothyroidism",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Untreated primary hypothyroidism (Clinical) — unfavorable effect on Total Cholesterol",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "untreated_primary_hypothyroidism_standard",
+          "regimen": {
+            "regimen_id": "untreated_primary_hypothyroidism_standard",
+            "intervention_id": "untreated_primary_hypothyroidism",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Untreated primary hypothyroidism",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "untreated_primary_hypothyroidism_total_cholesterol_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 35.0,
+                "lower": 20.0,
+                "upper": 50.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "untreated_primary_hypothyroidism_total_cholesterol_unfavorable",
+                "original_value": 35.0,
+                "original_lower": 20.0,
+                "original_upper": 50.0,
+                "original_unit": "%",
+                "canonical_value": 35.0,
+                "canonical_lower": 20.0,
+                "canonical_upper": 50.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-23000609_adults",
+                "evidence_id": "PMID-23000609",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-23000609",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Garber JR, et al. Endocr Pract. 2012;18:988-1028. PMID: 23000609",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2012,
+                "doi": null,
+                "pmid": "23000609",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:15.291229",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "untreated_primary_hypothyroidism_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

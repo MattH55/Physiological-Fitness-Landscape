@@ -1,0 +1,20 @@
+{
+  "modifier_id": "gse28016_muscle_fast40h_vs_fed",
+  "protocol": "fast_40h_vs_fed",
+  "biological_context": "skeletal_muscle",
+  "tissue": "human vastus lateralis",
+  "study_id": "GSE28016",
+  "species": "human",
+  "dose": {
+    "unit": "hours",
+    "duration_hr": 40.0,
+    "fasting_hr": 40.0,
+    "control": "6 h after a mixed meal"
+  },
+  "duration_hr": 40.0,
+  "timepoint_hr": 40.0,
+  "platform": "GPL5175",
+  "n_replicates": 7,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

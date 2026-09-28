@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "ldl_cholesterol",
+  "biomarker_name": "LDL Cholesterol",
+  "biomarker_units": "mg/dL",
+  "interventions": [
+    {
+      "intervention_id": "pcsk9_inhibitors_evolocumab_alirocumab",
+      "canonical_name": "PCSK9 inhibitors (Evolocumab / Alirocumab)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "PCSK9 inhibitors (Evolocumab / Alirocumab) (Pharmacologic) — favorable effect on LDL Cholesterol",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "pcsk9_inhibitors_evolocumab_alirocumab_standard",
+          "regimen": {
+            "regimen_id": "pcsk9_inhibitors_evolocumab_alirocumab_standard",
+            "intervention_id": "pcsk9_inhibitors_evolocumab_alirocumab",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for PCSK9 inhibitors (Evolocumab / Alirocumab)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "pcsk9_inhibitors_evolocumab_alirocumab_ldl_cholesterol_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -57.5,
+                "lower": -65.0,
+                "upper": -50.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "pcsk9_inhibitors_evolocumab_alirocumab_ldl_cholesterol_favorable",
+                "original_value": -57.5,
+                "original_lower": -65.0,
+                "original_upper": -50.0,
+                "original_unit": "%",
+                "canonical_value": -57.5,
+                "canonical_lower": -65.0,
+                "canonical_upper": -50.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-28304224_adults",
+                "evidence_id": "PMID-28304224",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-28304224",
+                "source_type": "RCT",
+                "title": "Sabatine MS, et al. N Engl J Med. 2017;376:1713-1722. PMID: 28304224",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2017,
+                "doi": null,
+                "pmid": "28304224",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:16.734799",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "pcsk9_inhibitors_evolocumab_alirocumab_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_intensity_statins_plus_ezetimibe_10_mg_combination_therapy",
+      "canonical_name": "High-intensity statins plus Ezetimibe 10 mg combination therapy",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "High-intensity statins plus Ezetimibe 10 mg combination therapy (Pharmacologic) — favorable effect on LDL Cholesterol",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_intensity_statins_plus_ezetimibe_10_mg_combination_therapy_standard",
+          "regimen": {
+            "regimen_id": "high_intensity_statins_plus_ezetimibe_10_mg_combination_therapy_standard",
+            "intervention_id": "high_intensity_statins_plus_ezetimibe_10_mg_combination_therapy",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High-intensity statins plus Ezetimibe 10 mg combination therapy",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_intensity_statins_plus_ezetimibe_10_mg_combination_therapy_ldl_cholesterol_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -62.5,
+                "lower": -70.0,
+                "upper": -55.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_intensity_statins_plus_ezetimibe_10_mg_combination_therapy_ldl_cholesterol_favorable",
+                "original_value": -62.5,
+                "original_lower": -70.0,
+                "original_upper": -55.0,
+                "original_unit": "%",
+                "canonical_value": -62.5,
+                "canonical_lower": -70.0,
+                "canonical_upper": -55.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-26039521_adults",
+                "evidence_id": "PMID-26039521",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-26039521",
+                "source_type": "RCT",
+                "title": "Cannon CP, et al. N Engl J Med. 2015;372:2387-2397. PMID: 26039521",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2015,
+                "doi": null,
+                "pmid": "26039521",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:16.863725",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_intensity_statins_plus_ezetimibe_10_mg_combination_therapy_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "portfolio_diet_plant_sterols_soy_protein_viscous_fiber_almonds",
+      "canonical_name": "Portfolio Diet (Plant sterols, soy protein, viscous fiber, almonds)",
+      "intervention_type": "DIET",
+      "description": "Portfolio Diet (Plant sterols, soy protein, viscous fiber, almonds) (Diet) — favorable effect on LDL Cholesterol",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "portfolio_diet_plant_sterols_soy_protein_viscous_fiber_almonds_standard",
+          "regimen": {
+            "regimen_id": "portfolio_diet_plant_sterols_soy_protein_viscous_fiber_almonds_standard",
+            "intervention_id": "portfolio_diet_plant_sterols_soy_protein_viscous_fiber_almonds",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Portfolio Diet (Plant sterols, soy protein, viscous fiber, almonds)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "portfolio_diet_plant_sterols_soy_protein_viscous_fiber_almonds_ldl_cholesterol_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -25.0,
+                "lower": -30.0,
+                "upper": -20.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "portfolio_diet_plant_sterols_soy_protein_viscous_fiber_almonds_ldl_cholesterol_favorable",
+                "original_value": -25.0,
+                "original_lower": -30.0,
+                "original_upper": -20.0,
+                "original_unit": "%",
+                "canonical_value": -25.0,
+                "canonical_lower": -30.0,
+                "canonical_upper": -20.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-21862744_adults",
+                "evidence_id": "PMID-21862744",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-21862744",
+                "source_type": "RCT",
+                "title": "Jenkins DJ, et al. JAMA. 2011;306:831-839. PMID: 21862744",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2011,
+                "doi": null,
+                "pmid": "21862744",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:16.960191",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "portfolio_diet_plant_sterols_soy_protein_viscous_fiber_almonds_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "familial_hypercholesterolemia_gene_mutations_ldlr_apob",
+      "canonical_name": "Familial hypercholesterolemia gene mutations (LDLR / APOB)",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Familial hypercholesterolemia gene mutations (LDLR / APOB) (Clinical) — unfavorable effect on LDL Cholesterol",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "familial_hypercholesterolemia_gene_mutations_ldlr_apob_standard",
+          "regimen": {
+            "regimen_id": "familial_hypercholesterolemia_gene_mutations_ldlr_apob_standard",
+            "intervention_id": "familial_hypercholesterolemia_gene_mutations_ldlr_apob",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Familial hypercholesterolemia gene mutations (LDLR / APOB)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "familial_hypercholesterolemia_gene_mutations_ldlr_apob_ldl_cholesterol_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 200.0,
+                "lower": 100.0,
+                "upper": 300.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "familial_hypercholesterolemia_gene_mutations_ldlr_apob_ldl_cholesterol_unfavorable",
+                "original_value": 200.0,
+                "original_lower": 100.0,
+                "original_upper": 300.0,
+                "original_unit": "%",
+                "canonical_value": 200.0,
+                "canonical_lower": 100.0,
+                "canonical_upper": 300.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-23956253_adults",
+                "evidence_id": "PMID-23956253",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-23956253",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Nordestgaard BG, et al. Eur Heart J. 2013;34:3478-3490. PMID: 23956253",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2013,
+                "doi": null,
+                "pmid": "23956253",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:17.089230",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "familial_hypercholesterolemia_gene_mutations_ldlr_apob_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "excessive_intake_of_refined_saturated_fats_and_palmcoconut_oils",
+      "canonical_name": "Excessive intake of refined saturated fats and palm/coconut oils",
+      "intervention_type": "DIET",
+      "description": "Excessive intake of refined saturated fats and palm/coconut oils (Diet) — unfavorable effect on LDL Cholesterol",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "excessive_intake_of_refined_saturated_fats_and_palmcoconut_oils_standard",
+          "regimen": {
+            "regimen_id": "excessive_intake_of_refined_saturated_fats_and_palmcoconut_oils_standard",
+            "intervention_id": "excessive_intake_of_refined_saturated_fats_and_palmcoconut_oils",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Excessive intake of refined saturated fats and palm/coconut oils",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "excessive_intake_of_refined_saturated_fats_and_palmcoconut_oils_ldl_cholesterol_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 32.5,
+                "lower": 20.0,
+                "upper": 45.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "excessive_intake_of_refined_saturated_fats_and_palmcoconut_oils_ldl_cholesterol_unfavorable",
+                "original_value": 32.5,
+                "original_lower": 20.0,
+                "original_upper": 45.0,
+                "original_unit": "%",
+                "canonical_value": 32.5,
+                "canonical_lower": 20.0,
+                "canonical_upper": 45.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-28620111_adults",
+                "evidence_id": "PMID-28620111",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-28620111",
+                "source_type": "SYSTEMATIC_REVIEW",
+                "title": "Sacks FM, et al. Circulation. 2017;136:e1-e23. PMID: 28620111",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2017,
+                "doi": null,
+                "pmid": "28620111",
+                "nct_id": null,
+                "url": null,
+                "study_design": "systematic_review",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:17.251881",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "excessive_intake_of_refined_saturated_fats_and_palmcoconut_oils_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

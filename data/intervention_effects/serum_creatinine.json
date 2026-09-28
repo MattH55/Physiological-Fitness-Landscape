@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "serum_creatinine",
+  "biomarker_name": "Serum Creatinine",
+  "biomarker_units": "mg/dL",
+  "interventions": [
+    {
+      "intervention_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_for_renal_nephron_preservation",
+      "canonical_name": "SGLT2 inhibitors (Empagliflozin / Dapagliflozin) for renal nephron preservation",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "SGLT2 inhibitors (Empagliflozin / Dapagliflozin) for renal nephron preservation (Pharmacologic) — favorable effect on Serum Creatinine",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_for_renal_nephron_preservation_standard",
+          "regimen": {
+            "regimen_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_for_renal_nephron_preservation_standard",
+            "intervention_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_for_renal_nephron_preservation",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for SGLT2 inhibitors (Empagliflozin / Dapagliflozin) for renal nephron preservation",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_for_renal_nephron_preservation_serum_creatinine_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -35.0,
+                "lower": -40.0,
+                "upper": -30.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_for_renal_nephron_preservation_serum_creatinine_favorable",
+                "original_value": -35.0,
+                "original_lower": -40.0,
+                "original_upper": -30.0,
+                "original_unit": "%",
+                "canonical_value": -35.0,
+                "canonical_lower": -40.0,
+                "canonical_upper": -30.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-32970396_adults",
+                "evidence_id": "PMID-32970396",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-32970396",
+                "source_type": "RCT",
+                "title": "Heerspink HJL, et al. N Engl J Med. 2020;383:1436-1446. PMID: 32970396",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2020,
+                "doi": null,
+                "pmid": "32970396",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:07.151681",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "sglt2_inhibitors_empagliflozin_dapagliflozin_for_renal_nephron_preservation_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "ace_inhibitors_angiotensin_receptor_blockers_arbs_for_intraglomerular_pressure_control",
+      "canonical_name": "ACE inhibitors / Angiotensin Receptor Blockers (ARBs) for intraglomerular pressure control",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "ACE inhibitors / Angiotensin Receptor Blockers (ARBs) for intraglomerular pressure control (Pharmacologic) — favorable effect on Serum Creatinine",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "ace_inhibitors_angiotensin_receptor_blockers_arbs_for_intraglomerular_pressure_control_standard",
+          "regimen": {
+            "regimen_id": "ace_inhibitors_angiotensin_receptor_blockers_arbs_for_intraglomerular_pressure_control_standard",
+            "intervention_id": "ace_inhibitors_angiotensin_receptor_blockers_arbs_for_intraglomerular_pressure_control",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for ACE inhibitors / Angiotensin Receptor Blockers (ARBs) for intraglomerular pressure control",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "ace_inhibitors_angiotensin_receptor_blockers_arbs_for_intraglomerular_pressure_control_serum_creatinine_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -30.0,
+                "lower": -35.0,
+                "upper": -25.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "ace_inhibitors_angiotensin_receptor_blockers_arbs_for_intraglomerular_pressure_control_serum_creatinine_favorable",
+                "original_value": -30.0,
+                "original_lower": -35.0,
+                "original_upper": -25.0,
+                "original_unit": "%",
+                "canonical_value": -30.0,
+                "canonical_lower": -35.0,
+                "canonical_upper": -25.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-11565518_adults",
+                "evidence_id": "PMID-11565518",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-11565518",
+                "source_type": "RCT",
+                "title": "Brenner BM, et al. N Engl J Med. 2001;345:861-869. PMID: 11565518",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2001,
+                "doi": null,
+                "pmid": "11565518",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:07.577108",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "ace_inhibitors_angiotensin_receptor_blockers_arbs_for_intraglomerular_pressure_control_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "adequate_daily_hydration_25_35_lday_pure_water",
+      "canonical_name": "Adequate daily hydration (2.5-3.5 L/day pure water)",
+      "intervention_type": "LIFESTYLE",
+      "description": "Adequate daily hydration (2.5-3.5 L/day pure water) (Lifestyle) — favorable effect on Serum Creatinine",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "adequate_daily_hydration_25_35_lday_pure_water_standard",
+          "regimen": {
+            "regimen_id": "adequate_daily_hydration_25_35_lday_pure_water_standard",
+            "intervention_id": "adequate_daily_hydration_25_35_lday_pure_water",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Adequate daily hydration (2.5-3.5 L/day pure water)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "adequate_daily_hydration_25_35_lday_pure_water_serum_creatinine_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -0.3,
+                "lower": -0.3,
+                "upper": -0.3,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mg/dL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "adequate_daily_hydration_25_35_lday_pure_water_serum_creatinine_favorable",
+                "original_value": -0.3,
+                "original_lower": -0.3,
+                "original_upper": -0.3,
+                "original_unit": "mg/dL",
+                "canonical_value": -0.3,
+                "canonical_lower": -0.3,
+                "canonical_upper": -0.3,
+                "canonical_unit": "mg/dL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-29710214_adults",
+                "evidence_id": "PMID-29710214",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-29710214",
+                "source_type": "RCT",
+                "title": "Clark WF, et al. JAMA. 2018;319:1870-1879. PMID: 29710214",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2018,
+                "doi": null,
+                "pmid": "29710214",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:08.075315",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "adequate_daily_hydration_25_35_lday_pure_water_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_dose_chronic_nsaid_use_ibuprofen_naproxen_meloxicam",
+      "canonical_name": "High-dose chronic NSAID use (Ibuprofen / Naproxen / Meloxicam)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "High-dose chronic NSAID use (Ibuprofen / Naproxen / Meloxicam) (Pharmacologic) — unfavorable effect on Serum Creatinine",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_dose_chronic_nsaid_use_ibuprofen_naproxen_meloxicam_standard",
+          "regimen": {
+            "regimen_id": "high_dose_chronic_nsaid_use_ibuprofen_naproxen_meloxicam_standard",
+            "intervention_id": "high_dose_chronic_nsaid_use_ibuprofen_naproxen_meloxicam",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High-dose chronic NSAID use (Ibuprofen / Naproxen / Meloxicam)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_dose_chronic_nsaid_use_ibuprofen_naproxen_meloxicam_serum_creatinine_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 40.0,
+                "lower": 20.0,
+                "upper": 60.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_dose_chronic_nsaid_use_ibuprofen_naproxen_meloxicam_serum_creatinine_unfavorable",
+                "original_value": 40.0,
+                "original_lower": 20.0,
+                "original_upper": 60.0,
+                "original_unit": "%",
+                "canonical_value": 40.0,
+                "canonical_lower": 20.0,
+                "canonical_upper": 60.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-10390124_adults",
+                "evidence_id": "PMID-10390124",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-10390124",
+                "source_type": "META_ANALYSIS",
+                "title": "Whelton A. Am J Med. 1999;106:13S-24S. PMID: 10390124",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1999,
+                "doi": null,
+                "pmid": "10390124",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:08.407653",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_dose_chronic_nsaid_use_ibuprofen_naproxen_meloxicam_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_dehydration_and_volume_depletion",
+      "canonical_name": "Severe dehydration and volume depletion",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe dehydration and volume depletion (Clinical) — unfavorable effect on Serum Creatinine",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_dehydration_and_volume_depletion_standard",
+          "regimen": {
+            "regimen_id": "severe_dehydration_and_volume_depletion_standard",
+            "intervention_id": "severe_dehydration_and_volume_depletion",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe dehydration and volume depletion",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_dehydration_and_volume_depletion_serum_creatinine_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 55.0,
+                "lower": 30.0,
+                "upper": 80.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_dehydration_and_volume_depletion_serum_creatinine_unfavorable",
+                "original_value": 55.0,
+                "original_lower": 30.0,
+                "original_upper": 80.0,
+                "original_unit": "%",
+                "canonical_value": 55.0,
+                "canonical_lower": 30.0,
+                "canonical_upper": 80.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-31223450_adults",
+                "evidence_id": "PMID-31223450",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-31223450",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "KDIGO. Kidney Int Suppl. 2012;2:1-138. PMID: 31223450",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2012,
+                "doi": null,
+                "pmid": "31223450",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:08.582147",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_dehydration_and_volume_depletion_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

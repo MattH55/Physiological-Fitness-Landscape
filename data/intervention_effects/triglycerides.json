@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "triglycerides",
+  "biomarker_name": "Serum Triglycerides",
+  "biomarker_units": "mg/dL",
+  "interventions": [
+    {
+      "intervention_id": "icosapent_ethyl_purified_epa_4gday",
+      "canonical_name": "Icosapent ethyl (Purified EPA 4g/day)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Icosapent ethyl (Purified EPA 4g/day) (Pharmacologic) — favorable effect on Serum Triglycerides",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "icosapent_ethyl_purified_epa_4gday_standard",
+          "regimen": {
+            "regimen_id": "icosapent_ethyl_purified_epa_4gday_standard",
+            "intervention_id": "icosapent_ethyl_purified_epa_4gday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Icosapent ethyl (Purified EPA 4g/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "icosapent_ethyl_purified_epa_4gday_triglycerides_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -5.0,
+                "lower": -35.0,
+                "upper": 25.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "icosapent_ethyl_purified_epa_4gday_triglycerides_favorable",
+                "original_value": -5.0,
+                "original_lower": -35.0,
+                "original_upper": 25.0,
+                "original_unit": "%",
+                "canonical_value": -5.0,
+                "canonical_lower": -35.0,
+                "canonical_upper": 25.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-30415628_adults",
+                "evidence_id": "PMID-30415628",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-30415628",
+                "source_type": "RCT",
+                "title": "Bhatt DL, et al. N Engl J Med. 2019;380:11-22. PMID: 30415628",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2019,
+                "doi": null,
+                "pmid": "30415628",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:17.569192",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "icosapent_ethyl_purified_epa_4gday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "carbohydrate_restriction_and_ketogenic_low_glycemic_dietary_protocol",
+      "canonical_name": "Carbohydrate restriction and ketogenic / low-glycemic dietary protocol",
+      "intervention_type": "DIET",
+      "description": "Carbohydrate restriction and ketogenic / low-glycemic dietary protocol (Diet) — favorable effect on Serum Triglycerides",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "carbohydrate_restriction_and_ketogenic_low_glycemic_dietary_protocol_standard",
+          "regimen": {
+            "regimen_id": "carbohydrate_restriction_and_ketogenic_low_glycemic_dietary_protocol_standard",
+            "intervention_id": "carbohydrate_restriction_and_ketogenic_low_glycemic_dietary_protocol",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Carbohydrate restriction and ketogenic / low-glycemic dietary protocol",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "carbohydrate_restriction_and_ketogenic_low_glycemic_dietary_protocol_triglycerides_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -42.5,
+                "lower": -55.0,
+                "upper": -30.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "carbohydrate_restriction_and_ketogenic_low_glycemic_dietary_protocol_triglycerides_favorable",
+                "original_value": -42.5,
+                "original_lower": -55.0,
+                "original_upper": -30.0,
+                "original_unit": "%",
+                "canonical_value": -42.5,
+                "canonical_lower": -55.0,
+                "canonical_upper": -30.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-23651522_adults",
+                "evidence_id": "PMID-23651522",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-23651522",
+                "source_type": "META_ANALYSIS",
+                "title": "Bueno NB, et al. Br J Nutr. 2013;110:1178-1187. PMID: 23651522",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2013,
+                "doi": null,
+                "pmid": "23651522",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:17.714987",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "carbohydrate_restriction_and_ketogenic_low_glycemic_dietary_protocol_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "aerobic_and_resistance_exercise_with_5_10_body_weight_loss",
+      "canonical_name": "Aerobic and resistance exercise with 5-10% body weight loss",
+      "intervention_type": "EXERCISE",
+      "description": "Aerobic and resistance exercise with 5-10% body weight loss (Exercise) — favorable effect on Serum Triglycerides",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "aerobic_and_resistance_exercise_with_5_10_body_weight_loss_standard",
+          "regimen": {
+            "regimen_id": "aerobic_and_resistance_exercise_with_5_10_body_weight_loss_standard",
+            "intervention_id": "aerobic_and_resistance_exercise_with_5_10_body_weight_loss",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Aerobic and resistance exercise with 5-10% body weight loss",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "aerobic_and_resistance_exercise_with_5_10_body_weight_loss_triglycerides_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -30.0,
+                "lower": -40.0,
+                "upper": -20.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "aerobic_and_resistance_exercise_with_5_10_body_weight_loss_triglycerides_favorable",
+                "original_value": -30.0,
+                "original_lower": -40.0,
+                "original_upper": -20.0,
+                "original_unit": "%",
+                "canonical_value": -30.0,
+                "canonical_lower": -40.0,
+                "canonical_upper": -20.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-21593294_adults",
+                "evidence_id": "PMID-21593294",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-21593294",
+                "source_type": "RCT",
+                "title": "Wing RR, et al. Diabetes Care. 2011;34:1481-1486. PMID: 21593294",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2011,
+                "doi": null,
+                "pmid": "21593294",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:17.808964",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "aerobic_and_resistance_exercise_with_5_10_body_weight_loss_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "excessive_intake_of_alcohol_and_high_fructose_corn_syrup",
+      "canonical_name": "Excessive intake of alcohol and high-fructose corn syrup",
+      "intervention_type": "DIET",
+      "description": "Excessive intake of alcohol and high-fructose corn syrup (Diet) — unfavorable effect on Serum Triglycerides",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "excessive_intake_of_alcohol_and_high_fructose_corn_syrup_standard",
+          "regimen": {
+            "regimen_id": "excessive_intake_of_alcohol_and_high_fructose_corn_syrup_standard",
+            "intervention_id": "excessive_intake_of_alcohol_and_high_fructose_corn_syrup",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Excessive intake of alcohol and high-fructose corn syrup",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "excessive_intake_of_alcohol_and_high_fructose_corn_syrup_triglycerides_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 95.0,
+                "lower": 40.0,
+                "upper": 150.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "excessive_intake_of_alcohol_and_high_fructose_corn_syrup_triglycerides_unfavorable",
+                "original_value": 95.0,
+                "original_lower": 40.0,
+                "original_upper": 150.0,
+                "original_unit": "%",
+                "canonical_value": 95.0,
+                "canonical_lower": 40.0,
+                "canonical_upper": 150.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-19381015_adults",
+                "evidence_id": "PMID-19381015",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-19381015",
+                "source_type": "OBSERVATIONAL",
+                "title": "Stanhope KL, et al. J Clin Invest. 2009;119:1322-1334. PMID: 19381015",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2009,
+                "doi": null,
+                "pmid": "19381015",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:18.014162",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "excessive_intake_of_alcohol_and_high_fructose_corn_syrup_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "uncontrolled_type_2_diabetes_and_severe_insulin_resistance",
+      "canonical_name": "Uncontrolled Type 2 Diabetes and severe insulin resistance",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Uncontrolled Type 2 Diabetes and severe insulin resistance (Clinical) — unfavorable effect on Serum Triglycerides",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "uncontrolled_type_2_diabetes_and_severe_insulin_resistance_standard",
+          "regimen": {
+            "regimen_id": "uncontrolled_type_2_diabetes_and_severe_insulin_resistance_standard",
+            "intervention_id": "uncontrolled_type_2_diabetes_and_severe_insulin_resistance",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Uncontrolled Type 2 Diabetes and severe insulin resistance",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "uncontrolled_type_2_diabetes_and_severe_insulin_resistance_triglycerides_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 175.0,
+                "lower": 50.0,
+                "upper": 300.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "uncontrolled_type_2_diabetes_and_severe_insulin_resistance_triglycerides_unfavorable",
+                "original_value": 175.0,
+                "original_lower": 50.0,
+                "original_upper": 300.0,
+                "original_unit": "%",
+                "canonical_value": 175.0,
+                "canonical_lower": 50.0,
+                "canonical_upper": 300.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-22962670_adults",
+                "evidence_id": "PMID-22962670",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-22962670",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Berglund L, et al. J Clin Endocrinol Metab. 2012;97:2969-2989. PMID: 22962670",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2012,
+                "doi": null,
+                "pmid": "22962670",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:18.130346",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "uncontrolled_type_2_diabetes_and_severe_insulin_resistance_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -231,11 +231,10 @@ def test_training_readiness_is_gated_by_seed():
     with SessionLocal() as s:
         r = training_readiness(s)
     assert r["ready"] is False
-    assert r["tier_1_count"] == 28
-    # 12 real combined_effect_metric values: 8 previous + 4 Helderman 2020
-    # TERs whose temperature the paper names (carboplatin RKO at 41 and 43 degC,
-    # oxaliplatin RKO and HCT116 at 43 degC). Still below the training gate.
-    assert r["tier_1_quantitative_count"] == 12
+    assert r["tier_1_count"] == 30
+    # 14 real combined_effect_metric values. The last two are Helderman 2020
+    # cisplatin TERs at 43 degC: RKO 3.5 and HCT116 2.8.
+    assert r["tier_1_quantitative_count"] == 14
     assert r["required_quantitative"] == MIN_TIER1_LABELS_FOR_TRAINING
 
 

@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "alkaline_phosphatase",
+  "biomarker_name": "Alkaline Phosphatase (ALP)",
+  "biomarker_units": "U/L",
+  "interventions": [
+    {
+      "intervention_id": "ursodeoxycholic_acid_udca_13_15_mgkgday_in_cholestatic_liver_diseases",
+      "canonical_name": "Ursodeoxycholic acid (UDCA 13-15 mg/kg/day) in cholestatic liver diseases",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Ursodeoxycholic acid (UDCA 13-15 mg/kg/day) in cholestatic liver diseases (Pharmacologic) — favorable effect on Alkaline Phosphatase (ALP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "ursodeoxycholic_acid_udca_13_15_mgkgday_in_cholestatic_liver_diseases_standard",
+          "regimen": {
+            "regimen_id": "ursodeoxycholic_acid_udca_13_15_mgkgday_in_cholestatic_liver_diseases_standard",
+            "intervention_id": "ursodeoxycholic_acid_udca_13_15_mgkgday_in_cholestatic_liver_diseases",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Ursodeoxycholic acid (UDCA 13-15 mg/kg/day) in cholestatic liver diseases",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "ursodeoxycholic_acid_udca_13_15_mgkgday_in_cholestatic_liver_diseases_alkaline_phosphatase_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -50.0,
+                "lower": -65.0,
+                "upper": -35.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "ursodeoxycholic_acid_udca_13_15_mgkgday_in_cholestatic_liver_diseases_alkaline_phosphatase_favorable",
+                "original_value": -50.0,
+                "original_lower": -65.0,
+                "original_upper": -35.0,
+                "original_unit": "%",
+                "canonical_value": -50.0,
+                "canonical_lower": -65.0,
+                "canonical_upper": -35.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-8152446_adults",
+                "evidence_id": "PMID-8152446",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-8152446",
+                "source_type": "RCT",
+                "title": "Poupon RE, et al. N Engl J Med. 1994;330:1342-1347. PMID: 8152446",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1994,
+                "doi": null,
+                "pmid": "8152446",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:34.576851",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "ursodeoxycholic_acid_udca_13_15_mgkgday_in_cholestatic_liver_diseases_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "antiresorptive_bisphosphonates_alendronate_zoledronic_acid_in_bone_turnover_pagets_disease",
+      "canonical_name": "Antiresorptive bisphosphonates (Alendronate / Zoledronic acid) in bone turnover / Paget's disease",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Antiresorptive bisphosphonates (Alendronate / Zoledronic acid) in bone turnover / Paget's disease (Pharmacologic) — favorable effect on Alkaline Phosphatase (ALP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "antiresorptive_bisphosphonates_alendronate_zoledronic_acid_in_bone_turnover_pagets_disease_standard",
+          "regimen": {
+            "regimen_id": "antiresorptive_bisphosphonates_alendronate_zoledronic_acid_in_bone_turnover_pagets_disease_standard",
+            "intervention_id": "antiresorptive_bisphosphonates_alendronate_zoledronic_acid_in_bone_turnover_pagets_disease",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Antiresorptive bisphosphonates (Alendronate / Zoledronic acid) in bone turnover / Paget's disease",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "antiresorptive_bisphosphonates_alendronate_zoledronic_acid_in_bone_turnover_pagets_disease_alkaline_phosphatase_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -57.5,
+                "lower": -75.0,
+                "upper": -40.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "antiresorptive_bisphosphonates_alendronate_zoledronic_acid_in_bone_turnover_pagets_disease_alkaline_phosphatase_favorable",
+                "original_value": -57.5,
+                "original_lower": -75.0,
+                "original_upper": -40.0,
+                "original_unit": "%",
+                "canonical_value": -57.5,
+                "canonical_lower": -75.0,
+                "canonical_upper": -40.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-16135834_adults",
+                "evidence_id": "PMID-16135834",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-16135834",
+                "source_type": "RCT",
+                "title": "Reid IR, et al. N Engl J Med. 2005;353:898-908. PMID: 16135834",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2005,
+                "doi": null,
+                "pmid": "16135834",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:34.658151",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "antiresorptive_bisphosphonates_alendronate_zoledronic_acid_in_bone_turnover_pagets_disease_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "optimization_of_vitamin_d_and_dietary_calcium_homeostasis",
+      "canonical_name": "Optimization of Vitamin D and dietary Calcium homeostasis",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Optimization of Vitamin D and dietary Calcium homeostasis (Nutraceutical) — favorable effect on Alkaline Phosphatase (ALP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "optimization_of_vitamin_d_and_dietary_calcium_homeostasis_standard",
+          "regimen": {
+            "regimen_id": "optimization_of_vitamin_d_and_dietary_calcium_homeostasis_standard",
+            "intervention_id": "optimization_of_vitamin_d_and_dietary_calcium_homeostasis",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Optimization of Vitamin D and dietary Calcium homeostasis",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "optimization_of_vitamin_d_and_dietary_calcium_homeostasis_alkaline_phosphatase_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -20.0,
+                "lower": -25.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "optimization_of_vitamin_d_and_dietary_calcium_homeostasis_alkaline_phosphatase_favorable",
+                "original_value": -20.0,
+                "original_lower": -25.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -20.0,
+                "canonical_lower": -25.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17634462_adults",
+                "evidence_id": "PMID-17634462",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17634462",
+                "source_type": "META_ANALYSIS",
+                "title": "Holick MF. N Engl J Med. 2007;357:266-281. PMID: 17634462",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2007,
+                "doi": null,
+                "pmid": "17634462",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:34.762069",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "optimization_of_vitamin_d_and_dietary_calcium_homeostasis_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "biliary_ductal_obstruction_choledocholithiasis_or_primary_sclerosing_cholangitis",
+      "canonical_name": "Biliary ductal obstruction, choledocholithiasis, or primary sclerosing cholangitis",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Biliary ductal obstruction, choledocholithiasis, or primary sclerosing cholangitis (Clinical) — unfavorable effect on Alkaline Phosphatase (ALP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "biliary_ductal_obstruction_choledocholithiasis_or_primary_sclerosing_cholangitis_standard",
+          "regimen": {
+            "regimen_id": "biliary_ductal_obstruction_choledocholithiasis_or_primary_sclerosing_cholangitis_standard",
+            "intervention_id": "biliary_ductal_obstruction_choledocholithiasis_or_primary_sclerosing_cholangitis",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Biliary ductal obstruction, choledocholithiasis, or primary sclerosing cholangitis",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "biliary_ductal_obstruction_choledocholithiasis_or_primary_sclerosing_cholangitis_alkaline_phosphatase_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 500.0,
+                "lower": 200.0,
+                "upper": 800.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "biliary_ductal_obstruction_choledocholithiasis_or_primary_sclerosing_cholangitis_alkaline_phosphatase_unfavorable",
+                "original_value": 500.0,
+                "original_lower": 200.0,
+                "original_upper": 800.0,
+                "original_unit": "%",
+                "canonical_value": 500.0,
+                "canonical_lower": 200.0,
+                "canonical_upper": 800.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-23642738_adults",
+                "evidence_id": "PMID-23642738",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-23642738",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Hirschfield GM, et al. Lancet. 2013;381:1579-1588. PMID: 23642738",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2013,
+                "doi": null,
+                "pmid": "23642738",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:35.037196",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "biliary_ductal_obstruction_choledocholithiasis_or_primary_sclerosing_cholangitis_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "active_pagets_disease_of_bone_or_osteolytic_bone_metastases",
+      "canonical_name": "Active Paget's disease of bone or osteolytic bone metastases",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Active Paget's disease of bone or osteolytic bone metastases (Clinical) — unfavorable effect on Alkaline Phosphatase (ALP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "active_pagets_disease_of_bone_or_osteolytic_bone_metastases_standard",
+          "regimen": {
+            "regimen_id": "active_pagets_disease_of_bone_or_osteolytic_bone_metastases_standard",
+            "intervention_id": "active_pagets_disease_of_bone_or_osteolytic_bone_metastases",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Active Paget's disease of bone or osteolytic bone metastases",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "active_pagets_disease_of_bone_or_osteolytic_bone_metastases_alkaline_phosphatase_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 750.0,
+                "lower": 300.0,
+                "upper": 1200.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "active_pagets_disease_of_bone_or_osteolytic_bone_metastases_alkaline_phosphatase_unfavorable",
+                "original_value": 750.0,
+                "original_lower": 300.0,
+                "original_upper": 1200.0,
+                "original_unit": "%",
+                "canonical_value": 750.0,
+                "canonical_lower": 300.0,
+                "canonical_upper": 1200.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-30803025_adults",
+                "evidence_id": "PMID-30803025",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-30803025",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Ralston SH, et al. J Bone Miner Res. 2019;34:579-604. PMID: 30803025",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2019,
+                "doi": null,
+                "pmid": "30803025",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:35.230712",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "active_pagets_disease_of_bone_or_osteolytic_bone_metastases_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

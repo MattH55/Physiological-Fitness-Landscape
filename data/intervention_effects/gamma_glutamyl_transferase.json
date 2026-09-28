@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "gamma_glutamyl_transferase",
+  "biomarker_name": "Gamma-Glutamyl Transferase (GGT)",
+  "biomarker_units": "U/L",
+  "interventions": [
+    {
+      "intervention_id": "complete_alcohol_abstinence_in_heavy_drinkers",
+      "canonical_name": "Complete alcohol abstinence in heavy drinkers",
+      "intervention_type": "BEHAVIORAL",
+      "description": "Complete alcohol abstinence in heavy drinkers (Behavioral) — favorable effect on Gamma-Glutamyl Transferase (GGT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "complete_alcohol_abstinence_in_heavy_drinkers_standard",
+          "regimen": {
+            "regimen_id": "complete_alcohol_abstinence_in_heavy_drinkers_standard",
+            "intervention_id": "complete_alcohol_abstinence_in_heavy_drinkers",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Complete alcohol abstinence in heavy drinkers",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "complete_alcohol_abstinence_in_heavy_drinkers_gamma_glutamyl_transferase_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -55.0,
+                "lower": -70.0,
+                "upper": -40.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "complete_alcohol_abstinence_in_heavy_drinkers_gamma_glutamyl_transferase_favorable",
+                "original_value": -55.0,
+                "original_lower": -70.0,
+                "original_upper": -40.0,
+                "original_unit": "%",
+                "canonical_value": -55.0,
+                "canonical_lower": -70.0,
+                "canonical_upper": -40.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-11563810_adults",
+                "evidence_id": "PMID-11563810",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-11563810",
+                "source_type": "OBSERVATIONAL",
+                "title": "Whitfield JB. Crit Rev Clin Lab Sci. 2001;38:263-355. PMID: 11563810",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2001,
+                "doi": null,
+                "pmid": "11563810",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:32.198825",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "complete_alcohol_abstinence_in_heavy_drinkers_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_dietary_antioxidant_intake_and_regular_coffee_consumption",
+      "canonical_name": "High dietary antioxidant intake and regular coffee consumption",
+      "intervention_type": "DIET",
+      "description": "High dietary antioxidant intake and regular coffee consumption (Diet) — favorable effect on Gamma-Glutamyl Transferase (GGT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_dietary_antioxidant_intake_and_regular_coffee_consumption_standard",
+          "regimen": {
+            "regimen_id": "high_dietary_antioxidant_intake_and_regular_coffee_consumption_standard",
+            "intervention_id": "high_dietary_antioxidant_intake_and_regular_coffee_consumption",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High dietary antioxidant intake and regular coffee consumption",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_dietary_antioxidant_intake_and_regular_coffee_consumption_gamma_glutamyl_transferase_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -22.5,
+                "lower": -30.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_dietary_antioxidant_intake_and_regular_coffee_consumption_gamma_glutamyl_transferase_favorable",
+                "original_value": -22.5,
+                "original_lower": -30.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -22.5,
+                "canonical_lower": -30.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-25123978_adults",
+                "evidence_id": "PMID-25123978",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-25123978",
+                "source_type": "META_ANALYSIS",
+                "title": "Xiao Q, et al. Hepatology. 2014;60:2020-2030. PMID: 25123978",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "25123978",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:33.396971",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_dietary_antioxidant_intake_and_regular_coffee_consumption_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "glutathione_n_acetylcysteine_nac_1200_mgday_supplementation",
+      "canonical_name": "Glutathione / N-Acetylcysteine (NAC 1200 mg/day) supplementation",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Glutathione / N-Acetylcysteine (NAC 1200 mg/day) supplementation (Nutraceutical) — favorable effect on Gamma-Glutamyl Transferase (GGT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "glutathione_n_acetylcysteine_nac_1200_mgday_supplementation_standard",
+          "regimen": {
+            "regimen_id": "glutathione_n_acetylcysteine_nac_1200_mgday_supplementation_standard",
+            "intervention_id": "glutathione_n_acetylcysteine_nac_1200_mgday_supplementation",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Glutathione / N-Acetylcysteine (NAC 1200 mg/day) supplementation",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "glutathione_n_acetylcysteine_nac_1200_mgday_supplementation_gamma_glutamyl_transferase_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -17.5,
+                "lower": -25.0,
+                "upper": -10.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "glutathione_n_acetylcysteine_nac_1200_mgday_supplementation_gamma_glutamyl_transferase_favorable",
+                "original_value": -17.5,
+                "original_lower": -25.0,
+                "original_upper": -10.0,
+                "original_unit": "%",
+                "canonical_value": -17.5,
+                "canonical_lower": -25.0,
+                "canonical_upper": -10.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-22308129_adults",
+                "evidence_id": "PMID-22308129",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-22308129",
+                "source_type": "RCT",
+                "title": "Khoshbaten M, et al. Hepat Mon. 2010;10:12-16. PMID: 22308129",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2010,
+                "doi": null,
+                "pmid": "22308129",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:34.075303",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "glutathione_n_acetylcysteine_nac_1200_mgday_supplementation_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "chronic_heavy_alcohol_consumption",
+      "canonical_name": "Chronic heavy alcohol consumption",
+      "intervention_type": "DIET",
+      "description": "Chronic heavy alcohol consumption (Diet) — unfavorable effect on Gamma-Glutamyl Transferase (GGT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "chronic_heavy_alcohol_consumption_standard",
+          "regimen": {
+            "regimen_id": "chronic_heavy_alcohol_consumption_standard",
+            "intervention_id": "chronic_heavy_alcohol_consumption",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Chronic heavy alcohol consumption",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "chronic_heavy_alcohol_consumption_gamma_glutamyl_transferase_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 375.0,
+                "lower": 150.0,
+                "upper": 600.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "chronic_heavy_alcohol_consumption_gamma_glutamyl_transferase_unfavorable",
+                "original_value": 375.0,
+                "original_lower": 150.0,
+                "original_upper": 600.0,
+                "original_unit": "%",
+                "canonical_value": 375.0,
+                "canonical_lower": 150.0,
+                "canonical_upper": 600.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-12410783_adults",
+                "evidence_id": "PMID-12410783",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-12410783",
+                "source_type": "META_ANALYSIS",
+                "title": "Conigrave KM, et al. Addiction. 2002;97:1429-1437. PMID: 12410783",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2002,
+                "doi": null,
+                "pmid": "12410783",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:34.375404",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "chronic_heavy_alcohol_consumption_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "enzyme_inducing_anticonvulsants_phenytoin_carbamazepine_phenobarbital",
+      "canonical_name": "Enzyme-inducing anticonvulsants (Phenytoin, Carbamazepine, Phenobarbital)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Enzyme-inducing anticonvulsants (Phenytoin, Carbamazepine, Phenobarbital) (Pharmacologic) — unfavorable effect on Gamma-Glutamyl Transferase (GGT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "enzyme_inducing_anticonvulsants_phenytoin_carbamazepine_phenobarbital_standard",
+          "regimen": {
+            "regimen_id": "enzyme_inducing_anticonvulsants_phenytoin_carbamazepine_phenobarbital_standard",
+            "intervention_id": "enzyme_inducing_anticonvulsants_phenytoin_carbamazepine_phenobarbital",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Enzyme-inducing anticonvulsants (Phenytoin, Carbamazepine, Phenobarbital)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "enzyme_inducing_anticonvulsants_phenytoin_carbamazepine_phenobarbital_gamma_glutamyl_transferase_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 125.0,
+                "lower": 50.0,
+                "upper": 200.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "enzyme_inducing_anticonvulsants_phenytoin_carbamazepine_phenobarbital_gamma_glutamyl_transferase_unfavorable",
+                "original_value": 125.0,
+                "original_lower": 50.0,
+                "original_upper": 200.0,
+                "original_unit": "%",
+                "canonical_value": 125.0,
+                "canonical_lower": 50.0,
+                "canonical_upper": 200.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-7113840_adults",
+                "evidence_id": "PMID-7113840",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-7113840",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Luoma PV, et al. Acta Med Scand. 1982;211:423-426. PMID: 7113840",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1982,
+                "doi": null,
+                "pmid": "7113840",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:34.494410",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "enzyme_inducing_anticonvulsants_phenytoin_carbamazepine_phenobarbital_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

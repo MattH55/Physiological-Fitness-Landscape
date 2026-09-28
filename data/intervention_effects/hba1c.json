@@ -1,0 +1,853 @@
+{
+  "biomarker_id": "hba1c",
+  "biomarker_name": "Glycated Hemoglobin (HbA1c)",
+  "biomarker_units": "%",
+  "interventions": [
+    {
+      "intervention_id": "dual_gipglp_1_receptor_agonist_tirzepatide_5_15mg",
+      "canonical_name": "Dual GIP/GLP-1 receptor agonist (Tirzepatide 5-15mg)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Dual GIP/GLP-1 receptor agonist (Tirzepatide 5-15mg) (Pharmacologic) — favorable effect on Glycated Hemoglobin (HbA1c)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "dual_gipglp_1_receptor_agonist_tirzepatide_5_15mg_standard",
+          "regimen": {
+            "regimen_id": "dual_gipglp_1_receptor_agonist_tirzepatide_5_15mg_standard",
+            "intervention_id": "dual_gipglp_1_receptor_agonist_tirzepatide_5_15mg",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Dual GIP/GLP-1 receptor agonist (Tirzepatide 5-15mg)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "dual_gipglp_1_receptor_agonist_tirzepatide_5_15mg_hba1c_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -2.2,
+                "lower": -2.6,
+                "upper": -1.8,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "dual_gipglp_1_receptor_agonist_tirzepatide_5_15mg_hba1c_favorable",
+                "original_value": -2.2,
+                "original_lower": -2.6,
+                "original_upper": -1.8,
+                "original_unit": "%",
+                "canonical_value": -2.2,
+                "canonical_lower": -2.6,
+                "canonical_upper": -1.8,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-34170647_adults",
+                "evidence_id": "PMID-34170647",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-34170647",
+                "source_type": "RCT",
+                "title": "Frías JP, et al. N Engl J Med. 2021;385:503-515. PMID: 34170647",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2021,
+                "doi": null,
+                "pmid": "34170647",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:25.815092",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "dual_gipglp_1_receptor_agonist_tirzepatide_5_15mg_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "intensive_lifestyle_intervention_diabetes_prevention_program",
+      "canonical_name": "Intensive lifestyle intervention (Diabetes Prevention Program)",
+      "intervention_type": "LIFESTYLE",
+      "description": "Intensive lifestyle intervention (Diabetes Prevention Program) (Lifestyle) — favorable effect on Glycated Hemoglobin (HbA1c)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "intensive_lifestyle_intervention_diabetes_prevention_program_standard",
+          "regimen": {
+            "regimen_id": "intensive_lifestyle_intervention_diabetes_prevention_program_standard",
+            "intervention_id": "intensive_lifestyle_intervention_diabetes_prevention_program",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Intensive lifestyle intervention (Diabetes Prevention Program)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "intensive_lifestyle_intervention_diabetes_prevention_program_hba1c_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 28.4,
+                "lower": -1.2,
+                "upper": 58.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "intensive_lifestyle_intervention_diabetes_prevention_program_hba1c_favorable",
+                "original_value": 28.4,
+                "original_lower": -1.2,
+                "original_upper": 58.0,
+                "original_unit": "%",
+                "canonical_value": 28.4,
+                "canonical_lower": -1.2,
+                "canonical_upper": 58.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-11832527_adults",
+                "evidence_id": "PMID-11832527",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-11832527",
+                "source_type": "RCT",
+                "title": "Knowler WC, et al. N Engl J Med. 2002;346:393-403. PMID: 11832527",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2002,
+                "doi": null,
+                "pmid": "11832527",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:23.694085",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "intensive_lifestyle_intervention_diabetes_prevention_program_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "low_carbohydrate_ketogenic_dietary_intervention",
+      "canonical_name": "Low-carbohydrate / Ketogenic dietary intervention",
+      "intervention_type": "DIET",
+      "description": "Low-carbohydrate / Ketogenic dietary intervention (Diet) — favorable effect on Glycated Hemoglobin (HbA1c)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "low_carbohydrate_ketogenic_dietary_intervention_standard",
+          "regimen": {
+            "regimen_id": "low_carbohydrate_ketogenic_dietary_intervention_standard",
+            "intervention_id": "low_carbohydrate_ketogenic_dietary_intervention",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Low-carbohydrate / Ketogenic dietary intervention",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "low_carbohydrate_ketogenic_dietary_intervention_hba1c_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -1.15,
+                "lower": -1.5,
+                "upper": -0.8,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "low_carbohydrate_ketogenic_dietary_intervention_hba1c_favorable",
+                "original_value": -1.15,
+                "original_lower": -1.5,
+                "original_upper": -0.8,
+                "original_unit": "%",
+                "canonical_value": -1.15,
+                "canonical_lower": -1.5,
+                "canonical_upper": -0.8,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-33441384_adults",
+                "evidence_id": "PMID-33441384",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-33441384",
+                "source_type": "META_ANALYSIS",
+                "title": "Goldenberg JZ, et al. BMJ. 2021;372:m4743. PMID: 33441384",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2021,
+                "doi": null,
+                "pmid": "33441384",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:26.437922",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "low_carbohydrate_ketogenic_dietary_intervention_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "combined_aerobic_and_resistance_training_3xweek",
+      "canonical_name": "Combined aerobic and resistance training (3x/week)",
+      "intervention_type": "EXERCISE",
+      "description": "Combined aerobic and resistance training (3x/week) (Exercise) — favorable effect on Glycated Hemoglobin (HbA1c)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "combined_aerobic_and_resistance_training_3xweek_standard",
+          "regimen": {
+            "regimen_id": "combined_aerobic_and_resistance_training_3xweek_standard",
+            "intervention_id": "combined_aerobic_and_resistance_training_3xweek",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Combined aerobic and resistance training (3x/week)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "combined_aerobic_and_resistance_training_3xweek_hba1c_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -0.7,
+                "lower": -0.9,
+                "upper": -0.5,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "combined_aerobic_and_resistance_training_3xweek_hba1c_favorable",
+                "original_value": -0.7,
+                "original_lower": -0.9,
+                "original_upper": -0.5,
+                "original_unit": "%",
+                "canonical_value": -0.7,
+                "canonical_lower": -0.9,
+                "canonical_upper": -0.5,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-21098771_adults",
+                "evidence_id": "PMID-21098771",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-21098771",
+                "source_type": "META_ANALYSIS",
+                "title": "Church TS, et al. JAMA. 2010;304:2253-2262. PMID: 21098771",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2010,
+                "doi": null,
+                "pmid": "21098771",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:26.634961",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "combined_aerobic_and_resistance_training_3xweek_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "progressive_beta_cell_failure_and_unmanaged_insulin_resistance",
+      "canonical_name": "Progressive beta-cell failure and unmanaged insulin resistance",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Progressive beta-cell failure and unmanaged insulin resistance (Clinical) — unfavorable effect on Glycated Hemoglobin (HbA1c)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "progressive_beta_cell_failure_and_unmanaged_insulin_resistance_standard",
+          "regimen": {
+            "regimen_id": "progressive_beta_cell_failure_and_unmanaged_insulin_resistance_standard",
+            "intervention_id": "progressive_beta_cell_failure_and_unmanaged_insulin_resistance",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Progressive beta-cell failure and unmanaged insulin resistance",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "progressive_beta_cell_failure_and_unmanaged_insulin_resistance_hba1c_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 4.75,
+                "lower": 1.5,
+                "upper": 8.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "progressive_beta_cell_failure_and_unmanaged_insulin_resistance_hba1c_unfavorable",
+                "original_value": 4.75,
+                "original_lower": 1.5,
+                "original_upper": 8.0,
+                "original_unit": "%",
+                "canonical_value": 4.75,
+                "canonical_lower": 1.5,
+                "canonical_upper": 8.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-36507647_adults",
+                "evidence_id": "PMID-36507647",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-36507647",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "American Diabetes Association. Diabetes Care. 2023;46:S19-S40. PMID: 36507647",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2023,
+                "doi": null,
+                "pmid": "36507647",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:26.788959",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "progressive_beta_cell_failure_and_unmanaged_insulin_resistance_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "chronic_high_glycemic_ultra_processed_dietary_pattern",
+      "canonical_name": "Chronic high-glycemic ultra-processed dietary pattern",
+      "intervention_type": "DIET",
+      "description": "Chronic high-glycemic ultra-processed dietary pattern (Diet) — unfavorable effect on Glycated Hemoglobin (HbA1c)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "chronic_high_glycemic_ultra_processed_dietary_pattern_standard",
+          "regimen": {
+            "regimen_id": "chronic_high_glycemic_ultra_processed_dietary_pattern_standard",
+            "intervention_id": "chronic_high_glycemic_ultra_processed_dietary_pattern",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Chronic high-glycemic ultra-processed dietary pattern",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "chronic_high_glycemic_ultra_processed_dietary_pattern_hba1c_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 0.85,
+                "lower": 0.5,
+                "upper": 1.2,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "chronic_high_glycemic_ultra_processed_dietary_pattern_hba1c_unfavorable",
+                "original_value": 0.85,
+                "original_lower": 0.5,
+                "original_upper": 1.2,
+                "original_unit": "%",
+                "canonical_value": 0.85,
+                "canonical_lower": 0.5,
+                "canonical_upper": 1.2,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-31841565_adults",
+                "evidence_id": "PMID-31841565",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-31841565",
+                "source_type": "OBSERVATIONAL",
+                "title": "Srour B, et al. JAMA Intern Med. 2020;180:283-291. PMID: 31841565",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2020,
+                "doi": null,
+                "pmid": "31841565",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:27.131931",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "chronic_high_glycemic_ultra_processed_dietary_pattern_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "cystatin_c",
+  "biomarker_name": "Serum Cystatin C",
+  "biomarker_units": "mg/L",
+  "interventions": [
+    {
+      "intervention_id": "sglt2_inhibitors_dapagliflozin_empagliflozin",
+      "canonical_name": "SGLT2 inhibitors (Dapagliflozin / Empagliflozin)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "SGLT2 inhibitors (Dapagliflozin / Empagliflozin) (Pharmacologic) — favorable effect on Serum Cystatin C",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "sglt2_inhibitors_dapagliflozin_empagliflozin_standard",
+          "regimen": {
+            "regimen_id": "sglt2_inhibitors_dapagliflozin_empagliflozin_standard",
+            "intervention_id": "sglt2_inhibitors_dapagliflozin_empagliflozin",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for SGLT2 inhibitors (Dapagliflozin / Empagliflozin)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "sglt2_inhibitors_dapagliflozin_empagliflozin_cystatin_c_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -27.5,
+                "lower": -35.0,
+                "upper": -20.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "sglt2_inhibitors_dapagliflozin_empagliflozin_cystatin_c_favorable",
+                "original_value": -27.5,
+                "original_lower": -35.0,
+                "original_upper": -20.0,
+                "original_unit": "%",
+                "canonical_value": -27.5,
+                "canonical_lower": -35.0,
+                "canonical_upper": -20.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-33932454_adults",
+                "evidence_id": "PMID-33932454",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-33932454",
+                "source_type": "RCT",
+                "title": "Wheeler DC, et al. Kidney Int. 2021;100:459-470. PMID: 33932454",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2021,
+                "doi": null,
+                "pmid": "33932454",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:10.338855",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "sglt2_inhibitors_dapagliflozin_empagliflozin_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "rigorous_systolic_blood_pressure_control_120_mmhg",
+      "canonical_name": "Rigorous systolic blood pressure control (<120 mmHg)",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Rigorous systolic blood pressure control (<120 mmHg) (Clinical) — favorable effect on Serum Cystatin C",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "rigorous_systolic_blood_pressure_control_120_mmhg_standard",
+          "regimen": {
+            "regimen_id": "rigorous_systolic_blood_pressure_control_120_mmhg_standard",
+            "intervention_id": "rigorous_systolic_blood_pressure_control_120_mmhg",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Rigorous systolic blood pressure control (<120 mmHg)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "rigorous_systolic_blood_pressure_control_120_mmhg_cystatin_c_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -20.0,
+                "lower": -25.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "rigorous_systolic_blood_pressure_control_120_mmhg_cystatin_c_favorable",
+                "original_value": -20.0,
+                "original_lower": -25.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -20.0,
+                "canonical_lower": -25.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-26551272_adults",
+                "evidence_id": "PMID-26551272",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-26551272",
+                "source_type": "RCT",
+                "title": "SPRINT Research Group. N Engl J Med. 2015;373:2103-2116. PMID: 26551272",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2015,
+                "doi": null,
+                "pmid": "26551272",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:10.873467",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "rigorous_systolic_blood_pressure_control_120_mmhg_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "anti_inflammatory_mediterranean_lifestyle_and_exercise",
+      "canonical_name": "Anti-inflammatory Mediterranean lifestyle and exercise",
+      "intervention_type": "LIFESTYLE",
+      "description": "Anti-inflammatory Mediterranean lifestyle and exercise (Lifestyle) — favorable effect on Serum Cystatin C",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "anti_inflammatory_mediterranean_lifestyle_and_exercise_standard",
+          "regimen": {
+            "regimen_id": "anti_inflammatory_mediterranean_lifestyle_and_exercise_standard",
+            "intervention_id": "anti_inflammatory_mediterranean_lifestyle_and_exercise",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Anti-inflammatory Mediterranean lifestyle and exercise",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "anti_inflammatory_mediterranean_lifestyle_and_exercise_cystatin_c_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -14.0,
+                "lower": -18.0,
+                "upper": -10.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "anti_inflammatory_mediterranean_lifestyle_and_exercise_cystatin_c_favorable",
+                "original_value": -14.0,
+                "original_lower": -18.0,
+                "original_upper": -10.0,
+                "original_unit": "%",
+                "canonical_value": -14.0,
+                "canonical_lower": -18.0,
+                "canonical_upper": -10.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-24721893_adults",
+                "evidence_id": "PMID-24721893",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-24721893",
+                "source_type": "OBSERVATIONAL",
+                "title": "Khatri M, et al. Clin J Am Soc Nephrol. 2014;9:1099-1106. PMID: 24721893",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "24721893",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:11.109547",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "anti_inflammatory_mediterranean_lifestyle_and_exercise_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "glucocorticoid_administration_prednisone_therapy",
+      "canonical_name": "Glucocorticoid administration (Prednisone therapy)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Glucocorticoid administration (Prednisone therapy) (Pharmacologic) — unfavorable effect on Serum Cystatin C",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "glucocorticoid_administration_prednisone_therapy_standard",
+          "regimen": {
+            "regimen_id": "glucocorticoid_administration_prednisone_therapy_standard",
+            "intervention_id": "glucocorticoid_administration_prednisone_therapy",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Glucocorticoid administration (Prednisone therapy)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "glucocorticoid_administration_prednisone_therapy_cystatin_c_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 30.0,
+                "lower": 20.0,
+                "upper": 40.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "glucocorticoid_administration_prednisone_therapy_cystatin_c_unfavorable",
+                "original_value": 30.0,
+                "original_lower": 20.0,
+                "original_upper": 40.0,
+                "original_unit": "%",
+                "canonical_value": 30.0,
+                "canonical_lower": 20.0,
+                "canonical_upper": 40.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-11673384_adults",
+                "evidence_id": "PMID-11673384",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-11673384",
+                "source_type": "MECHANISTIC",
+                "title": "Risch L, et al. Clin Chem. 2001;47:2055-2059. PMID: 11673384",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2001,
+                "doi": null,
+                "pmid": "11673384",
+                "nct_id": null,
+                "url": null,
+                "study_design": "mechanistic_study",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:11.410530",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "glucocorticoid_administration_prednisone_therapy_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_untreated_hyperthyroidism",
+      "canonical_name": "Severe untreated hyperthyroidism",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe untreated hyperthyroidism (Clinical) — unfavorable effect on Serum Cystatin C",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_untreated_hyperthyroidism_standard",
+          "regimen": {
+            "regimen_id": "severe_untreated_hyperthyroidism_standard",
+            "intervention_id": "severe_untreated_hyperthyroidism",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe untreated hyperthyroidism",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_untreated_hyperthyroidism_cystatin_c_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 37.5,
+                "lower": 25.0,
+                "upper": 50.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_untreated_hyperthyroidism_cystatin_c_unfavorable",
+                "original_value": 37.5,
+                "original_lower": 25.0,
+                "original_upper": 50.0,
+                "original_unit": "%",
+                "canonical_value": 37.5,
+                "canonical_lower": 25.0,
+                "canonical_upper": 50.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-12600956_adults",
+                "evidence_id": "PMID-12600956",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-12600956",
+                "source_type": "OBSERVATIONAL",
+                "title": "Fricker M, et al. Clin Chem. 2003;49:439-444. PMID: 12600956",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2003,
+                "doi": null,
+                "pmid": "12600956",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:11.642944",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_untreated_hyperthyroidism_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

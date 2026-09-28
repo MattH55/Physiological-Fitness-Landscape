@@ -1,0 +1,14 @@
+{
+  "built": "2026-09-28T02:19:36.536773+00:00",
+  "n_pairs": 2924,
+  "architecture": "DrugsyncGCN (real STRING PPI graph, 3 GCN layers, node features = [signature_A, signature_B], real cell-line baseline concatenated before the FC head)",
+  "note": "Real 146-fold CV (56 cell-line-out + 90 drug-out) completed 2026-09-27; these numbers come from that completed run's own printed log, not a re-run (see this script's module docstring).",
+  "bliss_rmse": 0.1105,
+  "gcn_rmse_cell_line_out": 0.113,
+  "gcn_rmse_drug_out": 0.1098,
+  "beats_bliss_both_splits": false,
+  "gate_6": {
+    "passed": false,
+    "criterion": "GCN RMSE < Bliss-independence RMSE under both leave-one-cell-line-out and leave-one-drug-out (same bar as Phase 5's models)"
+  }
+}

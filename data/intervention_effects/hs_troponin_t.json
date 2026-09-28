@@ -1,0 +1,700 @@
+{
+  "biomarker_id": "hs_troponin_t",
+  "biomarker_name": "High-Sensitivity Cardiac Troponin T (hs-cTnT)",
+  "biomarker_units": "ng/L",
+  "interventions": [
+    {
+      "intervention_id": "early_coronary_revascularization_pci_cabg_in_acute_coronary_syndrome",
+      "canonical_name": "Early coronary revascularization (PCI / CABG) in acute coronary syndrome",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Early coronary revascularization (PCI / CABG) in acute coronary syndrome (Clinical) — favorable effect on High-Sensitivity Cardiac Troponin T (hs-cTnT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "early_coronary_revascularization_pci_cabg_in_acute_coronary_syndrome_standard",
+          "regimen": {
+            "regimen_id": "early_coronary_revascularization_pci_cabg_in_acute_coronary_syndrome_standard",
+            "intervention_id": "early_coronary_revascularization_pci_cabg_in_acute_coronary_syndrome",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Early coronary revascularization (PCI / CABG) in acute coronary syndrome",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "early_coronary_revascularization_pci_cabg_in_acute_coronary_syndrome_hs_troponin_t_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-19723999_adults",
+                "evidence_id": "PMID-19723999",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-19723999",
+                "source_type": "RCT",
+                "title": "Mehta SR, et al. N Engl J Med. 2009;361:2165-2176. PMID: 19723999",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2009,
+                "doi": null,
+                "pmid": "19723999",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:51.660409",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "early_coronary_revascularization_pci_cabg_in_acute_coronary_syndrome_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "long_term_cardioprotective_beta_blockers_and_aceiarb_in_structural_heart_disease",
+      "canonical_name": "Long-term Cardioprotective Beta-Blockers and ACEi/ARB in structural heart disease",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Long-term Cardioprotective Beta-Blockers and ACEi/ARB in structural heart disease (Pharmacologic) — favorable effect on High-Sensitivity Cardiac Troponin T (hs-cTnT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "long_term_cardioprotective_beta_blockers_and_aceiarb_in_structural_heart_disease_standard",
+          "regimen": {
+            "regimen_id": "long_term_cardioprotective_beta_blockers_and_aceiarb_in_structural_heart_disease_standard",
+            "intervention_id": "long_term_cardioprotective_beta_blockers_and_aceiarb_in_structural_heart_disease",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Long-term Cardioprotective Beta-Blockers and ACEi/ARB in structural heart disease",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "long_term_cardioprotective_beta_blockers_and_aceiarb_in_structural_heart_disease_hs_troponin_t_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -25.0,
+                "lower": -35.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "long_term_cardioprotective_beta_blockers_and_aceiarb_in_structural_heart_disease_hs_troponin_t_favorable",
+                "original_value": -25.0,
+                "original_lower": -35.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -25.0,
+                "canonical_lower": -35.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17709633_adults",
+                "evidence_id": "PMID-17709633",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17709633",
+                "source_type": "META_ANALYSIS",
+                "title": "Latini R, et al. Circulation. 2007;116:1242-1249. PMID: 17709633",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2007,
+                "doi": null,
+                "pmid": "17709633",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:51.872849",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "long_term_cardioprotective_beta_blockers_and_aceiarb_in_structural_heart_disease_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "intensive_blood_pressure_reduction_and_left_ventricular_hypertrophy_regression",
+      "canonical_name": "Intensive blood pressure reduction and left ventricular hypertrophy regression",
+      "intervention_type": "LIFESTYLE",
+      "description": "Intensive blood pressure reduction and left ventricular hypertrophy regression (Lifestyle) — favorable effect on High-Sensitivity Cardiac Troponin T (hs-cTnT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "intensive_blood_pressure_reduction_and_left_ventricular_hypertrophy_regression_standard",
+          "regimen": {
+            "regimen_id": "intensive_blood_pressure_reduction_and_left_ventricular_hypertrophy_regression_standard",
+            "intervention_id": "intensive_blood_pressure_reduction_and_left_ventricular_hypertrophy_regression",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Intensive blood pressure reduction and left ventricular hypertrophy regression",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "intensive_blood_pressure_reduction_and_left_ventricular_hypertrophy_regression_hs_troponin_t_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -17.5,
+                "lower": -25.0,
+                "upper": -10.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "intensive_blood_pressure_reduction_and_left_ventricular_hypertrophy_regression_hs_troponin_t_favorable",
+                "original_value": -17.5,
+                "original_lower": -25.0,
+                "original_upper": -10.0,
+                "original_unit": "%",
+                "canonical_value": -17.5,
+                "canonical_lower": -25.0,
+                "canonical_upper": -10.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-26499966_adults",
+                "evidence_id": "PMID-26499966",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-26499966",
+                "source_type": "OBSERVATIONAL",
+                "title": "McEvoy JW, et al. Circulation. 2015;132:2317-2325. PMID: 26499966",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2015,
+                "doi": null,
+                "pmid": "26499966",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:52.143275",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "intensive_blood_pressure_reduction_and_left_ventricular_hypertrophy_regression_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "acute_myocardial_infarction_type_1_or_type_2_ischemia",
+      "canonical_name": "Acute Myocardial Infarction (Type 1 or Type 2 ischemia)",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Acute Myocardial Infarction (Type 1 or Type 2 ischemia) (Clinical) — unfavorable effect on High-Sensitivity Cardiac Troponin T (hs-cTnT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "acute_myocardial_infarction_type_1_or_type_2_ischemia_standard",
+          "regimen": {
+            "regimen_id": "acute_myocardial_infarction_type_1_or_type_2_ischemia_standard",
+            "intervention_id": "acute_myocardial_infarction_type_1_or_type_2_ischemia",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Acute Myocardial Infarction (Type 1 or Type 2 ischemia)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "acute_myocardial_infarction_type_1_or_type_2_ischemia_hs_troponin_t_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 5250.0,
+                "lower": 500.0,
+                "upper": 10000.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "acute_myocardial_infarction_type_1_or_type_2_ischemia_hs_troponin_t_unfavorable",
+                "original_value": 5250.0,
+                "original_lower": 500.0,
+                "original_upper": 10000.0,
+                "original_unit": "%",
+                "canonical_value": 5250.0,
+                "canonical_lower": 500.0,
+                "canonical_upper": 10000.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-30571511_adults",
+                "evidence_id": "PMID-30571511",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-30571511",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Thygesen K, et al. Circulation. 2018;138:e618-e651. PMID: 30571511",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2018,
+                "doi": null,
+                "pmid": "30571511",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:52.628335",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "acute_myocardial_infarction_type_1_or_type_2_ischemia_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "acute_viral_myocarditis_or_anthracycline_chemotherapy_cardiotoxicity",
+      "canonical_name": "Acute viral myocarditis or anthracycline chemotherapy cardiotoxicity",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Acute viral myocarditis or anthracycline chemotherapy cardiotoxicity (Pharmacologic) — unfavorable effect on High-Sensitivity Cardiac Troponin T (hs-cTnT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "acute_viral_myocarditis_or_anthracycline_chemotherapy_cardiotoxicity_standard",
+          "regimen": {
+            "regimen_id": "acute_viral_myocarditis_or_anthracycline_chemotherapy_cardiotoxicity_standard",
+            "intervention_id": "acute_viral_myocarditis_or_anthracycline_chemotherapy_cardiotoxicity",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Acute viral myocarditis or anthracycline chemotherapy cardiotoxicity",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "acute_viral_myocarditis_or_anthracycline_chemotherapy_cardiotoxicity_hs_troponin_t_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 800.0,
+                "lower": 100.0,
+                "upper": 1500.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "acute_viral_myocarditis_or_anthracycline_chemotherapy_cardiotoxicity_hs_troponin_t_unfavorable",
+                "original_value": 800.0,
+                "original_lower": 100.0,
+                "original_upper": 1500.0,
+                "original_unit": "%",
+                "canonical_value": 800.0,
+                "canonical_lower": 100.0,
+                "canonical_upper": 1500.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17101856_adults",
+                "evidence_id": "PMID-17101856",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17101856",
+                "source_type": "SYSTEMATIC_REVIEW",
+                "title": "Cardinale D, et al. Circulation. 2006;114:2474-2481. PMID: 17101856",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2006,
+                "doi": null,
+                "pmid": "17101856",
+                "nct_id": null,
+                "url": null,
+                "study_design": "systematic_review",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:52.878615",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "acute_viral_myocarditis_or_anthracycline_chemotherapy_cardiotoxicity_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

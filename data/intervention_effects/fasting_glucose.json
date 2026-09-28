@@ -1,0 +1,994 @@
+{
+  "biomarker_id": "fasting_glucose",
+  "biomarker_name": "Fasting Plasma Glucose",
+  "biomarker_units": "mg/dL",
+  "interventions": [
+    {
+      "intervention_id": "glp_1_receptor_agonists_semaglutide_tirzepatide",
+      "canonical_name": "GLP-1 Receptor Agonists (Semaglutide / Tirzepatide)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "GLP-1 Receptor Agonists (Semaglutide / Tirzepatide) (Pharmacologic) — favorable effect on Fasting Plasma Glucose",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "glp_1_receptor_agonists_semaglutide_tirzepatide_standard",
+          "regimen": {
+            "regimen_id": "glp_1_receptor_agonists_semaglutide_tirzepatide_standard",
+            "intervention_id": "glp_1_receptor_agonists_semaglutide_tirzepatide",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for GLP-1 Receptor Agonists (Semaglutide / Tirzepatide)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "glp_1_receptor_agonists_semaglutide_tirzepatide_fasting_glucose_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -50.0,
+                "lower": -50.0,
+                "upper": -50.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mg/dL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "glp_1_receptor_agonists_semaglutide_tirzepatide_fasting_glucose_favorable",
+                "original_value": -50.0,
+                "original_lower": -50.0,
+                "original_upper": -50.0,
+                "original_unit": "mg/dL",
+                "canonical_value": -50.0,
+                "canonical_lower": -50.0,
+                "canonical_upper": -50.0,
+                "canonical_unit": "mg/dL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-33567185_adults",
+                "evidence_id": "PMID-33567185",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-33567185",
+                "source_type": "RCT",
+                "title": "Wilding JPH, et al. N Engl J Med. 2021;384:989-1002. PMID: 33567185",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2021,
+                "doi": null,
+                "pmid": "33567185",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:22.487518",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "glp_1_receptor_agonists_semaglutide_tirzepatide_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "time_restricted_eating_and_ketogenic_carbohydrate_restriction",
+      "canonical_name": "Time-restricted eating and ketogenic carbohydrate restriction",
+      "intervention_type": "DIET",
+      "description": "Time-restricted eating and ketogenic carbohydrate restriction (Diet) — favorable effect on Fasting Plasma Glucose",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "time_restricted_eating_and_ketogenic_carbohydrate_restriction_standard",
+          "regimen": {
+            "regimen_id": "time_restricted_eating_and_ketogenic_carbohydrate_restriction_standard",
+            "intervention_id": "time_restricted_eating_and_ketogenic_carbohydrate_restriction",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Time-restricted eating and ketogenic carbohydrate restriction",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "time_restricted_eating_and_ketogenic_carbohydrate_restriction_fasting_glucose_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -30.0,
+                "lower": -30.0,
+                "upper": -30.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mg/dL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "time_restricted_eating_and_ketogenic_carbohydrate_restriction_fasting_glucose_favorable",
+                "original_value": -30.0,
+                "original_lower": -30.0,
+                "original_upper": -30.0,
+                "original_unit": "mg/dL",
+                "canonical_value": -30.0,
+                "canonical_lower": -30.0,
+                "canonical_upper": -30.0,
+                "canonical_unit": "mg/dL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-29752052_adults",
+                "evidence_id": "PMID-29752052",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-29752052",
+                "source_type": "META_ANALYSIS",
+                "title": "Sutton EF, et al. Cell Metab. 2018;27:1212-1221. PMID: 29752052",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2018,
+                "doi": null,
+                "pmid": "29752052",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:22.639631",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "time_restricted_eating_and_ketogenic_carbohydrate_restriction_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "postprandial_walking_and_structured_resistance_training",
+      "canonical_name": "Postprandial walking and structured resistance training",
+      "intervention_type": "EXERCISE",
+      "description": "Postprandial walking and structured resistance training (Exercise) — favorable effect on Fasting Plasma Glucose",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "postprandial_walking_and_structured_resistance_training_standard",
+          "regimen": {
+            "regimen_id": "postprandial_walking_and_structured_resistance_training_standard",
+            "intervention_id": "postprandial_walking_and_structured_resistance_training",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Postprandial walking and structured resistance training",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "postprandial_walking_and_structured_resistance_training_fasting_glucose_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -22.0,
+                "lower": -22.0,
+                "upper": -22.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mg/dL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "postprandial_walking_and_structured_resistance_training_fasting_glucose_favorable",
+                "original_value": -22.0,
+                "original_lower": -22.0,
+                "original_upper": -22.0,
+                "original_unit": "mg/dL",
+                "canonical_value": -22.0,
+                "canonical_lower": -22.0,
+                "canonical_upper": -22.0,
+                "canonical_unit": "mg/dL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-27747394_adults",
+                "evidence_id": "PMID-27747394",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-27747394",
+                "source_type": "RCT",
+                "title": "Reynolds AN, et al. Diabetologia. 2016;59:2572-2578. PMID: 27747394",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2016,
+                "doi": null,
+                "pmid": "27747394",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:23.037299",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "postprandial_walking_and_structured_resistance_training_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "metformin_therapy_500_2000_mgday",
+      "canonical_name": "Metformin therapy (500-2000 mg/day)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Metformin therapy (500-2000 mg/day) (Pharmacologic) — favorable effect on Fasting Plasma Glucose",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "metformin_therapy_500_2000_mgday_standard",
+          "regimen": {
+            "regimen_id": "metformin_therapy_500_2000_mgday_standard",
+            "intervention_id": "metformin_therapy_500_2000_mgday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Metformin therapy (500-2000 mg/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "metformin_therapy_500_2000_mgday_fasting_glucose_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -40.0,
+                "lower": -40.0,
+                "upper": -40.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mg/dL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "metformin_therapy_500_2000_mgday_fasting_glucose_favorable",
+                "original_value": -40.0,
+                "original_lower": -40.0,
+                "original_upper": -40.0,
+                "original_unit": "mg/dL",
+                "canonical_value": -40.0,
+                "canonical_lower": -40.0,
+                "canonical_upper": -40.0,
+                "canonical_unit": "mg/dL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-11832527_adults",
+                "evidence_id": "PMID-11832527",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-11832527",
+                "source_type": "RCT",
+                "title": "Knowler WC, et al. N Engl J Med. 2002;346:393-403. PMID: 11832527",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2002,
+                "doi": null,
+                "pmid": "11832527",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:23.694085",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "metformin_therapy_500_2000_mgday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_glycemic_load_diet_and_sugar_sweetened_beverages",
+      "canonical_name": "High glycemic load diet and sugar-sweetened beverages",
+      "intervention_type": "DIET",
+      "description": "High glycemic load diet and sugar-sweetened beverages (Diet) — unfavorable effect on Fasting Plasma Glucose",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_glycemic_load_diet_and_sugar_sweetened_beverages_standard",
+          "regimen": {
+            "regimen_id": "high_glycemic_load_diet_and_sugar_sweetened_beverages_standard",
+            "intervention_id": "high_glycemic_load_diet_and_sugar_sweetened_beverages",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High glycemic load diet and sugar-sweetened beverages",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_glycemic_load_diet_and_sugar_sweetened_beverages_fasting_glucose_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 60.0,
+                "lower": 60.0,
+                "upper": 60.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mg/dL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_glycemic_load_diet_and_sugar_sweetened_beverages_fasting_glucose_unfavorable",
+                "original_value": 60.0,
+                "original_lower": 60.0,
+                "original_upper": 60.0,
+                "original_unit": "mg/dL",
+                "canonical_value": 60.0,
+                "canonical_lower": 60.0,
+                "canonical_upper": 60.0,
+                "canonical_unit": "mg/dL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-20693348_adults",
+                "evidence_id": "PMID-20693348",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-20693348",
+                "source_type": "META_ANALYSIS",
+                "title": "Malik VS, et al. Diabetes Care. 2010;33:2477-2483. PMID: 20693348",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2010,
+                "doi": null,
+                "pmid": "20693348",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:24.545555",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_glycemic_load_diet_and_sugar_sweetened_beverages_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "chronic_glucocorticoid_therapy_prednisone_dexamethasone",
+      "canonical_name": "Chronic glucocorticoid therapy (Prednisone / Dexamethasone)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Chronic glucocorticoid therapy (Prednisone / Dexamethasone) (Pharmacologic) — unfavorable effect on Fasting Plasma Glucose",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "chronic_glucocorticoid_therapy_prednisone_dexamethasone_standard",
+          "regimen": {
+            "regimen_id": "chronic_glucocorticoid_therapy_prednisone_dexamethasone_standard",
+            "intervention_id": "chronic_glucocorticoid_therapy_prednisone_dexamethasone",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Chronic glucocorticoid therapy (Prednisone / Dexamethasone)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "chronic_glucocorticoid_therapy_prednisone_dexamethasone_fasting_glucose_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 90.0,
+                "lower": 90.0,
+                "upper": 90.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mg/dL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "chronic_glucocorticoid_therapy_prednisone_dexamethasone_fasting_glucose_unfavorable",
+                "original_value": 90.0,
+                "original_lower": 90.0,
+                "original_upper": 90.0,
+                "original_unit": "mg/dL",
+                "canonical_value": 90.0,
+                "canonical_lower": 90.0,
+                "canonical_upper": 90.0,
+                "canonical_unit": "mg/dL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-26246778_adults",
+                "evidence_id": "PMID-26246778",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-26246778",
+                "source_type": "SYSTEMATIC_REVIEW",
+                "title": "Kwon S, et al. Diabetes Spectr. 2013;26:118-124. PMID: 26246778",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2013,
+                "doi": null,
+                "pmid": "26246778",
+                "nct_id": null,
+                "url": null,
+                "study_design": "systematic_review",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:25.144664",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "chronic_glucocorticoid_therapy_prednisone_dexamethasone_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_obstructive_sleep_apnea_with_nocturnal_hypoxemia",
+      "canonical_name": "Severe obstructive sleep apnea with nocturnal hypoxemia",
+      "intervention_type": "SLEEP",
+      "description": "Severe obstructive sleep apnea with nocturnal hypoxemia (Sleep) — unfavorable effect on Fasting Plasma Glucose",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_obstructive_sleep_apnea_with_nocturnal_hypoxemia_standard",
+          "regimen": {
+            "regimen_id": "severe_obstructive_sleep_apnea_with_nocturnal_hypoxemia_standard",
+            "intervention_id": "severe_obstructive_sleep_apnea_with_nocturnal_hypoxemia",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe obstructive sleep apnea with nocturnal hypoxemia",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_obstructive_sleep_apnea_with_nocturnal_hypoxemia_fasting_glucose_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 35.0,
+                "lower": 35.0,
+                "upper": 35.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mg/dL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_obstructive_sleep_apnea_with_nocturnal_hypoxemia_fasting_glucose_unfavorable",
+                "original_value": 35.0,
+                "original_lower": 35.0,
+                "original_upper": 35.0,
+                "original_unit": "mg/dL",
+                "canonical_value": 35.0,
+                "canonical_lower": 35.0,
+                "canonical_upper": 35.0,
+                "canonical_unit": "mg/dL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-14597483_adults",
+                "evidence_id": "PMID-14597483",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-14597483",
+                "source_type": "OBSERVATIONAL",
+                "title": "Punjabi NM, et al. Am J Respir Crit Care Med. 2004;169:156-162. PMID: 14597483",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2004,
+                "doi": null,
+                "pmid": "14597483",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:25.535291",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_obstructive_sleep_apnea_with_nocturnal_hypoxemia_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

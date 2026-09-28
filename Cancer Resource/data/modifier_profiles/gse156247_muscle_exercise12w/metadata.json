@@ -1,0 +1,20 @@
+{
+  "modifier_id": "gse156247_muscle_exercise12w",
+  "protocol": "combined_exercise_12w",
+  "biological_context": "skeletal_muscle",
+  "tissue": "human vastus lateralis",
+  "study_id": "GSE156247",
+  "species": "human",
+  "dose": {
+    "unit": "calendar_hours",
+    "duration_hr": 2016.0,
+    "program_weeks": 12,
+    "note": "Per-session length is not in the series record. duration_hr is the 12-week calendar span."
+  },
+  "duration_hr": 2016.0,
+  "timepoint_hr": 2016.0,
+  "platform": "GPL11532",
+  "n_replicates": 18,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

@@ -1,0 +1,21 @@
+{
+  "modifier_id": "gse70976_lovo_serumfree96h",
+  "protocol": "serum_free_96h",
+  "biological_context": "lovo",
+  "tissue": "LoVo",
+  "study_id": "GSE70976",
+  "species": "human",
+  "dose": {
+    "modality": "serum_starvation",
+    "unit": "% serum",
+    "serum_percent": 0.0,
+    "duration_hr": 96.0,
+    "context": "ADMA-treated arm excluded (pharmacological)"
+  },
+  "duration_hr": 96.0,
+  "timepoint_hr": 96.0,
+  "platform": "GPL570",
+  "n_replicates": 3,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

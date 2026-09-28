@@ -41,6 +41,14 @@ const API = {
     biomarkerDetail: (slugOrId) => `/api/biomarkers/${encodeURIComponent(slugOrId)}`,
     biomarkerDiseases: (slugOrId) => `/api/biomarkers/${encodeURIComponent(slugOrId)}/diseases`,
     hrDistribution: (slugOrId) => `/api/biomarkers/${encodeURIComponent(slugOrId)}/hr-distribution`,
+    hazardCurve: (slugOrId, params) => {
+        const qs = new URLSearchParams();
+        if (params.age) qs.set('age', params.age);
+        if (params.sex) qs.set('sex', params.sex);
+        if (params.n_points) qs.set('n_points', params.n_points);
+        const q = qs.toString();
+        return `/api/biomarkers/${encodeURIComponent(slugOrId)}/hazard-curve${q ? '?' + q : ''}`;
+    },
     popDistribution: (slugOrId) => `/api/biomarkers/${encodeURIComponent(slugOrId)}/population-distribution`,
     compare: (slugs) => `/api/compare?ids=${encodeURIComponent(slugs.join(','))}`,
     diseases: (params) => `/api/diseases${params ? '?' + new URLSearchParams(params).toString() : ''}`,
@@ -130,7 +138,8 @@ function setupNavigation() {
         { btn: 'subtab-forest', view: 'subview-forest' },
         { btn: 'subtab-interventions', view: 'subview-interventions' },
         { btn: 'subtab-demographics', view: 'subview-demographics' },
-        { btn: 'subtab-diseases', view: 'subview-diseases' }
+        { btn: 'subtab-diseases', view: 'subview-diseases' },
+        { btn: 'subtab-monte-carlo', view: 'subview-monte-carlo' }
     ];
 
     subtabs.forEach(({ btn, view }) => {
@@ -161,6 +170,8 @@ function setupNavigation() {
                     renderDemographicsPlot(AppState.selectedBiomarkerDetail);
                 } else if (view === 'subview-diseases' && AppState.selectedBiomarkerDetail) {
                     renderBiomarkerDiseasesView(AppState.selectedBiomarkerDetail);
+                } else if (view === 'subview-monte-carlo' && AppState.selectedBiomarkerDetail) {
+                    renderMonteCarloView(AppState.selectedBiomarkerDetail);
                 }
             });
         }
@@ -581,34 +592,162 @@ function updateCompareButtonState() {
 // -----------------------------------------------------------------------------------------
 // Plotly Chart 1: Physiological Fitness Landscape Overlay
 // -----------------------------------------------------------------------------------------
-function renderLandscapePlot(detail) {
+// Landscape stratum selection state (sex + age band)
+const landscapeStratum = { sex: 'all', age_band: 'all' };
+let landscapeStratumBiomarkerId = null;
+
+function landscapeStratumLabel(sex, age_band) {
+    const sexLabel = sex === 'all' ? 'All Sexes' : (sex === 'male' ? 'Male' : 'Female');
+    const ageLabel = age_band === 'all' ? 'All Ages' : `${age_band} yrs`;
+    return `${sexLabel} · ${ageLabel}`;
+}
+
+function buildLandscapeStratumButtons(detail) {
+    const dists = detail.population_distributions || [];
+    const sexWrap = document.getElementById('landscape-sex-buttons');
+    const ageWrap = document.getElementById('landscape-age-buttons');
+    const note = document.getElementById('landscape-stratum-note');
+    if (!sexWrap || !ageWrap) return;
+
+    // Determine available strata
+    const sexes = ['all', 'male', 'female'];
+    const ageBands = ['all', '20-39', '40-59', '60+'];
+    const hasStratum = (sex, age) => dists.some(d => d.sex === sex && d.age_band === age);
+
+    const sexLabels = { all: 'All', male: 'Male', female: 'Female' };
+    const ageLabels = { all: 'All', '20-39': '20-39 yrs', '40-59': '40-59 yrs', '60+': '60+ yrs' };
+
+    const makeBtn = (label, active, disabled, onClick) => {
+        const b = document.createElement('button');
+        b.textContent = label;
+        b.className = 'px-2.5 py-1 rounded-md border text-[11px] font-medium transition ' +
+            (disabled
+                ? 'border-slate-800 text-slate-600 cursor-not-allowed opacity-40'
+                : active
+                    ? 'border-indigo-500 bg-indigo-600 text-white'
+                    : 'border-slate-700 bg-slate-900 text-slate-300 hover:border-indigo-500 hover:text-white');
+        b.disabled = disabled;
+        if (!disabled) b.addEventListener('click', onClick);
+        return b;
+    };
+
+    // Sex buttons
+    sexWrap.innerHTML = '';
+    sexes.forEach(sex => {
+        const available = hasStratum(sex, landscapeStratum.age_band);
+        const active = landscapeStratum.sex === sex;
+        sexWrap.appendChild(makeBtn(sexLabels[sex], active, !available, () => {
+            landscapeStratum.sex = sex;
+            renderLandscapePlot(detail);
+        }));
+    });
+
+    // Age buttons
+    ageWrap.innerHTML = '';
+    ageBands.forEach(age => {
+        const available = hasStratum(landscapeStratum.sex, age);
+        const active = landscapeStratum.age_band === age;
+        ageWrap.appendChild(makeBtn(ageLabels[age], active, !available, () => {
+            landscapeStratum.age_band = age;
+            renderLandscapePlot(detail);
+        }));
+    });
+
+    // Note
+    if (note) {
+        const isOverall = landscapeStratum.sex === 'all' && landscapeStratum.age_band === 'all';
+        note.textContent = isOverall ? 'Showing overall population distribution' : `Showing ${landscapeStratumLabel(landscapeStratum.sex, landscapeStratum.age_band)} distribution`;
+    }
+}
+
+async function renderLandscapePlot(detail) {
     const plotDiv = document.getElementById('plot-landscape');
     if (!plotDiv) return;
 
-    const overallDist = detail.population_distributions.find(d => d.sex === 'all' && d.age_band === 'all') || detail.population_distributions[0];
+    // Reset stratum to overall when a new biomarker is selected
+    if (landscapeStratumBiomarkerId !== detail.id) {
+        landscapeStratum.sex = 'all';
+        landscapeStratum.age_band = 'all';
+        landscapeStratumBiomarkerId = detail.id;
+    }
+
+    const dists = detail.population_distributions || [];
+    let selectedDist = dists.find(d => d.sex === landscapeStratum.sex && d.age_band === landscapeStratum.age_band);
+    const overallDist = dists.find(d => d.sex === 'all' && d.age_band === 'all') || dists[0];
+    if (!selectedDist) selectedDist = overallDist;
     const assoc = detail.associations[0];
 
+    // Build / refresh stratum selection buttons
+    buildLandscapeStratumButtons(detail);
+
     // Compute synthetic distribution curve domain based on percentiles or mean/SD
-    let p5 = overallDist ? (overallDist.p5 || 10) : 10;
-    let p50 = overallDist ? (overallDist.p50 || 50) : 50;
-    let p95 = overallDist ? (overallDist.p95 || 100) : 100;
-    let mean = overallDist ? (overallDist.mean || p50) : p50;
-    let sd = overallDist ? (overallDist.sd || (p95 - p5) / 3.29) : (p95 - p5) / 3.29;
+    // Use the selected stratum distribution (falls back to overall if stratum unavailable)
+    const dist = selectedDist || overallDist;
+    let p5 = dist ? (dist.p5 || 10) : 10;
+    let p50 = dist ? (dist.p50 || 50) : 50;
+    let p95 = dist ? (dist.p95 || 100) : 100;
+    let mean = dist ? (dist.mean || p50) : p50;
+    let sd = dist ? (dist.sd || (p95 - p5) / 3.29) : (p95 - p5) / 3.29;
     if (sd <= 0) sd = 1.0;
 
-    let minX = Math.max(0, p5 - 1.5 * sd);
-    let maxX = p95 + 1.8 * sd;
-    if (minX === 0 && p5 > 50) minX = p5 * 0.5;
+    // Compute population distribution range (mean ± 3*sd, or p5-p95 if no mean/sd)
+    let popMin, popMax;
+    if (mean && sd) {
+        popMin = Math.max(0, mean - 3 * sd);
+        popMax = mean + 3 * sd;
+    } else {
+        popMin = p5;
+        popMax = p95;
+    }
+
+    // Direction and hazard ratio behavior
+    const hrVal = assoc ? assoc.hazard_ratio : 1.5;
+    const direction = assoc ? assoc.direction : 'positive';
+
+    // Fetch age/sex-conditional hazard curve from the API
+    let apiCurvePoints = null;
+    let curveStratum = null;
+    let curveSpecificity = null;
+    try {
+        const sexParam = landscapeStratum.sex === 'male' ? 'M' : landscapeStratum.sex === 'female' ? 'F' : null;
+        const ageParam = landscapeStratum.age_band === '20-39' ? 30 : landscapeStratum.age_band === '40-59' ? 50 : landscapeStratum.age_band === '60+' ? 70 : null;
+        const curveRes = await fetch(API.hazardCurve(detail.slug, { age: ageParam, sex: sexParam, n_points: 100 }));
+        if (curveRes.ok) {
+            const curveData = await curveRes.json();
+            apiCurvePoints = curveData.points;
+            curveStratum = curveData.stratum;
+            curveSpecificity = curveData.curve_specificity;
+        }
+    } catch (e) {
+        console.warn('Hazard curve API fetch failed, falling back to synthetic:', e);
+    }
+
+    // Get HR curve domain from API if available
+    let hrDomainMin = null;
+    let hrDomainMax = null;
+    if (apiCurvePoints && apiCurvePoints.length > 0) {
+        hrDomainMin = apiCurvePoints[0].value;
+        hrDomainMax = apiCurvePoints[apiCurvePoints.length - 1].value;
+    }
+
+    // Plot only the observed population support — do not expand out to the
+    // HR-curve / physiological domain, which is often many times wider.
+    let minX, maxX;
+    if (p5 != null && p95 != null && p95 > p5) {
+        const pad = Math.max((p95 - p5) * 0.08, sd * 0.2);
+        minX = p5 - pad;
+        maxX = p95 + pad;
+    } else {
+        minX = popMin;
+        maxX = popMax;
+    }
+    if (mean >= 0 && p5 >= 0 && minX < 0) minX = 0;
 
     const points = 150;
     const step = (maxX - minX) / (points - 1);
     const xVals = [];
     const densityVals = [];
     const hrVals = [];
-
-    // Direction and hazard ratio behavior
-    const hrVal = assoc ? assoc.hazard_ratio : 1.5;
-    const direction = assoc ? assoc.direction : 'positive';
 
     for (let i = 0; i < points; i++) {
         const x = minX + i * step;
@@ -619,39 +758,121 @@ function renderLandscapePlot(detail) {
         const density = (1 / (sd * Math.sqrt(2 * Math.PI))) * Math.exp(-0.5 * z * z);
         densityVals.push(density);
 
-        // Model Hazard Ratio curve according to physiological association
-        let computedHR = 1.0;
-        if (direction === 'positive') {
-            // Higher is riskier: HR increases with standard deviations above p50
-            const zRisk = (x - p50) / sd;
-            computedHR = Math.exp(Math.log(hrVal) * (zRisk));
-        } else if (direction === 'inverse' || direction === 'protective') {
-            // Lower is riskier (e.g., eGFR, Albumin)
-            const zRisk = (p50 - x) / sd;
-            computedHR = Math.exp(Math.log(hrVal) * (zRisk));
-        } else if (direction === 'u_shaped') {
-            // U-shaped / J-shaped risk curve
-            const zRisk = Math.abs(x - p50) / sd;
-            computedHR = 1.0 + (hrVal - 1.0) * Math.pow(zRisk / 1.5, 2);
+        // Use API curve if available (interpolate), otherwise synthetic model
+        let computedHR;
+        if (apiCurvePoints && apiCurvePoints.length > 1) {
+            // Interpolate from API curve points
+            const cMin = apiCurvePoints[0].value;
+            const cMax = apiCurvePoints[apiCurvePoints.length - 1].value;
+            if (x >= cMin && x <= cMax) {
+                const t = (x - cMin) / (cMax - cMin);
+                const idx = t * (apiCurvePoints.length - 1);
+                const lo = Math.floor(idx);
+                const hi = Math.min(lo + 1, apiCurvePoints.length - 1);
+                const frac = idx - lo;
+                computedHR = apiCurvePoints[lo].hr * (1 - frac) + apiCurvePoints[hi].hr * frac;
+            } else {
+                // Extrapolate: use nearest endpoint
+                computedHR = x < cMin ? apiCurvePoints[0].hr : apiCurvePoints[apiCurvePoints.length - 1].hr;
+            }
         } else {
-            const zRisk = (x - p50) / sd;
-            computedHR = Math.exp(Math.log(Math.max(1.1, hrVal)) * zRisk);
+            // Fallback: synthetic model
+            if (direction === 'positive') {
+                const zRisk = (x - p50) / sd;
+                computedHR = Math.exp(Math.log(hrVal) * (zRisk));
+            } else if (direction === 'inverse' || direction === 'protective') {
+                const zRisk = (p50 - x) / sd;
+                computedHR = Math.exp(Math.log(hrVal) * (zRisk));
+            } else if (direction === 'u_shaped') {
+                const zRisk = Math.abs(x - p50) / sd;
+                computedHR = 1.0 + (hrVal - 1.0) * Math.pow(zRisk / 1.5, 2);
+            } else {
+                const zRisk = (x - p50) / sd;
+                computedHR = Math.exp(Math.log(Math.max(1.1, hrVal)) * zRisk);
+            }
         }
         hrVals.push(Math.max(0.2, Math.min(8.0, computedHR)));
     }
 
+    const stratumLabel = landscapeStratumLabel(landscapeStratum.sex, landscapeStratum.age_band);
     const densityTrace = {
         x: xVals,
         y: densityVals,
         type: 'scatter',
         mode: 'lines',
-        name: 'NHANES Population Density',
+        name: `${stratumLabel} Population Density`,
         line: { color: '#38bdf8', width: 2.5 },
         fill: 'tozeroy',
         fillcolor: 'rgba(56, 189, 248, 0.12)',
         yaxis: 'y1',
-        hovertemplate: `Level: %{x:.2f} ${detail.units}<br>Density: %{y:.4f}<extra></extra>`
+        hovertemplate: `Level: %{x:.2f} ${detail.units}<br>Density: %{y:.4f}<extra>${stratumLabel}</extra>`
     };
+
+    // --- Selection boxes: Male / Female & Age-group distribution overlays ---
+    // Build a smooth Gaussian density trace for any given distribution record.
+    const buildDensityTrace = (d, label, color, opts = {}) => {
+        let m = d.mean || d.p50;
+        let s = d.sd || ((d.p95 - d.p5) / 3.29);
+        if (!m || !s || s <= 0) return null;
+        const xs = [];
+        const ys = [];
+        const n = 120;
+        const lo = Math.max(0, m - 3 * s);
+        const hi = m + 3 * s;
+        const st = (hi - lo) / (n - 1);
+        for (let i = 0; i < n; i++) {
+            const x = lo + i * st;
+            const z = (x - m) / s;
+            const dens = (1 / (s * Math.sqrt(2 * Math.PI))) * Math.exp(-0.5 * z * z);
+            xs.push(x);
+            ys.push(dens);
+        }
+        return {
+            x: xs,
+            y: ys,
+            type: 'scatter',
+            mode: 'lines',
+            name: label,
+            line: { color: color, width: opts.width || 1.5, dash: opts.dash || 'dot' },
+            fill: opts.fill ? 'tozeroy' : undefined,
+            fillcolor: opts.fillColor || undefined,
+            opacity: opts.opacity !== undefined ? opts.opacity : 0.85,
+            yaxis: 'y1',
+            hovertemplate: `Level: %{x:.2f} ${detail.units}<br>Density: %{y:.4f}<extra>${label}</extra>`
+        };
+    };
+
+    const overlayTraces = [];
+    const isOverallSex = landscapeStratum.sex === 'all';
+    const isOverallAge = landscapeStratum.age_band === 'all';
+
+    // Sex selection boxes (Male vs Female) — shown when viewing an "all sexes" stratum
+    // DB stores sex as 'M'/'F' (or 'male'/'female' in some exports); match both.
+    const isMale = (d) => d.sex === 'M' || d.sex === 'male';
+    const isFemale = (d) => d.sex === 'F' || d.sex === 'female';
+    if (isOverallSex) {
+        const maleDist = dists.find(d => isMale(d) && d.age_band === landscapeStratum.age_band)
+            || dists.find(d => isMale(d));
+        const femaleDist = dists.find(d => isFemale(d) && d.age_band === landscapeStratum.age_band)
+            || dists.find(d => isFemale(d));
+        const maleT = maleDist ? buildDensityTrace(maleDist, 'Male Distribution', '#f472b6') : null;
+        const femaleT = femaleDist ? buildDensityTrace(femaleDist, 'Female Distribution', '#a78bfa') : null;
+        if (maleT) overlayTraces.push(maleT);
+        if (femaleT) overlayTraces.push(femaleT);
+    }
+
+    // Age-group selection boxes — shown when viewing an "all ages" stratum
+    if (isOverallAge) {
+        const ageColors = { '20-39': '#34d399', '40-59': '#fbbf24', '60+': '#fb923c' };
+        ['20-39', '40-59', '60+'].forEach(age => {
+            const ad = dists.find(d => d.sex === landscapeStratum.sex && d.age_band === age)
+                || dists.find(d => d.age_band === age);
+            if (ad) {
+                const t = buildDensityTrace(ad, `Age ${age}`, ageColors[age] || '#94a3b8');
+                if (t) overlayTraces.push(t);
+            }
+        });
+    }
 
     const hrTrace = {
         x: xVals,
@@ -710,7 +931,9 @@ function renderLandscapePlot(detail) {
         shapes: [baselineHrLine]
     };
 
-    Plotly.newPlot(plotDiv, [densityTrace, hrTrace], layout, plotlyConfig);
+    // Combine primary density + HR with optional sex/age selection-box overlays
+    const allTraces = [densityTrace, ...overlayTraces, hrTrace];
+    Plotly.newPlot(plotDiv, allTraces, layout, plotlyConfig);
 }
 
 // -----------------------------------------------------------------------------------------
@@ -1314,6 +1537,8 @@ function renderDiseasesView() {
         const altCount = d.alterations_count || 0;
         const itvCount = d.therapeutics_count || 0;
 
+        const diseasePageUrl = `https://research.opensourcemed.info/disease-intelligence/${d.slug}.html`;
+
         return `
             <div class="disease-card bg-slate-900/90 rounded-xl p-5 border border-slate-800 flex flex-col justify-between cursor-pointer hover:border-indigo-500/50 shadow-md transition" onclick="openDiseaseModal('${d.slug}')">
                 <div class="space-y-3">
@@ -1345,6 +1570,11 @@ function renderDiseasesView() {
                         <div class="text-xs font-mono font-bold text-purple-400">${itvCount}</div>
                     </div>
                 </div>
+
+                <a href="${diseasePageUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="mt-3 flex items-center justify-center gap-1.5 text-[11px] font-semibold text-indigo-400 hover:text-indigo-300 transition py-1.5 rounded-lg bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/20">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    View Full Disease Intelligence Page
+                </a>
             </div>
         `;
     }).join('');
@@ -1441,6 +1671,8 @@ function renderDiseaseModalContent(detail) {
         `;
     };
 
+    const diseasePageUrl = `https://research.opensourcemed.info/disease-intelligence/${detail.slug}.html`;
+
     modalBody.innerHTML = `
         <div class="space-y-6">
             <!-- Disease Header Info -->
@@ -1452,6 +1684,10 @@ function renderDiseaseModalContent(detail) {
                             <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-400 font-mono">${matchedCount} Matched Landscape Markers</span>
                         </div>
                         <h2 class="text-2xl font-black text-white">${detail.name}</h2>
+                        <a href="${diseasePageUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 mt-2 text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition px-3 py-1.5 rounded-lg bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/20">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            View Full Disease Intelligence Page
+                        </a>
                     </div>
                     <div class="flex items-center gap-3">
                         <div class="text-right">
@@ -1597,13 +1833,20 @@ async function renderBiomarkerDiseasesView(detail) {
                 dirIcon = 'fa-arrow-trend-down';
             }
 
+            const diseasePageUrl = `https://research.opensourcemed.info/disease-intelligence/${alt.disease_slug}.html`;
+
             html += `
                 <div class="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800 space-y-2 hover:border-indigo-500/40 transition">
                     <div class="flex items-center justify-between">
                         <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-slate-800 text-slate-400">${alt.alteration_type || 'Alteration'}</span>
-                        <button class="text-xs font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1 transition" onclick="openDiseaseModal('${alt.disease_slug}')">
-                            ${alt.disease_name} <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                        </button>
+                        <div class="flex items-center gap-2">
+                            <button class="text-xs font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1 transition" onclick="openDiseaseModal('${alt.disease_slug}')">
+                                ${alt.disease_name}
+                            </button>
+                            <a href="${diseasePageUrl}" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:text-indigo-300 transition" title="View full disease intelligence page">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
                     </div>
                     <div class="text-xs font-bold text-slate-100 flex items-center gap-1.5">
                         <i class="fa-solid ${dirIcon} ${dirColor}"></i>
@@ -1623,5 +1866,330 @@ async function renderBiomarkerDiseasesView(detail) {
     } catch (err) {
         console.error('Error rendering biomarker diseases:', err);
         container.innerHTML = `<div class="p-6 text-center text-rose-400 text-xs">Failed to load associated disease mappings.</div>`;
+    }
+}
+
+// -----------------------------------------------------------------------------------------
+// Monte Carlo Biomarker Optimization Sub-View
+// -----------------------------------------------------------------------------------------
+let monteCarloState = {
+    biomarkerId: null,
+    observedValue: null,
+    age: 60,
+    sex: 'M',
+    result: null,
+    loading: false
+};
+
+function renderMonteCarloView(detail) {
+    const container = document.getElementById('monte-carlo-container');
+    if (!container) return;
+
+    // Reset state when switching biomarkers
+    if (monteCarloState.biomarkerId !== detail.id) {
+        monteCarloState.biomarkerId = detail.id;
+        monteCarloState.result = null;
+        monteCarloState.observedValue = null;
+    }
+
+    // Get population median as default observed value
+    const overallDist = detail.population_distributions.find(d => d.sex === 'all' && d.age_band === 'all') || detail.population_distributions[0];
+    const defaultObserved = overallDist ? (overallDist.p50 || overallDist.mean || 0) : 0;
+    if (monteCarloState.observedValue === null) {
+        monteCarloState.observedValue = defaultObserved;
+    }
+
+    const directionLabel = detail.directionality === 'lower_better' ? 'Lower is better' :
+                           detail.directionality === 'higher_better' ? 'Higher is better' :
+                           'U-shaped (optimal target)';
+
+    container.innerHTML = `
+        <div class="space-y-4">
+            <!-- Input Controls -->
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-3">
+                <div class="flex items-center justify-between">
+                    <h4 class="text-xs font-bold text-slate-200 flex items-center gap-2">
+                        <i class="fa-solid fa-dice text-indigo-400"></i>
+                        Monte Carlo 1-SD Optimization Simulation
+                    </h4>
+                    <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-semibold">
+                        COUNTERFACTUAL — NOT CAUSAL
+                    </span>
+                </div>
+                <p class="text-[11px] class="text-slate-400">
+                    Estimates the distribution of expected years of life gained if this biomarker could be shifted by 1 SD toward the favorable direction.
+                    This is a hypothetical scenario, not proof that an intervention would produce the modeled benefit.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <div>
+                        <label class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">Observed Value (${detail.units})</label>
+                        <input type="number" id="mc-observed-value" value="${monteCarloState.observedValue}" step="any"
+                            class="mt-1 w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-100 font-mono focus:border-indigo-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">Age</label>
+                        <input type="number" id="mc-age" value="${monteCarloState.age}" min="18" max="100"
+                            class="mt-1 w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-100 font-mono focus:border-indigo-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">Sex</label>
+                        <select id="mc-sex"
+                            class="mt-1 w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-100 focus:border-indigo-500 focus:outline-none">
+                            <option value="M" ${monteCarloState.sex === 'M' ? 'selected' : ''}>Male</option>
+                            <option value="F" ${monteCarloState.sex === 'F' ? 'selected' : ''}>Female</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button id="mc-run-btn"
+                            class="w-full bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold py-2 px-4 rounded-lg transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-play"></i> Run Simulation
+                        </button>
+                    </div>
+                </div>
+                <div class="text-[10px] text-slate-500 flex items-center gap-3">
+                    <span>Direction: <strong class="text-slate-300">${directionLabel}</strong></span>
+                    <span>Population Median: <strong class="text-slate-300 font-mono">${defaultObserved} ${detail.units}</strong></span>
+                    <span>Population SD: <strong class="text-slate-300 font-mono">${overallDist ? overallDist.sd : 'N/A'}</strong></span>
+                </div>
+            </div>
+
+            <!-- Results Container -->
+            <div id="mc-results-container">
+                ${monteCarloState.result ? renderMonteCarloResults(monteCarloState.result, detail) : `
+                    <div class="p-12 text-center text-slate-500 text-xs space-y-2">
+                        <i class="fa-solid fa-dice text-3xl text-slate-600"></i>
+                        <div>Enter your observed biomarker value, age, and sex, then click "Run Simulation"</div>
+                        <div class="text-slate-600">The simulation will estimate your expected years of life gained from a hypothetical 1-SD improvement.</div>
+                    </div>
+                `}
+            </div>
+        </div>
+    `;
+
+    // Attach event listeners
+    const runBtn = document.getElementById('mc-run-btn');
+    if (runBtn) {
+        runBtn.addEventListener('click', async () => {
+            const observedVal = parseFloat(document.getElementById('mc-observed-value').value);
+            const age = parseInt(document.getElementById('mc-age').value);
+            const sex = document.getElementById('mc-sex').value;
+
+            if (isNaN(observedVal) || isNaN(age)) {
+                alert('Please enter valid numeric values.');
+                return;
+            }
+
+            monteCarloState.observedValue = observedVal;
+            monteCarloState.age = age;
+            monteCarloState.sex = sex;
+            monteCarloState.loading = true;
+
+            const resultsContainer = document.getElementById('mc-results-container');
+            resultsContainer.innerHTML = `
+                <div class="p-12 text-center text-slate-400">
+                    <i class="fa-solid fa-circle-notch fa-spin text-2xl text-indigo-500 mb-3"></i>
+                    <div class="text-xs">Running 10,000 Monte Carlo simulations...</div>
+                </div>
+            `;
+
+            try {
+                const res = await fetch('/api/nhanes/optimization', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        biomarker: detail.slug,
+                        observed_value: observedVal,
+                        age: age,
+                        sex: sex,
+                        n_simulations: 10000
+                    })
+                });
+                if (!res.ok) throw new Error('Simulation failed');
+                const data = await res.json();
+                monteCarloState.result = data;
+                monteCarloState.loading = false;
+
+                resultsContainer.innerHTML = renderMonteCarloResults(data, detail);
+                renderMonteCarloPlots(data, detail);
+            } catch (err) {
+                console.error('Monte Carlo simulation error:', err);
+                resultsContainer.innerHTML = `
+                    <div class="p-8 text-center text-rose-400 text-xs">
+                        <i class="fa-solid fa-exclamation-triangle text-xl mb-2"></i>
+                        <div>Simulation failed: ${err.message}</div>
+                    </div>
+                `;
+            }
+        });
+    }
+}
+
+function renderMonteCarloResults(result, detail) {
+    const ylg = result.years_life_gained;
+    const currentHR = result.current_hr;
+    const optimizedHR = result.optimized_hr;
+    const remainingLife = result.remaining_life;
+
+    const ylgColor = ylg.mean > 0.5 ? 'text-emerald-400' : ylg.mean > 0 ? 'text-amber-400' : 'text-rose-400';
+    const ylgBg = ylg.mean > 0.5 ? 'bg-emerald-500/10 border-emerald-500/30' : ylg.mean > 0 ? 'bg-amber-500/10 border-amber-500/30' : 'bg-rose-500/10 border-rose-500/30';
+
+    return `
+        <div class="space-y-4">
+            <!-- Key Metrics Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 text-center">
+                    <div class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Years of Life Gained</div>
+                    <div class="text-2xl font-black font-mono ${ylgColor}">${ylg.mean.toFixed(2)}</div>
+                    <div class="text-[10px] text-slate-500 mt-1">95% CI: ${ylg.uncertainty_95[0].toFixed(2)} to ${ylg.uncertainty_95[1].toFixed(2)}</div>
+                </div>
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 text-center">
+                    <div class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Prob. Positive Benefit</div>
+                    <div class="text-2xl font-black font-mono text-indigo-400">${(result.probability_positive_benefit * 100).toFixed(1)}%</div>
+                    <div class="text-[10px] text-slate-500 mt-1">P(YLG > 0)</div>
+                </div>
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 text-center">
+                    <div class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Current HR</div>
+                    <div class="text-2xl font-black font-mono text-rose-400">${currentHR.median.toFixed(2)}x</div>
+                    <div class="text-[10px] text-slate-500 mt-1">95% CI: ${currentHR.uncertainty_95[0].toFixed(2)} - ${currentHR.uncertainty_95[1].toFixed(2)}</div>
+                </div>
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 text-center">
+                    <div class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold mb-1">Optimized HR</div>
+                    <div class="text-2xl font-black font-mono text-emerald-400">${optimizedHR.median.toFixed(2)}x</div>
+                    <div class="text-[10px] text-slate-500 mt-1">95% CI: ${optimizedHR.uncertainty_95[0].toFixed(2)} - ${optimizedHR.uncertainty_95[1].toFixed(2)}</div>
+                </div>
+            </div>
+
+            <!-- Secondary Metrics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800/60 text-center">
+                    <div class="text-[10px] text-slate-500 font-semibold">Remaining Life (Current)</div>
+                    <div class="text-sm font-mono font-bold text-slate-200">${remainingLife.current_median.toFixed(1)} yrs</div>
+                </div>
+                <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800/60 text-center">
+                    <div class="text-[10px] text-slate-500 font-semibold">Remaining Life (Optimized)</div>
+                    <div class="text-sm font-mono font-bold text-emerald-300">${remainingLife.optimized_median.toFixed(1)} yrs</div>
+                </div>
+                <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800/60 text-center">
+                    <div class="text-[10px] text-slate-500 font-semibold">Prob. Gain > 1 Year</div>
+                    <div class="text-sm font-mono font-bold text-indigo-300">${(result.probability_gain_over_1_year * 100).toFixed(1)}%</div>
+                </div>
+                <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-800/60 text-center">
+                    <div class="text-[10px] text-slate-500 font-semibold">Prob. of Harm</div>
+                    <div class="text-sm font-mono font-bold ${result.probability_of_harm > 0.05 ? 'text-rose-400' : 'text-slate-300'}">${(result.probability_of_harm * 100).toFixed(1)}%</div>
+                </div>
+            </div>
+
+            <!-- Optimization Details -->
+            <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800/60">
+                <div class="text-[10px] uppercase tracking-wider text-slate-500 font-semibold mb-2">Optimization Details</div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+                    <div>
+                        <span class="text-slate-500">Observed:</span>
+                        <span class="font-mono font-bold text-slate-200 ml-1">${result.observed_value} ${detail.units}</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-500">Optimized:</span>
+                        <span class="font-mono font-bold text-emerald-300 ml-1">${result.optimized_value} ${detail.units}</span>
+                        ${result.optimization_clipped ? '<span class="text-amber-400 text-[10px] ml-1">(clipped)</span>' : ''}
+                    </div>
+                    <div>
+                        <span class="text-slate-500">Shift:</span>
+                        <span class="font-mono font-bold text-indigo-300 ml-1">${result.optimization_delta > 0 ? '+' : ''}${result.optimization_delta} ${detail.units}</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-500">Simulations:</span>
+                        <span class="font-mono font-bold text-slate-200 ml-1">${result.metadata.n_simulations.toLocaleString()}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plots -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-slate-900/60 rounded-xl border border-slate-800/60 p-2">
+                    <div id="mc-plot-ylg" style="height: 300px;"></div>
+                </div>
+                <div class="bg-slate-900/60 rounded-xl border border-slate-800/60 p-2">
+                    <div id="mc-plot-hr" style="height: 300px;"></div>
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="bg-amber-500/5 p-4 rounded-xl border border-amber-500/20">
+                <div class="flex items-start gap-2">
+                    <i class="fa-solid fa-triangle-exclamation text-amber-400 mt-0.5"></i>
+                    <p class="text-[11px] text-amber-200/80 leading-relaxed">${result.disclaimer}</p>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderMonteCarloPlots(result, detail) {
+    // Plot 1: YLG Distribution Histogram
+    const ylgDiv = document.getElementById('mc-plot-ylg');
+    if (ylgDiv) {
+        const ylgHist = result.histograms.years_life_gained;
+        const binCenters = ylgHist.bin_edges.slice(0, -1).map((e, i) => (e + ylgHist.bin_edges[i + 1]) / 2);
+        const ylgColor = result.years_life_gained.mean > 0 ? '#10b981' : '#f43f5e';
+
+        const ylgTrace = {
+            x: binCenters,
+            y: ylgHist.counts,
+            type: 'bar',
+            name: 'Years of Life Gained',
+            marker: { color: ylgColor, opacity: 0.7 },
+            hovertemplate: 'YLG: %{x:.2f} yrs<br>Count: %{y}<extra></extra>'
+        };
+
+        const ylgLayout = {
+            ...plotlyDarkTheme,
+            title: { text: 'Distribution of Years of Life Gained', font: { size: 12, color: '#cbd5e1' } },
+            xaxis: { ...plotlyDarkTheme.xaxis, title: { text: 'Years of Life Gained', font: { size: 10 } } },
+            yaxis: { ...plotlyDarkTheme.yaxis, title: { text: 'Frequency', font: { size: 10 } } },
+            margin: { l: 40, r: 20, t: 40, b: 35 }
+        };
+
+        Plotly.newPlot(ylgDiv, [ylgTrace], ylgLayout, plotlyConfig);
+    }
+
+    // Plot 2: HR Distribution Comparison
+    const hrDiv = document.getElementById('mc-plot-hr');
+    if (hrDiv) {
+        const currentHist = result.histograms.current_hr;
+        const optimizedHist = result.histograms.optimized_hr;
+
+        const currentCenters = currentHist.bin_edges.slice(0, -1).map((e, i) => (e + currentHist.bin_edges[i + 1]) / 2);
+        const optimizedCenters = optimizedHist.bin_edges.slice(0, -1).map((e, i) => (e + optimizedHist.bin_edges[i + 1]) / 2);
+
+        const currentTrace = {
+            x: currentCenters,
+            y: currentHist.counts,
+            type: 'bar',
+            name: 'Current HR',
+            marker: { color: '#f43f5e', opacity: 0.6 },
+            hovertemplate: 'HR: %{x:.2f}<br>Count: %{y}<extra>Current</extra>'
+        };
+
+        const optimizedTrace = {
+            x: optimizedCenters,
+            y: optimizedHist.counts,
+            type: 'bar',
+            name: 'Optimized HR',
+            marker: { color: '#10b981', opacity: 0.6 },
+            hovertemplate: 'HR: %{x:.2f}<br>Count: %{y}<extra>Optimized</extra>'
+        };
+
+        const hrLayout = {
+            ...plotlyDarkTheme,
+            title: { text: 'Hazard Ratio Distribution (Current vs Optimized)', font: { size: 12, color: '#cbd5e1' } },
+            xaxis: { ...plotlyDarkTheme.xaxis, title: { text: 'Hazard Ratio', font: { size: 10 } } },
+            yaxis: { ...plotlyDarkTheme.yaxis, title: { text: 'Frequency', font: { size: 10 } } },
+            barmode: 'overlay',
+            showlegend: true,
+            legend: { orientation: 'h', x: 0, y: 1.15, font: { size: 10 } },
+            margin: { l: 40, r: 20, t: 40, b: 35 }
+        };
+
+        Plotly.newPlot(hrDiv, [currentTrace, optimizedTrace], hrLayout, plotlyConfig);
     }
 }

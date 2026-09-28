@@ -1,0 +1,688 @@
+{
+  "biomarker_id": "grip_strength",
+  "biomarker_name": "Maximal Grip Strength",
+  "biomarker_units": "kg",
+  "interventions": [
+    {
+      "intervention_id": "progressive_whole_body_resistance_training_heavy_compound_lifting",
+      "canonical_name": "Progressive whole-body resistance training (Heavy compound lifting)",
+      "intervention_type": "EXERCISE",
+      "description": "Progressive whole-body resistance training (Heavy compound lifting) (Exercise) — favorable effect on Maximal Grip Strength",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "progressive_whole_body_resistance_training_heavy_compound_lifting_standard",
+          "regimen": {
+            "regimen_id": "progressive_whole_body_resistance_training_heavy_compound_lifting_standard",
+            "intervention_id": "progressive_whole_body_resistance_training_heavy_compound_lifting",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Progressive whole-body resistance training (Heavy compound lifting)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "progressive_whole_body_resistance_training_heavy_compound_lifting_grip_strength_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 25.0,
+                "lower": 15.0,
+                "upper": 35.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "progressive_whole_body_resistance_training_heavy_compound_lifting_grip_strength_favorable",
+                "original_value": 25.0,
+                "original_lower": 15.0,
+                "original_upper": 35.0,
+                "original_unit": "%",
+                "canonical_value": 25.0,
+                "canonical_lower": 15.0,
+                "canonical_upper": 35.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-20385254_adults",
+                "evidence_id": "PMID-20385254",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-20385254",
+                "source_type": "META_ANALYSIS",
+                "title": "Peterson MD, et al. Ageing Res Rev. 2010;9:226-237. PMID: 20385254",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2010,
+                "doi": null,
+                "pmid": "20385254",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:02.234392",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "progressive_whole_body_resistance_training_heavy_compound_lifting_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "optimized_protein_intake_16_gkgday_creatine_monohydrate_5gday",
+      "canonical_name": "Optimized protein intake (1.6 g/kg/day) + Creatine monohydrate (5g/day)",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Optimized protein intake (1.6 g/kg/day) + Creatine monohydrate (5g/day) (Nutraceutical) — favorable effect on Maximal Grip Strength",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "optimized_protein_intake_16_gkgday_creatine_monohydrate_5gday_standard",
+          "regimen": {
+            "regimen_id": "optimized_protein_intake_16_gkgday_creatine_monohydrate_5gday_standard",
+            "intervention_id": "optimized_protein_intake_16_gkgday_creatine_monohydrate_5gday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Optimized protein intake (1.6 g/kg/day) + Creatine monohydrate (5g/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "optimized_protein_intake_16_gkgday_creatine_monohydrate_5gday_grip_strength_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-24571172_adults",
+                "evidence_id": "PMID-24571172",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-24571172",
+                "source_type": "META_ANALYSIS",
+                "title": "Devries MC, et al. J Food Sci. 2014;79:M134-M142. PMID: 24571172",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "24571172",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:02.699037",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "optimized_protein_intake_16_gkgday_creatine_monohydrate_5gday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "testosterone_replacement_therapy_in_hypogonadal_sarcopenic_men",
+      "canonical_name": "Testosterone replacement therapy in hypogonadal sarcopenic men",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Testosterone replacement therapy in hypogonadal sarcopenic men (Pharmacologic) — favorable effect on Maximal Grip Strength",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "testosterone_replacement_therapy_in_hypogonadal_sarcopenic_men_standard",
+          "regimen": {
+            "regimen_id": "testosterone_replacement_therapy_in_hypogonadal_sarcopenic_men_standard",
+            "intervention_id": "testosterone_replacement_therapy_in_hypogonadal_sarcopenic_men",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Testosterone replacement therapy in hypogonadal sarcopenic men",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "testosterone_replacement_therapy_in_hypogonadal_sarcopenic_men_grip_strength_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": null,
+                "lower": null,
+                "upper": null,
+                "standard_error": null,
+                "p_value": null,
+                "unit": null,
+                "scale": null,
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": null,
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-26886521_adults",
+                "evidence_id": "PMID-26886521",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-26886521",
+                "source_type": "RCT",
+                "title": "Snyder PJ, et al. N Engl J Med. 2016;374:611-624. PMID: 26886521",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2016,
+                "doi": null,
+                "pmid": "26886521",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:03.073395",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "testosterone_replacement_therapy_in_hypogonadal_sarcopenic_men_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "prolonged_bed_rest_immobilization_and_neuromuscular_disuse",
+      "canonical_name": "Prolonged bed rest, immobilization, and neuromuscular disuse",
+      "intervention_type": "LIFESTYLE",
+      "description": "Prolonged bed rest, immobilization, and neuromuscular disuse (Lifestyle) — unfavorable effect on Maximal Grip Strength",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "prolonged_bed_rest_immobilization_and_neuromuscular_disuse_standard",
+          "regimen": {
+            "regimen_id": "prolonged_bed_rest_immobilization_and_neuromuscular_disuse_standard",
+            "intervention_id": "prolonged_bed_rest_immobilization_and_neuromuscular_disuse",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Prolonged bed rest, immobilization, and neuromuscular disuse",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "prolonged_bed_rest_immobilization_and_neuromuscular_disuse_grip_strength_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -17.5,
+                "lower": -25.0,
+                "upper": -10.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "prolonged_bed_rest_immobilization_and_neuromuscular_disuse_grip_strength_unfavorable",
+                "original_value": -17.5,
+                "original_lower": -25.0,
+                "original_upper": -10.0,
+                "original_unit": "%",
+                "canonical_value": -17.5,
+                "canonical_lower": -25.0,
+                "canonical_upper": -10.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17456818_adults",
+                "evidence_id": "PMID-17456818",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17456818",
+                "source_type": "RCT",
+                "title": "Kortebein P, et al. JAMA. 2007;297:1772-1774. PMID: 17456818",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2007,
+                "doi": null,
+                "pmid": "17456818",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:03.762683",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "prolonged_bed_rest_immobilization_and_neuromuscular_disuse_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_protein_malnutrition_and_cancer_cachexia_syndrome",
+      "canonical_name": "Severe protein malnutrition and cancer cachexia syndrome",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe protein malnutrition and cancer cachexia syndrome (Clinical) — unfavorable effect on Maximal Grip Strength",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_protein_malnutrition_and_cancer_cachexia_syndrome_standard",
+          "regimen": {
+            "regimen_id": "severe_protein_malnutrition_and_cancer_cachexia_syndrome_standard",
+            "intervention_id": "severe_protein_malnutrition_and_cancer_cachexia_syndrome",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe protein malnutrition and cancer cachexia syndrome",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_protein_malnutrition_and_cancer_cachexia_syndrome_grip_strength_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -45.0,
+                "lower": -60.0,
+                "upper": -30.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_protein_malnutrition_and_cancer_cachexia_syndrome_grip_strength_unfavorable",
+                "original_value": -45.0,
+                "original_lower": -60.0,
+                "original_upper": -30.0,
+                "original_unit": "%",
+                "canonical_value": -45.0,
+                "canonical_lower": -60.0,
+                "canonical_upper": -30.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-30312372_adults",
+                "evidence_id": "PMID-30312372",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-30312372",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Cruz-Jentoft AJ, et al. Age Ageing. 2019;48:16-31. PMID: 30312372",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2019,
+                "doi": null,
+                "pmid": "30312372",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:04.483060",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_protein_malnutrition_and_cancer_cachexia_syndrome_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

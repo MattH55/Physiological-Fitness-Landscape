@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "interleukin_6",
+  "biomarker_name": "Interleukin-6 (IL-6)",
+  "biomarker_units": "pg/mL",
+  "interventions": [
+    {
+      "intervention_id": "anti_il_6_receptor_monoclonal_antibody_tocilizumab",
+      "canonical_name": "Anti-IL-6 receptor monoclonal antibody (Tocilizumab)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Anti-IL-6 receptor monoclonal antibody (Tocilizumab) (Pharmacologic) — favorable effect on Interleukin-6 (IL-6)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "anti_il_6_receptor_monoclonal_antibody_tocilizumab_standard",
+          "regimen": {
+            "regimen_id": "anti_il_6_receptor_monoclonal_antibody_tocilizumab_standard",
+            "intervention_id": "anti_il_6_receptor_monoclonal_antibody_tocilizumab",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Anti-IL-6 receptor monoclonal antibody (Tocilizumab)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "anti_il_6_receptor_monoclonal_antibody_tocilizumab_interleukin_6_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -70.0,
+                "lower": -80.0,
+                "upper": -60.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "anti_il_6_receptor_monoclonal_antibody_tocilizumab_interleukin_6_favorable",
+                "original_value": -70.0,
+                "original_lower": -80.0,
+                "original_upper": -60.0,
+                "original_unit": "%",
+                "canonical_value": -70.0,
+                "canonical_lower": -80.0,
+                "canonical_upper": -60.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-22421340_adults",
+                "evidence_id": "PMID-22421340",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-22421340",
+                "source_type": "RCT",
+                "title": "Ridker PM, et al. Lancet. 2012;379:1205-1213. PMID: 22421340",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2012,
+                "doi": null,
+                "pmid": "22421340",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:56.171628",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "anti_il_6_receptor_monoclonal_antibody_tocilizumab_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "structured_resistance_and_moderate_aerobic_training",
+      "canonical_name": "Structured resistance and moderate aerobic training",
+      "intervention_type": "EXERCISE",
+      "description": "Structured resistance and moderate aerobic training (Exercise) — favorable effect on Interleukin-6 (IL-6)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "structured_resistance_and_moderate_aerobic_training_standard",
+          "regimen": {
+            "regimen_id": "structured_resistance_and_moderate_aerobic_training_standard",
+            "intervention_id": "structured_resistance_and_moderate_aerobic_training",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Structured resistance and moderate aerobic training",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "structured_resistance_and_moderate_aerobic_training_interleukin_6_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -22.5,
+                "lower": -30.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "structured_resistance_and_moderate_aerobic_training_interleukin_6_favorable",
+                "original_value": -22.5,
+                "original_lower": -30.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -22.5,
+                "canonical_lower": -30.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-30776735_adults",
+                "evidence_id": "PMID-30776735",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-30776735",
+                "source_type": "META_ANALYSIS",
+                "title": "Zheng G, et al. Cytokine. 2019;117:1-10. PMID: 30776735",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2019,
+                "doi": null,
+                "pmid": "30776735",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:56.427699",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "structured_resistance_and_moderate_aerobic_training_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "omega_3_polyunsaturated_fatty_acids_epadha_2_4gday",
+      "canonical_name": "Omega-3 polyunsaturated fatty acids (EPA/DHA 2-4g/day)",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Omega-3 polyunsaturated fatty acids (EPA/DHA 2-4g/day) (Nutraceutical) — favorable effect on Interleukin-6 (IL-6)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "omega_3_polyunsaturated_fatty_acids_epadha_2_4gday_standard",
+          "regimen": {
+            "regimen_id": "omega_3_polyunsaturated_fatty_acids_epadha_2_4gday_standard",
+            "intervention_id": "omega_3_polyunsaturated_fatty_acids_epadha_2_4gday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Omega-3 polyunsaturated fatty acids (EPA/DHA 2-4g/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "omega_3_polyunsaturated_fatty_acids_epadha_2_4gday_interleukin_6_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -17.0,
+                "lower": -22.0,
+                "upper": -12.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "omega_3_polyunsaturated_fatty_acids_epadha_2_4gday_interleukin_6_favorable",
+                "original_value": -17.0,
+                "original_lower": -22.0,
+                "original_upper": -12.0,
+                "original_unit": "%",
+                "canonical_value": -17.0,
+                "canonical_lower": -22.0,
+                "canonical_upper": -12.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-25139810_adults",
+                "evidence_id": "PMID-25139810",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-25139810",
+                "source_type": "META_ANALYSIS",
+                "title": "Li K, et al. Mol Nutr Food Res. 2014;58:2116-2125. PMID: 25139810",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "25139810",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:56.884172",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "omega_3_polyunsaturated_fatty_acids_epadha_2_4gday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "visceral_adiposity_accumulation_waist_circumference_102cm",
+      "canonical_name": "Visceral Adiposity Accumulation (waist circumference >102cm)",
+      "intervention_type": "LIFESTYLE",
+      "description": "Visceral Adiposity Accumulation (waist circumference >102cm) (Lifestyle) — unfavorable effect on Interleukin-6 (IL-6)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "visceral_adiposity_accumulation_waist_circumference_102cm_standard",
+          "regimen": {
+            "regimen_id": "visceral_adiposity_accumulation_waist_circumference_102cm_standard",
+            "intervention_id": "visceral_adiposity_accumulation_waist_circumference_102cm",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Visceral Adiposity Accumulation (waist circumference >102cm)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "visceral_adiposity_accumulation_waist_circumference_102cm_interleukin_6_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 75.0,
+                "lower": 50.0,
+                "upper": 100.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "visceral_adiposity_accumulation_waist_circumference_102cm_interleukin_6_unfavorable",
+                "original_value": 75.0,
+                "original_lower": 50.0,
+                "original_upper": 100.0,
+                "original_unit": "%",
+                "canonical_value": 75.0,
+                "canonical_lower": 50.0,
+                "canonical_upper": 100.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17287468_adults",
+                "evidence_id": "PMID-17287468",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17287468",
+                "source_type": "OBSERVATIONAL",
+                "title": "Fontana L, et al. Diabetes. 2007;56:1010-1013. PMID: 17287468",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2007,
+                "doi": null,
+                "pmid": "17287468",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:57.213193",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "visceral_adiposity_accumulation_waist_circumference_102cm_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "chronic_psychosocial_stress_and_elevated_glucocorticoids",
+      "canonical_name": "Chronic Psychosocial Stress and Elevated Glucocorticoids",
+      "intervention_type": "BEHAVIORAL",
+      "description": "Chronic Psychosocial Stress and Elevated Glucocorticoids (Behavioral) — unfavorable effect on Interleukin-6 (IL-6)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "chronic_psychosocial_stress_and_elevated_glucocorticoids_standard",
+          "regimen": {
+            "regimen_id": "chronic_psychosocial_stress_and_elevated_glucocorticoids_standard",
+            "intervention_id": "chronic_psychosocial_stress_and_elevated_glucocorticoids",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Chronic Psychosocial Stress and Elevated Glucocorticoids",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "chronic_psychosocial_stress_and_elevated_glucocorticoids_interleukin_6_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 47.5,
+                "lower": 35.0,
+                "upper": 60.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "chronic_psychosocial_stress_and_elevated_glucocorticoids_interleukin_6_unfavorable",
+                "original_value": 47.5,
+                "original_lower": 35.0,
+                "original_upper": 60.0,
+                "original_unit": "%",
+                "canonical_value": 47.5,
+                "canonical_lower": 35.0,
+                "canonical_upper": 60.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17493786_adults",
+                "evidence_id": "PMID-17493786",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17493786",
+                "source_type": "OBSERVATIONAL",
+                "title": "Steptoe A, et al. Brain Behav Immun. 2007;21:901-912. PMID: 17493786",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2007,
+                "doi": null,
+                "pmid": "17493786",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:57.572906",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "chronic_psychosocial_stress_and_elevated_glucocorticoids_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

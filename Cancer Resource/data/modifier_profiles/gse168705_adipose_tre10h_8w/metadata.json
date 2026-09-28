@@ -1,0 +1,19 @@
+{
+  "modifier_id": "gse168705_adipose_tre10h_8w",
+  "protocol": "tre_10h_window_8weeks_6am",
+  "biological_context": "adipose",
+  "tissue": "human adipose",
+  "study_id": "GSE168705",
+  "species": "human",
+  "dose": {
+    "unit": "calendar_hours",
+    "duration_hr": 1344.0,
+    "eating_window_hr": 10.0
+  },
+  "duration_hr": 1344.0,
+  "timepoint_hr": 1344.0,
+  "platform": "RNA-seq",
+  "n_replicates": 12,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

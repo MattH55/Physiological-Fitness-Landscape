@@ -1,0 +1,505 @@
+"""
+Evidence search engine for discovering interventions that affect biomarkers.
+
+Searches:
+1. PubMed (via E-utilities API)
+2. ClinicalTrials.gov (via API)
+3. Cochrane Library (via search)
+
+For each biomarker, generates search queries combining biomarker synonyms
+with intervention class terms, then identifies candidate intervention-effect
+records.
+
+Usage:
+    python -m scripts.discover_biomarker_interventions --biomarker crp
+    python -m scripts.discover_biomarker_interventions --all
+"""
+
+import os
+import sys
+import json
+import time
+import hashlib
+import logging
+import urllib.request
+import urllib.parse
+from typing import Dict, Any, List, Optional, Tuple
+from dataclasses import dataclass, field, asdict
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+logger = logging.getLogger(__name__)
+
+# =======================================================================
+# Configuration
+# =======================================================================
+
+PUBMED_API_BASE = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
+CLINICAL_TRIALS_API_BASE = "https://clinicaltrials.gov/api/v2"
+REQUEST_DELAY = 0.35  # seconds between API calls (PubMed rate limit: 3/sec)
+
+# Intervention class search terms
+INTERVENTION_CLASSES = [
+    "exercise",
+    "diet",
+    "weight loss",
+    "drug",
+    "supplement",
+    "smoking cessation",
+    "alcohol reduction",
+    "sleep",
+    "behavioral",
+    "surgery",
+    "procedure",
+    "device",
+]
+
+# Search modifiers
+SEARCH_MODIFIERS = [
+    "intervention",
+    "treatment",
+    "therapy",
+    "randomized",
+    "trial",
+    "meta-analysis",
+    "systematic review",
+    "Cochrane",
+]
+
+
+# =======================================================================
+# Data structures
+# =======================================================================
+
+@dataclass
+class SearchQuery:
+    """A single search query to execute."""
+    source: str  # 'pubmed', 'clinicaltrials', 'cochrane'
+    query: str
+    biomarker_id: str
+    intervention_class: Optional[str] = None
+
+
+@dataclass
+class CandidateEvidence:
+    """A candidate evidence record discovered by search."""
+    source: str
+    title: str
+    pmid: Optional[str] = None
+    doi: Optional[str] = None
+    nct_id: Optional[str] = None
+    url: Optional[str] = None
+    journal: Optional[str] = None
+    year: Optional[int] = None
+    study_design: Optional[str] = None
+    snippet: Optional[str] = None
+    biomarker_id: str = ""
+    intervention_class: Optional[str] = None
+
+
+@dataclass
+class DiscoveryResult:
+    """Aggregated discovery results for a biomarker."""
+    biomarker_id: str
+    biomarker_name: str
+    queries_executed: int = 0
+    total_results: int = 0
+    candidates: List[CandidateEvidence] = field(default_factory=list)
+    intervention_candidates: List[str] = field(default_factory=list)
+
+
+# =======================================================================
+# PubMed search
+# =======================================================================
+
+def search_pubmed(query: str, max_results: int = 50) -> List[Dict[str, Any]]:
+    """
+    Search PubMed via E-utilities.
+    Returns list of result dicts with pmid, title, journal, year, doi.
+    """
+    # Step 1: Search
+    search_url = f"{PUBMED_API_BASE}/esearch.fcgi"
+    params = {
+        "db": "pubmed",
+        "term": query,
+        "retmax": str(max_results),
+        "retmode": "json",
+        "sort": "relevance",
+    }
+    url = f"{search_url}?{urllib.parse.urlencode(params)}"
+
+    try:
+        with urllib.request.urlopen(url, timeout=30) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except Exception as e:
+        logger.warning(f"PubMed search failed for query '{query[:80]}...': {e}")
+        return []
+
+    pmids = data.get("esearchresult", {}).get("idlist", [])
+    if not pmids:
+        return []
+
+    time.sleep(REQUEST_DELAY)
+
+    # Step 2: Fetch details
+    esummary_url = f"{PUBMED_API_BASE}/esummary.fcgi"
+    params = {
+        "db": "pubmed",
+        "id": ",".join(pmids),
+        "retmode": "json",
+    }
+    url = f"{esummary_url}?{urllib.parse.urlencode(params)}"
+
+    try:
+        with urllib.request.urlopen(url, timeout=30) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except Exception as e:
+        logger.warning(f"PubMed esummary failed: {e}")
+        return []
+
+    results = []
+    result_data = data.get("result", {})
+    for pmid in pmids:
+        if pmid in result_data:
+            r = result_data[pmid]
+            results.append({
+                "pmid": pmid,
+                "title": r.get("title", ""),
+                "journal": r.get("fulljournalname", r.get("source", "")),
+                "year": r.get("pubdate", "")[:4] if r.get("pubdate") else None,
+                "doi": _extract_doi(r.get("articleids", [])),
+                "authors": ", ".join(
+                    a.get("name", "") for a in r.get("authors", [])[:3]
+                ),
+            })
+
+    return results
+
+
+def _extract_doi(articleids: List[Dict]) -> Optional[str]:
+    for aid in articleids:
+        if aid.get("idtype") == "doi":
+            return aid.get("value")
+    return None
+
+
+# =======================================================================
+# ClinicalTrials.gov search
+# =======================================================================
+
+def search_clinicaltrials(query: str, max_results: int = 50) -> List[Dict[str, Any]]:
+    """
+    Search ClinicalTrials.gov via API v2.
+    Returns list of result dicts with nct_id, title, phase, status, etc.
+    """
+    params = {
+        "query.term": query,
+        "pageSize": str(max_results),
+        "format": "json",
+    }
+    url = f"{CLINICAL_TRIALS_API_BASE}/studies?{urllib.parse.urlencode(params)}"
+
+    try:
+        with urllib.request.urlopen(url, timeout=30) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except Exception as e:
+        logger.warning(f"ClinicalTrials.gov search failed for query '{query[:80]}...': {e}")
+        return []
+
+    results = []
+    for study in data.get("studies", []):
+        proto = study.get("protocolSection", {})
+        ident = proto.get("identificationModule", {})
+        status = proto.get("statusModule", {})
+        design = proto.get("designModule", {})
+        arms = proto.get("armsInterventionsModule", {})
+
+        nct_id = ident.get("nctId", "")
+        title = ident.get("officialTitle", ident.get("briefTitle", ""))
+
+        # Extract interventions
+        interventions = []
+        for arm in arms.get("armGroups", []):
+            for interv in arm.get("interventions", []):
+                interventions.append({
+                    "name": interv.get("name", ""),
+                    "type": interv.get("type", ""),
+                    "description": interv.get("description", ""),
+                })
+
+        results.append({
+            "nct_id": nct_id,
+            "title": title,
+            "phase": design.get("phases", []),
+            "status": status.get("overallStatus", ""),
+            "study_type": design.get("allocation", ""),
+            "interventions": interventions,
+            "enrollment": proto.get("eligibilityModule", {}).get("studyPopulation", ""),
+            "url": f"https://clinicaltrials.gov/study/{nct_id}",
+        })
+
+    return results
+
+
+# =======================================================================
+# Query generation
+# =======================================================================
+
+def generate_search_queries(
+    biomarker_name: str,
+    biomarker_synonyms: List[str],
+    intervention_class: Optional[str] = None,
+) -> List[str]:
+    """
+    Generate search query strings for a biomarker.
+    Combines biomarker terms with intervention class and search modifiers.
+    """
+    terms = [biomarker_name] + biomarker_synonyms
+    # Quote multi-word terms
+    quoted_terms = [f'"{t}"' if " " in t else t for t in terms]
+    biomarker_query = " OR ".join(quoted_terms)
+
+    queries = []
+
+    if intervention_class:
+        # Specific intervention class
+        queries.append(f"({biomarker_query}) AND ({intervention_class})")
+        queries.append(f"({biomarker_query}) AND ({intervention_class}) AND (randomized OR trial)")
+        queries.append(f"({biomarker_query}) AND ({intervention_class}) AND (meta-analysis OR systematic review)")
+    else:
+        # General intervention search
+        for modifier in SEARCH_MODIFIERS:
+            queries.append(f"({biomarker_query}) AND ({modifier})")
+
+    return queries
+
+
+# =======================================================================
+# Main discovery function
+# =======================================================================
+
+def discover_interventions(
+    biomarker_id: str,
+    biomarker_name: str,
+    biomarker_synonyms: Optional[List[str]] = None,
+    max_results: int = 500,
+    search_pubmed_enabled: bool = True,
+    search_clinicaltrials_enabled: bool = True,
+) -> DiscoveryResult:
+    """
+    Comprehensive evidence search for a single biomarker.
+
+    Args:
+        biomarker_id: Slug identifier for the biomarker
+        biomarker_name: Canonical name
+        biomarker_synonyms: List of alternative names/terms
+        max_results: Maximum total results to collect
+        search_pubmed_enabled: Whether to search PubMed
+        search_clinicaltrials_enabled: Whether to search ClinicalTrials.gov
+
+    Returns:
+        DiscoveryResult with all candidate evidence records
+    """
+    if biomarker_synonyms is None:
+        biomarker_synonyms = []
+
+    result = DiscoveryResult(
+        biomarker_id=biomarker_id,
+        biomarker_name=biomarker_name,
+    )
+
+    seen_pmid = set()
+    seen_nct = set()
+    seen_title = set()
+
+    # Search each intervention class
+    for intv_class in INTERVENTION_CLASSES:
+        queries = generate_search_queries(
+            biomarker_name, biomarker_synonyms, intervention_class=intv_class
+        )
+
+        for query in queries:
+            if result.total_results >= max_results:
+                break
+
+            # PubMed
+            if search_pubmed_enabled:
+                pubmed_results = search_pubmed(query, max_results=50)
+                for r in pubmed_results:
+                    pmid = r.get("pmid")
+                    title = r.get("title", "").lower()
+                    if pmid in seen_pmid or title in seen_title:
+                        continue
+                    seen_pmid.add(pmid)
+                    seen_title.add(title)
+
+                    candidate = CandidateEvidence(
+                        source="pubmed",
+                        title=r.get("title", ""),
+                        pmid=pmid,
+                        doi=r.get("doi"),
+                        url=f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
+                        journal=r.get("journal"),
+                        year=int(r["year"]) if r.get("year") and r["year"].isdigit() else None,
+                        biomarker_id=biomarker_id,
+                        intervention_class=intv_class,
+                    )
+                    result.candidates.append(candidate)
+                    result.total_results += 1
+
+                time.sleep(REQUEST_DELAY)
+
+            # ClinicalTrials.gov
+            if search_clinicaltrials_enabled:
+                ct_results = search_clinicaltrials(query, max_results=30)
+                for r in ct_results:
+                    nct = r.get("nct_id")
+                    title = r.get("title", "").lower()
+                    if nct in seen_nct or title in seen_title:
+                        continue
+                    seen_nct.add(nct)
+                    seen_title.add(title)
+
+                    candidate = CandidateEvidence(
+                        source="clinicaltrials",
+                        title=r.get("title", ""),
+                        nct_id=nct,
+                        url=r.get("url"),
+                        study_design=", ".join(r.get("phase", [])) if r.get("phase") else r.get("study_type"),
+                        biomarker_id=biomarker_id,
+                        intervention_class=intv_class,
+                    )
+                    result.candidates.append(candidate)
+                    result.total_results += 1
+
+                time.sleep(REQUEST_DELAY)
+
+            result.queries_executed += 1
+
+        if result.total_results >= max_results:
+            break
+
+    # Identify unique intervention candidates from results
+    intervention_candidates = set()
+    for c in result.candidates:
+        if c.intervention_class:
+            intervention_candidates.add(c.intervention_class)
+    result.intervention_candidates = sorted(intervention_candidates)
+
+    logger.info(
+        f"Discovery complete for {biomarker_id}: "
+        f"{result.queries_executed} queries, {result.total_results} candidates, "
+        f"{len(result.intervention_candidates)} intervention classes"
+    )
+
+    return result
+
+
+# =======================================================================
+# CLI entry point
+# =======================================================================
+
+def main():
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Discover interventions affecting biomarkers via evidence search"
+    )
+    parser.add_argument(
+        "--biomarker",
+        type=str,
+        help="Biomarker slug (e.g. 'high_sensitivity_crp')",
+    )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help="Run discovery for all biomarkers in the database",
+    )
+    parser.add_argument(
+        "--max-results",
+        type=int,
+        default=500,
+        help="Maximum results per biomarker (default: 500)",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=str,
+        default=None,
+        help="Output directory for JSON results",
+    )
+    parser.add_argument(
+        "--no-pubmed",
+        action="store_true",
+        help="Skip PubMed search",
+    )
+    parser.add_argument(
+        "--no-clinicaltrials",
+        action="store_true",
+        help="Skip ClinicalTrials.gov search",
+    )
+
+    args = parser.parse_args()
+
+    if not args.biomarker and not args.all:
+        parser.error("Specify --biomarker or --all")
+
+    # Load biomarkers from database
+    from backend.models import Biomarker, get_engine, init_db
+    from sqlalchemy.orm import sessionmaker
+
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    db_path = os.path.join(base_dir, "data", "mortality_biomarkers.db")
+    engine = get_engine(f"sqlite:///{db_path}")
+    init_db(engine)
+    SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+    db = SessionLocal()
+
+    if args.all:
+        biomarkers = db.query(Biomarker).order_by(Biomarker.id).all()
+    else:
+        biomarkers = (
+            db.query(Biomarker)
+            .filter(Biomarker.slug == args.biomarker)
+            .all()
+        )
+        if not biomarkers:
+            logger.error(f"Biomarker '{args.biomarker}' not found in database")
+            sys.exit(1)
+
+    output_dir = args.output_dir or os.path.join(base_dir, "data", "discovery_results")
+    os.makedirs(output_dir, exist_ok=True)
+
+    for bm in biomarkers:
+        logger.info(f"\n{'='*60}")
+        logger.info(f"Searching: {bm.name} ({bm.slug})")
+        logger.info(f"{'='*60}")
+
+        synonyms = bm.aliases or []
+        result = discover_interventions(
+            biomarker_id=bm.slug,
+            biomarker_name=bm.name,
+            biomarker_synonyms=synonyms,
+            max_results=args.max_results,
+            search_pubmed_enabled=not args.no_pubmed,
+            search_clinicaltrials_enabled=not args.no_clinicaltrials,
+        )
+
+        # Save results
+        out_path = os.path.join(output_dir, f"{bm.slug}_discovery.json")
+        output = {
+            "biomarker_id": bm.slug,
+            "biomarker_name": bm.name,
+            "queries_executed": result.queries_executed,
+            "total_results": result.total_results,
+            "intervention_candidates": result.intervention_candidates,
+            "candidates": [asdict(c) for c in result.candidates],
+        }
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(output, f, indent=2, ensure_ascii=False)
+        logger.info(f"Results saved to: {out_path}")
+
+    db.close()
+    logger.info("\nAll discovery searches complete.")
+
+
+if __name__ == "__main__":
+    main()

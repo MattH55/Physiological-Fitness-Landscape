@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "urine_creatinine",
+  "biomarker_name": "Urinary Creatinine Concentration",
+  "biomarker_units": "mg/dL",
+  "interventions": [
+    {
+      "intervention_id": "progressive_resistance_hypertrophy_training_increasing_skeletal_muscle_mass",
+      "canonical_name": "Progressive resistance hypertrophy training increasing skeletal muscle mass",
+      "intervention_type": "EXERCISE",
+      "description": "Progressive resistance hypertrophy training increasing skeletal muscle mass (Exercise) — favorable effect on Urinary Creatinine Concentration",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "progressive_resistance_hypertrophy_training_increasing_skeletal_muscle_mass_standard",
+          "regimen": {
+            "regimen_id": "progressive_resistance_hypertrophy_training_increasing_skeletal_muscle_mass_standard",
+            "intervention_id": "progressive_resistance_hypertrophy_training_increasing_skeletal_muscle_mass",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Progressive resistance hypertrophy training increasing skeletal muscle mass",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "progressive_resistance_hypertrophy_training_increasing_skeletal_muscle_mass_urine_creatinine_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 22.5,
+                "lower": 15.0,
+                "upper": 30.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "progressive_resistance_hypertrophy_training_increasing_skeletal_muscle_mass_urine_creatinine_favorable",
+                "original_value": 22.5,
+                "original_lower": 15.0,
+                "original_upper": 30.0,
+                "original_unit": "%",
+                "canonical_value": 22.5,
+                "canonical_lower": 15.0,
+                "canonical_upper": 30.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-6829486_adults",
+                "evidence_id": "PMID-6829486",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-6829486",
+                "source_type": "RCT",
+                "title": "Forbes GB, et al. Am J Clin Nutr. 1983;37:433-439. PMID: 6829486",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1983,
+                "doi": null,
+                "pmid": "6829486",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:18.251070",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "progressive_resistance_hypertrophy_training_increasing_skeletal_muscle_mass_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "creatine_monohydrate_supplementation_5gday",
+      "canonical_name": "Creatine monohydrate supplementation (5g/day)",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Creatine monohydrate supplementation (5g/day) (Nutraceutical) — favorable effect on Urinary Creatinine Concentration",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "creatine_monohydrate_supplementation_5gday_standard",
+          "regimen": {
+            "regimen_id": "creatine_monohydrate_supplementation_5gday_standard",
+            "intervention_id": "creatine_monohydrate_supplementation_5gday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Creatine monohydrate supplementation (5g/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "creatine_monohydrate_supplementation_5gday_urine_creatinine_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 30.0,
+                "lower": 20.0,
+                "upper": 40.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "creatine_monohydrate_supplementation_5gday_urine_creatinine_favorable",
+                "original_value": 30.0,
+                "original_lower": 20.0,
+                "original_upper": 40.0,
+                "original_unit": "%",
+                "canonical_value": 30.0,
+                "canonical_lower": 20.0,
+                "canonical_upper": 40.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-12971434_adults",
+                "evidence_id": "PMID-12971434",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-12971434",
+                "source_type": "RCT",
+                "title": "Persky AM, et al. J Clin Pharmacol. 2003;43:1025-1033. PMID: 12971434",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2003,
+                "doi": null,
+                "pmid": "12971434",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:18.548765",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "creatine_monohydrate_supplementation_5gday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_protein_omnivorous_dietary_pattern",
+      "canonical_name": "High-protein omnivorous dietary pattern",
+      "intervention_type": "DIET",
+      "description": "High-protein omnivorous dietary pattern (Diet) — favorable effect on Urinary Creatinine Concentration",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_protein_omnivorous_dietary_pattern_standard",
+          "regimen": {
+            "regimen_id": "high_protein_omnivorous_dietary_pattern_standard",
+            "intervention_id": "high_protein_omnivorous_dietary_pattern",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High-protein omnivorous dietary pattern",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_protein_omnivorous_dietary_pattern_urine_creatinine_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 17.5,
+                "lower": 10.0,
+                "upper": 25.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_protein_omnivorous_dietary_pattern_urine_creatinine_favorable",
+                "original_value": 17.5,
+                "original_lower": 10.0,
+                "original_upper": 25.0,
+                "original_unit": "%",
+                "canonical_value": 17.5,
+                "canonical_lower": 10.0,
+                "canonical_upper": 25.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-1394976_adults",
+                "evidence_id": "PMID-1394976",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-1394976",
+                "source_type": "RCT",
+                "title": "Perrone RD, et al. Clin Chem. 1992;38:1933-1953. PMID: 1394976",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1992,
+                "doi": null,
+                "pmid": "1394976",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:18.867808",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_protein_omnivorous_dietary_pattern_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_muscle_wasting_advanced_sarcopenia_and_amputation",
+      "canonical_name": "Severe muscle wasting, advanced sarcopenia, and amputation",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe muscle wasting, advanced sarcopenia, and amputation (Clinical) — unfavorable effect on Urinary Creatinine Concentration",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_muscle_wasting_advanced_sarcopenia_and_amputation_standard",
+          "regimen": {
+            "regimen_id": "severe_muscle_wasting_advanced_sarcopenia_and_amputation_standard",
+            "intervention_id": "severe_muscle_wasting_advanced_sarcopenia_and_amputation",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe muscle wasting, advanced sarcopenia, and amputation",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_muscle_wasting_advanced_sarcopenia_and_amputation_urine_creatinine_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -55.0,
+                "lower": -70.0,
+                "upper": -40.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_muscle_wasting_advanced_sarcopenia_and_amputation_urine_creatinine_unfavorable",
+                "original_value": -55.0,
+                "original_lower": -70.0,
+                "original_upper": -40.0,
+                "original_unit": "%",
+                "canonical_value": -55.0,
+                "canonical_lower": -70.0,
+                "canonical_upper": -40.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-18235143_adults",
+                "evidence_id": "PMID-18235143",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-18235143",
+                "source_type": "OBSERVATIONAL",
+                "title": "Baxmann AC, et al. Clin J Am Soc Nephrol. 2008;3:348-354. PMID: 18235143",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2008,
+                "doi": null,
+                "pmid": "18235143",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:19.193701",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_muscle_wasting_advanced_sarcopenia_and_amputation_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "extensive_overhydration_water_intoxication_spot_dilution_20_mgdl",
+      "canonical_name": "Extensive overhydration / water intoxication (spot dilution <20 mg/dL)",
+      "intervention_type": "LIFESTYLE",
+      "description": "Extensive overhydration / water intoxication (spot dilution <20 mg/dL) (Lifestyle) — unfavorable effect on Urinary Creatinine Concentration",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "extensive_overhydration_water_intoxication_spot_dilution_20_mgdl_standard",
+          "regimen": {
+            "regimen_id": "extensive_overhydration_water_intoxication_spot_dilution_20_mgdl_standard",
+            "intervention_id": "extensive_overhydration_water_intoxication_spot_dilution_20_mgdl",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Extensive overhydration / water intoxication (spot dilution <20 mg/dL)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "extensive_overhydration_water_intoxication_spot_dilution_20_mgdl_urine_creatinine_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -75.0,
+                "lower": -90.0,
+                "upper": -60.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "extensive_overhydration_water_intoxication_spot_dilution_20_mgdl_urine_creatinine_unfavorable",
+                "original_value": -75.0,
+                "original_lower": -90.0,
+                "original_upper": -60.0,
+                "original_unit": "%",
+                "canonical_value": -75.0,
+                "canonical_lower": -90.0,
+                "canonical_upper": -60.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-8596265_adults",
+                "evidence_id": "PMID-8596265",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-8596265",
+                "source_type": "MECHANISTIC",
+                "title": "Kesteloot H, et al. Lancet. 1996;347:489-493. PMID: 8596265",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1996,
+                "doi": null,
+                "pmid": "8596265",
+                "nct_id": null,
+                "url": null,
+                "study_design": "mechanistic_study",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:19.541000",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "extensive_overhydration_water_intoxication_spot_dilution_20_mgdl_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

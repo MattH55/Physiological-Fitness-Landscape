@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "erythrocyte_sedimentation_rate",
+  "biomarker_name": "Erythrocyte Sedimentation Rate (ESR)",
+  "biomarker_units": "mm/hr",
+  "interventions": [
+    {
+      "intervention_id": "glucocorticoids_and_dmard_anti_inflammatory_therapy_in_active_inflammatory_disease",
+      "canonical_name": "Glucocorticoids and DMARD anti-inflammatory therapy in active inflammatory disease",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Glucocorticoids and DMARD anti-inflammatory therapy in active inflammatory disease (Pharmacologic) — favorable effect on Erythrocyte Sedimentation Rate (ESR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "glucocorticoids_and_dmard_anti_inflammatory_therapy_in_active_inflammatory_disease_standard",
+          "regimen": {
+            "regimen_id": "glucocorticoids_and_dmard_anti_inflammatory_therapy_in_active_inflammatory_disease_standard",
+            "intervention_id": "glucocorticoids_and_dmard_anti_inflammatory_therapy_in_active_inflammatory_disease",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Glucocorticoids and DMARD anti-inflammatory therapy in active inflammatory disease",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "glucocorticoids_and_dmard_anti_inflammatory_therapy_in_active_inflammatory_disease_erythrocyte_sedimentation_rate_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -55.0,
+                "lower": -70.0,
+                "upper": -40.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "glucocorticoids_and_dmard_anti_inflammatory_therapy_in_active_inflammatory_disease_erythrocyte_sedimentation_rate_favorable",
+                "original_value": -55.0,
+                "original_lower": -70.0,
+                "original_upper": -40.0,
+                "original_unit": "%",
+                "canonical_value": -55.0,
+                "canonical_lower": -70.0,
+                "canonical_upper": -40.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-26545940_adults",
+                "evidence_id": "PMID-26545940",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-26545940",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Singh JA, et al. Arthritis Care Res. 2016;68:1-25. PMID: 26545940",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2016,
+                "doi": null,
+                "pmid": "26545940",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:00.534681",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "glucocorticoids_and_dmard_anti_inflammatory_therapy_in_active_inflammatory_disease_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "anti_inflammatory_mediterranean_dietary_protocol",
+      "canonical_name": "Anti-inflammatory Mediterranean dietary protocol",
+      "intervention_type": "DIET",
+      "description": "Anti-inflammatory Mediterranean dietary protocol (Diet) — favorable effect on Erythrocyte Sedimentation Rate (ESR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "anti_inflammatory_mediterranean_dietary_protocol_standard",
+          "regimen": {
+            "regimen_id": "anti_inflammatory_mediterranean_dietary_protocol_standard",
+            "intervention_id": "anti_inflammatory_mediterranean_dietary_protocol",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Anti-inflammatory Mediterranean dietary protocol",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "anti_inflammatory_mediterranean_dietary_protocol_erythrocyte_sedimentation_rate_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -22.5,
+                "lower": -30.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "anti_inflammatory_mediterranean_dietary_protocol_erythrocyte_sedimentation_rate_favorable",
+                "original_value": -22.5,
+                "original_lower": -30.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -22.5,
+                "canonical_lower": -30.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-12594184_adults",
+                "evidence_id": "PMID-12594184",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-12594184",
+                "source_type": "RCT",
+                "title": "Sköldstam L, et al. Ann Rheum Dis. 2003;62:208-214. PMID: 12594184",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2003,
+                "doi": null,
+                "pmid": "12594184",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:00.794209",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "anti_inflammatory_mediterranean_dietary_protocol_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "regular_moderate_physical_exercise",
+      "canonical_name": "Regular moderate physical exercise",
+      "intervention_type": "EXERCISE",
+      "description": "Regular moderate physical exercise (Exercise) — favorable effect on Erythrocyte Sedimentation Rate (ESR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "regular_moderate_physical_exercise_standard",
+          "regimen": {
+            "regimen_id": "regular_moderate_physical_exercise_standard",
+            "intervention_id": "regular_moderate_physical_exercise",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Regular moderate physical exercise",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "regular_moderate_physical_exercise_erythrocyte_sedimentation_rate_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -15.0,
+                "lower": -20.0,
+                "upper": -10.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "regular_moderate_physical_exercise_erythrocyte_sedimentation_rate_favorable",
+                "original_value": -15.0,
+                "original_lower": -20.0,
+                "original_upper": -10.0,
+                "original_unit": "%",
+                "canonical_value": -15.0,
+                "canonical_lower": -20.0,
+                "canonical_upper": -10.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-18838426_adults",
+                "evidence_id": "PMID-18838426",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-18838426",
+                "source_type": "OBSERVATIONAL",
+                "title": "Metsios GS, et al. Rheumatology. 2008;47:1800-1804. PMID: 18838426",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2008,
+                "doi": null,
+                "pmid": "18838426",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:01.012707",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "regular_moderate_physical_exercise_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "uncontrolled_autoimmune_flare_or_untreated_chronic_infectious_foci",
+      "canonical_name": "Uncontrolled autoimmune flare or untreated chronic infectious foci",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Uncontrolled autoimmune flare or untreated chronic infectious foci (Clinical) — unfavorable effect on Erythrocyte Sedimentation Rate (ESR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "uncontrolled_autoimmune_flare_or_untreated_chronic_infectious_foci_standard",
+          "regimen": {
+            "regimen_id": "uncontrolled_autoimmune_flare_or_untreated_chronic_infectious_foci_standard",
+            "intervention_id": "uncontrolled_autoimmune_flare_or_untreated_chronic_infectious_foci",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Uncontrolled autoimmune flare or untreated chronic infectious foci",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "uncontrolled_autoimmune_flare_or_untreated_chronic_infectious_foci_erythrocyte_sedimentation_rate_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 250.0,
+                "lower": 100.0,
+                "upper": 400.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "uncontrolled_autoimmune_flare_or_untreated_chronic_infectious_foci_erythrocyte_sedimentation_rate_unfavorable",
+                "original_value": 250.0,
+                "original_lower": 100.0,
+                "original_upper": 400.0,
+                "original_unit": "%",
+                "canonical_value": 250.0,
+                "canonical_lower": 100.0,
+                "canonical_upper": 400.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-10524488_adults",
+                "evidence_id": "PMID-10524488",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-10524488",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Brigden ML. Am Fam Physician. 1999;60:1443-1450. PMID: 10524488",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1999,
+                "doi": null,
+                "pmid": "10524488",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:01.790486",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "uncontrolled_autoimmune_flare_or_untreated_chronic_infectious_foci_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "end_stage_renal_disease_or_nephrotic_syndrome",
+      "canonical_name": "End-stage renal disease or nephrotic syndrome",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "End-stage renal disease or nephrotic syndrome (Clinical) — unfavorable effect on Erythrocyte Sedimentation Rate (ESR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "end_stage_renal_disease_or_nephrotic_syndrome_standard",
+          "regimen": {
+            "regimen_id": "end_stage_renal_disease_or_nephrotic_syndrome_standard",
+            "intervention_id": "end_stage_renal_disease_or_nephrotic_syndrome",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for End-stage renal disease or nephrotic syndrome",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "end_stage_renal_disease_or_nephrotic_syndrome_erythrocyte_sedimentation_rate_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 140.0,
+                "lower": 80.0,
+                "upper": 200.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "end_stage_renal_disease_or_nephrotic_syndrome_erythrocyte_sedimentation_rate_unfavorable",
+                "original_value": 140.0,
+                "original_lower": 80.0,
+                "original_upper": 200.0,
+                "original_unit": "%",
+                "canonical_value": 140.0,
+                "canonical_lower": 80.0,
+                "canonical_upper": 200.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-20621695_adults",
+                "evidence_id": "PMID-20621695",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-20621695",
+                "source_type": "SYSTEMATIC_REVIEW",
+                "title": "Breda L, et al. Autoimmun Rev. 2010;9:747-750. PMID: 20621695",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2010,
+                "doi": null,
+                "pmid": "20621695",
+                "nct_id": null,
+                "url": null,
+                "study_design": "systematic_review",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:02.682170",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "end_stage_renal_disease_or_nephrotic_syndrome_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

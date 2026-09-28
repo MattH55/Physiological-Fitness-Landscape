@@ -1,0 +1,3849 @@
+{
+  "built": "2026-09-27T16:56:39.086955+00:00",
+  "reference": "C:\\Users\\matth\\OneDrive\\Documents\\OpenSourceMed\\Physiological Fitness Landscape\\Cancer Resource\\data\\lincs_phase1_raw\\phase1_mcf7_10uM_24h.json",
+  "n_chemical_reference": 6204,
+  "n_common_genes": 765,
+  "n_pca_components": 50,
+  "n_refused_chemicals": 0,
+  "thresholds": {
+    "in_distribution": "Mahalanobis percentile <= 95 vs chemical set",
+    "edge": "95 < percentile <= 99.5",
+    "off_manifold": "percentile > 99.5"
+  },
+  "gate_2": {
+    "passed": true,
+    "n_in_distribution_or_edge": 33,
+    "n_off_manifold": 0,
+    "criterion": "at least 4 modifiers in-distribution or edge"
+  },
+  "signatures": [
+    {
+      "signature_id": "gse153830_t47d_glucose_deprivation",
+      "modifier_class": "dietary_metabolic",
+      "condition_id": "glucose_deprivation_0.225gL_96h",
+      "cell_line_name": "T47D",
+      "l2_norm": 49.719658942807364,
+      "norm_z": 1.611063326964503,
+      "top_neighbor": "ZK-164015",
+      "top_pearson": 0.5798652243313546,
+      "top_cosine": 0.5820648185412223,
+      "top_neighbors": [
+        {
+          "compound": "ZK-164015",
+          "pearson": 0.5798652243313546,
+          "cosine": 0.5820648185412223
+        },
+        {
+          "compound": "CGK-733",
+          "pearson": 0.5710078393459087,
+          "cosine": 0.5733635260246212
+        },
+        {
+          "compound": "FCCP",
+          "pearson": 0.5631840298470564,
+          "cosine": 0.564003972374485
+        },
+        {
+          "compound": "tyrphostin-AG-879",
+          "pearson": 0.552035348851541,
+          "cosine": 0.5543897442623419
+        },
+        {
+          "compound": "CCCP",
+          "pearson": 0.5463244488594516,
+          "cosine": 0.5463998488808252
+        },
+        {
+          "compound": "niguldipine",
+          "pearson": 0.5336339851141981,
+          "cosine": 0.5281708035269392
+        },
+        {
+          "compound": "BRD-K65955264",
+          "pearson": 0.5322976023014401,
+          "cosine": 0.5354705828619476
+        },
+        {
+          "compound": "amsacrine",
+          "pearson": 0.5319533718150773,
+          "cosine": 0.5351995532688621
+        },
+        {
+          "compound": "BRD-K04534322",
+          "pearson": 0.5292459733757291,
+          "cosine": 0.5265169759791142
+        },
+        {
+          "compound": "reserpine",
+          "pearson": 0.5182217987743646,
+          "cosine": 0.5152514094014654
+        },
+        {
+          "compound": "BRD-K73008154",
+          "pearson": 0.5158766616203714,
+          "cosine": 0.5139078514281444
+        },
+        {
+          "compound": "BRD-K31706415",
+          "pearson": 0.5149056148701229,
+          "cosine": 0.5179375784734523
+        },
+        {
+          "compound": "malonoben",
+          "pearson": 0.5140944765076295,
+          "cosine": 0.5161878186956347
+        },
+        {
+          "compound": "devazepide",
+          "pearson": 0.5139980840144854,
+          "cosine": 0.5160238188660318
+        },
+        {
+          "compound": "ivermectin",
+          "pearson": 0.5069451097982461,
+          "cosine": 0.5070803927558206
+        },
+        {
+          "compound": "BRD-K99582188",
+          "pearson": 0.5068536859262026,
+          "cosine": 0.5055099155499051
+        },
+        {
+          "compound": "BRD-K07023879",
+          "pearson": 0.5051857300358688,
+          "cosine": 0.5055247501364761
+        },
+        {
+          "compound": "BRD-K41845021",
+          "pearson": 0.5036668904588423,
+          "cosine": 0.5050852417168716
+        },
+        {
+          "compound": "selamectin",
+          "pearson": 0.5018965676065087,
+          "cosine": 0.5030191529879101
+        },
+        {
+          "compound": "rhodomyrtoxin-b",
+          "pearson": 0.5010257053534098,
+          "cosine": 0.5021383481333028
+        }
+      ],
+      "mahalanobis": 47.36394198411418,
+      "percentile_vs_chemical": 53.65892972275951,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse153830_mcf7_glucose_deprivation",
+      "modifier_class": "dietary_metabolic",
+      "condition_id": "glucose_deprivation_0.225gL_96h",
+      "cell_line_name": "MCF-7",
+      "l2_norm": 43.2224645927372,
+      "norm_z": 0.4802955548922979,
+      "top_neighbor": "niguldipine",
+      "top_pearson": 0.36595559797032573,
+      "top_cosine": 0.36812829514228007,
+      "top_neighbors": [
+        {
+          "compound": "niguldipine",
+          "pearson": 0.36595559797032573,
+          "cosine": 0.36812829514228007
+        },
+        {
+          "compound": "KN-93",
+          "pearson": 0.36130540507416725,
+          "cosine": 0.3641306863282057
+        },
+        {
+          "compound": "spiperone",
+          "pearson": 0.3315725988966964,
+          "cosine": 0.33815043970041453
+        },
+        {
+          "compound": "SA-1458163",
+          "pearson": 0.3239872025989904,
+          "cosine": 0.3272115079877615
+        },
+        {
+          "compound": "reserpine",
+          "pearson": 0.3215220704707549,
+          "cosine": 0.3220409948121244
+        },
+        {
+          "compound": "BRD-A06276885",
+          "pearson": 0.3179101374782473,
+          "cosine": 0.3201395408286216
+        },
+        {
+          "compound": "penfluridol",
+          "pearson": 0.3170358155268109,
+          "cosine": 0.315330684380497
+        },
+        {
+          "compound": "nonoxynol-9",
+          "pearson": 0.30983159720757636,
+          "cosine": 0.3084707950945921
+        },
+        {
+          "compound": "CAM-9-027-3",
+          "pearson": 0.3066656843807888,
+          "cosine": 0.3075691761833515
+        },
+        {
+          "compound": "BRD-K32389477",
+          "pearson": 0.29956161707580137,
+          "cosine": 0.30256840385621253
+        },
+        {
+          "compound": "BRD-K61776140",
+          "pearson": 0.29829490447744345,
+          "cosine": 0.30266013924822716
+        },
+        {
+          "compound": "BRD-K32581454",
+          "pearson": 0.28651046357635523,
+          "cosine": 0.28375012192021504
+        },
+        {
+          "compound": "pimozide",
+          "pearson": 0.2857578345996066,
+          "cosine": 0.28958936913323197
+        },
+        {
+          "compound": "SA-425500",
+          "pearson": 0.28438240469483883,
+          "cosine": 0.2870831623089772
+        },
+        {
+          "compound": "CAY-10618",
+          "pearson": 0.2815452919010756,
+          "cosine": 0.27866817834393615
+        },
+        {
+          "compound": "mibefradil",
+          "pearson": 0.2797441066517387,
+          "cosine": 0.273846928683932
+        },
+        {
+          "compound": "malonoben",
+          "pearson": 0.27701384505490295,
+          "cosine": 0.270874400691313
+        },
+        {
+          "compound": "BRD-K93215584",
+          "pearson": 0.2764650712227871,
+          "cosine": 0.28046566596600314
+        },
+        {
+          "compound": "lasalocid",
+          "pearson": 0.2735884839721617,
+          "cosine": 0.27717375104277264
+        },
+        {
+          "compound": "suloctidil",
+          "pearson": 0.27203261099923737,
+          "cosine": 0.2723875513400956
+        }
+      ],
+      "mahalanobis": 70.50236196863878,
+      "percentile_vs_chemical": 85.15473887814314,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse153830_mcf7_bhb10mm",
+      "modifier_class": "dietary_metabolic",
+      "condition_id": "bhb_10mm_96h_on_glucose_deprivation",
+      "cell_line_name": "MCF-7",
+      "l2_norm": 36.801342412963905,
+      "norm_z": -0.6372326627063108,
+      "top_neighbor": "fusaric-acid",
+      "top_pearson": 0.2134485629325541,
+      "top_cosine": 0.21366694978004425,
+      "top_neighbors": [
+        {
+          "compound": "fusaric-acid",
+          "pearson": 0.2134485629325541,
+          "cosine": 0.21366694978004425
+        },
+        {
+          "compound": "PSB-069",
+          "pearson": 0.19488461388606895,
+          "cosine": 0.19512709260498967
+        },
+        {
+          "compound": "safinamide",
+          "pearson": 0.19302639117086862,
+          "cosine": 0.19310216363788663
+        },
+        {
+          "compound": "tyrphostin-AG-112",
+          "pearson": 0.18794183338503637,
+          "cosine": 0.18780105075855003
+        },
+        {
+          "compound": "eplerenone",
+          "pearson": 0.183153170255129,
+          "cosine": 0.18334102527917667
+        },
+        {
+          "compound": "BRD-K84677391",
+          "pearson": 0.1826036959570916,
+          "cosine": 0.18288623317983269
+        },
+        {
+          "compound": "deferiprone",
+          "pearson": 0.18209340740600385,
+          "cosine": 0.18218200791666003
+        },
+        {
+          "compound": "SB-206553",
+          "pearson": 0.17605789469070512,
+          "cosine": 0.17594325338931988
+        },
+        {
+          "compound": "UNC-0321",
+          "pearson": 0.17174924408176862,
+          "cosine": 0.17140505800372757
+        },
+        {
+          "compound": "farnesylcysteine-methyl-ester",
+          "pearson": 0.17100162242015254,
+          "cosine": 0.17124933137221846
+        },
+        {
+          "compound": "eicosatrienoic-acid",
+          "pearson": 0.16951416125157628,
+          "cosine": 0.16978238771828483
+        },
+        {
+          "compound": "BRD-K08451418",
+          "pearson": 0.16843590381216625,
+          "cosine": 0.16871400189439748
+        },
+        {
+          "compound": "ST-019386",
+          "pearson": 0.16782469702572828,
+          "cosine": 0.1680636269917622
+        },
+        {
+          "compound": "BRD-K05775306",
+          "pearson": 0.16757794862930525,
+          "cosine": 0.16788474999239728
+        },
+        {
+          "compound": "cefaclor",
+          "pearson": 0.16043123349874058,
+          "cosine": 0.16072458063194775
+        },
+        {
+          "compound": "delcorine",
+          "pearson": 0.15962440042422127,
+          "cosine": 0.1599469641254499
+        },
+        {
+          "compound": "dihomo-gamma-linolenic-acid",
+          "pearson": 0.15915942960245397,
+          "cosine": 0.15944876049025428
+        },
+        {
+          "compound": "ropinirole",
+          "pearson": 0.15897749821493629,
+          "cosine": 0.15854641256066362
+        },
+        {
+          "compound": "BRD-K73707305",
+          "pearson": 0.15776321753889244,
+          "cosine": 0.15805790885473453
+        },
+        {
+          "compound": "rolipram",
+          "pearson": 0.15722941264725732,
+          "cosine": 0.15735588527211733
+        }
+      ],
+      "mahalanobis": 35.288557464555424,
+      "percentile_vs_chemical": 27.724049000644747,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse153830_t47d_bhb25mm",
+      "modifier_class": "dietary_metabolic",
+      "condition_id": "bhb_25mm_96h_on_glucose_deprivation",
+      "cell_line_name": "T47D",
+      "l2_norm": 37.47091869831749,
+      "norm_z": -0.5207000112837041,
+      "top_neighbor": "9-methyl-5H-6-thia-4,5-diaza-chrysene-6,6-dioxide",
+      "top_pearson": 0.14344673506323333,
+      "top_cosine": 0.14349035171043778,
+      "top_neighbors": [
+        {
+          "compound": "9-methyl-5H-6-thia-4,5-diaza-chrysene-6,6-dioxide",
+          "pearson": 0.14344673506323333,
+          "cosine": 0.14349035171043778
+        },
+        {
+          "compound": "PF-04217903",
+          "pearson": 0.1396745972033454,
+          "cosine": 0.13906758937005995
+        },
+        {
+          "compound": "BRD-K44890999",
+          "pearson": 0.13750059412504714,
+          "cosine": 0.13685072217581
+        },
+        {
+          "compound": "mesalazine",
+          "pearson": 0.13731562725337118,
+          "cosine": 0.1373575002607601
+        },
+        {
+          "compound": "bicalutamide",
+          "pearson": 0.13512793623008912,
+          "cosine": 0.1351423564106108
+        },
+        {
+          "compound": "bimatoprost",
+          "pearson": 0.13449573149677993,
+          "cosine": 0.1345419652122191
+        },
+        {
+          "compound": "amoxicillin",
+          "pearson": 0.13406933153394326,
+          "cosine": 0.13401722392185134
+        },
+        {
+          "compound": "VU-0400195-3",
+          "pearson": 0.12899052617028514,
+          "cosine": 0.12895230205026803
+        },
+        {
+          "compound": "n-acetyl-l-leucine",
+          "pearson": 0.12892426134736082,
+          "cosine": 0.1287784009938504
+        },
+        {
+          "compound": "SA-97343",
+          "pearson": 0.12797383814601113,
+          "cosine": 0.12794392870448038
+        },
+        {
+          "compound": "AZD-5438",
+          "pearson": 0.12764087598050042,
+          "cosine": 0.1267553732528956
+        },
+        {
+          "compound": "BRD-K36767861",
+          "pearson": 0.1275973657178857,
+          "cosine": 0.12742231034290571
+        },
+        {
+          "compound": "genipin",
+          "pearson": 0.12740790452436812,
+          "cosine": 0.1274580751694538
+        },
+        {
+          "compound": "nicorandil",
+          "pearson": 0.12503062950142396,
+          "cosine": 0.12496143980310832
+        },
+        {
+          "compound": "BRD-K48924007",
+          "pearson": 0.1245135644129192,
+          "cosine": 0.12454987451991312
+        },
+        {
+          "compound": "BRD-K97149069",
+          "pearson": 0.1241035861780694,
+          "cosine": 0.1233314553338308
+        },
+        {
+          "compound": "L-161982",
+          "pearson": 0.12297127547970145,
+          "cosine": 0.1227673090191176
+        },
+        {
+          "compound": "BRD-K53780220",
+          "pearson": 0.12278197180447394,
+          "cosine": 0.12282316234214812
+        },
+        {
+          "compound": "SA-103150",
+          "pearson": 0.12271823317115171,
+          "cosine": 0.12272337771382104
+        },
+        {
+          "compound": "phentermine",
+          "pearson": 0.12230472237436812,
+          "cosine": 0.12234982337259394
+        }
+      ],
+      "mahalanobis": 29.93549229115601,
+      "percentile_vs_chemical": 16.715022566086397,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse300765_u87_hypoxia1pct48h",
+      "modifier_class": "hypoxic",
+      "condition_id": "hypoxia_1pct_o2_48h",
+      "cell_line_name": "U87MG",
+      "l2_norm": 46.31872328168361,
+      "norm_z": 1.0191665430167844,
+      "top_neighbor": "BRD-K08307026",
+      "top_pearson": 0.4425606297390794,
+      "top_cosine": 0.4392832935050959,
+      "top_neighbors": [
+        {
+          "compound": "BRD-K08307026",
+          "pearson": 0.4425606297390794,
+          "cosine": 0.4392832935050959
+        },
+        {
+          "compound": "BRD-K61717269",
+          "pearson": 0.42741631992797036,
+          "cosine": 0.42515759208303283
+        },
+        {
+          "compound": "BRD-A27640568",
+          "pearson": 0.42477645913526046,
+          "cosine": 0.4260467019293491
+        },
+        {
+          "compound": "VU-0418933-1",
+          "pearson": 0.41451058684045305,
+          "cosine": 0.41305543698419367
+        },
+        {
+          "compound": "VU-0410183-2",
+          "pearson": 0.39498954114609136,
+          "cosine": 0.3891449543779267
+        },
+        {
+          "compound": "BRD-K81795824",
+          "pearson": 0.3850246540952091,
+          "cosine": 0.38299818775251626
+        },
+        {
+          "compound": "VU-0418947-2",
+          "pearson": 0.3826924265178391,
+          "cosine": 0.3750278454553805
+        },
+        {
+          "compound": "ciclopirox",
+          "pearson": 0.38085529558753156,
+          "cosine": 0.3790669737443312
+        },
+        {
+          "compound": "VU-0418946-1",
+          "pearson": 0.3763262842434663,
+          "cosine": 0.36454196574073133
+        },
+        {
+          "compound": "VU-0418939-2",
+          "pearson": 0.37199524876145457,
+          "cosine": 0.36515408927098103
+        },
+        {
+          "compound": "VU-0418934-2",
+          "pearson": 0.3603892553254621,
+          "cosine": 0.35617982775894036
+        },
+        {
+          "compound": "BRD-A61825514",
+          "pearson": 0.3568781525744751,
+          "cosine": 0.35870303650887464
+        },
+        {
+          "compound": "BRD-K78385490",
+          "pearson": 0.34893127691327896,
+          "cosine": 0.3368582794061491
+        },
+        {
+          "compound": "BRD-K72615639",
+          "pearson": 0.3460843239145968,
+          "cosine": 0.3442026433269959
+        },
+        {
+          "compound": "hinokitiol",
+          "pearson": 0.34534742482162906,
+          "cosine": 0.3477933841797423
+        },
+        {
+          "compound": "BRD-K70161581",
+          "pearson": 0.3446090770623931,
+          "cosine": 0.34472951553404646
+        },
+        {
+          "compound": "TW-37",
+          "pearson": 0.3295610594333447,
+          "cosine": 0.3332481817429688
+        },
+        {
+          "compound": "BRD-K52321331",
+          "pearson": 0.31793379631957497,
+          "cosine": 0.3200758666850408
+        },
+        {
+          "compound": "BRD-K87125912",
+          "pearson": 0.2976571783382047,
+          "cosine": 0.29966240900776064
+        },
+        {
+          "compound": "PAC-1",
+          "pearson": 0.29638571667893754,
+          "cosine": 0.2992787034331785
+        }
+      ],
+      "mahalanobis": 33.27956718206125,
+      "percentile_vs_chemical": 23.64603481624758,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse300765_u87_acidosis_ph64_48h",
+      "modifier_class": "acidotic",
+      "condition_id": "acidosis_ph6.4_48h",
+      "cell_line_name": "U87MG",
+      "l2_norm": 41.268979715315666,
+      "norm_z": 0.1403122292288394,
+      "top_neighbor": "triflupromazine",
+      "top_pearson": 0.42422360622639016,
+      "top_cosine": 0.4231499120907123,
+      "top_neighbors": [
+        {
+          "compound": "triflupromazine",
+          "pearson": 0.42422360622639016,
+          "cosine": 0.4231499120907123
+        },
+        {
+          "compound": "amsacrine",
+          "pearson": 0.4084513539368504,
+          "cosine": 0.4038518811025121
+        },
+        {
+          "compound": "mibefradil",
+          "pearson": 0.4015032851225794,
+          "cosine": 0.39945611344689513
+        },
+        {
+          "compound": "tamoxifen",
+          "pearson": 0.3941366730811588,
+          "cosine": 0.3938038833379325
+        },
+        {
+          "compound": "diphenyleneiodonium",
+          "pearson": 0.39114524011582413,
+          "cosine": 0.3852003451149644
+        },
+        {
+          "compound": "BRD-A68061604",
+          "pearson": 0.3897525493048171,
+          "cosine": 0.3851735736780508
+        },
+        {
+          "compound": "etoposide",
+          "pearson": 0.38685842611361637,
+          "cosine": 0.3833024890910207
+        },
+        {
+          "compound": "perphenazine",
+          "pearson": 0.3865165561105872,
+          "cosine": 0.3872739533288669
+        },
+        {
+          "compound": "naproxol",
+          "pearson": 0.3845770155121302,
+          "cosine": 0.38003894794899673
+        },
+        {
+          "compound": "dichlorobenzamil",
+          "pearson": 0.38153521960700076,
+          "cosine": 0.38228236368159335
+        },
+        {
+          "compound": "FCCP",
+          "pearson": 0.3789218537223859,
+          "cosine": 0.3778450111898669
+        },
+        {
+          "compound": "Y-134",
+          "pearson": 0.3776834232097482,
+          "cosine": 0.3742509264093588
+        },
+        {
+          "compound": "niguldipine",
+          "pearson": 0.3747173404824159,
+          "cosine": 0.37549829294302056
+        },
+        {
+          "compound": "rhodomyrtoxin-b",
+          "pearson": 0.3744980133212393,
+          "cosine": 0.3729966659778898
+        },
+        {
+          "compound": "perhexiline",
+          "pearson": 0.3709469517062929,
+          "cosine": 0.3717481402701682
+        },
+        {
+          "compound": "BRD-K19181733",
+          "pearson": 0.3697648557357,
+          "cosine": 0.36295132059631713
+        },
+        {
+          "compound": "BRD-K30836161",
+          "pearson": 0.3685763224132507,
+          "cosine": 0.3646075004904582
+        },
+        {
+          "compound": "BRD-K86899078",
+          "pearson": 0.3683458405328469,
+          "cosine": 0.36798009460456155
+        },
+        {
+          "compound": "BRD-K08307026",
+          "pearson": 0.36795439206878205,
+          "cosine": 0.3666532580995245
+        },
+        {
+          "compound": "VU-0410183-2",
+          "pearson": 0.366122122599998,
+          "cosine": 0.3633251506297442
+        }
+      ],
+      "mahalanobis": 23.389510459746578,
+      "percentile_vs_chemical": 6.560283687943262,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse300765_u87_acidosis_ph64_10wk",
+      "modifier_class": "acidotic",
+      "condition_id": "acidosis_adaptation_ph6.4_10weeks",
+      "cell_line_name": "U87MG",
+      "l2_norm": 52.49513035480588,
+      "norm_z": 2.094104691574716,
+      "top_neighbor": "BRD-K81795824",
+      "top_pearson": 0.2601682406464126,
+      "top_cosine": 0.2573460130411838,
+      "top_neighbors": [
+        {
+          "compound": "BRD-K81795824",
+          "pearson": 0.2601682406464126,
+          "cosine": 0.2573460130411838
+        },
+        {
+          "compound": "BRD-K78385490",
+          "pearson": 0.25004241868972765,
+          "cosine": 0.23496343998784783
+        },
+        {
+          "compound": "BRD-K61717269",
+          "pearson": 0.24932431458747137,
+          "cosine": 0.24635472182250528
+        },
+        {
+          "compound": "VU-0418946-1",
+          "pearson": 0.24559459832282693,
+          "cosine": 0.23121153593163815
+        },
+        {
+          "compound": "VU-0410183-2",
+          "pearson": 0.24411212336805735,
+          "cosine": 0.23659159508845393
+        },
+        {
+          "compound": "VU-0418939-2",
+          "pearson": 0.24176047763320158,
+          "cosine": 0.23295282137504056
+        },
+        {
+          "compound": "VU-0418947-2",
+          "pearson": 0.24117370673792005,
+          "cosine": 0.2314815168903535
+        },
+        {
+          "compound": "VU-0418933-1",
+          "pearson": 0.23861902685432104,
+          "cosine": 0.23674156379798708
+        },
+        {
+          "compound": "BRD-K08307026",
+          "pearson": 0.23779347236304899,
+          "cosine": 0.23360720775194083
+        },
+        {
+          "compound": "BRD-A61825514",
+          "pearson": 0.22517512721924246,
+          "cosine": 0.22820648906544183
+        },
+        {
+          "compound": "BRD-K70161581",
+          "pearson": 0.22507866689062567,
+          "cosine": 0.22533093661778575
+        },
+        {
+          "compound": "IKK-16",
+          "pearson": 0.22506747731712598,
+          "cosine": 0.21961035841090504
+        },
+        {
+          "compound": "ciclopirox",
+          "pearson": 0.22397696525090569,
+          "cosine": 0.2216116524575168
+        },
+        {
+          "compound": "hinokitiol",
+          "pearson": 0.22328648558432607,
+          "cosine": 0.22737409174125378
+        },
+        {
+          "compound": "BRD-K40329609",
+          "pearson": 0.22233436306824195,
+          "cosine": 0.21425796117467985
+        },
+        {
+          "compound": "VU-0418934-2",
+          "pearson": 0.22227204119930155,
+          "cosine": 0.2167097354559024
+        },
+        {
+          "compound": "BRD-A27640568",
+          "pearson": 0.21648936551647666,
+          "cosine": 0.21891939035583224
+        },
+        {
+          "compound": "tremulacin",
+          "pearson": 0.21351208250788942,
+          "cosine": 0.2022139990741586
+        },
+        {
+          "compound": "BRD-K03829970",
+          "pearson": 0.20860429364857336,
+          "cosine": 0.19810582841983088
+        },
+        {
+          "compound": "suloctidil",
+          "pearson": 0.20661313865073036,
+          "cosine": 0.20737954343830564
+        }
+      ],
+      "mahalanobis": 29.786678735323758,
+      "percentile_vs_chemical": 16.344294003868473,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse70976_lovo_serumfree96h",
+      "modifier_class": "serum_starvation",
+      "condition_id": "serum_free_96h",
+      "cell_line_name": "LoVo",
+      "l2_norm": 37.16326616931653,
+      "norm_z": -0.5742436712154775,
+      "top_neighbor": "pyrvinium",
+      "top_pearson": 0.5565060095167834,
+      "top_cosine": 0.557058759080175,
+      "top_neighbors": [
+        {
+          "compound": "pyrvinium",
+          "pearson": 0.5565060095167834,
+          "cosine": 0.557058759080175
+        },
+        {
+          "compound": "FCCP",
+          "pearson": 0.5394288516975159,
+          "cosine": 0.5397053266687488
+        },
+        {
+          "compound": "rhodomyrtoxin-b",
+          "pearson": 0.5347373379170193,
+          "cosine": 0.5352201088330425
+        },
+        {
+          "compound": "BRD-K78385490",
+          "pearson": 0.5345236554232168,
+          "cosine": 0.5336721954266266
+        },
+        {
+          "compound": "BRD-K65955264",
+          "pearson": 0.5280624320441826,
+          "cosine": 0.5283354936397355
+        },
+        {
+          "compound": "suloctidil",
+          "pearson": 0.521728799070608,
+          "cosine": 0.5207158240265554
+        },
+        {
+          "compound": "amsacrine",
+          "pearson": 0.5205974069684458,
+          "cosine": 0.520897624474111
+        },
+        {
+          "compound": "BRD-K73008154",
+          "pearson": 0.5189194141664507,
+          "cosine": 0.5180758062071962
+        },
+        {
+          "compound": "CCCP",
+          "pearson": 0.5185165581937946,
+          "cosine": 0.5186749255964171
+        },
+        {
+          "compound": "triflupromazine",
+          "pearson": 0.51322645151698,
+          "cosine": 0.5136254123763324
+        },
+        {
+          "compound": "malonoben",
+          "pearson": 0.5130639909152576,
+          "cosine": 0.5136905477529949
+        },
+        {
+          "compound": "CGK-733",
+          "pearson": 0.5126948779089765,
+          "cosine": 0.513335760044324
+        },
+        {
+          "compound": "diphenyleneiodonium",
+          "pearson": 0.5120569506981686,
+          "cosine": 0.5119117964453292
+        },
+        {
+          "compound": "benzethonium",
+          "pearson": 0.5115600786273812,
+          "cosine": 0.5115902645587449
+        },
+        {
+          "compound": "RS-17053",
+          "pearson": 0.5099488198310193,
+          "cosine": 0.5103878440841817
+        },
+        {
+          "compound": "pyrvinium-pamoate",
+          "pearson": 0.5092520418588223,
+          "cosine": 0.5097788905168759
+        },
+        {
+          "compound": "terfenadine",
+          "pearson": 0.5083000450418677,
+          "cosine": 0.5083509446079428
+        },
+        {
+          "compound": "NNC-55-0396",
+          "pearson": 0.5035237510936719,
+          "cosine": 0.5039052640816591
+        },
+        {
+          "compound": "BRD-K81795824",
+          "pearson": 0.5014591025348532,
+          "cosine": 0.5016992822670052
+        },
+        {
+          "compound": "heliomycin",
+          "pearson": 0.500153410133021,
+          "cosine": 0.5007951844340958
+        }
+      ],
+      "mahalanobis": 21.03855496507907,
+      "percentile_vs_chemical": 3.6428110896196007,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse48398_mcf10a_heat45c30min",
+      "modifier_class": "thermal",
+      "condition_id": "hyperthermia_45c_30min_rna+4h",
+      "cell_line_name": "MCF-10A",
+      "l2_norm": 42.411089244874574,
+      "norm_z": 0.33908428045858496,
+      "top_neighbor": "NU-1025",
+      "top_pearson": 0.20993506427072853,
+      "top_cosine": 0.207308005177083,
+      "top_neighbors": [
+        {
+          "compound": "NU-1025",
+          "pearson": 0.20993506427072853,
+          "cosine": 0.207308005177083
+        },
+        {
+          "compound": "tyrphostin-1",
+          "pearson": 0.20954406974075682,
+          "cosine": 0.20944668363887728
+        },
+        {
+          "compound": "triacsin-c",
+          "pearson": 0.20884568286324764,
+          "cosine": 0.2072696906745366
+        },
+        {
+          "compound": "temozolomide",
+          "pearson": 0.20014491158811282,
+          "cosine": 0.19939794010219627
+        },
+        {
+          "compound": "RHO-kinase-inhibitor-III[rockout]",
+          "pearson": 0.19879761202069926,
+          "cosine": 0.1965252887179573
+        },
+        {
+          "compound": "CAY-10415",
+          "pearson": 0.19282854250452142,
+          "cosine": 0.19097387036131167
+        },
+        {
+          "compound": "BRD-K90735586",
+          "pearson": 0.18988408098287549,
+          "cosine": 0.18838230270458475
+        },
+        {
+          "compound": "navitoclax",
+          "pearson": 0.1890365249610429,
+          "cosine": 0.19117373756999934
+        },
+        {
+          "compound": "resveratrol",
+          "pearson": 0.18643854205490507,
+          "cosine": 0.1821000841063899
+        },
+        {
+          "compound": "NF-449",
+          "pearson": 0.18366284870771102,
+          "cosine": 0.18390894083767567
+        },
+        {
+          "compound": "PT-630",
+          "pearson": 0.18269084190508061,
+          "cosine": 0.1781197612700404
+        },
+        {
+          "compound": "BRD-K64024097",
+          "pearson": 0.18261263299402689,
+          "cosine": 0.17919429166353462
+        },
+        {
+          "compound": "BRD-K76926998",
+          "pearson": 0.17508678163479663,
+          "cosine": 0.18239489570823436
+        },
+        {
+          "compound": "quinisocaine",
+          "pearson": 0.17500448092939905,
+          "cosine": 0.1829054766490823
+        },
+        {
+          "compound": "estradiol-cypionate",
+          "pearson": 0.1716976805885562,
+          "cosine": 0.17338721331718931
+        },
+        {
+          "compound": "BRD-K86992982",
+          "pearson": 0.1709975952937865,
+          "cosine": 0.17117890912763428
+        },
+        {
+          "compound": "tebuthiuron",
+          "pearson": 0.17040559703544297,
+          "cosine": 0.16898343253082213
+        },
+        {
+          "compound": "AGK-2",
+          "pearson": 0.17038470376324208,
+          "cosine": 0.1646732266921512
+        },
+        {
+          "compound": "balsalazide",
+          "pearson": 0.16911697173393192,
+          "cosine": 0.1722605531581807
+        },
+        {
+          "compound": "oleylethanolamide",
+          "pearson": 0.16750690954196823,
+          "cosine": 0.16663158353559082
+        }
+      ],
+      "mahalanobis": 38.23519118547827,
+      "percentile_vs_chemical": 33.994197292069636,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse48398_mcf7_heat45c30min",
+      "modifier_class": "thermal",
+      "condition_id": "hyperthermia_45c_30min_rna+4h",
+      "cell_line_name": "MCF-7",
+      "l2_norm": 40.64261224494103,
+      "norm_z": 0.03129961381178877,
+      "top_neighbor": "RITA",
+      "top_pearson": 0.33745432284811044,
+      "top_cosine": 0.3544657582056549,
+      "top_neighbors": [
+        {
+          "compound": "RITA",
+          "pearson": 0.33745432284811044,
+          "cosine": 0.3544657582056549
+        },
+        {
+          "compound": "CGP-60474",
+          "pearson": 0.2560534952487893,
+          "cosine": 0.2918619372722683
+        },
+        {
+          "compound": "mepacrine",
+          "pearson": 0.2540978418036611,
+          "cosine": 0.28240158685123984
+        },
+        {
+          "compound": "chelidonine",
+          "pearson": 0.24833405194691235,
+          "cosine": 0.2616273979148957
+        },
+        {
+          "compound": "BRD-K00289828",
+          "pearson": 0.23699814549880238,
+          "cosine": 0.26095084510198935
+        },
+        {
+          "compound": "ER-27319",
+          "pearson": 0.2284971771075144,
+          "cosine": 0.2454746599387254
+        },
+        {
+          "compound": "bisindolylmaleimide-ix",
+          "pearson": 0.2265253879177826,
+          "cosine": 0.24688031767183768
+        },
+        {
+          "compound": "YC-1",
+          "pearson": 0.22472772407075223,
+          "cosine": 0.22421443578214462
+        },
+        {
+          "compound": "BRD-K45232279",
+          "pearson": 0.22026695291015633,
+          "cosine": 0.22385510554484267
+        },
+        {
+          "compound": "BRD-K28916077",
+          "pearson": 0.21695599239813226,
+          "cosine": 0.18603065407100539
+        },
+        {
+          "compound": "oxibendazole",
+          "pearson": 0.21638007883048005,
+          "cosine": 0.22730203995518755
+        },
+        {
+          "compound": "D-64131",
+          "pearson": 0.2158327790512518,
+          "cosine": 0.23843065887788828
+        },
+        {
+          "compound": "BRD-A43640821",
+          "pearson": 0.21489784812225834,
+          "cosine": 0.2595545394394963
+        },
+        {
+          "compound": "BRD-K41200778",
+          "pearson": 0.21429905583860698,
+          "cosine": 0.24556479703064965
+        },
+        {
+          "compound": "BRD-K00429057",
+          "pearson": 0.21378453641849923,
+          "cosine": 0.23764621145466933
+        },
+        {
+          "compound": "MD-040",
+          "pearson": 0.21335986947930974,
+          "cosine": 0.2503686035845183
+        },
+        {
+          "compound": "sildenafil",
+          "pearson": 0.2128535649311147,
+          "cosine": 0.22005513447553102
+        },
+        {
+          "compound": "baccatin-III",
+          "pearson": 0.212284121750603,
+          "cosine": 0.21765971523322164
+        },
+        {
+          "compound": "SA-1460110",
+          "pearson": 0.21204020607066118,
+          "cosine": 0.21703384375123205
+        },
+        {
+          "compound": "fenbendazole",
+          "pearson": 0.21138190133472337,
+          "cosine": 0.22729025401960884
+        }
+      ],
+      "mahalanobis": 43.30902295815447,
+      "percentile_vs_chemical": 45.13217279174726,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse48398_mda231_heat45c30min",
+      "modifier_class": "thermal",
+      "condition_id": "hyperthermia_45c_30min_rna+4h",
+      "cell_line_name": "MDA-MB-231",
+      "l2_norm": 37.47596826776208,
+      "norm_z": -0.5198211872739655,
+      "top_neighbor": "RITA",
+      "top_pearson": 0.3121182692670552,
+      "top_cosine": 0.32347780252788505,
+      "top_neighbors": [
+        {
+          "compound": "RITA",
+          "pearson": 0.3121182692670552,
+          "cosine": 0.32347780252788505
+        },
+        {
+          "compound": "BRD-K00429057",
+          "pearson": 0.2837142138182644,
+          "cosine": 0.29584029550345303
+        },
+        {
+          "compound": "BRD-K00289828",
+          "pearson": 0.2635707826459596,
+          "cosine": 0.2765795365987093
+        },
+        {
+          "compound": "YC-1",
+          "pearson": 0.26226371344305177,
+          "cosine": 0.2640198957801022
+        },
+        {
+          "compound": "BRD-K45232279",
+          "pearson": 0.2609019116976654,
+          "cosine": 0.2645157460652982
+        },
+        {
+          "compound": "SA-1459975",
+          "pearson": 0.2531133725856467,
+          "cosine": 0.2577205858104695
+        },
+        {
+          "compound": "SA-1458450",
+          "pearson": 0.2475484640232066,
+          "cosine": 0.2472733702716634
+        },
+        {
+          "compound": "pitavastatin",
+          "pearson": 0.24633492578567537,
+          "cosine": 0.2560223583170679
+        },
+        {
+          "compound": "BRD-K54285697",
+          "pearson": 0.24572864125648403,
+          "cosine": 0.25597760312852486
+        },
+        {
+          "compound": "BRD-K86231656",
+          "pearson": 0.23538642761207304,
+          "cosine": 0.23313495488023261
+        },
+        {
+          "compound": "tremulacin",
+          "pearson": 0.23518210214457275,
+          "cosine": 0.24667335558087933
+        },
+        {
+          "compound": "SD-6-035-A9",
+          "pearson": 0.23412752171307968,
+          "cosine": 0.24209373697690262
+        },
+        {
+          "compound": "trifluridine",
+          "pearson": 0.23212729890401942,
+          "cosine": 0.2208997227433304
+        },
+        {
+          "compound": "BRD-A68061604",
+          "pearson": 0.2290416915734181,
+          "cosine": 0.23965797044676812
+        },
+        {
+          "compound": "WT-171",
+          "pearson": 0.228870652746027,
+          "cosine": 0.24094115063232238
+        },
+        {
+          "compound": "SA-1460110",
+          "pearson": 0.2276351795016744,
+          "cosine": 0.23211977373016884
+        },
+        {
+          "compound": "BRD-K55722623",
+          "pearson": 0.22524534254293282,
+          "cosine": 0.24654429851339854
+        },
+        {
+          "compound": "MK-1775",
+          "pearson": 0.22234038569706846,
+          "cosine": 0.2261557316832289
+        },
+        {
+          "compound": "SA-1922006",
+          "pearson": 0.22131555410206752,
+          "cosine": 0.2131411412165746
+        },
+        {
+          "compound": "etoposide",
+          "pearson": 0.22114668445705943,
+          "cosine": 0.22966891712156562
+        }
+      ],
+      "mahalanobis": 39.74731211862917,
+      "percentile_vs_chemical": 37.31463571889104,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse48398_mda468_heat45c30min",
+      "modifier_class": "thermal",
+      "condition_id": "hyperthermia_45c_30min_rna+4h",
+      "cell_line_name": "MDA-MB-468",
+      "l2_norm": 41.29612367235439,
+      "norm_z": 0.14503634708219723,
+      "top_neighbor": "RITA",
+      "top_pearson": 0.22169605113324348,
+      "top_cosine": 0.2155556776940758,
+      "top_neighbors": [
+        {
+          "compound": "RITA",
+          "pearson": 0.22169605113324348,
+          "cosine": 0.2155556776940758
+        },
+        {
+          "compound": "SD-6-035-A9",
+          "pearson": 0.15971647738999278,
+          "cosine": 0.15614809876654265
+        },
+        {
+          "compound": "BRD-K00289828",
+          "pearson": 0.14838413009990964,
+          "cosine": 0.14238147910921864
+        },
+        {
+          "compound": "BRD-K93875449",
+          "pearson": 0.1392431146409344,
+          "cosine": 0.13836605271265798
+        },
+        {
+          "compound": "clozapine",
+          "pearson": 0.1386393122286824,
+          "cosine": 0.13832977681488273
+        },
+        {
+          "compound": "BRD-K49807497",
+          "pearson": 0.13762042525817653,
+          "cosine": 0.13914462345545878
+        },
+        {
+          "compound": "BRD-K45895591",
+          "pearson": 0.1347085631148348,
+          "cosine": 0.13357624427002052
+        },
+        {
+          "compound": "BRD-K91987625",
+          "pearson": 0.13461950100338818,
+          "cosine": 0.13473161484485888
+        },
+        {
+          "compound": "BRD-K08447949",
+          "pearson": 0.13161858358226222,
+          "cosine": 0.13174310948133844
+        },
+        {
+          "compound": "promazine",
+          "pearson": 0.1316065893045626,
+          "cosine": 0.13405430998858248
+        },
+        {
+          "compound": "asiatic-acid",
+          "pearson": 0.13069585097823372,
+          "cosine": 0.12823833818222957
+        },
+        {
+          "compound": "BRD-K00429057",
+          "pearson": 0.13013198939983037,
+          "cosine": 0.12454137720022179
+        },
+        {
+          "compound": "MW-MITF22",
+          "pearson": 0.12937436157347007,
+          "cosine": 0.13004484178479403
+        },
+        {
+          "compound": "BRD-K57592392",
+          "pearson": 0.12798049474982712,
+          "cosine": 0.1286970004621029
+        },
+        {
+          "compound": "BRD-K69422440",
+          "pearson": 0.12601628407094143,
+          "cosine": 0.1279207444211017
+        },
+        {
+          "compound": "SA-1459975",
+          "pearson": 0.12592064667643965,
+          "cosine": 0.1236174807693554
+        },
+        {
+          "compound": "cephalexin",
+          "pearson": 0.124981291082774,
+          "cosine": 0.12300722039544668
+        },
+        {
+          "compound": "TUL-XX025TFA",
+          "pearson": 0.12382798242869614,
+          "cosine": 0.12262396112777842
+        },
+        {
+          "compound": "BRD-K62019540",
+          "pearson": 0.12300852330613667,
+          "cosine": 0.12161327404341049
+        },
+        {
+          "compound": "SA-89763",
+          "pearson": 0.12197699982951239,
+          "cosine": 0.12038112062672221
+        }
+      ],
+      "mahalanobis": 35.220058326939096,
+      "percentile_vs_chemical": 27.61121856866538,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse10043_u937_mildhyperthermia41c30min",
+      "modifier_class": "thermal",
+      "condition_id": "mild_hyperthermia_41c_30min_rna+3h",
+      "cell_line_name": "U937",
+      "l2_norm": 49.995377123594615,
+      "norm_z": 1.6590491522623463,
+      "top_neighbor": "MD-041",
+      "top_pearson": 0.18268217563992298,
+      "top_cosine": 0.1801566858004214,
+      "top_neighbors": [
+        {
+          "compound": "MD-041",
+          "pearson": 0.18268217563992298,
+          "cosine": 0.1801566858004214
+        },
+        {
+          "compound": "I-606061",
+          "pearson": 0.17332675415653517,
+          "cosine": 0.17413645116224505
+        },
+        {
+          "compound": "BRD-K94991378",
+          "pearson": 0.1620006736452963,
+          "cosine": 0.16948790164875022
+        },
+        {
+          "compound": "BNTX",
+          "pearson": 0.1511264522764806,
+          "cosine": 0.15015770262684613
+        },
+        {
+          "compound": "CCT-018159",
+          "pearson": 0.14950693790469244,
+          "cosine": 0.14362747540139192
+        },
+        {
+          "compound": "cladribine",
+          "pearson": 0.14525651429035097,
+          "cosine": 0.15312282089836193
+        },
+        {
+          "compound": "NSC-632839",
+          "pearson": 0.14186908794924,
+          "cosine": 0.14051407373718952
+        },
+        {
+          "compound": "raltitrexed",
+          "pearson": 0.1365820927964721,
+          "cosine": 0.13330665429338437
+        },
+        {
+          "compound": "haloprogin",
+          "pearson": 0.1342292390847146,
+          "cosine": 0.1371712746379766
+        },
+        {
+          "compound": "BG-FA-0953",
+          "pearson": 0.1310246002146381,
+          "cosine": 0.13026003584403362
+        },
+        {
+          "compound": "BIIB-021",
+          "pearson": 0.12994713649318426,
+          "cosine": 0.12146018918532714
+        },
+        {
+          "compound": "bortezomib",
+          "pearson": 0.12939233707178446,
+          "cosine": 0.13072989688046213
+        },
+        {
+          "compound": "MG-132",
+          "pearson": 0.12863167172686396,
+          "cosine": 0.1180536408789246
+        },
+        {
+          "compound": "MD-II-008-P",
+          "pearson": 0.12825438178582202,
+          "cosine": 0.11820923550008365
+        },
+        {
+          "compound": "NVP-AUY922",
+          "pearson": 0.1261988008688455,
+          "cosine": 0.127663063420064
+        },
+        {
+          "compound": "BRD-A43155244",
+          "pearson": 0.12527877170590013,
+          "cosine": 0.11786229252598979
+        },
+        {
+          "compound": "BRD-K55116708",
+          "pearson": 0.12402449041234144,
+          "cosine": 0.12255321608108641
+        },
+        {
+          "compound": "withaferin-a",
+          "pearson": 0.1239945465845318,
+          "cosine": 0.12948855075218843
+        },
+        {
+          "compound": "tropicamide",
+          "pearson": 0.12358175210234613,
+          "cosine": 0.12641843212868498
+        },
+        {
+          "compound": "droxinostat",
+          "pearson": 0.12246702060268104,
+          "cosine": 0.11966074341947387
+        }
+      ],
+      "mahalanobis": 42.48501162870228,
+      "percentile_vs_chemical": 43.278529980657645,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse75127_hsc3_hyperthermia44c90min",
+      "modifier_class": "thermal",
+      "condition_id": "hyperthermia_44c_90min",
+      "cell_line_name": "HSC-3",
+      "l2_norm": 52.60863347438889,
+      "norm_z": 2.1138587058059106,
+      "top_neighbor": "BRD-K49010888",
+      "top_pearson": 0.35560032806736147,
+      "top_cosine": 0.3557703429989004,
+      "top_neighbors": [
+        {
+          "compound": "BRD-K49010888",
+          "pearson": 0.35560032806736147,
+          "cosine": 0.3557703429989004
+        },
+        {
+          "compound": "ZK-164015",
+          "pearson": 0.3321456958333959,
+          "cosine": 0.33063908122427793
+        },
+        {
+          "compound": "BRD-K86899078",
+          "pearson": 0.3241658025022556,
+          "cosine": 0.32406947450385887
+        },
+        {
+          "compound": "CGK-733",
+          "pearson": 0.32191776622534285,
+          "cosine": 0.32030833556689065
+        },
+        {
+          "compound": "niguldipine",
+          "pearson": 0.3135601691568618,
+          "cosine": 0.31382995038121236
+        },
+        {
+          "compound": "T-98475",
+          "pearson": 0.3100256264774411,
+          "cosine": 0.3102879685101087
+        },
+        {
+          "compound": "KN-93",
+          "pearson": 0.30730370355435543,
+          "cosine": 0.3075639568986792
+        },
+        {
+          "compound": "BRD-K68007270",
+          "pearson": 0.30690804218798245,
+          "cosine": 0.30667174184672574
+        },
+        {
+          "compound": "FCCP",
+          "pearson": 0.30598104940432774,
+          "cosine": 0.3055682947160605
+        },
+        {
+          "compound": "CAM-9-027-3",
+          "pearson": 0.30415641495582696,
+          "cosine": 0.30445395265714337
+        },
+        {
+          "compound": "deguelin",
+          "pearson": 0.30377516291767515,
+          "cosine": 0.302007068393846
+        },
+        {
+          "compound": "BRD-K41845021",
+          "pearson": 0.30093441479630484,
+          "cosine": 0.30010682600548244
+        },
+        {
+          "compound": "reserpine",
+          "pearson": 0.2989308077864282,
+          "cosine": 0.29921588127074633
+        },
+        {
+          "compound": "tamoxifen",
+          "pearson": 0.2986806839080015,
+          "cosine": 0.29864118098098835
+        },
+        {
+          "compound": "CCCP",
+          "pearson": 0.2981305876161707,
+          "cosine": 0.29784848593316354
+        },
+        {
+          "compound": "rhodomyrtoxin-b",
+          "pearson": 0.29570005212097994,
+          "cosine": 0.29498013932464834
+        },
+        {
+          "compound": "BRD-K58288048",
+          "pearson": 0.2955232563438781,
+          "cosine": 0.2950749695299614
+        },
+        {
+          "compound": "tyrphostin-AG-879",
+          "pearson": 0.29492697723694306,
+          "cosine": 0.2933411489605747
+        },
+        {
+          "compound": "amsacrine",
+          "pearson": 0.29412671175907207,
+          "cosine": 0.2914689023020932
+        },
+        {
+          "compound": "WAY-170523",
+          "pearson": 0.2933159739119784,
+          "cosine": 0.29325070035647766
+        }
+      ],
+      "mahalanobis": 45.18295160036323,
+      "percentile_vs_chemical": 49.29078014184397,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse55924_muscle_fast24h_vs_1p5h",
+      "modifier_class": "fasting",
+      "condition_id": "fast_24h_vs_1.5h_postmeal",
+      "cell_line_name": "human skeletal muscle",
+      "l2_norm": 73.07423908815585,
+      "norm_z": 5.6756803194286825,
+      "top_neighbor": "tegaserod",
+      "top_pearson": 0.31035849804437016,
+      "top_cosine": 0.30644975679149894,
+      "top_neighbors": [
+        {
+          "compound": "tegaserod",
+          "pearson": 0.31035849804437016,
+          "cosine": 0.30644975679149894
+        },
+        {
+          "compound": "calmidazolium",
+          "pearson": 0.2947159553579573,
+          "cosine": 0.2927374051352652
+        },
+        {
+          "compound": "lylamine",
+          "pearson": 0.29121654747827924,
+          "cosine": 0.28534802024441136
+        },
+        {
+          "compound": "BRD-K80786583",
+          "pearson": 0.2875201452732053,
+          "cosine": 0.28585164755270714
+        },
+        {
+          "compound": "I-606061",
+          "pearson": 0.2846223432720859,
+          "cosine": 0.28514622481456997
+        },
+        {
+          "compound": "BRD-K71935468",
+          "pearson": 0.2843662513385051,
+          "cosine": 0.2902853867007393
+        },
+        {
+          "compound": "BRD-K19166598",
+          "pearson": 0.2794833103181136,
+          "cosine": 0.27794532901789043
+        },
+        {
+          "compound": "oxindole-I",
+          "pearson": 0.2689006327032919,
+          "cosine": 0.2628595706069099
+        },
+        {
+          "compound": "EMF-sumo1-3",
+          "pearson": 0.26707151665218976,
+          "cosine": 0.2696239267532448
+        },
+        {
+          "compound": "I-606051",
+          "pearson": 0.26687335636723686,
+          "cosine": 0.2661615801654383
+        },
+        {
+          "compound": "BRD-K08448573",
+          "pearson": 0.2617039103138104,
+          "cosine": 0.25480679416729285
+        },
+        {
+          "compound": "LDN-193189",
+          "pearson": 0.25598083214105205,
+          "cosine": 0.25535273852836965
+        },
+        {
+          "compound": "BRD-K32896438",
+          "pearson": 0.2552990692409528,
+          "cosine": 0.2677481119652555
+        },
+        {
+          "compound": "suloctidil",
+          "pearson": 0.25144417937673225,
+          "cosine": 0.2518911614681321
+        },
+        {
+          "compound": "BRD-A43155244",
+          "pearson": 0.2505772913446053,
+          "cosine": 0.23789391389182116
+        },
+        {
+          "compound": "ispinesib",
+          "pearson": 0.25054384137895985,
+          "cosine": 0.24020165515357703
+        },
+        {
+          "compound": "SB-218078",
+          "pearson": 0.24852288774358308,
+          "cosine": 0.2501257425080568
+        },
+        {
+          "compound": "SA-25547",
+          "pearson": 0.24785075717023955,
+          "cosine": 0.23646444134029543
+        },
+        {
+          "compound": "torin-2",
+          "pearson": 0.244973802575063,
+          "cosine": 0.24223152800701278
+        },
+        {
+          "compound": "MRS-1220",
+          "pearson": 0.2447534368646472,
+          "cosine": 0.24605070623047826
+        }
+      ],
+      "mahalanobis": 84.94076615503035,
+      "percentile_vs_chemical": 93.00451321727917,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse156248_muscle_cold10d",
+      "modifier_class": "cold",
+      "condition_id": "cold_acclimation_10d_14to15c",
+      "cell_line_name": "human vastus lateralis",
+      "l2_norm": 37.73893165786577,
+      "norm_z": -0.4740551980264844,
+      "top_neighbor": "BRD-K89451433",
+      "top_pearson": 0.1862041372109707,
+      "top_cosine": 0.19072042372647124,
+      "top_neighbors": [
+        {
+          "compound": "BRD-K89451433",
+          "pearson": 0.1862041372109707,
+          "cosine": 0.19072042372647124
+        },
+        {
+          "compound": "BRD-K51791390",
+          "pearson": 0.17706511765559307,
+          "cosine": 0.1778627825647435
+        },
+        {
+          "compound": "BRD-K94544211",
+          "pearson": 0.17640048000904734,
+          "cosine": 0.1768984032477834
+        },
+        {
+          "compound": "BRD-K60297835",
+          "pearson": 0.1705108557955264,
+          "cosine": 0.1750475991565235
+        },
+        {
+          "compound": "BRD-K65904652",
+          "pearson": 0.1602387594672679,
+          "cosine": 0.1630730500539365
+        },
+        {
+          "compound": "BRD-K55116708",
+          "pearson": 0.15943361938500233,
+          "cosine": 0.1591578890250896
+        },
+        {
+          "compound": "BRD-K48803730",
+          "pearson": 0.15629782906893605,
+          "cosine": 0.1572111595022066
+        },
+        {
+          "compound": "SA-247714",
+          "pearson": 0.15462889253950482,
+          "cosine": 0.15597339277056527
+        },
+        {
+          "compound": "BRD-K56196992",
+          "pearson": 0.15126241546492392,
+          "cosine": 0.14947332717802786
+        },
+        {
+          "compound": "BRD-K85818861",
+          "pearson": 0.15046115586364206,
+          "cosine": 0.15203993727033685
+        },
+        {
+          "compound": "BRD-K60067222",
+          "pearson": 0.1485221643282282,
+          "cosine": 0.1520188135782222
+        },
+        {
+          "compound": "BRD-K57678861",
+          "pearson": 0.14697695884574036,
+          "cosine": 0.15251054220886154
+        },
+        {
+          "compound": "BRD-K55827386",
+          "pearson": 0.14667650506137447,
+          "cosine": 0.1499621670917174
+        },
+        {
+          "compound": "SA-1017940",
+          "pearson": 0.1458526163672117,
+          "cosine": 0.14631803958195153
+        },
+        {
+          "compound": "BRD-K71303366",
+          "pearson": 0.1456140498810305,
+          "cosine": 0.1453575723923245
+        },
+        {
+          "compound": "entinostat",
+          "pearson": 0.14220071789140776,
+          "cosine": 0.14024814449885276
+        },
+        {
+          "compound": "BRD-K99502566",
+          "pearson": 0.14007365270778244,
+          "cosine": 0.14454963046895977
+        },
+        {
+          "compound": "BRD-K49010888",
+          "pearson": 0.14004205675572937,
+          "cosine": 0.14123253175402922
+        },
+        {
+          "compound": "BRD-K58288048",
+          "pearson": 0.13796844523666008,
+          "cosine": 0.13714150193665742
+        },
+        {
+          "compound": "BRD-K45044657",
+          "pearson": 0.13760744685343926,
+          "cosine": 0.13499952831253437
+        }
+      ],
+      "mahalanobis": 20.395978412668963,
+      "percentile_vs_chemical": 3.0141843971631204,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse156247_muscle_exercise12w",
+      "modifier_class": "exercise",
+      "condition_id": "combined_exercise_12w",
+      "cell_line_name": "human vastus lateralis",
+      "l2_norm": 38.890524800853875,
+      "norm_z": -0.2736326244557516,
+      "top_neighbor": "ER-27319",
+      "top_pearson": 0.22499723168051403,
+      "top_cosine": 0.2074718349589467,
+      "top_neighbors": [
+        {
+          "compound": "ER-27319",
+          "pearson": 0.22499723168051403,
+          "cosine": 0.2074718349589467
+        },
+        {
+          "compound": "bisindolylmaleimide-ix",
+          "pearson": 0.21697268422470645,
+          "cosine": 0.19573936564645825
+        },
+        {
+          "compound": "alvocidib",
+          "pearson": 0.21534858309806093,
+          "cosine": 0.1908344334406578
+        },
+        {
+          "compound": "fludarabine",
+          "pearson": 0.21301284903231604,
+          "cosine": 0.1936033636428975
+        },
+        {
+          "compound": "ZG-10",
+          "pearson": 0.21014755293612275,
+          "cosine": 0.17276504761491482
+        },
+        {
+          "compound": "EI-273",
+          "pearson": 0.21010483597477725,
+          "cosine": 0.19167448571226386
+        },
+        {
+          "compound": "BRD-K55116708",
+          "pearson": 0.2094124706765419,
+          "cosine": 0.206577645938908
+        },
+        {
+          "compound": "AS-601245",
+          "pearson": 0.20481011852396871,
+          "cosine": 0.19124781396381885
+        },
+        {
+          "compound": "staurosporine",
+          "pearson": 0.20434494778702558,
+          "cosine": 0.20640281803586202
+        },
+        {
+          "compound": "BRD-K85123403",
+          "pearson": 0.2029514959154787,
+          "cosine": 0.18851262875573868
+        },
+        {
+          "compound": "BRD-K56196992",
+          "pearson": 0.201845817409415,
+          "cosine": 0.19475112377818737
+        },
+        {
+          "compound": "BRD-K83670234",
+          "pearson": 0.200415850991613,
+          "cosine": 0.18793488020954707
+        },
+        {
+          "compound": "BRD-K78559095",
+          "pearson": 0.20024353985176185,
+          "cosine": 0.19253937240539032
+        },
+        {
+          "compound": "BRD-K55896799",
+          "pearson": 0.19980334134523386,
+          "cosine": 0.1974655620722027
+        },
+        {
+          "compound": "BRD-K98834634",
+          "pearson": 0.19929001552753645,
+          "cosine": 0.19636084703364906
+        },
+        {
+          "compound": "BMS-345541",
+          "pearson": 0.1992315651252544,
+          "cosine": 0.19110834414569436
+        },
+        {
+          "compound": "WZ-3105",
+          "pearson": 0.19876697794150983,
+          "cosine": 0.17327277344887876
+        },
+        {
+          "compound": "BRD-K26304855",
+          "pearson": 0.1969474712648269,
+          "cosine": 0.1791228182459845
+        },
+        {
+          "compound": "BRD-K85853281",
+          "pearson": 0.19673955010236302,
+          "cosine": 0.16846339769381205
+        },
+        {
+          "compound": "dactinomycin",
+          "pearson": 0.1966686037316545,
+          "cosine": 0.17397452429422633
+        }
+      ],
+      "mahalanobis": 27.769783889084984,
+      "percentile_vs_chemical": 12.798194713088328,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse12474_muscle_heat_sheet10w",
+      "modifier_class": "local_heat",
+      "condition_id": "heat_sheet_8h_day_10w",
+      "cell_line_name": "human vastus lateralis",
+      "l2_norm": 39.856028370115375,
+      "norm_z": -0.10559696766032299,
+      "top_neighbor": "MDL-29951",
+      "top_pearson": 0.19908097949593478,
+      "top_cosine": 0.19915030319663454,
+      "top_neighbors": [
+        {
+          "compound": "MDL-29951",
+          "pearson": 0.19908097949593478,
+          "cosine": 0.19915030319663454
+        },
+        {
+          "compound": "niridazole",
+          "pearson": 0.1905030266424789,
+          "cosine": 0.1879889449576979
+        },
+        {
+          "compound": "fusaric-acid",
+          "pearson": 0.18362197567985042,
+          "cosine": 0.18185225267350488
+        },
+        {
+          "compound": "SDM-25N",
+          "pearson": 0.17658096673178855,
+          "cosine": 0.17549683333677196
+        },
+        {
+          "compound": "pirenzepine",
+          "pearson": 0.17105372706928906,
+          "cosine": 0.16982890987776295
+        },
+        {
+          "compound": "biotin",
+          "pearson": 0.16482952223753827,
+          "cosine": 0.16428457427732462
+        },
+        {
+          "compound": "eplerenone",
+          "pearson": 0.15567510841059948,
+          "cosine": 0.1547413244896726
+        },
+        {
+          "compound": "PSB-069",
+          "pearson": 0.15280052306371972,
+          "cosine": 0.15174109846324915
+        },
+        {
+          "compound": "GW-7647",
+          "pearson": 0.1455666067845184,
+          "cosine": 0.1443824524625061
+        },
+        {
+          "compound": "1-monopalmitin",
+          "pearson": 0.14394394952422204,
+          "cosine": 0.143191773150958
+        },
+        {
+          "compound": "hexylresorcinol",
+          "pearson": 0.14342477769549428,
+          "cosine": 0.1431638964367304
+        },
+        {
+          "compound": "levocabastine",
+          "pearson": 0.14199373058704423,
+          "cosine": 0.14133422477066707
+        },
+        {
+          "compound": "ibudilast",
+          "pearson": 0.1416488076304776,
+          "cosine": 0.14075082752744048
+        },
+        {
+          "compound": "tropicamide",
+          "pearson": 0.13964817428203155,
+          "cosine": 0.13862317939428467
+        },
+        {
+          "compound": "dioxybenzone",
+          "pearson": 0.13893253743832715,
+          "cosine": 0.13806653227830024
+        },
+        {
+          "compound": "dihydrosamidin",
+          "pearson": 0.13824118524847243,
+          "cosine": 0.13887623911177532
+        },
+        {
+          "compound": "prothionamide",
+          "pearson": 0.13823849520980638,
+          "cosine": 0.1384652296652462
+        },
+        {
+          "compound": "pregnenolone-succinate",
+          "pearson": 0.13785458863610894,
+          "cosine": 0.13752377487464887
+        },
+        {
+          "compound": "temefos",
+          "pearson": 0.13664158420493425,
+          "cosine": 0.1344332380232207
+        },
+        {
+          "compound": "dubinidine",
+          "pearson": 0.13351722440304054,
+          "cosine": 0.13378460420133803
+        }
+      ],
+      "mahalanobis": 31.407468483343713,
+      "percentile_vs_chemical": 19.874274661508704,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse90763_pbmc_sauna_15min_after",
+      "modifier_class": "sauna",
+      "condition_id": "sauna_pbmc_15min_after_vs_before",
+      "cell_line_name": "human PBMC",
+      "l2_norm": 31.87583584773535,
+      "norm_z": -1.49446484401398,
+      "top_neighbor": "BRD-K30459086",
+      "top_pearson": 0.1616462166570476,
+      "top_cosine": 0.1623513123786153,
+      "top_neighbors": [
+        {
+          "compound": "BRD-K30459086",
+          "pearson": 0.1616462166570476,
+          "cosine": 0.1623513123786153
+        },
+        {
+          "compound": "BRD-A70311631",
+          "pearson": 0.1575046782887402,
+          "cosine": 0.15689411210330226
+        },
+        {
+          "compound": "AS-601245",
+          "pearson": 0.15663298779876786,
+          "cosine": 0.1602290321534434
+        },
+        {
+          "compound": "lomefloxacin",
+          "pearson": 0.15425265732208338,
+          "cosine": 0.1579463297403778
+        },
+        {
+          "compound": "BRD-K76132250",
+          "pearson": 0.14354033270920602,
+          "cosine": 0.14741386728286496
+        },
+        {
+          "compound": "WZ-3105",
+          "pearson": 0.13786305425961182,
+          "cosine": 0.14432508569166178
+        },
+        {
+          "compound": "5-iodotubercidin",
+          "pearson": 0.13654843054857546,
+          "cosine": 0.13903144659703373
+        },
+        {
+          "compound": "FTI-276",
+          "pearson": 0.1355163348269567,
+          "cosine": 0.1341877752223112
+        },
+        {
+          "compound": "BRD-K48388979",
+          "pearson": 0.13163001306140013,
+          "cosine": 0.13821995364490536
+        },
+        {
+          "compound": "BRD-K59470558",
+          "pearson": 0.13106892432392714,
+          "cosine": 0.13114591019965555
+        },
+        {
+          "compound": "BRD-A73929928",
+          "pearson": 0.1303908383233132,
+          "cosine": 0.13195063675486185
+        },
+        {
+          "compound": "EMF-sumo1-12",
+          "pearson": 0.12958970290213714,
+          "cosine": 0.13224079497024374
+        },
+        {
+          "compound": "BMS-387032",
+          "pearson": 0.12937190809611693,
+          "cosine": 0.13702091420037305
+        },
+        {
+          "compound": "nor-binaltorphimine",
+          "pearson": 0.12886504309311564,
+          "cosine": 0.12771464217933734
+        },
+        {
+          "compound": "thenoyltrifluoroacetone",
+          "pearson": 0.12852850911111127,
+          "cosine": 0.12783095925955232
+        },
+        {
+          "compound": "BRD-K85205404",
+          "pearson": 0.12850988086270446,
+          "cosine": 0.1308101187518753
+        },
+        {
+          "compound": "halometasone",
+          "pearson": 0.12830488390748876,
+          "cosine": 0.1272570977283965
+        },
+        {
+          "compound": "cyclopamine",
+          "pearson": 0.12813754023299734,
+          "cosine": 0.127184492223928
+        },
+        {
+          "compound": "artemether",
+          "pearson": 0.12799626481177642,
+          "cosine": 0.12849829153424147
+        },
+        {
+          "compound": "gavestinel",
+          "pearson": 0.12788296194738233,
+          "cosine": 0.12561102145482406
+        }
+      ],
+      "mahalanobis": 12.086207007866346,
+      "percentile_vs_chemical": 0.016118633139909737,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse129843_muscle_trf8h_vs_15h",
+      "modifier_class": "meal_timing",
+      "condition_id": "trf_8h_vs_15h_5days",
+      "cell_line_name": "human vastus lateralis",
+      "l2_norm": 27.801210499774868,
+      "norm_z": -2.2036101732886766,
+      "top_neighbor": "BRD-K00289828",
+      "top_pearson": 0.18070961236852648,
+      "top_cosine": 0.16496505340134487,
+      "top_neighbors": [
+        {
+          "compound": "BRD-K00289828",
+          "pearson": 0.18070961236852648,
+          "cosine": 0.16496505340134487
+        },
+        {
+          "compound": "erythrosine",
+          "pearson": 0.16658298733073837,
+          "cosine": 0.15667882979336542
+        },
+        {
+          "compound": "SD-6-035-B3",
+          "pearson": 0.16265074407988056,
+          "cosine": 0.1505926830635613
+        },
+        {
+          "compound": "pirenperone",
+          "pearson": 0.15347741534420933,
+          "cosine": 0.1548097416525732
+        },
+        {
+          "compound": "BRD-K36895979",
+          "pearson": 0.15274382997434782,
+          "cosine": 0.14056813697882622
+        },
+        {
+          "compound": "AZD-1152HQPA",
+          "pearson": 0.15235271521726773,
+          "cosine": 0.15175435468980192
+        },
+        {
+          "compound": "alosetron",
+          "pearson": 0.14284691777815997,
+          "cosine": 0.13632686416830242
+        },
+        {
+          "compound": "BRD-K65093687",
+          "pearson": 0.14069301894276212,
+          "cosine": 0.1341508930422518
+        },
+        {
+          "compound": "clopidogrel",
+          "pearson": 0.1361631443181659,
+          "cosine": 0.11963818742576574
+        },
+        {
+          "compound": "calyculin",
+          "pearson": 0.13615462801630224,
+          "cosine": 0.13836554887857952
+        },
+        {
+          "compound": "artemether",
+          "pearson": 0.1348350267696904,
+          "cosine": 0.1320998719387444
+        },
+        {
+          "compound": "SD-6-035-A9",
+          "pearson": 0.13383189828274547,
+          "cosine": 0.12400015343592534
+        },
+        {
+          "compound": "epirizole",
+          "pearson": 0.1330030553956478,
+          "cosine": 0.12387259633588682
+        },
+        {
+          "compound": "BRD-A09984573",
+          "pearson": 0.13018968826998287,
+          "cosine": 0.12369678246814435
+        },
+        {
+          "compound": "BRD-K08777248",
+          "pearson": 0.12901313298480108,
+          "cosine": 0.12270880643356147
+        },
+        {
+          "compound": "BRD-K23978082",
+          "pearson": 0.12749070006688448,
+          "cosine": 0.1096973868940082
+        },
+        {
+          "compound": "cycloserine",
+          "pearson": 0.12688908070129898,
+          "cosine": 0.12439428584086099
+        },
+        {
+          "compound": "DM-161",
+          "pearson": 0.12660937905564923,
+          "cosine": 0.12911064343233572
+        },
+        {
+          "compound": "BRD-K83929831",
+          "pearson": 0.12624902050935016,
+          "cosine": 0.11580514881715787
+        },
+        {
+          "compound": "BRD-K71970656",
+          "pearson": 0.1260209186220143,
+          "cosine": 0.1297186397590361
+        }
+      ],
+      "mahalanobis": 16.395337115298904,
+      "percentile_vs_chemical": 0.6931012250161186,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse168705_adipose_tre10h_8w",
+      "modifier_class": "meal_timing",
+      "condition_id": "tre_10h_window_8weeks_6am",
+      "cell_line_name": "human adipose",
+      "l2_norm": 36.73608979527179,
+      "norm_z": -0.6485891887934208,
+      "top_neighbor": "SA-1922796",
+      "top_pearson": 0.24283659885380016,
+      "top_cosine": 0.24539031009375273,
+      "top_neighbors": [
+        {
+          "compound": "SA-1922796",
+          "pearson": 0.24283659885380016,
+          "cosine": 0.24539031009375273
+        },
+        {
+          "compound": "oxyphenonium",
+          "pearson": 0.22713879692156366,
+          "cosine": 0.23605811857391704
+        },
+        {
+          "compound": "BRD-K58547240",
+          "pearson": 0.22377469783494,
+          "cosine": 0.21437818357550992
+        },
+        {
+          "compound": "H-7",
+          "pearson": 0.22342652975160293,
+          "cosine": 0.22918525048801044
+        },
+        {
+          "compound": "BRD-K35961280",
+          "pearson": 0.22103614690705292,
+          "cosine": 0.21804620458145776
+        },
+        {
+          "compound": "SA-1456195",
+          "pearson": 0.22003708290093565,
+          "cosine": 0.21401206763637062
+        },
+        {
+          "compound": "BRD-K78559095",
+          "pearson": 0.21852578598475564,
+          "cosine": 0.2148261862092531
+        },
+        {
+          "compound": "BRD-A09164687",
+          "pearson": 0.2163806763793782,
+          "cosine": 0.19755739649048173
+        },
+        {
+          "compound": "AZD-1152HQPA",
+          "pearson": 0.21602540311615598,
+          "cosine": 0.21730299934665984
+        },
+        {
+          "compound": "amoxicillin",
+          "pearson": 0.2146553976310095,
+          "cosine": 0.21542217125639446
+        },
+        {
+          "compound": "BRD-A94381689",
+          "pearson": 0.21254680388384484,
+          "cosine": 0.21090135941366847
+        },
+        {
+          "compound": "lavendustin-c",
+          "pearson": 0.21195027779045414,
+          "cosine": 0.2191964642280768
+        },
+        {
+          "compound": "EMF-sumo1-9",
+          "pearson": 0.2115555784511763,
+          "cosine": 0.21424966582855573
+        },
+        {
+          "compound": "SA-1455938",
+          "pearson": 0.2110515438798656,
+          "cosine": 0.21068143247224125
+        },
+        {
+          "compound": "taxifolin",
+          "pearson": 0.21025162425749613,
+          "cosine": 0.21138157492132273
+        },
+        {
+          "compound": "verrucarin-a",
+          "pearson": 0.20937737372251047,
+          "cosine": 0.2017655517522336
+        },
+        {
+          "compound": "sonidegib",
+          "pearson": 0.20804198071655228,
+          "cosine": 0.20958125291654042
+        },
+        {
+          "compound": "SA-102607",
+          "pearson": 0.20741374517040798,
+          "cosine": 0.20295926481875184
+        },
+        {
+          "compound": "SA-1944378",
+          "pearson": 0.20678951663791226,
+          "cosine": 0.21373341546788058
+        },
+        {
+          "compound": "BRD-K20168484",
+          "pearson": 0.20650316049254994,
+          "cosine": 0.20587828085497192
+        }
+      ],
+      "mahalanobis": 24.57353110689947,
+      "percentile_vs_chemical": 7.801418439716312,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse3606_wbc_exhaustive_1h",
+      "modifier_class": "exercise",
+      "condition_id": "treadmill_exhaustive_1h_post",
+      "cell_line_name": "human white blood cells",
+      "l2_norm": 33.499692484063885,
+      "norm_z": -1.2118498179133594,
+      "top_neighbor": "BRD-A43155244",
+      "top_pearson": 0.21078681363857366,
+      "top_cosine": 0.20542619047548497,
+      "top_neighbors": [
+        {
+          "compound": "BRD-A43155244",
+          "pearson": 0.21078681363857366,
+          "cosine": 0.20542619047548497
+        },
+        {
+          "compound": "NSC-632839",
+          "pearson": 0.2021444996983757,
+          "cosine": 0.20127488155867784
+        },
+        {
+          "compound": "BRD-K24156250",
+          "pearson": 0.19765873297335462,
+          "cosine": 0.19074617385041592
+        },
+        {
+          "compound": "IKK-16",
+          "pearson": 0.19388399319402289,
+          "cosine": 0.19107643671749475
+        },
+        {
+          "compound": "BRD-K97701319",
+          "pearson": 0.19081502648647156,
+          "cosine": 0.18892649238473325
+        },
+        {
+          "compound": "IKK-2-inhibitor-V",
+          "pearson": 0.1814701249166469,
+          "cosine": 0.18237258131511594
+        },
+        {
+          "compound": "ellipticine",
+          "pearson": 0.18108247228929505,
+          "cosine": 0.17627286213863225
+        },
+        {
+          "compound": "MG-132",
+          "pearson": 0.1806036576727293,
+          "cosine": 0.17297955474882207
+        },
+        {
+          "compound": "SA-1459167",
+          "pearson": 0.1800705189508224,
+          "cosine": 0.1804575273951572
+        },
+        {
+          "compound": "MD-II-008-P",
+          "pearson": 0.1799370175412894,
+          "cosine": 0.17273416538024716
+        },
+        {
+          "compound": "BRD-A40431293",
+          "pearson": 0.17867262312972126,
+          "cosine": 0.1768953819131189
+        },
+        {
+          "compound": "F-1566-0341",
+          "pearson": 0.1780716225802201,
+          "cosine": 0.17569997353486697
+        },
+        {
+          "compound": "thiostrepton",
+          "pearson": 0.1778984238782341,
+          "cosine": 0.16866067790600803
+        },
+        {
+          "compound": "proscillaridin",
+          "pearson": 0.17773313938332228,
+          "cosine": 0.17359529198477186
+        },
+        {
+          "compound": "niclosamide",
+          "pearson": 0.17761155526623537,
+          "cosine": 0.17969907362336832
+        },
+        {
+          "compound": "NCH-51",
+          "pearson": 0.1740935761502707,
+          "cosine": 0.17072917223520714
+        },
+        {
+          "compound": "ouabain",
+          "pearson": 0.17280402361709096,
+          "cosine": 0.16840533844508696
+        },
+        {
+          "compound": "PD-168077",
+          "pearson": 0.16971573141428847,
+          "cosine": 0.1663415094680831
+        },
+        {
+          "compound": "BNTX",
+          "pearson": 0.16945631317699247,
+          "cosine": 0.1688966564818147
+        },
+        {
+          "compound": "BRD-K92317137",
+          "pearson": 0.16894867567481786,
+          "cosine": 0.17115532456388036
+        }
+      ],
+      "mahalanobis": 17.02487260947311,
+      "percentile_vs_chemical": 0.9348807221147646,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse3606_wbc_moderate_1h",
+      "modifier_class": "exercise",
+      "condition_id": "treadmill_moderate_1h_post",
+      "cell_line_name": "human white blood cells",
+      "l2_norm": 37.975520006940705,
+      "norm_z": -0.43287950495539496,
+      "top_neighbor": "VU-0418947-2",
+      "top_pearson": 0.17814548802378585,
+      "top_cosine": 0.17659693916903244,
+      "top_neighbors": [
+        {
+          "compound": "VU-0418947-2",
+          "pearson": 0.17814548802378585,
+          "cosine": 0.17659693916903244
+        },
+        {
+          "compound": "BRD-A68061604",
+          "pearson": 0.1779263214747698,
+          "cosine": 0.17609613961269124
+        },
+        {
+          "compound": "BRD-K68007270",
+          "pearson": 0.1745940335406971,
+          "cosine": 0.17442033119959627
+        },
+        {
+          "compound": "BRD-K34092011",
+          "pearson": 0.17349018051626464,
+          "cosine": 0.17328269951134095
+        },
+        {
+          "compound": "docetaxel",
+          "pearson": 0.17230971108452664,
+          "cosine": 0.1712602799273141
+        },
+        {
+          "compound": "cerulenin",
+          "pearson": 0.1684715390869785,
+          "cosine": 0.16626723571363833
+        },
+        {
+          "compound": "F-1566-0341",
+          "pearson": 0.1675800873933474,
+          "cosine": 0.1669905184984198
+        },
+        {
+          "compound": "BRD-K97701319",
+          "pearson": 0.16715223385488082,
+          "cosine": 0.16671653264801306
+        },
+        {
+          "compound": "BRD-K18724229",
+          "pearson": 0.16654458721404838,
+          "cosine": 0.164601661782459
+        },
+        {
+          "compound": "BRD-K51556300",
+          "pearson": 0.16645819161883135,
+          "cosine": 0.16495143377069527
+        },
+        {
+          "compound": "BRD-K24156250",
+          "pearson": 0.1632251472445757,
+          "cosine": 0.16099380592846213
+        },
+        {
+          "compound": "BRD-K41431262",
+          "pearson": 0.16106683973690278,
+          "cosine": 0.16047190803546932
+        },
+        {
+          "compound": "BRD-K86899078",
+          "pearson": 0.15840605578238914,
+          "cosine": 0.1583194188066267
+        },
+        {
+          "compound": "SA-247384",
+          "pearson": 0.15556917211117796,
+          "cosine": 0.15464188189907357
+        },
+        {
+          "compound": "BRD-K88008216",
+          "pearson": 0.15537155722467053,
+          "cosine": 0.15362888666135793
+        },
+        {
+          "compound": "amonafide",
+          "pearson": 0.15350997696696336,
+          "cosine": 0.1512868526679819
+        },
+        {
+          "compound": "pyroxamide",
+          "pearson": 0.1530386640054377,
+          "cosine": 0.15239309889791405
+        },
+        {
+          "compound": "BRD-K19724398",
+          "pearson": 0.15264510997491296,
+          "cosine": 0.15142290095403887
+        },
+        {
+          "compound": "BRD-K46373671",
+          "pearson": 0.15224611417214204,
+          "cosine": 0.15214754565016708
+        },
+        {
+          "compound": "SA-424380",
+          "pearson": 0.15214896852593293,
+          "cosine": 0.15066564532690108
+        }
+      ],
+      "mahalanobis": 16.180495073762224,
+      "percentile_vs_chemical": 0.6769825918762089,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse252357_muscle_resistance_3h",
+      "modifier_class": "exercise",
+      "condition_id": "resistance_exercise_3h_vs_pre",
+      "cell_line_name": "human vastus lateralis",
+      "l2_norm": 52.09647383773398,
+      "norm_z": 2.0247227526418614,
+      "top_neighbor": "BRD-A49848186",
+      "top_pearson": 0.2756971609762379,
+      "top_cosine": 0.27965690950756383,
+      "top_neighbors": [
+        {
+          "compound": "BRD-A49848186",
+          "pearson": 0.2756971609762379,
+          "cosine": 0.27965690950756383
+        },
+        {
+          "compound": "BCI-hydrochloride",
+          "pearson": 0.22858990735471296,
+          "cosine": 0.2310195792698343
+        },
+        {
+          "compound": "prostratin",
+          "pearson": 0.22792671922412258,
+          "cosine": 0.2328801756273293
+        },
+        {
+          "compound": "BRD-K80346834",
+          "pearson": 0.222409949856003,
+          "cosine": 0.23035959435290904
+        },
+        {
+          "compound": "SA-3676",
+          "pearson": 0.2210379728613144,
+          "cosine": 0.2184561665314583
+        },
+        {
+          "compound": "BRD-K07259155",
+          "pearson": 0.2173127640816107,
+          "cosine": 0.2171125819708256
+        },
+        {
+          "compound": "brazilin",
+          "pearson": 0.21592548234775974,
+          "cosine": 0.21178012397145002
+        },
+        {
+          "compound": "BRD-K28366633",
+          "pearson": 0.21522256614548183,
+          "cosine": 0.21141129215988927
+        },
+        {
+          "compound": "BRD-K71935468",
+          "pearson": 0.2149335570439109,
+          "cosine": 0.22051583601647556
+        },
+        {
+          "compound": "MRS-1220",
+          "pearson": 0.21186178428008634,
+          "cosine": 0.21370296916837264
+        },
+        {
+          "compound": "BRD-K77547920",
+          "pearson": 0.21166663063019475,
+          "cosine": 0.21133629548701888
+        },
+        {
+          "compound": "RAN-05",
+          "pearson": 0.21004981959340796,
+          "cosine": 0.21723901801991818
+        },
+        {
+          "compound": "cercosporin",
+          "pearson": 0.20691608159791638,
+          "cosine": 0.20661052301846697
+        },
+        {
+          "compound": "EMF-sumo1-11",
+          "pearson": 0.20529115550025992,
+          "cosine": 0.20766867445480375
+        },
+        {
+          "compound": "scoulerine",
+          "pearson": 0.2040055315204374,
+          "cosine": 0.19807609838793325
+        },
+        {
+          "compound": "BRD-K96041907",
+          "pearson": 0.19980755645900153,
+          "cosine": 0.19399300707697592
+        },
+        {
+          "compound": "ingenol",
+          "pearson": 0.19929619782283473,
+          "cosine": 0.2022189097515682
+        },
+        {
+          "compound": "dichlorobenzamil",
+          "pearson": 0.19906033910344104,
+          "cosine": 0.20340106394762056
+        },
+        {
+          "compound": "chrysenequinone",
+          "pearson": 0.1974863362453141,
+          "cosine": 0.19180903730049587
+        },
+        {
+          "compound": "BG-FA-0953",
+          "pearson": 0.19542364446879568,
+          "cosine": 0.1949357902945595
+        }
+      ],
+      "mahalanobis": 42.23192389627689,
+      "percentile_vs_chemical": 42.79497098646034,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse252357_muscle_resistance_24h",
+      "modifier_class": "exercise",
+      "condition_id": "resistance_exercise_24h_vs_pre",
+      "cell_line_name": "human vastus lateralis",
+      "l2_norm": 47.85308733714264,
+      "norm_z": 1.286206334510838,
+      "top_neighbor": "prostratin",
+      "top_pearson": 0.21524141329538463,
+      "top_cosine": 0.2215728214581991,
+      "top_neighbors": [
+        {
+          "compound": "prostratin",
+          "pearson": 0.21524141329538463,
+          "cosine": 0.2215728214581991
+        },
+        {
+          "compound": "BCI-hydrochloride",
+          "pearson": 0.18908655818842346,
+          "cosine": 0.1921971827629987
+        },
+        {
+          "compound": "cyproheptadine",
+          "pearson": 0.1861385189445901,
+          "cosine": 0.19028569008692123
+        },
+        {
+          "compound": "MRS-1220",
+          "pearson": 0.18485842367228827,
+          "cosine": 0.18714491521415247
+        },
+        {
+          "compound": "BRD-K71935468",
+          "pearson": 0.1820099421957101,
+          "cosine": 0.1893731489751236
+        },
+        {
+          "compound": "securinine",
+          "pearson": 0.18200168928929886,
+          "cosine": 0.18744218543974958
+        },
+        {
+          "compound": "ingenol",
+          "pearson": 0.1804179932895517,
+          "cosine": 0.18407549688410227
+        },
+        {
+          "compound": "BRD-A49848186",
+          "pearson": 0.17988714021112356,
+          "cosine": 0.18547315988495464
+        },
+        {
+          "compound": "BRD-K53932786",
+          "pearson": 0.17562050687964462,
+          "cosine": 0.17794970850497172
+        },
+        {
+          "compound": "BRD-K56593336",
+          "pearson": 0.169880208914072,
+          "cosine": 0.17538508451394935
+        },
+        {
+          "compound": "BRD-K80346834",
+          "pearson": 0.16978849515429004,
+          "cosine": 0.1810147029264954
+        },
+        {
+          "compound": "KU-C103898N",
+          "pearson": 0.16880114478653835,
+          "cosine": 0.15488158625750173
+        },
+        {
+          "compound": "BRD-K55487965",
+          "pearson": 0.16617672531793815,
+          "cosine": 0.16646835948835118
+        },
+        {
+          "compound": "BRD-K75999307",
+          "pearson": 0.16614821761933848,
+          "cosine": 0.16132890040899941
+        },
+        {
+          "compound": "BRD-K28366633",
+          "pearson": 0.16614618844358456,
+          "cosine": 0.16148497825102087
+        },
+        {
+          "compound": "BRD-K77547920",
+          "pearson": 0.16454677073179397,
+          "cosine": 0.1641520669784769
+        },
+        {
+          "compound": "BRD-K01834163",
+          "pearson": 0.1637031919258891,
+          "cosine": 0.16931275125488016
+        },
+        {
+          "compound": "phorbol-12-myristate-13-acetate",
+          "pearson": 0.16244885201776071,
+          "cosine": 0.16816301654045251
+        },
+        {
+          "compound": "ixazomib",
+          "pearson": 0.16178866797879424,
+          "cosine": 0.15701174438823048
+        },
+        {
+          "compound": "BRD-K44366801",
+          "pearson": 0.16074190479496325,
+          "cosine": 0.15216264213333947
+        }
+      ],
+      "mahalanobis": 36.814800079969906,
+      "percentile_vs_chemical": 30.770470664087686,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse28016_muscle_fast40h_vs_fed",
+      "modifier_class": "fasting",
+      "condition_id": "fast_40h_vs_fed",
+      "cell_line_name": "human vastus lateralis",
+      "l2_norm": 36.352336783459954,
+      "norm_z": -0.7153773306915894,
+      "top_neighbor": "KUC111109N",
+      "top_pearson": 0.1128799130257976,
+      "top_cosine": 0.11394295935834395,
+      "top_neighbors": [
+        {
+          "compound": "KUC111109N",
+          "pearson": 0.1128799130257976,
+          "cosine": 0.11394295935834395
+        },
+        {
+          "compound": "DMBI",
+          "pearson": 0.11010608258143637,
+          "cosine": 0.1105358873852797
+        },
+        {
+          "compound": "AZD-8055",
+          "pearson": 0.10888762799422308,
+          "cosine": 0.10903875048918522
+        },
+        {
+          "compound": "homoveratrylamine",
+          "pearson": 0.10683199414405088,
+          "cosine": 0.10916453186860749
+        },
+        {
+          "compound": "MAZ-51",
+          "pearson": 0.10463376428957473,
+          "cosine": 0.10394740252138396
+        },
+        {
+          "compound": "NSC-119889",
+          "pearson": 0.1038078480444008,
+          "cosine": 0.10314598451655788
+        },
+        {
+          "compound": "FR-180204",
+          "pearson": 0.10256827234851322,
+          "cosine": 0.1030911812081694
+        },
+        {
+          "compound": "tamibarotene",
+          "pearson": 0.10252112526794809,
+          "cosine": 0.1020793983427
+        },
+        {
+          "compound": "BRD-K53475565",
+          "pearson": 0.10187027824305644,
+          "cosine": 0.10276765599274842
+        },
+        {
+          "compound": "vemurafenib",
+          "pearson": 0.10153304082505185,
+          "cosine": 0.10266510303341438
+        },
+        {
+          "compound": "tozasertib",
+          "pearson": 0.10115191110470682,
+          "cosine": 0.10125111218490028
+        },
+        {
+          "compound": "BRD-K80171496",
+          "pearson": 0.09938001159450473,
+          "cosine": 0.09864599247277799
+        },
+        {
+          "compound": "RX-821002",
+          "pearson": 0.0992344370192045,
+          "cosine": 0.09919882147962132
+        },
+        {
+          "compound": "BRD-K21822525",
+          "pearson": 0.09889801362027469,
+          "cosine": 0.09953959759377787
+        },
+        {
+          "compound": "BRD-K93779718",
+          "pearson": 0.09755688692047644,
+          "cosine": 0.09910794571980452
+        },
+        {
+          "compound": "NVP-AEW541",
+          "pearson": 0.09610846870869436,
+          "cosine": 0.0947701486408842
+        },
+        {
+          "compound": "FGIN-1-27",
+          "pearson": 0.09603148542454748,
+          "cosine": 0.09537495131843386
+        },
+        {
+          "compound": "BRD-K40138205",
+          "pearson": 0.09470653989325746,
+          "cosine": 0.09633480947784882
+        },
+        {
+          "compound": "foretinib",
+          "pearson": 0.09442256964244433,
+          "cosine": 0.09406679118385501
+        },
+        {
+          "compound": "BRD-K02409808",
+          "pearson": 0.09333657660971625,
+          "cosine": 0.0929866608321812
+        }
+      ],
+      "mahalanobis": 15.429670997100338,
+      "percentile_vs_chemical": 0.3546099290780142,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse111551_muscle_running18w",
+      "modifier_class": "exercise",
+      "condition_id": "running_18w_skeletal muscle",
+      "cell_line_name": "human skeletal muscle",
+      "l2_norm": 41.72691812109254,
+      "norm_z": 0.22001155218983698,
+      "top_neighbor": "narciclasine",
+      "top_pearson": 0.1626309927644412,
+      "top_cosine": 0.16276820285265473,
+      "top_neighbors": [
+        {
+          "compound": "narciclasine",
+          "pearson": 0.1626309927644412,
+          "cosine": 0.16276820285265473
+        },
+        {
+          "compound": "anisomycin",
+          "pearson": 0.160778445465518,
+          "cosine": 0.16105517551545606
+        },
+        {
+          "compound": "cephaeline",
+          "pearson": 0.14542947508900328,
+          "cosine": 0.1441764306454681
+        },
+        {
+          "compound": "torin-2",
+          "pearson": 0.14399167002333865,
+          "cosine": 0.14431941139205567
+        },
+        {
+          "compound": "homoharringtonine",
+          "pearson": 0.14334029446567792,
+          "cosine": 0.14168312105885758
+        },
+        {
+          "compound": "emetine",
+          "pearson": 0.13824718268716552,
+          "cosine": 0.13732168260068434
+        },
+        {
+          "compound": "trimipramine",
+          "pearson": 0.13767670581539415,
+          "cosine": 0.13715120448987958
+        },
+        {
+          "compound": "thonzonium",
+          "pearson": 0.13246881886918274,
+          "cosine": 0.1330287878262575
+        },
+        {
+          "compound": "YM-201636",
+          "pearson": 0.12666665544396924,
+          "cosine": 0.1271230397227282
+        },
+        {
+          "compound": "lylamine",
+          "pearson": 0.12550292414201913,
+          "cosine": 0.1268669518134248
+        },
+        {
+          "compound": "I-606061",
+          "pearson": 0.12495857247019217,
+          "cosine": 0.1236200722561618
+        },
+        {
+          "compound": "ifenprodil",
+          "pearson": 0.1241184223515165,
+          "cosine": 0.12284064139154477
+        },
+        {
+          "compound": "JW-7-24-1",
+          "pearson": 0.12313833988680675,
+          "cosine": 0.12440102796148544
+        },
+        {
+          "compound": "phenolphthalein",
+          "pearson": 0.12293101239367892,
+          "cosine": 0.12293212510722025
+        },
+        {
+          "compound": "BRD-K63423329",
+          "pearson": 0.12274253666778641,
+          "cosine": 0.12228960721505834
+        },
+        {
+          "compound": "R-59022",
+          "pearson": 0.12248231425203426,
+          "cosine": 0.1225975694527396
+        },
+        {
+          "compound": "fipronil",
+          "pearson": 0.11993412539892088,
+          "cosine": 0.11806445080690454
+        },
+        {
+          "compound": "BMS-754807",
+          "pearson": 0.11877776437580345,
+          "cosine": 0.11830313245755272
+        },
+        {
+          "compound": "benactyzine",
+          "pearson": 0.11699809515966277,
+          "cosine": 0.11714490348429053
+        },
+        {
+          "compound": "GSK-2126458",
+          "pearson": 0.11691581392405007,
+          "cosine": 0.11657452674513426
+        }
+      ],
+      "mahalanobis": 28.414381184595797,
+      "percentile_vs_chemical": 13.894261766602192,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse111552_pbmc_running18w",
+      "modifier_class": "exercise",
+      "condition_id": "running_18w_PBMC",
+      "cell_line_name": "human PBMC",
+      "l2_norm": 54.76064321418543,
+      "norm_z": 2.488393178354225,
+      "top_neighbor": "BRD-K44931544",
+      "top_pearson": 0.25716284333880157,
+      "top_cosine": 0.25292260577723286,
+      "top_neighbors": [
+        {
+          "compound": "BRD-K44931544",
+          "pearson": 0.25716284333880157,
+          "cosine": 0.25292260577723286
+        },
+        {
+          "compound": "IBC-293",
+          "pearson": 0.24436909718768982,
+          "cosine": 0.23978530292989284
+        },
+        {
+          "compound": "BRD-K59633395",
+          "pearson": 0.23642291610467217,
+          "cosine": 0.2370725820761789
+        },
+        {
+          "compound": "MDL-28170",
+          "pearson": 0.23313297370996566,
+          "cosine": 0.22186199393135303
+        },
+        {
+          "compound": "W-7",
+          "pearson": 0.2324584085589523,
+          "cosine": 0.22820565977882903
+        },
+        {
+          "compound": "bicuculline",
+          "pearson": 0.23154216199109395,
+          "cosine": 0.23987707720673643
+        },
+        {
+          "compound": "BRD-K51189903",
+          "pearson": 0.2282766529732225,
+          "cosine": 0.23127801601609557
+        },
+        {
+          "compound": "clopamide",
+          "pearson": 0.2226576368655896,
+          "cosine": 0.2280336387467197
+        },
+        {
+          "compound": "TL-HRAS-27",
+          "pearson": 0.21961914728182733,
+          "cosine": 0.21938234046002406
+        },
+        {
+          "compound": "BRD-K62169556",
+          "pearson": 0.21719258596508884,
+          "cosine": 0.19469176797145377
+        },
+        {
+          "compound": "m-chlorophenylbiguanide",
+          "pearson": 0.2094985464327924,
+          "cosine": 0.2218881207694651
+        },
+        {
+          "compound": "proscillaridin",
+          "pearson": 0.2090240110174746,
+          "cosine": 0.18570760957575783
+        },
+        {
+          "compound": "BRD-K53335770",
+          "pearson": 0.2087405688701931,
+          "cosine": 0.1820953768840058
+        },
+        {
+          "compound": "BRD-K92020737",
+          "pearson": 0.20759581901162372,
+          "cosine": 0.19761358210327626
+        },
+        {
+          "compound": "RJC-00245SC",
+          "pearson": 0.2065765008425136,
+          "cosine": 0.18462404225958867
+        },
+        {
+          "compound": "dorsomorphin",
+          "pearson": 0.20319735700166316,
+          "cosine": 0.18906488474734814
+        },
+        {
+          "compound": "ouabain",
+          "pearson": 0.20255989060806143,
+          "cosine": 0.17839916245385642
+        },
+        {
+          "compound": "MPEP",
+          "pearson": 0.1981221798452403,
+          "cosine": 0.19966204489072933
+        },
+        {
+          "compound": "BRD-K33720404",
+          "pearson": 0.19494979027396772,
+          "cosine": 0.19637784327411734
+        },
+        {
+          "compound": "BRD-K41185612",
+          "pearson": 0.19319901635564482,
+          "cosine": 0.18918270510720225
+        }
+      ],
+      "mahalanobis": 55.66621562475518,
+      "percentile_vs_chemical": 68.76208897485493,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse82323_muscle_heat",
+      "modifier_class": "thermal",
+      "condition_id": "gse82323_heat_3h",
+      "cell_line_name": "human skeletal muscle",
+      "l2_norm": 29.317965858141246,
+      "norm_z": -1.939634988778457,
+      "top_neighbor": "profenamine",
+      "top_pearson": 0.1810093760059701,
+      "top_cosine": 0.17894305400392768,
+      "top_neighbors": [
+        {
+          "compound": "profenamine",
+          "pearson": 0.1810093760059701,
+          "cosine": 0.17894305400392768
+        },
+        {
+          "compound": "BRD-A09164687",
+          "pearson": 0.17342201180288574,
+          "cosine": 0.17501798135450963
+        },
+        {
+          "compound": "BRD-K30536692",
+          "pearson": 0.17238909234481764,
+          "cosine": 0.17163978704481114
+        },
+        {
+          "compound": "myriocin",
+          "pearson": 0.16816289597377793,
+          "cosine": 0.16636869963014297
+        },
+        {
+          "compound": "BRD-K35961280",
+          "pearson": 0.16534339665460443,
+          "cosine": 0.16609429145842133
+        },
+        {
+          "compound": "dehydrocholic-acid",
+          "pearson": 0.1649107929459204,
+          "cosine": 0.16349065930817006
+        },
+        {
+          "compound": "SD-6-035-A2",
+          "pearson": 0.15706975972770776,
+          "cosine": 0.15863286824346576
+        },
+        {
+          "compound": "WY-01-034",
+          "pearson": 0.15639427770703693,
+          "cosine": 0.15172019614094362
+        },
+        {
+          "compound": "BRD-K24346336",
+          "pearson": 0.15590036220869988,
+          "cosine": 0.15649876816936867
+        },
+        {
+          "compound": "ARG-CSC-22",
+          "pearson": 0.15526989622569762,
+          "cosine": 0.1558457559902362
+        },
+        {
+          "compound": "fluticasone",
+          "pearson": 0.15332823431327822,
+          "cosine": 0.1530349041888275
+        },
+        {
+          "compound": "nitrendipine",
+          "pearson": 0.15025607609326505,
+          "cosine": 0.14888099706995492
+        },
+        {
+          "compound": "ampiroxicam",
+          "pearson": 0.1498606631273129,
+          "cosine": 0.1505118894277358
+        },
+        {
+          "compound": "BRD-K49061529",
+          "pearson": 0.14937221592700492,
+          "cosine": 0.14725666394034204
+        },
+        {
+          "compound": "VX-702",
+          "pearson": 0.14604883921830583,
+          "cosine": 0.1441734268313532
+        },
+        {
+          "compound": "BRD-K18170480",
+          "pearson": 0.14577957533737015,
+          "cosine": 0.14721644301063186
+        },
+        {
+          "compound": "H-7",
+          "pearson": 0.1456722468145091,
+          "cosine": 0.14422084402909677
+        },
+        {
+          "compound": "1B-parent",
+          "pearson": 0.14524978093313515,
+          "cosine": 0.14509585121661742
+        },
+        {
+          "compound": "PF-04217903",
+          "pearson": 0.1445716615892707,
+          "cosine": 0.1426070496489898
+        },
+        {
+          "compound": "praziquantel",
+          "pearson": 0.14443277484689002,
+          "cosine": 0.14338295077556448
+        }
+      ],
+      "mahalanobis": 11.933374935443146,
+      "percentile_vs_chemical": 0.016118633139909737,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse82323_soleus_contraction",
+      "modifier_class": "exercise",
+      "condition_id": "gse82323_contraction_3h",
+      "cell_line_name": "human skeletal muscle",
+      "l2_norm": 65.65757196595915,
+      "norm_z": 4.384888062632952,
+      "top_neighbor": "withaferin-a",
+      "top_pearson": 0.26684729168379506,
+      "top_cosine": 0.2760686290303036,
+      "top_neighbors": [
+        {
+          "compound": "withaferin-a",
+          "pearson": 0.26684729168379506,
+          "cosine": 0.2760686290303036
+        },
+        {
+          "compound": "I-606061",
+          "pearson": 0.2667414974091243,
+          "cosine": 0.2687763289878111
+        },
+        {
+          "compound": "BRD-K93229693",
+          "pearson": 0.2555561067266914,
+          "cosine": 0.2628830344760073
+        },
+        {
+          "compound": "MD-II-008-P",
+          "pearson": 0.24649816115429724,
+          "cosine": 0.22632242069343406
+        },
+        {
+          "compound": "calmidazolium",
+          "pearson": 0.2360141070854509,
+          "cosine": 0.23515961919804168
+        },
+        {
+          "compound": "I-606051",
+          "pearson": 0.2356622211537688,
+          "cosine": 0.2359485282173199
+        },
+        {
+          "compound": "SB-218078",
+          "pearson": 0.23528530214599505,
+          "cosine": 0.23781598799031484
+        },
+        {
+          "compound": "BRD-K55844427",
+          "pearson": 0.22593088789912152,
+          "cosine": 0.23104812883020612
+        },
+        {
+          "compound": "BRD-K80786583",
+          "pearson": 0.222561008765785,
+          "cosine": 0.22145541900156226
+        },
+        {
+          "compound": "obatoclax",
+          "pearson": 0.22171617674929828,
+          "cosine": 0.2340891389237764
+        },
+        {
+          "compound": "BG-FA-0953",
+          "pearson": 0.21885953390807042,
+          "cosine": 0.21782550492931896
+        },
+        {
+          "compound": "IKK-2-inhibitor-V",
+          "pearson": 0.21608667709813817,
+          "cosine": 0.21795443926553204
+        },
+        {
+          "compound": "cercosporin",
+          "pearson": 0.21253158250186213,
+          "cosine": 0.21117417969528054
+        },
+        {
+          "compound": "BRD-K71935468",
+          "pearson": 0.2117567486217546,
+          "cosine": 0.22099899193648948
+        },
+        {
+          "compound": "dichlorobenzamil",
+          "pearson": 0.20900392896003278,
+          "cosine": 0.21432848971286142
+        },
+        {
+          "compound": "niclosamide",
+          "pearson": 0.20626612800164923,
+          "cosine": 0.21152831847895837
+        },
+        {
+          "compound": "tyrphostin-A9",
+          "pearson": 0.20502118279391007,
+          "cosine": 0.19839596070689994
+        },
+        {
+          "compound": "BRD-K49010888",
+          "pearson": 0.20356694112900245,
+          "cosine": 0.2030164002580894
+        },
+        {
+          "compound": "suloctidil",
+          "pearson": 0.19614077154878637,
+          "cosine": 0.1975910499215167
+        },
+        {
+          "compound": "BNTX",
+          "pearson": 0.193504584319112,
+          "cosine": 0.1916557700148656
+        }
+      ],
+      "mahalanobis": 88.6380836051803,
+      "percentile_vs_chemical": 94.45519019987105,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse82323_soleus_vibration",
+      "modifier_class": "exercise",
+      "condition_id": "gse82323_vibration_3h",
+      "cell_line_name": "human skeletal muscle",
+      "l2_norm": 33.86508766981726,
+      "norm_z": -1.1482566609508027,
+      "top_neighbor": "avicin-g",
+      "top_pearson": 0.16219336162038758,
+      "top_cosine": 0.16321595366056013,
+      "top_neighbors": [
+        {
+          "compound": "avicin-g",
+          "pearson": 0.16219336162038758,
+          "cosine": 0.16321595366056013
+        },
+        {
+          "compound": "wortmannin",
+          "pearson": 0.14862337242442666,
+          "cosine": 0.1480724713307359
+        },
+        {
+          "compound": "BRD-K13559922",
+          "pearson": 0.14472116554445835,
+          "cosine": 0.14380153665959894
+        },
+        {
+          "compound": "BRD-K35046132",
+          "pearson": 0.14352547776451774,
+          "cosine": 0.14286749334044244
+        },
+        {
+          "compound": "BRD-K57037351",
+          "pearson": 0.14326746449140343,
+          "cosine": 0.14277973009338107
+        },
+        {
+          "compound": "BRD-K79797318",
+          "pearson": 0.1377130803018485,
+          "cosine": 0.13732254311363526
+        },
+        {
+          "compound": "BRD-K26484692",
+          "pearson": 0.1344828466537962,
+          "cosine": 0.13413524556092524
+        },
+        {
+          "compound": "clozapine",
+          "pearson": 0.13431673686229254,
+          "cosine": 0.1339217510611005
+        },
+        {
+          "compound": "KB-R7943",
+          "pearson": 0.13370092196551092,
+          "cosine": 0.13507422704105942
+        },
+        {
+          "compound": "pyrantel",
+          "pearson": 0.13336416719443625,
+          "cosine": 0.1344271269293442
+        },
+        {
+          "compound": "fludrocortisone",
+          "pearson": 0.13159982618680913,
+          "cosine": 0.13323585012618144
+        },
+        {
+          "compound": "SU-11274",
+          "pearson": 0.12994070347065842,
+          "cosine": 0.12948922760025708
+        },
+        {
+          "compound": "AT1-SHH-09",
+          "pearson": 0.1296444152348344,
+          "cosine": 0.1282554220173167
+        },
+        {
+          "compound": "tenovin-1",
+          "pearson": 0.12922785461306144,
+          "cosine": 0.12928891901141806
+        },
+        {
+          "compound": "HG-5-88-01",
+          "pearson": 0.1292070091870963,
+          "cosine": 0.1297725018398559
+        },
+        {
+          "compound": "BRD-K86671899",
+          "pearson": 0.1291323491779585,
+          "cosine": 0.1294921418162982
+        },
+        {
+          "compound": "CGS-15943",
+          "pearson": 0.12850546286291853,
+          "cosine": 0.1279784055503984
+        },
+        {
+          "compound": "amsacrine",
+          "pearson": 0.12780079193971802,
+          "cosine": 0.12507071099343484
+        },
+        {
+          "compound": "BRD-K38625260",
+          "pearson": 0.12775495347052185,
+          "cosine": 0.1284335925884128
+        },
+        {
+          "compound": "AT-SUMO-1",
+          "pearson": 0.12685577357484065,
+          "cosine": 0.12774480010023107
+        }
+      ],
+      "mahalanobis": 14.333088326081235,
+      "percentile_vs_chemical": 0.16118633139909735,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse85620_cwi_post_vs_pre",
+      "modifier_class": "cold_immersion",
+      "condition_id": "strength10w_cwi",
+      "cell_line_name": "human vastus lateralis",
+      "l2_norm": 36.264420342261374,
+      "norm_z": -0.7306782549038321,
+      "top_neighbor": "BRD-A74983348",
+      "top_pearson": 0.12143393549561901,
+      "top_cosine": 0.12143076317405771,
+      "top_neighbors": [
+        {
+          "compound": "BRD-A74983348",
+          "pearson": 0.12143393549561901,
+          "cosine": 0.12143076317405771
+        },
+        {
+          "compound": "PD-0325901",
+          "pearson": 0.1039536144454615,
+          "cosine": 0.10394232802227715
+        },
+        {
+          "compound": "pralidoxime",
+          "pearson": 0.1023718497567092,
+          "cosine": 0.1023680380159974
+        },
+        {
+          "compound": "reserpic-acid",
+          "pearson": 0.10179075917189494,
+          "cosine": 0.10177214635489236
+        },
+        {
+          "compound": "hexamethyleneamiloride",
+          "pearson": 0.09847399548571441,
+          "cosine": 0.09816253090942964
+        },
+        {
+          "compound": "clopamide",
+          "pearson": 0.09746658265174556,
+          "cosine": 0.09733362100976879
+        },
+        {
+          "compound": "BRD-K98896788",
+          "pearson": 0.09453242066396227,
+          "cosine": 0.0945098395303273
+        },
+        {
+          "compound": "BRD-K22449070",
+          "pearson": 0.09392352187977632,
+          "cosine": 0.09381956039517284
+        },
+        {
+          "compound": "atovaquone",
+          "pearson": 0.09380370141926213,
+          "cosine": 0.09380336585414366
+        },
+        {
+          "compound": "BRD-K40378749",
+          "pearson": 0.09311846127730966,
+          "cosine": 0.09304851741298659
+        },
+        {
+          "compound": "BRD-K48311056",
+          "pearson": 0.09166956179485627,
+          "cosine": 0.0916007924618095
+        },
+        {
+          "compound": "BRD-K46505016",
+          "pearson": 0.0915656811971302,
+          "cosine": 0.09155481145330335
+        },
+        {
+          "compound": "BRD-K82230692",
+          "pearson": 0.09143685975853104,
+          "cosine": 0.09142294251082102
+        },
+        {
+          "compound": "pazufloxacin",
+          "pearson": 0.09142404348206833,
+          "cosine": 0.09131830875439914
+        },
+        {
+          "compound": "BRD-K11981252",
+          "pearson": 0.09136357178480661,
+          "cosine": 0.0912563968177624
+        },
+        {
+          "compound": "BRD-K95168667",
+          "pearson": 0.08909607577466981,
+          "cosine": 0.08898703952109768
+        },
+        {
+          "compound": "BRD-K00442147",
+          "pearson": 0.08909069788240784,
+          "cosine": 0.08908751756301155
+        },
+        {
+          "compound": "AS-703026",
+          "pearson": 0.08898670211823388,
+          "cosine": 0.0889639472332751
+        },
+        {
+          "compound": "BRD-K11088254",
+          "pearson": 0.08897221473420083,
+          "cosine": 0.08891126022154713
+        },
+        {
+          "compound": "BRD-K08995965",
+          "pearson": 0.08871076035012047,
+          "cosine": 0.08867942302207732
+        }
+      ],
+      "mahalanobis": 25.850459355876335,
+      "percentile_vs_chemical": 9.767891682785299,
+      "verdict": "in-distribution"
+    },
+    {
+      "signature_id": "gse85620_placebo_post_vs_pre",
+      "modifier_class": "exercise",
+      "condition_id": "strength10w_pla",
+      "cell_line_name": "human vastus lateralis",
+      "l2_norm": 31.953269169331065,
+      "norm_z": -1.4809883955922096,
+      "top_neighbor": "IBC-293",
+      "top_pearson": 0.19251144920690863,
+      "top_cosine": 0.1924394441223263,
+      "top_neighbors": [
+        {
+          "compound": "IBC-293",
+          "pearson": 0.19251144920690863,
+          "cosine": 0.1924394441223263
+        },
+        {
+          "compound": "MPEP",
+          "pearson": 0.18421862806717956,
+          "cosine": 0.18360808339529985
+        },
+        {
+          "compound": "BRD-K57732441",
+          "pearson": 0.17682306767877995,
+          "cosine": 0.17679818939259617
+        },
+        {
+          "compound": "bicuculline",
+          "pearson": 0.17566384753866005,
+          "cosine": 0.1743985938743596
+        },
+        {
+          "compound": "BRD-K53335770",
+          "pearson": 0.17395952015463373,
+          "cosine": 0.17475702988351835
+        },
+        {
+          "compound": "BRD-K92020737",
+          "pearson": 0.17325402873235357,
+          "cosine": 0.17330641529937282
+        },
+        {
+          "compound": "BRD-K12814321",
+          "pearson": 0.17231170016943478,
+          "cosine": 0.17100710388998894
+        },
+        {
+          "compound": "m-chlorophenylbiguanide",
+          "pearson": 0.16637102876266507,
+          "cosine": 0.1648479039368041
+        },
+        {
+          "compound": "ilomastat",
+          "pearson": 0.1645221317831561,
+          "cosine": 0.16393140655109892
+        },
+        {
+          "compound": "NVP-AUY922",
+          "pearson": 0.16324868488668126,
+          "cosine": 0.16258656008713818
+        },
+        {
+          "compound": "W-7",
+          "pearson": 0.1611972754199193,
+          "cosine": 0.1610296364319262
+        },
+        {
+          "compound": "clopamide",
+          "pearson": 0.16073469040396798,
+          "cosine": 0.15967735100466035
+        },
+        {
+          "compound": "BRD-K60093216",
+          "pearson": 0.1581565295655823,
+          "cosine": 0.1575706524949446
+        },
+        {
+          "compound": "hexamethyleneamiloride",
+          "pearson": 0.1575832698113304,
+          "cosine": 0.15579557437795
+        },
+        {
+          "compound": "nadifloxacin",
+          "pearson": 0.15574021089938442,
+          "cosine": 0.1552863879010607
+        },
+        {
+          "compound": "MDL-28170",
+          "pearson": 0.15562304437053984,
+          "cosine": 0.1560586483080364
+        },
+        {
+          "compound": "BRD-K95561591",
+          "pearson": 0.1554272315217543,
+          "cosine": 0.15502602070278146
+        },
+        {
+          "compound": "BRD-K59633395",
+          "pearson": 0.15312087497447735,
+          "cosine": 0.15252998060682615
+        },
+        {
+          "compound": "BIIB-021",
+          "pearson": 0.15216200079392647,
+          "cosine": 0.15306324548910644
+        },
+        {
+          "compound": "6-hydroxytropinone",
+          "pearson": 0.1519318548420721,
+          "cosine": 0.1514860942845066
+        }
+      ],
+      "mahalanobis": 21.92901560394303,
+      "percentile_vs_chemical": 4.803352675693101,
+      "verdict": "in-distribution"
+    }
+  ]
+}

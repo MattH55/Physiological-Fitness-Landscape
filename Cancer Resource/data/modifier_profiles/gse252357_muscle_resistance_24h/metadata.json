@@ -1,0 +1,18 @@
+{
+  "modifier_id": "gse252357_muscle_resistance_24h",
+  "protocol": "resistance_exercise_24h_vs_pre",
+  "biological_context": "skeletal_muscle",
+  "tissue": "human vastus lateralis",
+  "study_id": "GSE252357",
+  "species": "human",
+  "dose": {
+    "unit": "hours_after_session",
+    "duration_hr": 24.0
+  },
+  "duration_hr": 24.0,
+  "timepoint_hr": 24.0,
+  "platform": "RNA-seq",
+  "n_replicates": 7,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

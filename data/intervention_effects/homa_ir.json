@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "homa_ir",
+  "biomarker_name": "Homeostatic Model Assessment of Insulin Resistance (HOMA-IR)",
+  "biomarker_units": "index",
+  "interventions": [
+    {
+      "intervention_id": "glp_1_gip_receptor_agonists_tirzepatide_semaglutide",
+      "canonical_name": "GLP-1 / GIP receptor agonists (Tirzepatide / Semaglutide)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "GLP-1 / GIP receptor agonists (Tirzepatide / Semaglutide) (Pharmacologic) — favorable effect on Homeostatic Model Assessment of Insulin Resistance (HOMA-IR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "glp_1_gip_receptor_agonists_tirzepatide_semaglutide_standard",
+          "regimen": {
+            "regimen_id": "glp_1_gip_receptor_agonists_tirzepatide_semaglutide_standard",
+            "intervention_id": "glp_1_gip_receptor_agonists_tirzepatide_semaglutide",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for GLP-1 / GIP receptor agonists (Tirzepatide / Semaglutide)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "glp_1_gip_receptor_agonists_tirzepatide_semaglutide_homa_ir_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -52.5,
+                "lower": -65.0,
+                "upper": -40.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "glp_1_gip_receptor_agonists_tirzepatide_semaglutide_homa_ir_favorable",
+                "original_value": -52.5,
+                "original_lower": -65.0,
+                "original_upper": -40.0,
+                "original_unit": "%",
+                "canonical_value": -52.5,
+                "canonical_lower": -65.0,
+                "canonical_upper": -40.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-35658024_adults",
+                "evidence_id": "PMID-35658024",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-35658024",
+                "source_type": "RCT",
+                "title": "Jastreboff AM, et al. N Engl J Med. 2022;387:205-216. PMID: 35658024",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2022,
+                "doi": null,
+                "pmid": "35658024",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:28.549633",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "glp_1_gip_receptor_agonists_tirzepatide_semaglutide_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "10_total_body_weight_loss_through_lifestyle_modification",
+      "canonical_name": "10% Total Body Weight Loss through lifestyle modification",
+      "intervention_type": "LIFESTYLE",
+      "description": "10% Total Body Weight Loss through lifestyle modification (Lifestyle) — favorable effect on Homeostatic Model Assessment of Insulin Resistance (HOMA-IR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "10_total_body_weight_loss_through_lifestyle_modification_standard",
+          "regimen": {
+            "regimen_id": "10_total_body_weight_loss_through_lifestyle_modification_standard",
+            "intervention_id": "10_total_body_weight_loss_through_lifestyle_modification",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for 10% Total Body Weight Loss through lifestyle modification",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "10_total_body_weight_loss_through_lifestyle_modification_homa_ir_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -45.0,
+                "lower": -55.0,
+                "upper": -35.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "10_total_body_weight_loss_through_lifestyle_modification_homa_ir_favorable",
+                "original_value": -45.0,
+                "original_lower": -55.0,
+                "original_upper": -35.0,
+                "original_unit": "%",
+                "canonical_value": -45.0,
+                "canonical_lower": -55.0,
+                "canonical_upper": -35.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-12750520_adults",
+                "evidence_id": "PMID-12750520",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-12750520",
+                "source_type": "RCT",
+                "title": "Petersen KF, et al. Science. 2007;300:1140-1142. PMID: 12750520",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2007,
+                "doi": null,
+                "pmid": "12750520",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:28.670191",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "10_total_body_weight_loss_through_lifestyle_modification_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_intensity_interval_training_hiit_combined_with_resistance_training",
+      "canonical_name": "High-intensity interval training (HIIT) combined with resistance training",
+      "intervention_type": "EXERCISE",
+      "description": "High-intensity interval training (HIIT) combined with resistance training (Exercise) — favorable effect on Homeostatic Model Assessment of Insulin Resistance (HOMA-IR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_intensity_interval_training_hiit_combined_with_resistance_training_standard",
+          "regimen": {
+            "regimen_id": "high_intensity_interval_training_hiit_combined_with_resistance_training_standard",
+            "intervention_id": "high_intensity_interval_training_hiit_combined_with_resistance_training",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High-intensity interval training (HIIT) combined with resistance training",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_intensity_interval_training_hiit_combined_with_resistance_training_homa_ir_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -35.0,
+                "lower": -45.0,
+                "upper": -25.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_intensity_interval_training_hiit_combined_with_resistance_training_homa_ir_favorable",
+                "original_value": -35.0,
+                "original_lower": -45.0,
+                "original_upper": -25.0,
+                "original_unit": "%",
+                "canonical_value": -35.0,
+                "canonical_lower": -45.0,
+                "canonical_upper": -25.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-27797734_adults",
+                "evidence_id": "PMID-27797734",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-27797734",
+                "source_type": "META_ANALYSIS",
+                "title": "Batacan RB Jr, et al. Br J Sports Med. 2017;51:494-503. PMID: 27797734",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2017,
+                "doi": null,
+                "pmid": "27797734",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:28.941751",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_intensity_interval_training_hiit_combined_with_resistance_training_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_visceral_adiposity_and_physical_inactivity",
+      "canonical_name": "Severe visceral adiposity and physical inactivity",
+      "intervention_type": "LIFESTYLE",
+      "description": "Severe visceral adiposity and physical inactivity (Lifestyle) — unfavorable effect on Homeostatic Model Assessment of Insulin Resistance (HOMA-IR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_visceral_adiposity_and_physical_inactivity_standard",
+          "regimen": {
+            "regimen_id": "severe_visceral_adiposity_and_physical_inactivity_standard",
+            "intervention_id": "severe_visceral_adiposity_and_physical_inactivity",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe visceral adiposity and physical inactivity",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_visceral_adiposity_and_physical_inactivity_homa_ir_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 225.0,
+                "lower": 100.0,
+                "upper": 350.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_visceral_adiposity_and_physical_inactivity_homa_ir_unfavorable",
+                "original_value": 225.0,
+                "original_lower": 100.0,
+                "original_upper": 350.0,
+                "original_unit": "%",
+                "canonical_value": 225.0,
+                "canonical_lower": 100.0,
+                "canonical_upper": 350.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-12080108_adults",
+                "evidence_id": "PMID-12080108",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-12080108",
+                "source_type": "OBSERVATIONAL",
+                "title": "Bonora E, et al. Diabetes Care. 2002;25:1135-1141. PMID: 12080108",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2002,
+                "doi": null,
+                "pmid": "12080108",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:29.149673",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_visceral_adiposity_and_physical_inactivity_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "atypical_antipsychotics_olanzapine_clozapine",
+      "canonical_name": "Atypical antipsychotics (Olanzapine / Clozapine)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Atypical antipsychotics (Olanzapine / Clozapine) (Pharmacologic) — unfavorable effect on Homeostatic Model Assessment of Insulin Resistance (HOMA-IR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "atypical_antipsychotics_olanzapine_clozapine_standard",
+          "regimen": {
+            "regimen_id": "atypical_antipsychotics_olanzapine_clozapine_standard",
+            "intervention_id": "atypical_antipsychotics_olanzapine_clozapine",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Atypical antipsychotics (Olanzapine / Clozapine)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "atypical_antipsychotics_olanzapine_clozapine_homa_ir_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 85.0,
+                "lower": 50.0,
+                "upper": 120.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "atypical_antipsychotics_olanzapine_clozapine_homa_ir_unfavorable",
+                "original_value": 85.0,
+                "original_lower": 50.0,
+                "original_upper": 120.0,
+                "original_unit": "%",
+                "canonical_value": 85.0,
+                "canonical_lower": 50.0,
+                "canonical_upper": 120.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-20850949_adults",
+                "evidence_id": "PMID-20850949",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-20850949",
+                "source_type": "META_ANALYSIS",
+                "title": "Rummel-Kluge C, et al. Schizophr Res. 2010;123:225-233. PMID: 20850949",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2010,
+                "doi": null,
+                "pmid": "20850949",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:29.348707",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "atypical_antipsychotics_olanzapine_clozapine_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

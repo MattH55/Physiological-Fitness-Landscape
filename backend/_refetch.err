@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\matth\OneDrive\Documents\OpenSourceMed\Physiological Fitness Landscape\backend\_fetch_ctgov_outcome_variables.py", line 737, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\matth\OneDrive\Documents\OpenSourceMed\Physiological Fitness Landscape\backend\_fetch_ctgov_outcome_variables.py", line 699, in main
+    save_cache(cache)
+    ~~~~~~~~~~^^^^^^^
+  File "C:\Users\matth\OneDrive\Documents\OpenSourceMed\Physiological Fitness Landscape\backend\_fetch_ctgov_outcome_variables.py", line 169, in save_cache
+    os.replace(tmp, CACHE_PATH)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'backend/_ctgov_outcome_variables.json.tmp' -> 'backend/_ctgov_outcome_variables.json'

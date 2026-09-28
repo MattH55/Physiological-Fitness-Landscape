@@ -1,0 +1,21 @@
+{
+  "modifier_id": "gse82323_muscle_heat",
+  "protocol": "gse82323_heat_3h",
+  "biological_context": "skeletal_muscle",
+  "tissue": "human skeletal muscle",
+  "study_id": "GSE82323",
+  "species": "human",
+  "dose": {
+    "unit": "exposure_min",
+    "value": 30.0,
+    "temperature_c": 73.0,
+    "duration_hr": 0.5,
+    "note": "Chamber air ~73 C for 30 min. Not converted to CEM43 because 73 C is air, not tissue."
+  },
+  "duration_hr": 0.5,
+  "timepoint_hr": 3.0,
+  "platform": "GPL5175",
+  "n_replicates": 6,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

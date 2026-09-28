@@ -1,0 +1,36 @@
+Redo these procurement website images with the specified fixes:
+
+1. battery-monitoring.jpg
+2. boundary-legal-survey.jpg
+3. culvert-installation.jpg
+4. culverts.jpg
+5. domestic-water-well.jpg
+6. drainage-watershed-assessment.jpg
+7. drone-orthomosaic.jpg
+8. equipment-access.jpg
+9. erosion-control.jpg (show a slope being fortified)
+10. excavation.jpg (fix the vehicles)
+11. farm-gate.jpg (single fence and gate)
+12. flood-mitigation.jpg (sandbags and HESCO barriers at river's edge)
+13. freeze-detection.jpg (show underground probe)
+14. gate-operator.jpg (show single gate)
+15. greenhouse-installation.jpg (simplify)
+16. holding-tank.jpg
+17. irrigation-well.jpg (make well simpler)
+18. leak-detection.jpg (show pipe)
+19. lidar-topographic-survey.jpg (show forested hill)
+20. pond-aeration.jpg
+21. pond-dugout.jpg
+22. pressure-tank-system.jpg
+23. rainwater-harvesting.jpg
+24. road-construction.jpg (road goes in one direction)
+25. road-rehabilitation.jpg (one road)
+26. root-cellar.jpg (show access to underground)
+27. security-cameras.jpg (show single security camera on a pole)
+28. septic-mound.jpg
+29. soil-restoration.jpg
+30. swales.jpg (show on hill)
+31. wildlife-cameras.jpg
+
+Target directory:
+C:\Users\matth\OneDrive\Documents\Sovereign Policy Institute\Permaculture\Expanding Edge\Expanding Edge Website\public\land-intelligence\procurement\website-images\images\

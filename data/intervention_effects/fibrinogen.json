@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "fibrinogen",
+  "biomarker_name": "Fibrinogen",
+  "biomarker_units": "mg/dL",
+  "interventions": [
+    {
+      "intervention_id": "regular_moderate_aerobic_endurance_exercise",
+      "canonical_name": "Regular moderate aerobic endurance exercise",
+      "intervention_type": "EXERCISE",
+      "description": "Regular moderate aerobic endurance exercise (Exercise) — favorable effect on Fibrinogen",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "regular_moderate_aerobic_endurance_exercise_standard",
+          "regimen": {
+            "regimen_id": "regular_moderate_aerobic_endurance_exercise_standard",
+            "intervention_id": "regular_moderate_aerobic_endurance_exercise",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Regular moderate aerobic endurance exercise",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "regular_moderate_aerobic_endurance_exercise_fibrinogen_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -15.0,
+                "lower": -20.0,
+                "upper": -10.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "regular_moderate_aerobic_endurance_exercise_fibrinogen_favorable",
+                "original_value": -15.0,
+                "original_lower": -20.0,
+                "original_upper": -10.0,
+                "original_unit": "%",
+                "canonical_value": -15.0,
+                "canonical_lower": -20.0,
+                "canonical_upper": -10.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-8322283_adults",
+                "evidence_id": "PMID-8322283",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-8322283",
+                "source_type": "META_ANALYSIS",
+                "title": "Ernst E. Thromb Res. 1993;70:271-274. PMID: 8322283",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1993,
+                "doi": null,
+                "pmid": "8322283",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:59.216221",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "regular_moderate_aerobic_endurance_exercise_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "cessation_of_cigarette_smoking",
+      "canonical_name": "Cessation of cigarette smoking",
+      "intervention_type": "BEHAVIORAL",
+      "description": "Cessation of cigarette smoking (Behavioral) — favorable effect on Fibrinogen",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "cessation_of_cigarette_smoking_standard",
+          "regimen": {
+            "regimen_id": "cessation_of_cigarette_smoking_standard",
+            "intervention_id": "cessation_of_cigarette_smoking",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Cessation of cigarette smoking",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "cessation_of_cigarette_smoking_fibrinogen_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -20.0,
+                "lower": -25.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "cessation_of_cigarette_smoking_fibrinogen_favorable",
+                "original_value": -20.0,
+                "original_lower": -25.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -20.0,
+                "canonical_lower": -25.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-8902167_adults",
+                "evidence_id": "PMID-8902167",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-8902167",
+                "source_type": "OBSERVATIONAL",
+                "title": "Tuut M, et al. Atherosclerosis. 1996;126:125-132. PMID: 8902167",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1996,
+                "doi": null,
+                "pmid": "8902167",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:59.470495",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "cessation_of_cigarette_smoking_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "fibrate_therapy_fenofibrate_145_200_mgday",
+      "canonical_name": "Fibrate therapy (Fenofibrate 145-200 mg/day)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Fibrate therapy (Fenofibrate 145-200 mg/day) (Pharmacologic) — favorable effect on Fibrinogen",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "fibrate_therapy_fenofibrate_145_200_mgday_standard",
+          "regimen": {
+            "regimen_id": "fibrate_therapy_fenofibrate_145_200_mgday_standard",
+            "intervention_id": "fibrate_therapy_fenofibrate_145_200_mgday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Fibrate therapy (Fenofibrate 145-200 mg/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "fibrate_therapy_fenofibrate_145_200_mgday_fibrinogen_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -16.0,
+                "lower": -20.0,
+                "upper": -12.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "fibrate_therapy_fenofibrate_145_200_mgday_fibrinogen_favorable",
+                "original_value": -16.0,
+                "original_lower": -20.0,
+                "original_upper": -12.0,
+                "original_unit": "%",
+                "canonical_value": -16.0,
+                "canonical_lower": -20.0,
+                "canonical_upper": -12.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-16730737_adults",
+                "evidence_id": "PMID-16730737",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-16730737",
+                "source_type": "RCT",
+                "title": "Rosenson RS. Atherosclerosis. 2007;190:407-411. PMID: 16730737",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2007,
+                "doi": null,
+                "pmid": "16730737",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:59.664298",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "fibrate_therapy_fenofibrate_145_200_mgday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "cigarette_smoking_and_chronic_tobacco_inhalation",
+      "canonical_name": "Cigarette smoking and chronic tobacco inhalation",
+      "intervention_type": "BEHAVIORAL",
+      "description": "Cigarette smoking and chronic tobacco inhalation (Behavioral) — unfavorable effect on Fibrinogen",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "cigarette_smoking_and_chronic_tobacco_inhalation_standard",
+          "regimen": {
+            "regimen_id": "cigarette_smoking_and_chronic_tobacco_inhalation_standard",
+            "intervention_id": "cigarette_smoking_and_chronic_tobacco_inhalation",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Cigarette smoking and chronic tobacco inhalation",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "cigarette_smoking_and_chronic_tobacco_inhalation_fibrinogen_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 32.5,
+                "lower": 20.0,
+                "upper": 45.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "cigarette_smoking_and_chronic_tobacco_inhalation_fibrinogen_unfavorable",
+                "original_value": 32.5,
+                "original_lower": 20.0,
+                "original_upper": 45.0,
+                "original_unit": "%",
+                "canonical_value": 32.5,
+                "canonical_lower": 20.0,
+                "canonical_upper": 45.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-15477943_adults",
+                "evidence_id": "PMID-15477943",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-15477943",
+                "source_type": "META_ANALYSIS",
+                "title": "Bembich S, et al. Thromb Haemost. 2004;92:699-707. PMID: 15477943",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2004,
+                "doi": null,
+                "pmid": "15477943",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:59.838940",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "cigarette_smoking_and_chronic_tobacco_inhalation_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_particulate_air_pollution_exposure_pm25",
+      "canonical_name": "High particulate air pollution exposure (PM2.5)",
+      "intervention_type": "ENVIRONMENTAL",
+      "description": "High particulate air pollution exposure (PM2.5) (Environmental) — unfavorable effect on Fibrinogen",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_particulate_air_pollution_exposure_pm25_standard",
+          "regimen": {
+            "regimen_id": "high_particulate_air_pollution_exposure_pm25_standard",
+            "intervention_id": "high_particulate_air_pollution_exposure_pm25",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High particulate air pollution exposure (PM2.5)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_particulate_air_pollution_exposure_pm25_fibrinogen_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 17.5,
+                "lower": 10.0,
+                "upper": 25.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_particulate_air_pollution_exposure_pm25_fibrinogen_unfavorable",
+                "original_value": 17.5,
+                "original_lower": 10.0,
+                "original_upper": 25.0,
+                "original_unit": "%",
+                "canonical_value": 17.5,
+                "canonical_lower": 10.0,
+                "canonical_upper": 25.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-14676145_adults",
+                "evidence_id": "PMID-14676145",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-14676145",
+                "source_type": "OBSERVATIONAL",
+                "title": "Pope CA 3rd, et al. Circulation. 2004;109:71-77. PMID: 14676145",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2004,
+                "doi": null,
+                "pmid": "14676145",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:00.137753",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_particulate_air_pollution_exposure_pm25_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

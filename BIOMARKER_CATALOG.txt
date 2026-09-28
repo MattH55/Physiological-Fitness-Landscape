@@ -1,0 +1,846 @@
+================================================================================
+PHYSIOLOGICAL FITNESS LANDSCAPE - BIOMARKER CATALOG
+Total biomarkers: 111
+================================================================================
+
+--------------------------------------------------------------------------------
+  AGING & SENESCENCE (4)
+--------------------------------------------------------------------------------
+  Alpha-Klotho
+    Slug: alpha-klotho
+    Units: pg/mL  |  Specimen: serum  |  Direction: higher_better
+    Valid range: 0.0-2000.0 (optimal: 500.0)
+    Anti-aging hormone. Strong inverse predictor of all-cause mortality. Low levels associated with
+    accelerated aging, CKD, and cardiovascular disease. Genuinely undercovered in most panels.
+
+  DNA Methylation Age Acceleration (PhenoAge/GrimAge)
+    Slug: dna-methylation-age
+    Units: years  |  Specimen: blood  |  Direction: lower_better
+    Valid range: -20.0-20.0 (optimal: 0.0)
+    Epigenetic clock. Among the best all-cause mortality predictors known. Age acceleration (difference
+    between biological and chronological age) strongly predicts mortality independent of traditional
+    risk factors.
+
+  Leukocyte Telomere Length
+    Slug: telomere-length
+    Units: kb  |  Specimen: blood  |  Direction: higher_better
+    Valid range: 3.0-10.0 (optimal: 6.0)
+    Cellular aging marker. Short telomeres associated with increased all-cause mortality,
+    cardiovascular disease, and cancer. Reflects cumulative cell division and oxidative stress.
+
+  Mitochondrial DNA Copy Number
+    Slug: mt-dna-copy
+    Units: copies/cell  |  Specimen: blood  |  Direction: u_shaped
+    Valid range: 0.0-10000.0 (optimal: 3000.0)
+    Marker of mitochondrial function and cellular aging. Both very low and very high copy numbers
+    associated with increased mortality. Reflects mitochondrial biogenesis and turnover.
+
+--------------------------------------------------------------------------------
+  ANTHROPOMETRIC (4)
+--------------------------------------------------------------------------------
+  Appendicular Lean Mass / Sarcopenia Index
+    Slug: appendicular-lean-mass
+    Units: kg/m2  |  Specimen: imaging  |  Direction: higher_better
+    Valid range: 0.0-40.0 (optimal: 20.0)
+    Skeletal muscle mass index. Low appendicular lean mass (sarcopenia) associated with increased
+    all-cause mortality, especially in elderly. Strong independent predictor.
+
+  Body Mass Index (BMI)
+    Slug: bmi
+    Units: kg/m2  |  Specimen: anthropometric  |  Direction: u_shaped
+    Valid range: 10.0-80.0 (optimal: 22.0)
+    One of the most-replicated U-shaped mortality curves. Both underweight (<18.5) and obesity (>30)
+    associated with increased mortality. Optimal range ~20-25 in most cohorts.
+
+  Gait Speed
+    Slug: gait-speed
+    Units: m/s  |  Specimen: functional  |  Direction: higher_better
+    Valid range: 0.0-3.0 (optimal: 1.2)
+    As strong or stronger than grip strength in elderly cohorts. Slow gait speed (<0.8 m/s) associated
+    with significantly increased all-cause mortality. Marker of overall physiological reserve.
+
+  Waist-to-Height Ratio (WHtR)
+    Slug: waist-height-ratio
+    Units: ratio  |  Specimen: anthropometric  |  Direction: lower_better
+    Valid range: 0.0-2.0 (optimal: 0.5)
+    Outperforms BMI in several meta-analyses for predicting cardiovascular and all-cause mortality.
+    Cutoff >0.5 associated with increased risk regardless of height.
+
+--------------------------------------------------------------------------------
+  AUTONOMIC (2)
+--------------------------------------------------------------------------------
+  Heart Rate Variability (SDNN)
+    Slug: hrv-sdnn
+    Units: ms  |  Specimen: functional  |  Direction: higher_better
+    Valid range: 0.0-300.0 (optimal: 100.0)
+    Distinct, strong independent predictor of cardiovascular and all-cause mortality. Low SDNN (<100
+    ms) associated with significantly increased risk. Reflects autonomic nervous system balance.
+
+  Orthostatic Blood Pressure Drop
+    Slug: orthostatic-bp-drop
+    Units: mmHg  |  Specimen: functional  |  Direction: lower_better
+    Valid range: 0.0-100.0 (optimal: 20.0)
+    Drop in systolic BP upon standing. >20 mmHg drop associated with increased cardiovascular and
+    all-cause mortality. Marker of autonomic dysfunction and volume status.
+
+--------------------------------------------------------------------------------
+  BONE & MINERAL (2)
+--------------------------------------------------------------------------------
+  Bone Mineral Density T-score (DXA)
+    Slug: bmd-tscore
+    Units: T-score  |  Specimen: imaging  |  Direction: higher_better
+    Valid range: -5.0-5.0 (optimal: 0.0)
+    Strong all-cause mortality predictor independent of fracture. T-score < -2.5 (osteoporosis)
+    associated with significantly increased mortality. Reflects overall skeletal health and aging.
+
+  Parathyroid Hormone (PTH)
+    Slug: pth
+    Units: pg/mL  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 0.0-1000.0 (optimal: 55.0)
+    Regulates calcium and bone metabolism. U-shaped mortality curve: both very low and very high PTH
+    associated with increased mortality. Strong in CKD and elderly cohorts.
+
+--------------------------------------------------------------------------------
+  CARDIAC & HEMODYNAMICS (10)
+--------------------------------------------------------------------------------
+  Carotid-Femoral Pulse Wave Velocity (PWV)
+    Slug: pulse_wave_velocity
+    Units: m/s  |  Specimen: physiological  |  Direction: lower_better
+    Valid range: 4.0-18.0 (optimal: 6.5)
+    Gold-standard non-invasive measurement of large elastic arterial stiffness and vascular aging.
+
+  Copeptin
+    Slug: copeptin
+    Units: pmol/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-100.0 (optimal: 5.0)
+    Co-secreted with vasopressin. Stable surrogate for vasopressin release. Strong mortality predictor
+    in sepsis, ACS, and heart failure.
+
+  Diastolic Blood Pressure (DBP)
+    Slug: diastolic_blood_pressure
+    Units: mmHg  |  Specimen: physiological  |  Direction: u_shaped
+    Valid range: 50.0-120.0 (optimal: 74.0)
+    Trough arterial pressure during ventricular diastole; shows J-shaped association in elderly
+    patients with arterial stiffness.
+
+  Galectin-3
+    Slug: galectin-3
+    Units: ng/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-20.0 (optimal: 7.0)
+    Beta-galactoside-binding lectin. Strong independent predictor of heart failure progression and
+    all-cause mortality. Elevated in fibrosis and inflammation.
+
+  High-Sensitivity Cardiac Troponin T (hs-cTnT)
+    Slug: hs_troponin_t
+    Units: ng/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 1.5-100.0 (optimal: 3.0)
+    Specific biomarker of myocardial cellular injury, ischemia, and subclinical chronic cardiomyocyte
+    death.
+
+  Mid-Regional Pro-Adrenomedullin (MR-proADM)
+    Slug: mr-proadm
+    Units: pmol/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-100.0 (optimal: 5.0)
+    Vasodilatory peptide. Strong mortality predictor in sepsis, heart failure, and general population
+    cohorts. Reflects endothelial stress and sympathetic activation.
+
+  N-Terminal Pro-B-Type Natriuretic Peptide (NT-proBNP)
+    Slug: nt_pro_bnp
+    Units: pg/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 10.0-3500.0 (optimal: 35.0)
+    Cleaved prohormone fragment released by ventricular cardiomyocytes in response to wall tension,
+    stretch, and volume overload.
+
+  Resting Heart Rate (RHR)
+    Slug: resting_heart_rate
+    Units: bpm  |  Specimen: physiological  |  Direction: lower_better
+    Valid range: 40.0-115.0 (optimal: 55.0)
+    Reflects parasympathetic vagal tone vs sympathetic drive; strong independent prospective predictor
+    of all-cause mortality across cohorts.
+
+  ST2 Soluble (sST2)
+    Slug: sst2
+    Units: ng/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-10000.0 (optimal: 100.0)
+    Interleukin-1-like receptor 1. Strong predictor of adverse cardiovascular outcomes and mortality.
+    FDA-cleared for heart failure risk stratification.
+
+  Systolic Blood Pressure (SBP)
+    Slug: systolic_blood_pressure
+    Units: mmHg  |  Specimen: physiological  |  Direction: lower_better
+    Valid range: 85.0-210.0 (optimal: 115.0)
+    Peak arterial pressure during ventricular contraction; continuous monotonic driver of
+    cardiovascular and cerebrovascular mortality above 115 mmHg.
+
+--------------------------------------------------------------------------------
+  CARDIOMETABOLIC (4)
+--------------------------------------------------------------------------------
+  Apolipoprotein B to A1 Ratio (ApoB/ApoA1)
+    Slug: apob-apoa1
+    Units: ratio  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-5.0 (optimal: 0.8)
+    Ratio of atherogenic to anti-atherogenic apolipoproteins. Outperforms either alone in predicting
+    cardiovascular mortality. Strong in INTERHEART and other large cohorts.
+
+  Lipoprotein-Associated Phospholipase A2 (Lp-PLA2)
+    Slug: lp-pla2
+    Units: U/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-500.0 (optimal: 100.0)
+    Enzyme generating pro-inflammatory oxidized phospholipids. Strong independent predictor of
+    cardiovascular events and mortality. Marker of vascular inflammation.
+
+  Non-HDL Cholesterol
+    Slug: non-hdl-c
+    Units: mg/dL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-400.0 (optimal: 130.0)
+    Total cholesterol minus HDL. Captures all atherogenic particles. Outperforms LDL-C in several
+    cohorts, especially with hypertriglyceridemia.
+
+  Trimethylamine N-oxide (TMAO)
+    Slug: tmao
+    Units: umol/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-50.0 (optimal: 5.0)
+    Gut-microbiome derived metabolite. Well-established independent predictor of cardiovascular
+    mortality. Elevated in atherosclerosis, CKD, and metabolic syndrome.
+
+--------------------------------------------------------------------------------
+  COAGULATION (3)
+--------------------------------------------------------------------------------
+  D-dimer
+    Slug: d-dimer
+    Units: ug/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-10.0 (optimal: 0.5)
+    Fibrin degradation product. Strong independent predictor of cardiovascular and all-cause mortality.
+    Elevated in VTE, atherosclerosis, cancer, and chronic inflammation.
+
+  Plasminogen Activator Inhibitor-1 (PAI-1)
+    Slug: pai-1
+    Units: U/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-100.0 (optimal: 10.0)
+    Key regulator of fibrinolysis. Strong independent predictor of cardiovascular mortality. Elevated
+    in metabolic syndrome, obesity, and chronic inflammation.
+
+  von Willebrand Factor (vWF)
+    Slug: vwf
+    Units: %  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-500.0 (optimal: 100.0)
+    Adhesion glycoprotein. Elevated levels predict cardiovascular events and mortality. Marker of
+    endothelial dysfunction and thrombotic risk.
+
+--------------------------------------------------------------------------------
+  ELECTROLYTES & MINERALS (6)
+--------------------------------------------------------------------------------
+  Serum Calcium
+    Slug: serum_calcium
+    Units: mg/dL  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 7.5-11.5 (optimal: 9.3)
+    Total circulating calcium; regulates neuromuscular transmission, coagulation cascade, and cardiac
+    excitation-contraction coupling.
+
+  Serum Phosphate
+    Slug: serum_phosphate
+    Units: mg/dL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 1.8-6.0 (optimal: 3.2)
+    Inorganic anion crucial for cellular energy (ATP), nucleic acid structure, and vascular
+    calcification pathways.
+
+  Serum Potassium
+    Slug: serum_potassium
+    Units: mmol/L  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 3.0-6.0 (optimal: 4.3)
+    Major intracellular cation essential for myocardial resting membrane potential and neuromuscular
+    conduction; strict U-shaped mortality curve.
+
+  Serum Selenium
+    Slug: selenium
+    Units: ug/L  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 0.0-500.0 (optimal: 100.0)
+    Trace mineral and antioxidant (glutathione peroxidase cofactor). U-shaped mortality curve: both
+    deficiency and excess associated with increased mortality. Strong in cardiovascular cohorts.
+
+  Serum Sodium
+    Slug: serum_sodium
+    Units: mmol/L  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 125.0-150.0 (optimal: 140.0)
+    Major extracellular cation regulating extracellular fluid volume and osmolality; both hyponatremia
+    and hypernatremia confer high mortality.
+
+  Serum Zinc
+    Slug: zinc
+    Units: ug/dL  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 0.0-300.0 (optimal: 100.0)
+    Trace mineral. U-shaped mortality association. Deficiency associated with immune dysfunction,
+    increased infection risk, and mortality. Excess may be harmful.
+
+--------------------------------------------------------------------------------
+  FUNCTIONAL FITNESS (2)
+--------------------------------------------------------------------------------
+  Cardiorespiratory Fitness (VO2 Max)
+    Slug: vo2_max
+    Units: mL/kg/min  |  Specimen: functional  |  Direction: higher_better
+    Valid range: 12.0-70.0 (optimal: 48.0)
+    Maximal volume of oxygen consumed during graded maximal exercise; one of the strongest independent
+    predictors of survival.
+
+  Maximal Grip Strength
+    Slug: grip_strength
+    Units: kg  |  Specimen: functional  |  Direction: higher_better
+    Valid range: 10.0-75.0 (optimal: 48.0)
+    Surrogate of total-body muscular strength, neuromuscular reserve, and resistance to frailty;
+    inversely associated with mortality.
+
+--------------------------------------------------------------------------------
+  GLYCEMIC & METABOLIC (4)
+--------------------------------------------------------------------------------
+  Fasting Plasma Glucose
+    Slug: fasting_glucose
+    Units: mg/dL  |  Specimen: plasma  |  Direction: u_shaped
+    Valid range: 60.0-250.0 (optimal: 88.0)
+    Primary diagnostic criterion for impaired fasting glucose and diabetes mellitus; J-shaped mortality
+    risk.
+
+  Fasting Serum Insulin
+    Slug: fasting_insulin
+    Units: uIU/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 1.5-45.0 (optimal: 4.5)
+    Pancreatic beta-cell peptide hormone; hyperinsulinemia is a foundational hallmark of metabolic
+    syndrome and atherogenesis.
+
+  Glycated Hemoglobin (HbA1c)
+    Slug: hba1c
+    Units: %  |  Specimen: whole_blood  |  Direction: u_shaped
+    Valid range: 4.2-13.0 (optimal: 5.3)
+    Integrates average erythrocyte glycemic exposure over past 90-120 days. U-shaped mortality curves
+    in diabetic and frail cohorts.
+
+  Homeostatic Model Assessment of Insulin Resistance (HOMA-IR)
+    Slug: homa_ir
+    Units: index  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.3-12.0 (optimal: 1.0)
+    Mathematical model quantifying baseline hepatic and peripheral insulin resistance from fasting
+    state.
+
+--------------------------------------------------------------------------------
+  HEMATOLOGY (10)
+--------------------------------------------------------------------------------
+  Eosinophil Count
+    Slug: eosinophil-count
+    Units: 10^3 cells/uL  |  Specimen: blood  |  Direction: higher_better
+    Valid range: 0.0-20.0 (optimal: 0.3)
+    Low eosinophil count associated with increased mortality in multiple large cohorts (UK Biobank,
+    ARIC). Very low/absent eosinophils indicate immune senescence or chronic stress.
+
+  Hematocrit
+    Slug: hematocrit
+    Units: %  |  Specimen: blood  |  Direction: u_shaped
+    Valid range: 10.0-80.0 (optimal: 45.0)
+    Volume fraction of red blood cells. U-shaped mortality curve: both anemia and polycythemia
+    associated with increased mortality. Strong in cardiovascular and CKD cohorts.
+
+  Hemoglobin Concentration
+    Slug: hemoglobin
+    Units: g/dL  |  Specimen: whole_blood  |  Direction: u_shaped
+    Valid range: 7.0-19.5 (optimal: 14.8)
+    Primary oxygen transport protein inside erythrocytes; both anemia and polycythemia elevate
+    all-cause mortality (U-shaped curve).
+
+  Mean Corpuscular Volume (MCV)
+    Slug: mcv
+    Units: fL  |  Specimen: blood  |  Direction: u_shaped
+    Valid range: 50.0-200.0 (optimal: 90.0)
+    Average red blood cell size. U-shaped mortality association: both microcytosis (iron deficiency,
+    thalassemia) and macrocytosis (B12/folate deficiency, liver disease) associated with increased
+    mortality.
+
+  Mean Platelet Volume (MPV)
+    Slug: mpv
+    Units: fL  |  Specimen: blood  |  Direction: u_shaped
+    Valid range: 5.0-20.0 (optimal: 10.0)
+    Average platelet size. U-shaped mortality association: both very low and very high MPV associated
+    with increased cardiovascular mortality. Marker of platelet activation and turnover.
+
+  Monocyte Count
+    Slug: monocyte-count
+    Units: 10^3 cells/uL  |  Specimen: blood  |  Direction: lower_better
+    Valid range: 0.0-20.0 (optimal: 0.5)
+    Elevated monocyte count associated with increased cardiovascular and all-cause mortality. Marker of
+    chronic inflammation and immune activation.
+
+  Platelet Count
+    Slug: platelet_count
+    Units: 10^3 cells/uL  |  Specimen: whole_blood  |  Direction: u_shaped
+    Valid range: 75.0-600.0 (optimal: 230.0)
+    Cellular mediators of hemostasis and vascular thrombosis; thrombocytopenia and extreme reactive
+    thrombocytosis both confer elevated mortality.
+
+  Red Cell Distribution Width (RDW)
+    Slug: red_cell_distribution_width
+    Units: %  |  Specimen: whole_blood  |  Direction: lower_better
+    Valid range: 10.0-20.0 (optimal: 11.5)
+    Measures coefficient of variation of red blood cell volume. Elevated in systemic inflammation,
+    impaired erythropoiesis, and biological aging.
+
+  Transferrin Saturation
+    Slug: transferrin-sat
+    Units: %  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 0.0-100.0 (optimal: 30.0)
+    Iron status marker. U-shaped mortality curve: both iron deficiency and iron overload associated
+    with increased mortality. Strong in CKD, cardiovascular, and cancer cohorts.
+
+  White Blood Cell Count (WBC)
+    Slug: white_blood_cells
+    Units: 10^3 cells/uL  |  Specimen: whole_blood  |  Direction: lower_better
+    Valid range: 2.5-18.0 (optimal: 5.0)
+    Total circulating immune cells; sensitive marker of systemic subclinical inflammation, infection,
+    and immunological tone.
+
+--------------------------------------------------------------------------------
+  INFLAMMATION (19)
+--------------------------------------------------------------------------------
+  Erythrocyte Sedimentation Rate (ESR)
+    Slug: erythrocyte_sedimentation_rate
+    Units: mm/hr  |  Specimen: whole_blood  |  Direction: lower_better
+    Valid range: 1.0-90.0 (optimal: 5.0)
+    Measures rate of erythrocyte settling in 1 hour; indirect measure of plasma acute-phase proteins
+    and immunoglobulins.
+
+  Fibrinogen
+    Slug: fibrinogen
+    Units: mg/dL  |  Specimen: plasma  |  Direction: lower_better
+    Valid range: 150.0-650.0 (optimal: 240.0)
+    Acute phase coagulation glycoprotein synthesized by hepatocytes; elevates blood viscosity and
+    thrombotic risk.
+
+  Growth Differentiation Factor-15 (GDF-15)
+    Slug: gdf-15
+    Units: pg/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-2000.0 (optimal: 100.0)
+    One of the strongest all-cause mortality predictors in recent cohorts (Kivimaki et al. 2015, UK
+    Biobank). Strongly elevated in heart failure, CKD, and cancer.
+
+  High-Sensitivity C-Reactive Protein (hs-CRP)
+    Slug: high_sensitivity_crp
+    Units: mg/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.1-25.0 (optimal: 0.5)
+    Acute phase reactant synthesized by liver hepatocytes in response to IL-6; potent systemic vascular
+    inflammation marker.
+
+  Interleukin-18 (IL-18)
+    Slug: il-18
+    Units: pg/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-1000.0 (optimal: 50.0)
+    Pro-inflammatory cytokine. Elevated in cardiovascular disease, CKD, and cancer. Independent
+    mortality predictor in several cohorts.
+
+  Interleukin-6 (IL-6)
+    Slug: interleukin_6
+    Units: pg/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.2-30.0 (optimal: 1.0)
+    Pro-inflammatory cytokine triggering hepatic acute-phase response and senescence-associated
+    secretory phenotype (SASP).
+
+  Lymphocyte-to-Monocyte Ratio (LMR)
+    Slug: lmr
+    Units: ratio  |  Specimen: blood  |  Direction: higher_better
+    Valid range: 0.1-20.0 (optimal: 5.0)
+    Inverse predictor of mortality across multiple meta-analyses. Low LMR indicates immune
+    dysregulation and chronic inflammation.
+
+  Monocyte Chemoattractant Protein-1 (MCP-1 / CCL2)
+    Slug: mcp-1
+    Units: pg/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-500.0 (optimal: 50.0)
+    Chemokine driving monocyte recruitment. Strong independent predictor of cardiovascular mortality.
+    Elevated in atherosclerosis, metabolic syndrome, and chronic inflammation.
+
+  Neopterin
+    Slug: neopterin
+    Units: nmol/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-100.0 (optimal: 5.0)
+    Macrophage/T-cell activation marker. Strong mortality predictor in elderly cohorts. Reflects immune
+    activation and oxidative stress. Elevated in chronic infections, autoimmune disease, and cancer.
+
+  Neutrophil-to-Lymphocyte Ratio (NLR)
+    Slug: neutrophil_lymphocyte_ratio
+    Units: ratio  |  Specimen: whole_blood  |  Direction: lower_better
+    Valid range: 0.5-8.0 (optimal: 1.5)
+    Integrated index of innate pro-inflammatory drive (neutrophils) vs adaptive immune reserve
+    (lymphocytes).
+
+  Pentraxin-3 (PTX3)
+    Slug: ptx3
+    Units: ng/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-100.0 (optimal: 10.0)
+    Late-phase acute phase reactant. Complements CRP with independent signal in cardiovascular cohorts.
+    Strong predictor of MI, stroke, and all-cause mortality.
+
+  Procalcitonin
+    Slug: procalcitonin
+    Units: ng/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-100.0 (optimal: 0.1)
+    Primarily acute infection marker, but chronic elevation carries independent mortality signal.
+    Strong predictor in sepsis, heart failure, and general population cohorts.
+
+  Serum Ferritin
+    Slug: serum_ferritin
+    Units: ug/L  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 10.0-800.0 (optimal: 90.0)
+    Intracellular iron storage protein and acute-phase reactant; extreme elevations reflect iron
+    overload, liver inflammation, or macrophage activation.
+
+  Soluble CD14 (sCD14)
+    Slug: scd14
+    Units: ng/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-5000.0 (optimal: 500.0)
+    Monocyte/macrophage activation marker. Elevated in chronic inflammation, sepsis, and cardiovascular
+    disease. Independent mortality signal.
+
+  Soluble CD163 (sCD163)
+    Slug: scd163
+    Units: ng/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-10000.0 (optimal: 1000.0)
+    Macrophage activation marker. Strong predictor of adverse outcomes in heart failure, sepsis, and
+    CKD. Reflects macrophage-mediated inflammation.
+
+  Soluble Tumor Necrosis Factor Receptor 1 (sTNFR1)
+    Slug: stnfr1
+    Units: pg/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-5000.0 (optimal: 500.0)
+    Soluble TNF receptor with strong mortality signal in cardiovascular and cancer cohorts. Marker of
+    chronic TNF-driven inflammation.
+
+  Soluble Urokinase Plasminogen Activator Receptor (suPAR)
+    Slug: supar
+    Units: ng/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-20.0 (optimal: 2.5)
+    Master inflammation marker. Arguably as strong as GDF-15 for all-cause mortality. Strong signal in
+    Danish and US cohorts. Elevated in sepsis, CKD, cancer, and cardiovascular disease.
+
+  Tumor Necrosis Factor-alpha (TNF-alpha)
+    Slug: tumor_necrosis_factor_alpha
+    Units: pg/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.1-20.0 (optimal: 0.8)
+    Master pro-inflammatory cytokine driving systemic vascular inflammation, sarcopenia, and insulin
+    resistance.
+
+  YKL-40 (CHI3L1)
+    Slug: ykl-40
+    Units: ng/mL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-500.0 (optimal: 50.0)
+    Chitinase-3-like protein 1. Strong mortality predictor in cardiovascular disease, COPD, and cancer
+    cohorts. Marker of tissue remodeling and inflammation.
+
+--------------------------------------------------------------------------------
+  LIPIDS & APOLIPOPROTEINS (7)
+--------------------------------------------------------------------------------
+  Apolipoprotein A1 (ApoA1)
+    Slug: apolipoprotein_a1
+    Units: mg/dL  |  Specimen: serum  |  Direction: higher_better
+    Valid range: 70.0-240.0 (optimal: 165.0)
+    Primary structural protein of HDL particles; activates LCAT and drives cellular cholesterol efflux.
+
+  Apolipoprotein B (ApoB)
+    Slug: apolipoprotein_b
+    Units: mg/dL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 30.0-200.0 (optimal: 60.0)
+    Structural apolipoprotein with exactly one molecule per atherogenic particle (LDL, VLDL, IDL,
+    Lp(a)); superior marker of particle number.
+
+  HDL Cholesterol
+    Slug: hdl_cholesterol
+    Units: mg/dL  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 20.0-120.0 (optimal: 60.0)
+    Apolipoprotein A-I rich lipoprotein mediating reverse cholesterol transport. Demonstrates U-shaped
+    risk at extreme high levels.
+
+  LDL Cholesterol
+    Slug: ldl_cholesterol
+    Units: mg/dL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 30.0-250.0 (optimal: 70.0)
+    Major atherogenic lipoprotein carrying ApoB-100; causally implicated in atherosclerosis and
+    ischemic heart disease.
+
+  Lipoprotein(a) [Lp(a)]
+    Slug: lipoprotein_a
+    Units: nmol/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 5.0-300.0 (optimal: 15.0)
+    LDL-like particle with apolipoprotein(a) covalently bound; genetically determined causal driver of
+    calcific aortic stenosis and ASCVD.
+
+  Serum Triglycerides
+    Slug: triglycerides
+    Units: mg/dL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 35.0-600.0 (optimal: 80.0)
+    Neutral lipids packaged inside triglyceride-rich lipoproteins (chylomicrons, VLDL); surrogate of
+    atherogenic remnant particles and insulin resistance.
+
+  Total Cholesterol
+    Slug: total_cholesterol
+    Units: mg/dL  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 100.0-350.0 (optimal: 180.0)
+    Total sterol content in all circulating lipoprotein fractions (LDL, HDL, VLDL). Shows U-shaped
+    association in older populations.
+
+--------------------------------------------------------------------------------
+  LIVER & NUTRITIONAL (10)
+--------------------------------------------------------------------------------
+  Alanine Aminotransferase (ALT)
+    Slug: alanine_aminotransferase
+    Units: U/L  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 6.0-120.0 (optimal: 22.0)
+    Hepatocellular enzyme localized primarily to cytosol; very low ALT in elderly reflects frailty and
+    hepatic sarcopenia (U-shaped curve).
+
+  Albumin:Globulin Ratio (A/G)
+    Slug: ag-ratio
+    Units: ratio  |  Specimen: serum  |  Direction: higher_better
+    Valid range: 0.0-5.0 (optimal: 1.5)
+    Inverted A/G ratio associated with chronic inflammation, liver disease, and increased mortality.
+    Reflects balance of hepatic synthetic function and immune activation.
+
+  Alkaline Phosphatase (ALP)
+    Slug: alkaline_phosphatase
+    Units: U/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 25.0-200.0 (optimal: 55.0)
+    Membrane-bound metalloenzyme expressed in liver, bone, kidneys, and vascular endothelial tissue;
+    involved in vascular calcification pathways.
+
+  Aspartate Aminotransferase (AST)
+    Slug: aspartate_aminotransferase
+    Units: U/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 8.0-110.0 (optimal: 18.0)
+    Mitochondrial and cytosolic enzyme expressed in liver, myocardium, and skeletal muscle; elevated in
+    tissue injury and advanced fibrosis.
+
+  De Ritis Ratio (AST/ALT)
+    Slug: deritis-ratio
+    Units: ratio  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-10.0 (optimal: 1.0)
+    Ratio of AST to ALT. Outperforms either enzyme alone in several cohorts. Elevated ratio suggests
+    alcoholic liver disease, cirrhosis, or extrahepatic sources. Strong mortality predictor.
+
+  FIB-4 Index (NAFLD Fibrosis Score)
+    Slug: fib-4
+    Units: index  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-20.0 (optimal: 1.46)
+    Composite index: (Age x AST) / (Platelets x sqrt(ALT)). Non-invasive fibrosis marker. Strong
+    mortality predictor in NAFLD/MASLD populations. Cutoffs: <1.3 low risk, >3.25 high risk.
+
+  Gamma-Glutamyl Transferase (GGT)
+    Slug: gamma_glutamyl_transferase
+    Units: U/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 5.0-180.0 (optimal: 15.0)
+    Microsomal enzyme involved in glutathione metabolism; sensitive marker of hepatic steatosis,
+    alcohol consumption, and systemic oxidative stress.
+
+  Serum Albumin
+    Slug: serum_albumin
+    Units: g/dL  |  Specimen: serum  |  Direction: higher_better
+    Valid range: 2.5-5.2 (optimal: 4.6)
+    Major circulating protein synthesized by hepatocytes; negative acute-phase reactant reflecting
+    nutritional status and systemic inflammation.
+
+  Serum Total Bilirubin
+    Slug: total_bilirubin
+    Units: mg/dL  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 0.2-3.0 (optimal: 0.85)
+    End product of heme catabolism; endogenous antioxidant at physiologic concentrations, elevated in
+    cholestasis and hemolysis.
+
+  Total Protein
+    Slug: total-protein
+    Units: g/dL  |  Specimen: serum  |  Direction: higher_better
+    Valid range: 0.0-10.0 (optimal: 7.0)
+    Low total protein associated with increased mortality, malnutrition, and chronic disease. Reflects
+    hepatic synthetic function and nutritional status.
+
+--------------------------------------------------------------------------------
+  METABOLIC (1)
+--------------------------------------------------------------------------------
+  Homocysteine
+    Slug: homocysteine
+    Units: umol/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-100.0 (optimal: 10.0)
+    Amino acid metabolite. Elevated levels associated with cardiovascular mortality, cognitive decline,
+    and fracture risk. U-shaped curve in some cohorts.
+
+--------------------------------------------------------------------------------
+  NEURO (1)
+--------------------------------------------------------------------------------
+  Neurofilament Light Chain (NfL)
+    Slug: nfl
+    Units: pg/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.0-2000.0 (optimal: 50.0)
+    Neuronal injury marker. Recently shown to predict all-cause mortality independent of
+    neurodegenerative diagnosis. Growing evidence base in cardiovascular and general population cohorts.
+
+--------------------------------------------------------------------------------
+  OXIDATIVE STRESS (1)
+--------------------------------------------------------------------------------
+  8-Hydroxy-2'-deoxyguanosine (8-OHdG)
+    Slug: 8-ohdg
+    Units: pmol/mol DNA  |  Specimen: urine  |  Direction: lower_better
+    Valid range: 0.0-50.0 (optimal: 5.0)
+    DNA oxidation marker. Elevated levels indicate oxidative DNA damage. Associated with increased
+    cancer risk, cardiovascular disease, and all-cause mortality.
+
+--------------------------------------------------------------------------------
+  RENAL & PURINE (6)
+--------------------------------------------------------------------------------
+  Beta-2 Microglobulin
+    Slug: beta2-microglobulin
+    Units: mg/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.5-10.0 (optimal: 2.0)
+    Independent mortality predictor beyond creatinine-eGFR. Elevated in CKD, myeloma, and chronic
+    inflammation. Strong signal in dialysis populations.
+
+  Blood Urea Nitrogen (BUN)
+    Slug: blood_urea_nitrogen
+    Units: mg/dL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 5.0-60.0 (optimal: 10.0)
+    End product of protein catabolism; elevated in renal insufficiency, dehydration, gastrointestinal
+    bleeding, and high neurohormonal activation.
+
+  Estimated Glomerular Filtration Rate (eGFR)
+    Slug: estimated_gfr
+    Units: mL/min/1.73m2  |  Specimen: serum  |  Direction: higher_better
+    Valid range: 15.0-140.0 (optimal: 105.0)
+    Calculated rate of kidney filtration through glomerular capillaries; primary clinical marker of
+    chronic kidney disease stage.
+
+  Serum Creatinine
+    Slug: serum_creatinine
+    Units: mg/dL  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 0.4-4.5 (optimal: 0.85)
+    Breakdown product of creatine phosphate from muscle metabolism; inverse surrogate of glomerular
+    filtration rate (GFR).
+
+  Serum Cystatin C
+    Slug: cystatin_c
+    Units: mg/L  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 0.4-3.5 (optimal: 0.75)
+    Low-molecular-weight cysteine protease inhibitor produced by all nucleated cells;
+    muscle-mass-independent filtration marker.
+
+  Serum Uric Acid
+    Slug: serum_uric_acid
+    Units: mg/dL  |  Specimen: serum  |  Direction: lower_better
+    Valid range: 2.0-12.0 (optimal: 4.5)
+    End product of purine nucleotide degradation; biomarker of endothelial dysfunction, oxidative
+    stress, and metabolic syndrome.
+
+--------------------------------------------------------------------------------
+  URINE BIOMARKERS (4)
+--------------------------------------------------------------------------------
+  Urinary Creatinine Concentration
+    Slug: urine_creatinine
+    Units: mg/dL  |  Specimen: urine  |  Direction: higher_better
+    Valid range: 20.0-350.0 (optimal: 160.0)
+    Surrogate for lean muscle mass and urinary hydration/concentration normalization in spot urine
+    samples.
+
+  Urinary Flow Rate
+    Slug: urine_flow_rate
+    Units: mL/min  |  Specimen: urine  |  Direction: u_shaped
+    Valid range: 0.2-4.5 (optimal: 1.3)
+    Volume rate of urine production; physiological biomarker of hydration volume and acute tubular
+    perfusion.
+
+  Urine Albumin-to-Creatinine Ratio (uACR)
+    Slug: urine_albumin_creatinine_ratio
+    Units: mg/g  |  Specimen: urine  |  Direction: lower_better
+    Valid range: 1.0-300.0 (optimal: 4.0)
+    Sensitive indicator of glomerular capillary permeability and generalized systemic endothelial
+    dysfunction.
+
+  Urine Specific Gravity
+    Slug: urine_specific_gravity
+    Units: ratio  |  Specimen: urine  |  Direction: u_shaped
+    Valid range: 1.002-1.035 (optimal: 1.015)
+    Measures kidney tubular concentrating ability and physiological hydration state; deviations signal
+    renal tubular decline.
+
+--------------------------------------------------------------------------------
+  VITAMINS & ENDOCRINE (11)
+--------------------------------------------------------------------------------
+  Adiponectin
+    Slug: adiponectin
+    Units: ug/mL  |  Specimen: serum  |  Direction: higher_better
+    Valid range: 0.0-100.0 (optimal: 10.0)
+    Anti-inflammatory adipokine. Low levels associated with increased cardiovascular and all-cause
+    mortality. Adiponectin:leptin ratio may be better signal. Strong in metabolic syndrome cohorts.
+
+  C-peptide
+    Slug: c-peptide
+    Units: ng/mL  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 0.0-20.0 (optimal: 1.5)
+    Marker of endogenous insulin secretion. U-shaped mortality curve: very low (beta-cell failure) and
+    very high (insulin resistance) both associated with increased mortality.
+
+  Dehydroepiandrosterone Sulfate (DHEA-S)
+    Slug: dhea-s
+    Units: ug/dL  |  Specimen: serum  |  Direction: higher_better
+    Valid range: 0.0-1000.0 (optimal: 200.0)
+    Adrenal androgen precursor. Low levels associated with increased all-cause mortality, especially in
+    elderly. Declines with age. Potential protective role against cardiovascular disease.
+
+  Free Triiodothyronine (Free T3)
+    Slug: free-t3
+    Units: pg/mL  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 0.2-10.0 (optimal: 3.1)
+    Active thyroid hormone. U-shaped mortality curve: both low (hypothyroidism) and high
+    (hyperthyroidism) associated with increased mortality. Strong signal in elderly.
+
+  Insulin-like Growth Factor 1 (IGF-1)
+    Slug: igf-1
+    Units: ng/mL  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 0.0-1000.0 (optimal: 200.0)
+    U-shaped mortality curve. Both very low (anorexia, aging, malnutrition) and very high (cancer risk)
+    associated with increased mortality. Strong in elderly cohorts.
+
+  Serum 25-Hydroxyvitamin D
+    Slug: serum_25_hydroxyvitamin_d
+    Units: nmol/L  |  Specimen: serum  |  Direction: higher_better
+    Valid range: 15.0-180.0 (optimal: 100.0)
+    Main storage form of vitamin D in circulation; inverse non-linear relationship with all-cause and
+    cardiovascular mortality.
+
+  Serum Cortisol
+    Slug: cortisol
+    Units: ug/dL  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 0.0-100.0 (optimal: 10.0)
+    Stress hormone. U-shaped mortality curve: both very low (adrenal insufficiency) and very high
+    (chronic stress, Cushing's) associated with increased mortality. Cortisol:DHEA-S ratio may be
+    better signal.
+
+  Serum Folate
+    Slug: folate
+    Units: ng/mL  |  Specimen: serum  |  Direction: higher_better
+    Valid range: 0.0-100.0 (optimal: 10.0)
+    Vitamin B9. Low levels associated with increased mortality, cardiovascular disease, and cognitive
+    decline. Important for one-carbon metabolism and DNA synthesis.
+
+  Thyroid-Stimulating Hormone (TSH)
+    Slug: tsh
+    Units: mIU/L  |  Specimen: serum  |  Direction: u_shaped
+    Valid range: 0.01-50.0 (optimal: 2.5)
+    U-shaped mortality curve well characterized. Both subclinical hypothyroidism (high TSH) and
+    subclinical hyperthyroidism (low TSH) associated with increased mortality, especially in elderly.
+
+  Total Testosterone
+    Slug: testosterone
+    Units: ng/dL  |  Specimen: serum  |  Direction: higher_better
+    Valid range: 0.0-2000.0 (optimal: 500.0)
+    Low levels independently predict all-cause and cardiovascular mortality in men. U-shaped curve in
+    some cohorts. Strong signal in elderly and metabolically unhealthy populations.
+
+  Vitamin B12 (Cobalamin)
+    Slug: vitamin-b12
+    Units: pg/mL  |  Specimen: serum  |  Direction: higher_better
+    Valid range: 0.0-2000.0 (optimal: 500.0)
+    Essential vitamin. Deficiency associated with increased mortality, neurological damage, and
+    megaloblastic anemia. U-shaped curve in some cohorts.
+
+================================================================================
+END OF CATALOG
+================================================================================

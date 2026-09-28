@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "red_cell_distribution_width",
+  "biomarker_name": "Red Cell Distribution Width (RDW)",
+  "biomarker_units": "%",
+  "interventions": [
+    {
+      "intervention_id": "correction_of_micronutrient_deficiencies_iron_vitamin_b12_folate",
+      "canonical_name": "Correction of micronutrient deficiencies (Iron, Vitamin B12, Folate)",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Correction of micronutrient deficiencies (Iron, Vitamin B12, Folate) (Nutraceutical) — favorable effect on Red Cell Distribution Width (RDW)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "correction_of_micronutrient_deficiencies_iron_vitamin_b12_folate_standard",
+          "regimen": {
+            "regimen_id": "correction_of_micronutrient_deficiencies_iron_vitamin_b12_folate_standard",
+            "intervention_id": "correction_of_micronutrient_deficiencies_iron_vitamin_b12_folate",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Correction of micronutrient deficiencies (Iron, Vitamin B12, Folate)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "correction_of_micronutrient_deficiencies_iron_vitamin_b12_folate_red_cell_distribution_width_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -2.25,
+                "lower": -3.0,
+                "upper": -1.5,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "correction_of_micronutrient_deficiencies_iron_vitamin_b12_folate_red_cell_distribution_width_favorable",
+                "original_value": -2.25,
+                "original_lower": -3.0,
+                "original_upper": -1.5,
+                "original_unit": "%",
+                "canonical_value": -2.25,
+                "canonical_lower": -3.0,
+                "canonical_upper": -1.5,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-28363943_adults",
+                "evidence_id": "PMID-28363943",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-28363943",
+                "source_type": "META_ANALYSIS",
+                "title": "Green R. Blood. 2017;129:2603-2611. PMID: 28363943",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2017,
+                "doi": null,
+                "pmid": "28363943",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:11.805543",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "correction_of_micronutrient_deficiencies_iron_vitamin_b12_folate_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "regular_cardiorespiratory_physical_exercise_training",
+      "canonical_name": "Regular cardiorespiratory physical exercise training",
+      "intervention_type": "EXERCISE",
+      "description": "Regular cardiorespiratory physical exercise training (Exercise) — favorable effect on Red Cell Distribution Width (RDW)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "regular_cardiorespiratory_physical_exercise_training_standard",
+          "regimen": {
+            "regimen_id": "regular_cardiorespiratory_physical_exercise_training_standard",
+            "intervention_id": "regular_cardiorespiratory_physical_exercise_training",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Regular cardiorespiratory physical exercise training",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "regular_cardiorespiratory_physical_exercise_training_red_cell_distribution_width_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -0.85,
+                "lower": -1.2,
+                "upper": -0.5,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "regular_cardiorespiratory_physical_exercise_training_red_cell_distribution_width_favorable",
+                "original_value": -0.85,
+                "original_lower": -1.2,
+                "original_upper": -0.5,
+                "original_unit": "%",
+                "canonical_value": -0.85,
+                "canonical_lower": -1.2,
+                "canonical_upper": -0.5,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-24967664_adults",
+                "evidence_id": "PMID-24967664",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-24967664",
+                "source_type": "OBSERVATIONAL",
+                "title": "Lippi G, et al. Clin Chem Lab Med. 2014;52:e255-e257. PMID: 24967664",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "24967664",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:12.265256",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "regular_cardiorespiratory_physical_exercise_training_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "anti_inflammatory_dietary_intervention_rich_in_antioxidants",
+      "canonical_name": "Anti-inflammatory dietary intervention rich in antioxidants",
+      "intervention_type": "DIET",
+      "description": "Anti-inflammatory dietary intervention rich in antioxidants (Diet) — favorable effect on Red Cell Distribution Width (RDW)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "anti_inflammatory_dietary_intervention_rich_in_antioxidants_standard",
+          "regimen": {
+            "regimen_id": "anti_inflammatory_dietary_intervention_rich_in_antioxidants_standard",
+            "intervention_id": "anti_inflammatory_dietary_intervention_rich_in_antioxidants",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Anti-inflammatory dietary intervention rich in antioxidants",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "anti_inflammatory_dietary_intervention_rich_in_antioxidants_red_cell_distribution_width_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -0.7,
+                "lower": -1.0,
+                "upper": -0.4,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "anti_inflammatory_dietary_intervention_rich_in_antioxidants_red_cell_distribution_width_favorable",
+                "original_value": -0.7,
+                "original_lower": -1.0,
+                "original_upper": -0.4,
+                "original_unit": "%",
+                "canonical_value": -0.7,
+                "canonical_lower": -1.0,
+                "canonical_upper": -0.4,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-19900593_adults",
+                "evidence_id": "PMID-19900593",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-19900593",
+                "source_type": "RCT",
+                "title": "Forhecz Z, et al. Am J Cardiol. 2009;104:1550-1555. PMID: 19900593",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2009,
+                "doi": null,
+                "pmid": "19900593",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:13.711069",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "anti_inflammatory_dietary_intervention_rich_in_antioxidants_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "advanced_congestive_heart_failure_and_cardiorenal_syndrome",
+      "canonical_name": "Advanced congestive heart failure and cardiorenal syndrome",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Advanced congestive heart failure and cardiorenal syndrome (Clinical) — unfavorable effect on Red Cell Distribution Width (RDW)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "advanced_congestive_heart_failure_and_cardiorenal_syndrome_standard",
+          "regimen": {
+            "regimen_id": "advanced_congestive_heart_failure_and_cardiorenal_syndrome_standard",
+            "intervention_id": "advanced_congestive_heart_failure_and_cardiorenal_syndrome",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Advanced congestive heart failure and cardiorenal syndrome",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "advanced_congestive_heart_failure_and_cardiorenal_syndrome_red_cell_distribution_width_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 8.75,
+                "lower": 2.0,
+                "upper": 15.5,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "advanced_congestive_heart_failure_and_cardiorenal_syndrome_red_cell_distribution_width_unfavorable",
+                "original_value": 8.75,
+                "original_lower": 2.0,
+                "original_upper": 15.5,
+                "original_unit": "%",
+                "canonical_value": 8.75,
+                "canonical_lower": 2.0,
+                "canonical_upper": 15.5,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17601544_adults",
+                "evidence_id": "PMID-17601544",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17601544",
+                "source_type": "OBSERVATIONAL",
+                "title": "Felker GM, et al. J Am Coll Cardiol. 2007;50:40-47. PMID: 17601544",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2007,
+                "doi": null,
+                "pmid": "17601544",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:14.835322",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "advanced_congestive_heart_failure_and_cardiorenal_syndrome_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_chronic_kidney_disease_with_uremic_erythrocyte_damage",
+      "canonical_name": "Severe chronic kidney disease with uremic erythrocyte damage",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe chronic kidney disease with uremic erythrocyte damage (Clinical) — unfavorable effect on Red Cell Distribution Width (RDW)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_chronic_kidney_disease_with_uremic_erythrocyte_damage_standard",
+          "regimen": {
+            "regimen_id": "severe_chronic_kidney_disease_with_uremic_erythrocyte_damage_standard",
+            "intervention_id": "severe_chronic_kidney_disease_with_uremic_erythrocyte_damage",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe chronic kidney disease with uremic erythrocyte damage",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_chronic_kidney_disease_with_uremic_erythrocyte_damage_red_cell_distribution_width_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 2.75,
+                "lower": 1.5,
+                "upper": 4.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_chronic_kidney_disease_with_uremic_erythrocyte_damage_red_cell_distribution_width_unfavorable",
+                "original_value": 2.75,
+                "original_lower": 1.5,
+                "original_upper": 4.0,
+                "original_unit": "%",
+                "canonical_value": 2.75,
+                "canonical_lower": 1.5,
+                "canonical_upper": 4.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-24751433_adults",
+                "evidence_id": "PMID-24751433",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-24751433",
+                "source_type": "OBSERVATIONAL",
+                "title": "Solak Y, et al. Am J Nephrol. 2014;39:328-335. PMID: 24751433",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "24751433",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:15.262280",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_chronic_kidney_disease_with_uremic_erythrocyte_damage_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

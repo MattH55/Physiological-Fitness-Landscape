@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "lipoprotein_a",
+  "biomarker_name": "Lipoprotein(a) [Lp(a)]",
+  "biomarker_units": "nmol/L",
+  "interventions": [
+    {
+      "intervention_id": "antisense_oligonucleotide_sirna_inhibitors_pelacarsen_olpasiran",
+      "canonical_name": "Antisense oligonucleotide / siRNA inhibitors (Pelacarsen / Olpasiran)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Antisense oligonucleotide / siRNA inhibitors (Pelacarsen / Olpasiran) (Pharmacologic) — favorable effect on Lipoprotein(a) [Lp(a)]",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "antisense_oligonucleotide_sirna_inhibitors_pelacarsen_olpasiran_standard",
+          "regimen": {
+            "regimen_id": "antisense_oligonucleotide_sirna_inhibitors_pelacarsen_olpasiran_standard",
+            "intervention_id": "antisense_oligonucleotide_sirna_inhibitors_pelacarsen_olpasiran",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Antisense oligonucleotide / siRNA inhibitors (Pelacarsen / Olpasiran)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "antisense_oligonucleotide_sirna_inhibitors_pelacarsen_olpasiran_lipoprotein_a_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -82.5,
+                "lower": -95.0,
+                "upper": -70.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "antisense_oligonucleotide_sirna_inhibitors_pelacarsen_olpasiran_lipoprotein_a_favorable",
+                "original_value": -82.5,
+                "original_lower": -95.0,
+                "original_upper": -70.0,
+                "original_unit": "%",
+                "canonical_value": -82.5,
+                "canonical_lower": -95.0,
+                "canonical_upper": -70.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-36342177_adults",
+                "evidence_id": "PMID-36342177",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-36342177",
+                "source_type": "RCT",
+                "title": "O'Donoghue ML, et al. N Engl J Med. 2022;387:1855-1864. PMID: 36342177",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2022,
+                "doi": null,
+                "pmid": "36342177",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:21.207740",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "antisense_oligonucleotide_sirna_inhibitors_pelacarsen_olpasiran_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab",
+      "canonical_name": "PCSK9 monoclonal antibodies (Evolocumab / Alirocumab)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "PCSK9 monoclonal antibodies (Evolocumab / Alirocumab) (Pharmacologic) — favorable effect on Apolipoprotein B (ApoB)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab_standard",
+          "regimen": {
+            "regimen_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab_standard",
+            "intervention_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for PCSK9 monoclonal antibodies (Evolocumab / Alirocumab)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab_lipoprotein_a_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -30.0,
+                "lower": -35.0,
+                "upper": -25.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab_lipoprotein_a_favorable",
+                "original_value": -30.0,
+                "original_lower": -35.0,
+                "original_upper": -25.0,
+                "original_unit": "%",
+                "canonical_value": -30.0,
+                "canonical_lower": -35.0,
+                "canonical_upper": -25.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-31948570_adults",
+                "evidence_id": "PMID-31948570",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-31948570",
+                "source_type": "META_ANALYSIS",
+                "title": "Bittner VA, et al. J Am Coll Cardiol. 2020;75:133-144. PMID: 31948570",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2020,
+                "doi": null,
+                "pmid": "31948570",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:21.565509",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "niacin_therapy_extended_release_1500_2000_mg",
+      "canonical_name": "Niacin therapy (Extended release 1500-2000 mg)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Niacin therapy (Extended release 1500-2000 mg) (Pharmacologic) — favorable effect on Lipoprotein(a) [Lp(a)]",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "niacin_therapy_extended_release_1500_2000_mg_standard",
+          "regimen": {
+            "regimen_id": "niacin_therapy_extended_release_1500_2000_mg_standard",
+            "intervention_id": "niacin_therapy_extended_release_1500_2000_mg",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Niacin therapy (Extended release 1500-2000 mg)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "niacin_therapy_extended_release_1500_2000_mg_lipoprotein_a_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -25.0,
+                "lower": -30.0,
+                "upper": -20.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "niacin_therapy_extended_release_1500_2000_mg_lipoprotein_a_favorable",
+                "original_value": -25.0,
+                "original_lower": -30.0,
+                "original_upper": -20.0,
+                "original_unit": "%",
+                "canonical_value": -25.0,
+                "canonical_lower": -30.0,
+                "canonical_upper": -20.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-16018787_adults",
+                "evidence_id": "PMID-16018787",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-16018787",
+                "source_type": "RCT",
+                "title": "Carlson LA. J Intern Med. 2005;258:94-114. PMID: 16018787",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2005,
+                "doi": null,
+                "pmid": "16018787",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:21.801103",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "niacin_therapy_extended_release_1500_2000_mg_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "genetically_low_lpa_kringle_iv_type_2_copy_number_variants",
+      "canonical_name": "Genetically low LPA Kringle IV type 2 copy number variants",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Genetically low LPA Kringle IV type 2 copy number variants (Clinical) — unfavorable effect on Lipoprotein(a) [Lp(a)]",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "genetically_low_lpa_kringle_iv_type_2_copy_number_variants_standard",
+          "regimen": {
+            "regimen_id": "genetically_low_lpa_kringle_iv_type_2_copy_number_variants_standard",
+            "intervention_id": "genetically_low_lpa_kringle_iv_type_2_copy_number_variants",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Genetically low LPA Kringle IV type 2 copy number variants",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "genetically_low_lpa_kringle_iv_type_2_copy_number_variants_lipoprotein_a_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 600.0,
+                "lower": 200.0,
+                "upper": 1000.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "genetically_low_lpa_kringle_iv_type_2_copy_number_variants_lipoprotein_a_unfavorable",
+                "original_value": 600.0,
+                "original_lower": 200.0,
+                "original_upper": 1000.0,
+                "original_unit": "%",
+                "canonical_value": 600.0,
+                "canonical_lower": 200.0,
+                "canonical_upper": 1000.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-20032323_adults",
+                "evidence_id": "PMID-20032323",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-20032323",
+                "source_type": "OBSERVATIONAL",
+                "title": "Clarke R, et al. N Engl J Med. 2009;361:2518-2528. PMID: 20032323",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2009,
+                "doi": null,
+                "pmid": "20032323",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:22.053714",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "genetically_low_lpa_kringle_iv_type_2_copy_number_variants_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "postmenopausal_hormone_depletion_and_estrogen_deficiency",
+      "canonical_name": "Postmenopausal hormone depletion and estrogen deficiency",
+      "intervention_type": "PHYSIOLOGICAL",
+      "description": "Postmenopausal hormone depletion and estrogen deficiency (Physiological) — unfavorable effect on Lipoprotein(a) [Lp(a)]",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "postmenopausal_hormone_depletion_and_estrogen_deficiency_standard",
+          "regimen": {
+            "regimen_id": "postmenopausal_hormone_depletion_and_estrogen_deficiency_standard",
+            "intervention_id": "postmenopausal_hormone_depletion_and_estrogen_deficiency",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Postmenopausal hormone depletion and estrogen deficiency",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "postmenopausal_hormone_depletion_and_estrogen_deficiency_lipoprotein_a_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 22.5,
+                "lower": 15.0,
+                "upper": 30.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "postmenopausal_hormone_depletion_and_estrogen_deficiency_lipoprotein_a_unfavorable",
+                "original_value": 22.5,
+                "original_lower": 15.0,
+                "original_upper": 30.0,
+                "original_unit": "%",
+                "canonical_value": 22.5,
+                "canonical_lower": 15.0,
+                "canonical_upper": 30.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-18377983_adults",
+                "evidence_id": "PMID-18377983",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-18377983",
+                "source_type": "OBSERVATIONAL",
+                "title": "Kimak E, et al. Clin Biochem. 2008;41:744-749. PMID: 18377983",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2008,
+                "doi": null,
+                "pmid": "18377983",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:22.318719",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "postmenopausal_hormone_depletion_and_estrogen_deficiency_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

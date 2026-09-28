@@ -31,11 +31,11 @@ def build_disease_signatures(db_session: Session) -> Dict[Union[int, str], Any]:
         panel_dict = {}
         panel_list = []
         by_type = {
-            "Molecular": [],
+            "Functional": [],
             "Lab / Clinical": [],
-            "Scales & PROs": [],
             "Pathology": [],
-            "Functional": []
+            "Scales & PROs": [],
+            "Molecular": []
         }
         type_a_molecular = []
         type_b_clinical = []
@@ -45,7 +45,14 @@ def build_disease_signatures(db_session: Session) -> Dict[Union[int, str], Any]:
         
         biomarker_vector = {}
 
-        for alt in alterations:
+        # Sort alterations so gene alterations (subtype 'Gene') are LOWEST priority.
+        # Non-gene alterations come first; gene alterations are pushed to the end.
+        sorted_alterations = sorted(
+            alterations,
+            key=lambda a: (1 if (a.subtype or "").strip().lower() == "gene" else 0, (a.name or "").lower())
+        )
+
+        for alt in sorted_alterations:
             type_key = alt.alteration_type if alt.alteration_type in by_type else "Lab / Clinical"
             alt_info = {
                 "id": alt.id,

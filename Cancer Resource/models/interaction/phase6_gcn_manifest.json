@@ -1,0 +1,25 @@
+{
+  "saved": "2026-09-28T05:09:19.569817+00:00",
+  "architecture": {
+    "class": "DrugsyncGCN",
+    "n_nodes": 979,
+    "gcn_input_dim": 2,
+    "gcn_hidden_dim": 16,
+    "gcn_n_layers": 3,
+    "fc_hidden_dims": [
+      16
+    ],
+    "readout": "mean",
+    "baseline_dim": 978
+  },
+  "trained_on": "2924 real pairs, data/lincs/phase4/ (ALMANAC + DrugComb, mimetic-anchored)",
+  "gene_list": "data/reference/genes_978.txt (978 L1000 landmark genes)",
+  "ppi_graph": "data/reference/ppi_edges.csv (real STRING v11.5, threshold 700)",
+  "validation": {
+    "bliss_rmse": 0.1105,
+    "gcn_rmse_cell_line_out": 0.113,
+    "gcn_rmse_drug_out": 0.1098,
+    "gate_6_passed": false
+  },
+  "warning": "Gate 6 FAILED (see PHASE_6_REPORT.md): this model does not beat Bliss independence under both leave-one-cell-line-out and leave-one-drug-out cross-validation. Predictions from this model are extrapolations, not validated forecasts. Never write a prediction from this model into synlethality/seed_data.py as tier_2b_model_predicted -- that tier is gated on Gate 6 passing."
+}

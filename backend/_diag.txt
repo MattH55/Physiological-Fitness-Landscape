@@ -1,0 +1,15 @@
+population_distributions = 55
+distributions = 58
+"mean" = 300
+"sd" = 300
+"p50" = 300
+"p10" = 0
+"p90" = 0
+"sex" = 300
+"age_band" = 300
+"curves" = 50
+"beta" = 0
+hazard = 475
+hazardRatio = 0
+hazard_ratio = 109
+index.html size = 8472552

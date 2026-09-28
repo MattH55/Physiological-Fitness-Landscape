@@ -1,0 +1,19 @@
+{
+  "modifier_id": "gse85620_cwi_post_vs_pre",
+  "protocol": "strength10w_cwi",
+  "biological_context": "skeletal_muscle",
+  "tissue": "human vastus lateralis",
+  "study_id": "GSE85620",
+  "species": "human",
+  "dose": {
+    "unit": "calendar_hours",
+    "duration_hr": 1680.0,
+    "note": "Water temperature is not in the GEO record, so none is stored."
+  },
+  "duration_hr": 1680.0,
+  "timepoint_hr": 1680.0,
+  "platform": "GPL22321",
+  "n_replicates": 6,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

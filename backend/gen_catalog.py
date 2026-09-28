@@ -1,0 +1,62 @@
+"""Generate a clean biomarker list as a txt file at project root."""
+import sqlite3
+from pathlib import Path
+from collections import defaultdict
+
+db = Path(__file__).resolve().parent.parent / "data" / "mortality_biomarkers.db"
+conn = sqlite3.connect(db)
+conn.row_factory = sqlite3.Row
+
+rows = conn.execute("""
+    SELECT id, slug, name, category, units, specimen_type, directionality, 
+           valid_domain_min, valid_domain_max, optimal_target, notes
+    FROM biomarker 
+    ORDER BY category, name
+""").fetchall()
+
+by_cat = defaultdict(list)
+for r in rows:
+    by_cat[r['category']].append(dict(r))
+
+lines = []
+lines.append("=" * 80)
+lines.append("PHYSIOLOGICAL FITNESS LANDSCAPE - BIOMARKER CATALOG")
+lines.append(f"Total biomarkers: {len(rows)}")
+lines.append("=" * 80)
+lines.append("")
+
+for cat in sorted(by_cat.keys()):
+    items = by_cat[cat]
+    lines.append(f"{'-' * 80}")
+    lines.append(f"  {cat.upper()} ({len(items)})")
+    lines.append(f"{'-' * 80}")
+    for b in items:
+        lines.append(f"  {b['name']}")
+        lines.append(f"    Slug: {b['slug']}")
+        lines.append(f"    Units: {b['units']}  |  Specimen: {b['specimen_type']}  |  Direction: {b['directionality']}")
+        vmin = b['valid_domain_min']
+        vmax = b['valid_domain_max']
+        opt = b['optimal_target']
+        domain = f"{vmin}-{vmax}" if vmin is not None and vmax is not None else "n/a"
+        opt_str = f" (optimal: {opt})" if opt is not None else ""
+        lines.append(f"    Valid range: {domain}{opt_str}")
+        if b['notes']:
+            note = b['notes']
+            while len(note) > 100:
+                cut = note.rfind(' ', 0, 100)
+                if cut == -1:
+                    cut = 100
+                lines.append(f"    {note[:cut]}")
+                note = note[cut:].lstrip()
+            if note:
+                lines.append(f"    {note}")
+        lines.append("")
+
+lines.append("=" * 80)
+lines.append("END OF CATALOG")
+lines.append("=" * 80)
+
+out = Path(__file__).resolve().parent.parent / "BIOMARKER_CATALOG.txt"
+out.write_text('\n'.join(lines), encoding='utf-8')
+print(f"Written {len(lines)} lines to {out}")
+conn.close()

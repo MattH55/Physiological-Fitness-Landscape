@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "estimated_gfr",
+  "biomarker_name": "Estimated Glomerular Filtration Rate (eGFR)",
+  "biomarker_units": "mL/min/1.73m2",
+  "interventions": [
+    {
+      "intervention_id": "non_steroidal_mineralocorticoid_receptor_antagonists_finerenone",
+      "canonical_name": "Non-steroidal mineralocorticoid receptor antagonists (Finerenone)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Non-steroidal mineralocorticoid receptor antagonists (Finerenone) (Pharmacologic) — favorable effect on Estimated Glomerular Filtration Rate (eGFR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "non_steroidal_mineralocorticoid_receptor_antagonists_finerenone_standard",
+          "regimen": {
+            "regimen_id": "non_steroidal_mineralocorticoid_receptor_antagonists_finerenone_standard",
+            "intervention_id": "non_steroidal_mineralocorticoid_receptor_antagonists_finerenone",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Non-steroidal mineralocorticoid receptor antagonists (Finerenone)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "non_steroidal_mineralocorticoid_receptor_antagonists_finerenone_estimated_gfr_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -23.0,
+                "lower": -23.0,
+                "upper": -23.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "non_steroidal_mineralocorticoid_receptor_antagonists_finerenone_estimated_gfr_favorable",
+                "original_value": -23.0,
+                "original_lower": -23.0,
+                "original_upper": -23.0,
+                "original_unit": "%",
+                "canonical_value": -23.0,
+                "canonical_lower": -23.0,
+                "canonical_upper": -23.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-33264289_adults",
+                "evidence_id": "PMID-33264289",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-33264289",
+                "source_type": "RCT",
+                "title": "Bakris GL, et al. N Engl J Med. 2020;383:2219-2229. PMID: 33264289",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2020,
+                "doi": null,
+                "pmid": "33264289",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:11.976932",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "non_steroidal_mineralocorticoid_receptor_antagonists_finerenone_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "sglt2_inhibitors_empagliflozin_canagliflozin",
+      "canonical_name": "SGLT2 inhibitors (Empagliflozin / Canagliflozin)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "SGLT2 inhibitors (Empagliflozin / Canagliflozin) (Pharmacologic) — favorable effect on Estimated Glomerular Filtration Rate (eGFR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "sglt2_inhibitors_empagliflozin_canagliflozin_standard",
+          "regimen": {
+            "regimen_id": "sglt2_inhibitors_empagliflozin_canagliflozin_standard",
+            "intervention_id": "sglt2_inhibitors_empagliflozin_canagliflozin",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for SGLT2 inhibitors (Empagliflozin / Canagliflozin)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "sglt2_inhibitors_empagliflozin_canagliflozin_estimated_gfr_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 40.0,
+                "lower": 30.0,
+                "upper": 50.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "sglt2_inhibitors_empagliflozin_canagliflozin_estimated_gfr_favorable",
+                "original_value": 40.0,
+                "original_lower": 30.0,
+                "original_upper": 50.0,
+                "original_unit": "%",
+                "canonical_value": 40.0,
+                "canonical_lower": 30.0,
+                "canonical_upper": 50.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-30990260_adults",
+                "evidence_id": "PMID-30990260",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-30990260",
+                "source_type": "RCT",
+                "title": "Perkovic V, et al. N Engl J Med. 2019;380:2295-2306. PMID: 30990260",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2019,
+                "doi": null,
+                "pmid": "30990260",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:12.405899",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "sglt2_inhibitors_empagliflozin_canagliflozin_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "intensive_blood_pressure_normalization_13080_mmhg",
+      "canonical_name": "Intensive blood pressure normalization (<130/80 mmHg)",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Intensive blood pressure normalization (<130/80 mmHg) (Clinical) — favorable effect on Estimated Glomerular Filtration Rate (eGFR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "intensive_blood_pressure_normalization_13080_mmhg_standard",
+          "regimen": {
+            "regimen_id": "intensive_blood_pressure_normalization_13080_mmhg_standard",
+            "intervention_id": "intensive_blood_pressure_normalization_13080_mmhg",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Intensive blood pressure normalization (<130/80 mmHg)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "intensive_blood_pressure_normalization_13080_mmhg_estimated_gfr_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -25.0,
+                "lower": -25.0,
+                "upper": -25.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "intensive_blood_pressure_normalization_13080_mmhg_estimated_gfr_favorable",
+                "original_value": -25.0,
+                "original_lower": -25.0,
+                "original_upper": -25.0,
+                "original_unit": "%",
+                "canonical_value": -25.0,
+                "canonical_lower": -25.0,
+                "canonical_upper": -25.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-23687358_adults",
+                "evidence_id": "PMID-23687358",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-23687358",
+                "source_type": "META_ANALYSIS",
+                "title": "Lv J, et al. J Am Soc Nephrol. 2013;24:996-1003. PMID: 23687358",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2013,
+                "doi": null,
+                "pmid": "23687358",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:12.628786",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "intensive_blood_pressure_normalization_13080_mmhg_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "chronic_uncontrolled_type_2_diabetes_with_diabetic_glomerulosclerosis",
+      "canonical_name": "Chronic uncontrolled Type 2 Diabetes with diabetic glomerulosclerosis",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Chronic uncontrolled Type 2 Diabetes with diabetic glomerulosclerosis (Clinical) — unfavorable effect on Estimated Glomerular Filtration Rate (eGFR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "chronic_uncontrolled_type_2_diabetes_with_diabetic_glomerulosclerosis_standard",
+          "regimen": {
+            "regimen_id": "chronic_uncontrolled_type_2_diabetes_with_diabetic_glomerulosclerosis_standard",
+            "intervention_id": "chronic_uncontrolled_type_2_diabetes_with_diabetic_glomerulosclerosis",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Chronic uncontrolled Type 2 Diabetes with diabetic glomerulosclerosis",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "chronic_uncontrolled_type_2_diabetes_with_diabetic_glomerulosclerosis_estimated_gfr_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -8.0,
+                "lower": -8.0,
+                "upper": -8.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "mL/min",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "chronic_uncontrolled_type_2_diabetes_with_diabetic_glomerulosclerosis_estimated_gfr_unfavorable",
+                "original_value": -8.0,
+                "original_lower": -8.0,
+                "original_upper": -8.0,
+                "original_unit": "mL/min",
+                "canonical_value": -8.0,
+                "canonical_lower": -8.0,
+                "canonical_upper": -8.0,
+                "canonical_unit": "mL/min",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-12472787_adults",
+                "evidence_id": "PMID-12472787",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-12472787",
+                "source_type": "OBSERVATIONAL",
+                "title": "Adler AI, et al. Kidney Int. 2003;63:225-232. PMID: 12472787",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2003,
+                "doi": null,
+                "pmid": "12472787",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:12.928864",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "chronic_uncontrolled_type_2_diabetes_with_diabetic_glomerulosclerosis_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "chronic_heavy_exposure_to_radiocontrast_agents_or_nephrotoxic_aminoglycosides",
+      "canonical_name": "Chronic heavy exposure to radiocontrast agents or nephrotoxic aminoglycosides",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Chronic heavy exposure to radiocontrast agents or nephrotoxic aminoglycosides (Pharmacologic) — unfavorable effect on Estimated Glomerular Filtration Rate (eGFR)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "chronic_heavy_exposure_to_radiocontrast_agents_or_nephrotoxic_aminoglycosides_standard",
+          "regimen": {
+            "regimen_id": "chronic_heavy_exposure_to_radiocontrast_agents_or_nephrotoxic_aminoglycosides_standard",
+            "intervention_id": "chronic_heavy_exposure_to_radiocontrast_agents_or_nephrotoxic_aminoglycosides",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Chronic heavy exposure to radiocontrast agents or nephrotoxic aminoglycosides",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "chronic_heavy_exposure_to_radiocontrast_agents_or_nephrotoxic_aminoglycosides_estimated_gfr_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -35.0,
+                "lower": -50.0,
+                "upper": -20.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "chronic_heavy_exposure_to_radiocontrast_agents_or_nephrotoxic_aminoglycosides_estimated_gfr_unfavorable",
+                "original_value": -35.0,
+                "original_lower": -50.0,
+                "original_upper": -20.0,
+                "original_unit": "%",
+                "canonical_value": -35.0,
+                "canonical_lower": -50.0,
+                "canonical_upper": -20.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-15282351_adults",
+                "evidence_id": "PMID-15282351",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-15282351",
+                "source_type": "SYSTEMATIC_REVIEW",
+                "title": "Marenzi G, et al. N Engl J Med. 2004;351:437-446. PMID: 15282351",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2004,
+                "doi": null,
+                "pmid": "15282351",
+                "nct_id": null,
+                "url": null,
+                "study_design": "systematic_review",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:13.127457",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "chronic_heavy_exposure_to_radiocontrast_agents_or_nephrotoxic_aminoglycosides_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

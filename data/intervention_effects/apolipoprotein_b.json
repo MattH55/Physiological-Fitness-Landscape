@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "apolipoprotein_b",
+  "biomarker_name": "Apolipoprotein B (ApoB)",
+  "biomarker_units": "mg/dL",
+  "interventions": [
+    {
+      "intervention_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab",
+      "canonical_name": "PCSK9 monoclonal antibodies (Evolocumab / Alirocumab)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "PCSK9 monoclonal antibodies (Evolocumab / Alirocumab) (Pharmacologic) — favorable effect on Apolipoprotein B (ApoB)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab_standard",
+          "regimen": {
+            "regimen_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab_standard",
+            "intervention_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for PCSK9 monoclonal antibodies (Evolocumab / Alirocumab)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab_apolipoprotein_b_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -50.0,
+                "lower": -55.0,
+                "upper": -45.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab_apolipoprotein_b_favorable",
+                "original_value": -50.0,
+                "original_lower": -55.0,
+                "original_upper": -45.0,
+                "original_unit": "%",
+                "canonical_value": -50.0,
+                "canonical_lower": -55.0,
+                "canonical_upper": -45.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-28304224_adults",
+                "evidence_id": "PMID-28304224",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-28304224",
+                "source_type": "RCT",
+                "title": "Sabatine MS, et al. N Engl J Med. 2017;376:1713-1722. PMID: 28304224",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2017,
+                "doi": null,
+                "pmid": "28304224",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:16.734799",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "pcsk9_monoclonal_antibodies_evolocumab_alirocumab_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_intensity_statins_atorvastatin_80mg_rosuvastatin_40mg",
+      "canonical_name": "High-intensity statins (Atorvastatin 80mg / Rosuvastatin 40mg)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "High-intensity statins (Atorvastatin 80mg / Rosuvastatin 40mg) (Pharmacologic) — favorable effect on Apolipoprotein B (ApoB)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_intensity_statins_atorvastatin_80mg_rosuvastatin_40mg_standard",
+          "regimen": {
+            "regimen_id": "high_intensity_statins_atorvastatin_80mg_rosuvastatin_40mg_standard",
+            "intervention_id": "high_intensity_statins_atorvastatin_80mg_rosuvastatin_40mg",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High-intensity statins (Atorvastatin 80mg / Rosuvastatin 40mg)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_intensity_statins_atorvastatin_80mg_rosuvastatin_40mg_apolipoprotein_b_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -41.5,
+                "lower": -48.0,
+                "upper": -35.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_intensity_statins_atorvastatin_80mg_rosuvastatin_40mg_apolipoprotein_b_favorable",
+                "original_value": -41.5,
+                "original_lower": -48.0,
+                "original_upper": -35.0,
+                "original_unit": "%",
+                "canonical_value": -41.5,
+                "canonical_lower": -48.0,
+                "canonical_upper": -35.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-25082582_adults",
+                "evidence_id": "PMID-25082582",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-25082582",
+                "source_type": "META_ANALYSIS",
+                "title": "Boekholdt SM, et al. J Am Coll Cardiol. 2014;64:485-494. PMID: 25082582",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "25082582",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:18.552001",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_intensity_statins_atorvastatin_80mg_rosuvastatin_40mg_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "very_low_saturated_fat_diet_coupled_with_viscous_dietary_fibers",
+      "canonical_name": "Very low saturated fat diet coupled with viscous dietary fibers",
+      "intervention_type": "DIET",
+      "description": "Very low saturated fat diet coupled with viscous dietary fibers (Diet) — favorable effect on Apolipoprotein B (ApoB)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "very_low_saturated_fat_diet_coupled_with_viscous_dietary_fibers_standard",
+          "regimen": {
+            "regimen_id": "very_low_saturated_fat_diet_coupled_with_viscous_dietary_fibers_standard",
+            "intervention_id": "very_low_saturated_fat_diet_coupled_with_viscous_dietary_fibers",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Very low saturated fat diet coupled with viscous dietary fibers",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "very_low_saturated_fat_diet_coupled_with_viscous_dietary_fibers_apolipoprotein_b_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -20.0,
+                "lower": -25.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "very_low_saturated_fat_diet_coupled_with_viscous_dietary_fibers_apolipoprotein_b_favorable",
+                "original_value": -20.0,
+                "original_lower": -25.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -20.0,
+                "canonical_lower": -25.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-12885700_adults",
+                "evidence_id": "PMID-12885700",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-12885700",
+                "source_type": "RCT",
+                "title": "Jenkins DJ, et al. Am J Clin Nutr. 2003;78:213-221. PMID: 12885700",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2003,
+                "doi": null,
+                "pmid": "12885700",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:18.736077",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "very_low_saturated_fat_diet_coupled_with_viscous_dietary_fibers_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_saturated_fatty_acid_intake_and_trans_fat_consumption",
+      "canonical_name": "High saturated fatty acid intake and trans fat consumption",
+      "intervention_type": "DIET",
+      "description": "High saturated fatty acid intake and trans fat consumption (Diet) — unfavorable effect on Apolipoprotein B (ApoB)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_saturated_fatty_acid_intake_and_trans_fat_consumption_standard",
+          "regimen": {
+            "regimen_id": "high_saturated_fatty_acid_intake_and_trans_fat_consumption_standard",
+            "intervention_id": "high_saturated_fatty_acid_intake_and_trans_fat_consumption",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High saturated fatty acid intake and trans fat consumption",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_saturated_fatty_acid_intake_and_trans_fat_consumption_apolipoprotein_b_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 30.0,
+                "lower": 20.0,
+                "upper": 40.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_saturated_fatty_acid_intake_and_trans_fat_consumption_apolipoprotein_b_unfavorable",
+                "original_value": 30.0,
+                "original_lower": 20.0,
+                "original_upper": 40.0,
+                "original_unit": "%",
+                "canonical_value": 30.0,
+                "canonical_lower": 20.0,
+                "canonical_upper": 40.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-12716665_adults",
+                "evidence_id": "PMID-12716665",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-12716665",
+                "source_type": "META_ANALYSIS",
+                "title": "Mensink RP, et al. Am J Clin Nutr. 2003;77:1146-1155. PMID: 12716665",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2003,
+                "doi": null,
+                "pmid": "12716665",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:15.130107",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_saturated_fatty_acid_intake_and_trans_fat_consumption_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "familial_combined_hyperlipidemia_and_hepatic_apob_overproduction",
+      "canonical_name": "Familial combined hyperlipidemia and hepatic ApoB overproduction",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Familial combined hyperlipidemia and hepatic ApoB overproduction (Clinical) — unfavorable effect on Apolipoprotein B (ApoB)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "familial_combined_hyperlipidemia_and_hepatic_apob_overproduction_standard",
+          "regimen": {
+            "regimen_id": "familial_combined_hyperlipidemia_and_hepatic_apob_overproduction_standard",
+            "intervention_id": "familial_combined_hyperlipidemia_and_hepatic_apob_overproduction",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Familial combined hyperlipidemia and hepatic ApoB overproduction",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "familial_combined_hyperlipidemia_and_hepatic_apob_overproduction_apolipoprotein_b_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 70.0,
+                "lower": 40.0,
+                "upper": 100.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "familial_combined_hyperlipidemia_and_hepatic_apob_overproduction_apolipoprotein_b_unfavorable",
+                "original_value": 70.0,
+                "original_lower": 40.0,
+                "original_upper": 100.0,
+                "original_unit": "%",
+                "canonical_value": 70.0,
+                "canonical_lower": 40.0,
+                "canonical_upper": 100.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-31636021_adults",
+                "evidence_id": "PMID-31636021",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-31636021",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Sniderman AD, et al. J Clin Lipidol. 2019;13:706-716. PMID: 31636021",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2019,
+                "doi": null,
+                "pmid": "31636021",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:19.012217",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "familial_combined_hyperlipidemia_and_hepatic_apob_overproduction_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

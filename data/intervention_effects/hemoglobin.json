@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "hemoglobin",
+  "biomarker_name": "Hemoglobin Concentration",
+  "biomarker_units": "g/dL",
+  "interventions": [
+    {
+      "intervention_id": "erythropoiesis_stimulating_agents_esa_hif_ph_inhibitors_roxadustat_in_ckd_anemia",
+      "canonical_name": "Erythropoiesis-stimulating agents (ESA) / HIF-PH inhibitors (Roxadustat) in CKD anemia",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Erythropoiesis-stimulating agents (ESA) / HIF-PH inhibitors (Roxadustat) in CKD anemia (Pharmacologic) — favorable effect on Hemoglobin Concentration",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "erythropoiesis_stimulating_agents_esa_hif_ph_inhibitors_roxadustat_in_ckd_anemia_standard",
+          "regimen": {
+            "regimen_id": "erythropoiesis_stimulating_agents_esa_hif_ph_inhibitors_roxadustat_in_ckd_anemia_standard",
+            "intervention_id": "erythropoiesis_stimulating_agents_esa_hif_ph_inhibitors_roxadustat_in_ckd_anemia",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Erythropoiesis-stimulating agents (ESA) / HIF-PH inhibitors (Roxadustat) in CKD anemia",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "erythropoiesis_stimulating_agents_esa_hif_ph_inhibitors_roxadustat_in_ckd_anemia_hemoglobin_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -4.25,
+                "lower": -11.5,
+                "upper": 3.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "g",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "erythropoiesis_stimulating_agents_esa_hif_ph_inhibitors_roxadustat_in_ckd_anemia_hemoglobin_favorable",
+                "original_value": -4.25,
+                "original_lower": -11.5,
+                "original_upper": 3.0,
+                "original_unit": "g",
+                "canonical_value": -4.25,
+                "canonical_lower": -11.5,
+                "canonical_upper": 3.0,
+                "canonical_unit": "g",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-31340089_adults",
+                "evidence_id": "PMID-31340089",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-31340089",
+                "source_type": "RCT",
+                "title": "Chen N, et al. N Engl J Med. 2019;381:1001-1010. PMID: 31340089",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2019,
+                "doi": null,
+                "pmid": "31340089",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:07.818343",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "erythropoiesis_stimulating_agents_esa_hif_ph_inhibitors_roxadustat_in_ckd_anemia_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "intravenous_oral_iron_repletion_in_iron_deficiency_anemia",
+      "canonical_name": "Intravenous / oral iron repletion in iron deficiency anemia",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Intravenous / oral iron repletion in iron deficiency anemia (Nutraceutical) — favorable effect on Hemoglobin Concentration",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "intravenous_oral_iron_repletion_in_iron_deficiency_anemia_standard",
+          "regimen": {
+            "regimen_id": "intravenous_oral_iron_repletion_in_iron_deficiency_anemia_standard",
+            "intervention_id": "intravenous_oral_iron_repletion_in_iron_deficiency_anemia",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Intravenous / oral iron repletion in iron deficiency anemia",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "intravenous_oral_iron_repletion_in_iron_deficiency_anemia_hemoglobin_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 4.0,
+                "lower": 4.0,
+                "upper": 4.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "g",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "intravenous_oral_iron_repletion_in_iron_deficiency_anemia_hemoglobin_favorable",
+                "original_value": 4.0,
+                "original_lower": 4.0,
+                "original_upper": 4.0,
+                "original_unit": "g",
+                "canonical_value": 4.0,
+                "canonical_lower": 4.0,
+                "canonical_upper": 4.0,
+                "canonical_unit": "g",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-26463991_adults",
+                "evidence_id": "PMID-26463991",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-26463991",
+                "source_type": "META_ANALYSIS",
+                "title": "Auerbach M, et al. Am J Hematol. 2016;91:31-38. PMID: 26463991",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2016,
+                "doi": null,
+                "pmid": "26463991",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:08.674627",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "intravenous_oral_iron_repletion_in_iron_deficiency_anemia_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "altitude_hypoxic_conditioning_protocol",
+      "canonical_name": "Altitude / hypoxic conditioning protocol",
+      "intervention_type": "EXERCISE",
+      "description": "Altitude / hypoxic conditioning protocol (Exercise) — favorable effect on Hemoglobin Concentration",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "altitude_hypoxic_conditioning_protocol_standard",
+          "regimen": {
+            "regimen_id": "altitude_hypoxic_conditioning_protocol_standard",
+            "intervention_id": "altitude_hypoxic_conditioning_protocol",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Altitude / hypoxic conditioning protocol",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "altitude_hypoxic_conditioning_protocol_hemoglobin_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 1.2,
+                "lower": 1.2,
+                "upper": 1.2,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "g",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "altitude_hypoxic_conditioning_protocol_hemoglobin_favorable",
+                "original_value": 1.2,
+                "original_lower": 1.2,
+                "original_upper": 1.2,
+                "original_unit": "g",
+                "canonical_value": 1.2,
+                "canonical_lower": 1.2,
+                "canonical_upper": 1.2,
+                "canonical_unit": "g",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-9216951_adults",
+                "evidence_id": "PMID-9216951",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-9216951",
+                "source_type": "RCT",
+                "title": "Levine BD, et al. J Appl Physiol. 1997;83:102-112. PMID: 9216951",
+                "authors": null,
+                "journal": null,
+                "publication_year": 1997,
+                "doi": null,
+                "pmid": "9216951",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:09.305727",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "altitude_hypoxic_conditioning_protocol_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "chronic_occult_gastrointestinal_blood_loss_colorectal_lesion_pud",
+      "canonical_name": "Chronic occult gastrointestinal blood loss (Colorectal lesion / PUD)",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Chronic occult gastrointestinal blood loss (Colorectal lesion / PUD) (Clinical) — unfavorable effect on Hemoglobin Concentration",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "chronic_occult_gastrointestinal_blood_loss_colorectal_lesion_pud_standard",
+          "regimen": {
+            "regimen_id": "chronic_occult_gastrointestinal_blood_loss_colorectal_lesion_pud_standard",
+            "intervention_id": "chronic_occult_gastrointestinal_blood_loss_colorectal_lesion_pud",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Chronic occult gastrointestinal blood loss (Colorectal lesion / PUD)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "chronic_occult_gastrointestinal_blood_loss_colorectal_lesion_pud_hemoglobin_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 0.0,
+                "lower": -8.0,
+                "upper": 8.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "g",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "chronic_occult_gastrointestinal_blood_loss_colorectal_lesion_pud_hemoglobin_unfavorable",
+                "original_value": 0.0,
+                "original_lower": -8.0,
+                "original_upper": 8.0,
+                "original_unit": "g",
+                "canonical_value": 0.0,
+                "canonical_lower": -8.0,
+                "canonical_upper": 8.0,
+                "canonical_unit": "g",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-21561874_adults",
+                "evidence_id": "PMID-21561874",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-21561874",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Goddard AF, et al. Gut. 2011;60:1309-1316. PMID: 21561874",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2011,
+                "doi": null,
+                "pmid": "21561874",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:09.826684",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "chronic_occult_gastrointestinal_blood_loss_colorectal_lesion_pud_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "polycythemia_vera_jak2_v617f_mutation_or_severe_chronic_hypoxia",
+      "canonical_name": "Polycythemia vera (JAK2 V617F mutation) or severe chronic hypoxia",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Polycythemia vera (JAK2 V617F mutation) or severe chronic hypoxia (Clinical) — unfavorable effect on Hemoglobin Concentration",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "polycythemia_vera_jak2_v617f_mutation_or_severe_chronic_hypoxia_standard",
+          "regimen": {
+            "regimen_id": "polycythemia_vera_jak2_v617f_mutation_or_severe_chronic_hypoxia_standard",
+            "intervention_id": "polycythemia_vera_jak2_v617f_mutation_or_severe_chronic_hypoxia",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Polycythemia vera (JAK2 V617F mutation) or severe chronic hypoxia",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "polycythemia_vera_jak2_v617f_mutation_or_severe_chronic_hypoxia_hemoglobin_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 13.25,
+                "lower": 8.0,
+                "upper": 18.5,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "g",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "polycythemia_vera_jak2_v617f_mutation_or_severe_chronic_hypoxia_hemoglobin_unfavorable",
+                "original_value": 13.25,
+                "original_lower": 8.0,
+                "original_upper": 18.5,
+                "original_unit": "g",
+                "canonical_value": 13.25,
+                "canonical_lower": 8.0,
+                "canonical_upper": 18.5,
+                "canonical_unit": "g",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-30043993_adults",
+                "evidence_id": "PMID-30043993",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-30043993",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Tefferi A, et al. Am J Hematol. 2018;93:1424-1441. PMID: 30043993",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2018,
+                "doi": null,
+                "pmid": "30043993",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:10.011208",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "polycythemia_vera_jak2_v617f_mutation_or_severe_chronic_hypoxia_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

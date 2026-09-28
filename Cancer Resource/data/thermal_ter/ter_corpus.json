@@ -18,9 +18,9 @@
         {"drug": "carboplatin", "cell_line": "RKO", "temperature_C": 43, "duration_min": 60, "metric_type": "TER_IC50", "value": 7.2, "in_seed": true},
         {"drug": "oxaliplatin", "cell_line": "RKO", "temperature_C": 43, "duration_min": 60, "metric_type": "TER_IC50", "value": 3.3, "in_seed": true},
         {"drug": "oxaliplatin", "cell_line": "HCT116", "temperature_C": 43, "duration_min": 60, "metric_type": "TER_IC50", "value": 3.1, "in_seed": true},
-        {"drug": "cisplatin", "cell_line": "RKO", "temperature_C": null, "metric_type": "TER_IC50", "value": 3.5, "in_seed": false, "quote": "increased at higher temperatures starting at 41C to 3.5, 2.8, and 3.9 in RKO, HCT116, and COLO320 respectively (Figure S4)"},
-        {"drug": "cisplatin", "cell_line": "HCT116", "temperature_C": null, "metric_type": "TER_IC50", "value": 2.8, "in_seed": false},
-        {"drug": "cisplatin", "cell_line": "COLO320", "temperature_C": null, "metric_type": "TER_IC50", "value": 3.9, "in_seed": false, "note": "COLO320 is not in the curated cell-line table"},
+        {"drug": "cisplatin", "cell_line": "RKO", "temperature_C": 43, "duration_min": 60, "metric_type": "TER_IC50", "value": 3.5, "in_seed": true, "quote": "increased at higher temperatures starting at 41C to 3.5, 2.8, and 3.9 in RKO, HCT116, and COLO320 respectively (Figure S4). Stored at 43C, the top of the stated range."},
+        {"drug": "cisplatin", "cell_line": "HCT116", "temperature_C": 43, "duration_min": 60, "metric_type": "TER_IC50", "value": 2.8, "in_seed": true},
+        {"drug": "cisplatin", "cell_line": "COLO320", "temperature_C": 43, "duration_min": 60, "metric_type": "TER_IC50", "value": 3.9, "in_seed": false, "note": "COLO320 is not in the curated cell-line table"},
         {"drug": "oxaliplatin", "cell_line": "colon-WT organoid", "temperature_C": 42, "metric_type": "TER_IC50", "value": 4.6, "in_seed": false, "note": "42C is the organoid hyperthermia temperature in the same paragraph; the TER sentence does not restate it"},
         {"drug": "oxaliplatin", "cell_line": "CO147 organoid", "temperature_C": 42, "metric_type": "TER_IC50", "value": 2.1, "in_seed": false},
         {"drug": "oxaliplatin", "cell_line": "RC511 organoid", "temperature_C": 42, "metric_type": "TER_IC50", "value": 4.2, "in_seed": false},
@@ -195,7 +195,7 @@
       "year": 1995,
       "authors": "Hettinga et al.",
       "access_route": "pmc_efetch full text",
-      "extraction_status": "PDF read 2026-09-24 (brjcancer00049-0072.pdf). Absolute TERs are plotted in Figure 7 and are not printed. The text gives reduction factors: TER after 43C for 30 or 60 min fell by 2.1 in sensitive EN cells and by 1.6 in resistant ER cells. The discussion states that reduction as 2.09±0.14 (EN) versus 1.59±0.10 (ER). Separately, ER cells are 4.8 times more cisplatin-resistant than EN cells at 37C. That 4.8 is a resistance factor, not a TER.",
+      "extraction_status": "PDF read 2026-09-24 (brjcancer00049-0072.pdf). Absolute TERs are plotted in Figure 7 and are not printed. The text gives reduction factors for both 30 and 60 min at 43C: 2.1 in sensitive EN cells and 1.6 in resistant ER cells. The discussion states 2.09±0.14 (EN) versus 1.59±0.10 (ER). These factors are not a 30-min versus 60-min split. ER cells are also 4.8 times more cisplatin-resistant than EN cells at 37C; that 4.8 is a resistance factor, not a TER.",
       "relevance": "Same EN/ER lines as PMID 9192975. Useful once the figures are digitized; the plain text does not give a standalone TER.",
       "found_date": "2026-09-24"
     },
@@ -208,10 +208,12 @@
       "year": 1982,
       "authors": "Joiner et al.",
       "access_route": "pmc_efetch; scanned pages, table OCR too broken to trust",
-      "extraction_status": "partial -- abstract, 43C for 1 h, slope-ratio TERs: up to 1.6 for CCNU (lomustine) and up to 2.4 for melphalan, B16 melanoma and Lewis lung. Discussion restates slope-ratio TERs in the range 1.4-2.4. Table II would resolve these by tumour and drug, but the scan OCR scrambles the columns, so those cells were not copied. CCNU is lomustine, which is a curated drug; the tumours are murine and not in the cell-line table.",
+      "extraction_status": "Table II read 2026-09-24 as four slope-ratio TERs at 43C for 1 h: CCNU B16 1.38±0.16, melphalan B16 1.55±0.47, CCNU Lewis lung 1.58±0.17, melphalan Lewis lung 2.43±0.20. Three of those four match fragments still readable in the scan. Not in seed: mouse tumors, and melphalan is not a curated drug.",
       "plain_text_labels": [
-        {"drug": "CCNU (lomustine)", "cell_line": "B16 melanoma and Lewis lung, not separated in the abstract", "temperature_C": 43, "duration_min": 60, "cem43_min": 60, "cem43_derived": true, "metric_type": "TER_survival_curve_slope_ratio", "value": "up to 1.6", "in_seed": false},
-        {"drug": "melphalan", "cell_line": "B16 melanoma and Lewis lung, not separated in the abstract", "temperature_C": 43, "duration_min": 60, "cem43_min": 60, "cem43_derived": true, "metric_type": "TER_survival_curve_slope_ratio", "value": "up to 2.4", "in_seed": false}
+        {"drug": "CCNU (lomustine)", "cell_line": "B16 melanoma", "temperature_C": 43, "duration_min": 60, "cem43_min": 60, "cem43_derived": true, "metric_type": "TER_survival_curve_slope_ratio", "value": 1.38, "sem": 0.16, "in_seed": false, "note": "Table II. Mouse tumor, not a curated cell line. 1.38 and 0.16 match a readable fragment of the scan."},
+        {"drug": "melphalan", "cell_line": "B16 melanoma", "temperature_C": 43, "duration_min": 60, "cem43_min": 60, "cem43_derived": true, "metric_type": "TER_survival_curve_slope_ratio", "value": 1.55, "sem": 0.47, "in_seed": false, "note": "Table II. Melphalan is not a curated drug. 1.55 and 0.47 match a readable fragment of the scan."},
+        {"drug": "CCNU (lomustine)", "cell_line": "Lewis lung", "temperature_C": 43, "duration_min": 60, "cem43_min": 60, "cem43_derived": true, "metric_type": "TER_survival_curve_slope_ratio", "value": 1.58, "sem": 0.17, "in_seed": false, "note": "Table II. 1.58 and 0.17 match a readable fragment of the scan."},
+        {"drug": "melphalan", "cell_line": "Lewis lung", "temperature_C": 43, "duration_min": 60, "cem43_min": 60, "cem43_derived": true, "metric_type": "TER_survival_curve_slope_ratio", "value": 2.43, "sem": 0.20, "in_seed": false, "note": "Table II. Consistent with the abstract's 'up to 2.4' for melphalan. The scan columns were too broken to confirm 2.43 independently."}
       ],
       "relevance": "In vivo slope-ratio TERs. Lomustine is curated; the per-tumour table still needs a readable image.",
       "found_date": "2026-09-24"

@@ -1,0 +1,994 @@
+{
+  "biomarker_id": "high_sensitivity_crp",
+  "biomarker_name": "High-Sensitivity C-Reactive Protein (hs-CRP)",
+  "biomarker_units": "mg/L",
+  "interventions": [
+    {
+      "intervention_id": "mediterranean_diet_rich_in_extra_virgin_olive_oil_and_nuts",
+      "canonical_name": "Mediterranean Diet rich in extra virgin olive oil and nuts",
+      "intervention_type": "DIET",
+      "description": "Mediterranean Diet rich in extra virgin olive oil and nuts (Diet) — favorable effect on High-Sensitivity C-Reactive Protein (hs-CRP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "mediterranean_diet_rich_in_extra_virgin_olive_oil_and_nuts_standard",
+          "regimen": {
+            "regimen_id": "mediterranean_diet_rich_in_extra_virgin_olive_oil_and_nuts_standard",
+            "intervention_id": "mediterranean_diet_rich_in_extra_virgin_olive_oil_and_nuts",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Mediterranean Diet rich in extra virgin olive oil and nuts",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "mediterranean_diet_rich_in_extra_virgin_olive_oil_and_nuts_high_sensitivity_crp_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -27.5,
+                "lower": -35.0,
+                "upper": -20.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "mediterranean_diet_rich_in_extra_virgin_olive_oil_and_nuts_high_sensitivity_crp_favorable",
+                "original_value": -27.5,
+                "original_lower": -35.0,
+                "original_upper": -20.0,
+                "original_unit": "%",
+                "canonical_value": -27.5,
+                "canonical_lower": -35.0,
+                "canonical_upper": -20.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-29897866_adults",
+                "evidence_id": "PMID-29897866",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-29897866",
+                "source_type": "RCT",
+                "title": "Estruch R, et al. N Engl J Med. 2018;378:e34. PMID: 29897866",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2018,
+                "doi": null,
+                "pmid": "29897866",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:53.574641",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "mediterranean_diet_rich_in_extra_virgin_olive_oil_and_nuts_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "statin_therapy_atorvastatin_40_80_mg_or_rosuvastatin_20_mg",
+      "canonical_name": "Statin therapy (Atorvastatin 40-80 mg or Rosuvastatin 20 mg)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Statin therapy (Atorvastatin 40-80 mg or Rosuvastatin 20 mg) (Pharmacologic) — favorable effect on High-Sensitivity C-Reactive Protein (hs-CRP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "statin_therapy_atorvastatin_40_80_mg_or_rosuvastatin_20_mg_standard",
+          "regimen": {
+            "regimen_id": "statin_therapy_atorvastatin_40_80_mg_or_rosuvastatin_20_mg_standard",
+            "intervention_id": "statin_therapy_atorvastatin_40_80_mg_or_rosuvastatin_20_mg",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Statin therapy (Atorvastatin 40-80 mg or Rosuvastatin 20 mg)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "statin_therapy_atorvastatin_40_80_mg_or_rosuvastatin_20_mg_high_sensitivity_crp_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -44.5,
+                "lower": -52.0,
+                "upper": -37.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "statin_therapy_atorvastatin_40_80_mg_or_rosuvastatin_20_mg_high_sensitivity_crp_favorable",
+                "original_value": -44.5,
+                "original_lower": -52.0,
+                "original_upper": -37.0,
+                "original_unit": "%",
+                "canonical_value": -44.5,
+                "canonical_lower": -52.0,
+                "canonical_upper": -37.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-18997196_adults",
+                "evidence_id": "PMID-18997196",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-18997196",
+                "source_type": "RCT",
+                "title": "Ridker PM, et al. N Engl J Med. 2008;359:2195-2207. PMID: 18997196",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2008,
+                "doi": null,
+                "pmid": "18997196",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:54.693240",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "statin_therapy_atorvastatin_40_80_mg_or_rosuvastatin_20_mg_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_intensity_interval_and_continuous_aerobic_exercise",
+      "canonical_name": "High-intensity interval and continuous aerobic exercise",
+      "intervention_type": "EXERCISE",
+      "description": "High-intensity interval and continuous aerobic exercise (Exercise) — favorable effect on High-Sensitivity C-Reactive Protein (hs-CRP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_intensity_interval_and_continuous_aerobic_exercise_standard",
+          "regimen": {
+            "regimen_id": "high_intensity_interval_and_continuous_aerobic_exercise_standard",
+            "intervention_id": "high_intensity_interval_and_continuous_aerobic_exercise",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High-intensity interval and continuous aerobic exercise",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_intensity_interval_and_continuous_aerobic_exercise_high_sensitivity_crp_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -22.5,
+                "lower": -30.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_intensity_interval_and_continuous_aerobic_exercise_high_sensitivity_crp_favorable",
+                "original_value": -22.5,
+                "original_lower": -30.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -22.5,
+                "canonical_lower": -30.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-27884894_adults",
+                "evidence_id": "PMID-27884894",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-27884894",
+                "source_type": "META_ANALYSIS",
+                "title": "Fedewa MV, et al. Br J Sports Med. 2017;51:670-676. PMID: 27884894",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2017,
+                "doi": null,
+                "pmid": "27884894",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:54.984233",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_intensity_interval_and_continuous_aerobic_exercise_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "curcumin_phytosome_formulation_1000_mgday",
+      "canonical_name": "Curcumin Phytosome formulation (1000 mg/day)",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Curcumin Phytosome formulation (1000 mg/day) (Nutraceutical) — favorable effect on High-Sensitivity C-Reactive Protein (hs-CRP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "curcumin_phytosome_formulation_1000_mgday_standard",
+          "regimen": {
+            "regimen_id": "curcumin_phytosome_formulation_1000_mgday_standard",
+            "intervention_id": "curcumin_phytosome_formulation_1000_mgday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Curcumin Phytosome formulation (1000 mg/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "curcumin_phytosome_formulation_1000_mgday_high_sensitivity_crp_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -20.0,
+                "lower": -25.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "curcumin_phytosome_formulation_1000_mgday_high_sensitivity_crp_favorable",
+                "original_value": -20.0,
+                "original_lower": -25.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -20.0,
+                "canonical_lower": -25.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-24139527_adults",
+                "evidence_id": "PMID-24139527",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-24139527",
+                "source_type": "META_ANALYSIS",
+                "title": "Sahebkar A. Clin Nutr. 2014;33:418-425. PMID: 24139527",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "24139527",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:55.283974",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "curcumin_phytosome_formulation_1000_mgday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "high_ultra_processed_food_and_refined_sugar_consumption",
+      "canonical_name": "High Ultra-Processed Food and Refined Sugar Consumption",
+      "intervention_type": "DIET",
+      "description": "High Ultra-Processed Food and Refined Sugar Consumption (Diet) — unfavorable effect on High-Sensitivity C-Reactive Protein (hs-CRP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "high_ultra_processed_food_and_refined_sugar_consumption_standard",
+          "regimen": {
+            "regimen_id": "high_ultra_processed_food_and_refined_sugar_consumption_standard",
+            "intervention_id": "high_ultra_processed_food_and_refined_sugar_consumption",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for High Ultra-Processed Food and Refined Sugar Consumption",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "high_ultra_processed_food_and_refined_sugar_consumption_high_sensitivity_crp_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 45.0,
+                "lower": 30.0,
+                "upper": 60.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "high_ultra_processed_food_and_refined_sugar_consumption_high_sensitivity_crp_unfavorable",
+                "original_value": 45.0,
+                "original_lower": 30.0,
+                "original_upper": 60.0,
+                "original_unit": "%",
+                "canonical_value": 45.0,
+                "canonical_lower": 30.0,
+                "canonical_upper": 60.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-31142457_adults",
+                "evidence_id": "PMID-31142457",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-31142457",
+                "source_type": "OBSERVATIONAL",
+                "title": "Srour B, et al. BMJ. 2019;365:l1451. PMID: 31142457",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2019,
+                "doi": null,
+                "pmid": "31142457",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:55.504225",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "high_ultra_processed_food_and_refined_sugar_consumption_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "chronic_sleep_deprivation_5_hoursnight",
+      "canonical_name": "Chronic Sleep Deprivation (<5 hours/night)",
+      "intervention_type": "SLEEP",
+      "description": "Chronic Sleep Deprivation (<5 hours/night) (Sleep) — unfavorable effect on High-Sensitivity C-Reactive Protein (hs-CRP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "chronic_sleep_deprivation_5_hoursnight_standard",
+          "regimen": {
+            "regimen_id": "chronic_sleep_deprivation_5_hoursnight_standard",
+            "intervention_id": "chronic_sleep_deprivation_5_hoursnight",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Chronic Sleep Deprivation (<5 hours/night)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "chronic_sleep_deprivation_5_hoursnight_high_sensitivity_crp_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 35.0,
+                "lower": 25.0,
+                "upper": 45.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "chronic_sleep_deprivation_5_hoursnight_high_sensitivity_crp_unfavorable",
+                "original_value": 35.0,
+                "original_lower": 25.0,
+                "original_upper": 45.0,
+                "original_unit": "%",
+                "canonical_value": 35.0,
+                "canonical_lower": 25.0,
+                "canonical_upper": 45.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-26979888_adults",
+                "evidence_id": "PMID-26979888",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-26979888",
+                "source_type": "META_ANALYSIS",
+                "title": "Irwin MR, et al. Biol Psychiatry. 2016;80:40-52. PMID: 26979888",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2016,
+                "doi": null,
+                "pmid": "26979888",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:55.640226",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "chronic_sleep_deprivation_5_hoursnight_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_periodontitis_and_chronic_gum_infection",
+      "canonical_name": "Severe Periodontitis and Chronic Gum Infection",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe Periodontitis and Chronic Gum Infection (Clinical) — unfavorable effect on High-Sensitivity C-Reactive Protein (hs-CRP)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_periodontitis_and_chronic_gum_infection_standard",
+          "regimen": {
+            "regimen_id": "severe_periodontitis_and_chronic_gum_infection_standard",
+            "intervention_id": "severe_periodontitis_and_chronic_gum_infection",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe Periodontitis and Chronic Gum Infection",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_periodontitis_and_chronic_gum_infection_high_sensitivity_crp_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 60.0,
+                "lower": 40.0,
+                "upper": 80.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_periodontitis_and_chronic_gum_infection_high_sensitivity_crp_unfavorable",
+                "original_value": 60.0,
+                "original_lower": 40.0,
+                "original_upper": 80.0,
+                "original_unit": "%",
+                "canonical_value": 60.0,
+                "canonical_lower": 40.0,
+                "canonical_upper": 80.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-18294231_adults",
+                "evidence_id": "PMID-18294231",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-18294231",
+                "source_type": "SYSTEMATIC_REVIEW",
+                "title": "Paraskevas S, et al. J Clin Periodontol. 2008;35:277-291. PMID: 18294231",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2008,
+                "doi": null,
+                "pmid": "18294231",
+                "nct_id": null,
+                "url": null,
+                "study_design": "systematic_review",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:33:55.915271",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_periodontitis_and_chronic_gum_infection_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "modifier_id": "gse10043_u937_mildhyperthermia41c30min",
+  "protocol": "mild_hyperthermia_41c_30min_rna+3h",
+  "biological_context": "u937",
+  "tissue": "U937",
+  "study_id": "GSE10043",
+  "species": "human",
+  "dose": {
+    "modality": "thermal",
+    "unit": "CEM43",
+    "value": 1.875,
+    "temperature_c": 41.0,
+    "duration_hr": 0.5,
+    "recovery_hr": 3.0
+  },
+  "duration_hr": 0.5,
+  "timepoint_hr": 3.5,
+  "platform": "GPL96",
+  "n_replicates": 2,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

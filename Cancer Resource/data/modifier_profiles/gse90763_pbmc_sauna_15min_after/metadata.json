@@ -1,0 +1,21 @@
+{
+  "modifier_id": "gse90763_pbmc_sauna_15min_after",
+  "protocol": "sauna_pbmc_15min_after_vs_before",
+  "biological_context": "blood",
+  "tissue": "human PBMC",
+  "study_id": "GSE90763",
+  "species": "human",
+  "dose": {
+    "unit": "hours_after_exposure",
+    "temperature_c": 75.7,
+    "temperature_note": "Abstract reports sauna air 75.7\u00b10.86 C. GEO summary says 78\u00b16 C. Not tissue temperature and not CEM43.",
+    "duration_hr": 0.25,
+    "note": "Sample source calls T1 '15 min after exposure'. Sauna length itself is not in the series record."
+  },
+  "duration_hr": 0.25,
+  "timepoint_hr": 0.25,
+  "platform": "GPL570",
+  "n_replicates": 15,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

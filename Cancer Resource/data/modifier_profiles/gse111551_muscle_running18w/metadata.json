@@ -1,0 +1,20 @@
+{
+  "modifier_id": "gse111551_muscle_running18w",
+  "protocol": "running_18w_skeletal muscle",
+  "biological_context": "skeletal_muscle",
+  "tissue": "human skeletal muscle",
+  "study_id": "GSE111551",
+  "species": "human",
+  "dose": {
+    "unit": "hours_of_running",
+    "duration_hr": 54.0,
+    "sessions_per_week": 3,
+    "weeks": 18
+  },
+  "duration_hr": 54.0,
+  "timepoint_hr": 3024.0,
+  "platform": "GPL17586",
+  "n_replicates": 13,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

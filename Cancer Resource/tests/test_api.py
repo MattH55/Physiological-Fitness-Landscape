@@ -184,7 +184,7 @@ def test_interactions_filter_tier():
     # 24 = 21 + 3 Kusumoto et al. 1993 (PMID 8347479) rows: simultaneous
     # cisplatin and carboplatin (2026-09-23) and heat-before carboplatin
     # (2026-09-24, survival-slope ratio 2.85).
-    assert len(t1) == 28
+    assert len(t1) == 30
     assert all(i["evidence_tier"] == "tier_1_direct" for i in t1)
 
 

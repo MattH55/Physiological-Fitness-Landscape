@@ -1,0 +1,18 @@
+{
+  "modifier_id": "gse82323_soleus_contraction",
+  "protocol": "gse82323_contraction_3h",
+  "biological_context": "skeletal_muscle",
+  "tissue": "human skeletal muscle",
+  "study_id": "GSE82323",
+  "species": "human",
+  "dose": {
+    "unit": "hours_after_bout",
+    "duration_hr": 3.0
+  },
+  "duration_hr": 3.0,
+  "timepoint_hr": 3.0,
+  "platform": "GPL5175",
+  "n_replicates": 6,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

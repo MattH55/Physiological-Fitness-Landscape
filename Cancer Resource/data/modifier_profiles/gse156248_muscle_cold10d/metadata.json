@@ -1,0 +1,21 @@
+{
+  "modifier_id": "gse156248_muscle_cold10d",
+  "protocol": "cold_acclimation_10d_14to15c",
+  "biological_context": "skeletal_muscle",
+  "tissue": "human vastus lateralis",
+  "study_id": "GSE156248",
+  "species": "human",
+  "dose": {
+    "unit": "hours_per_day_at_air_temperature",
+    "temperature_c": 14.5,
+    "temperature_note": "Paper states 14-15 C air. 14.5 is the midpoint, not a measured core temperature. Not a CEM43 dose.",
+    "duration_hr": 6.0,
+    "schedule": "2 h day 1, 4 h day 2, 6 h days 3-10"
+  },
+  "duration_hr": 6.0,
+  "timepoint_hr": 240.0,
+  "platform": "GPL11532",
+  "n_replicates": 7,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

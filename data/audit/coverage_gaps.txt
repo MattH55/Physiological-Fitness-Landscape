@@ -1,0 +1,64 @@
+Total: 111, Dist: 50, HR: 89
+BOTH_MISSING: 51 | Growth Differentiation Factor-15 (GDF-15) | gdf-15
+BOTH_MISSING: 52 | Soluble Tumor Necrosis Factor Receptor 1 (sTNFR1) | stnfr1
+BOTH_MISSING: 53 | Lymphocyte-to-Monocyte Ratio (LMR) | lmr
+BOTH_MISSING: 54 | YKL-40 (CHI3L1) | ykl-40
+BOTH_MISSING: 55 | Beta-2 Microglobulin | beta2-microglobulin
+BOTH_MISSING: 56 | Galectin-3 | galectin-3
+BOTH_MISSING: 57 | ST2 Soluble (sST2) | sst2
+BOTH_MISSING: 58 | Mid-Regional Pro-Adrenomedullin (MR-proADM) | mr-proadm
+BOTH_MISSING: 59 | Copeptin | copeptin
+BOTH_MISSING: 60 | Homocysteine | homocysteine
+BOTH_MISSING: 61 | FIB-4 Index (NAFLD Fibrosis Score) | fib-4
+BOTH_MISSING: 62 | Free Triiodothyronine (Free T3) | free-t3
+BOTH_MISSING: 63 | Thyroid-Stimulating Hormone (TSH) | tsh
+BOTH_MISSING: 64 | Insulin-like Growth Factor 1 (IGF-1) | igf-1
+BOTH_MISSING: 65 | Dehydroepiandrosterone Sulfate (DHEA-S) | dhea-s
+BOTH_MISSING: 66 | Mean Platelet Volume (MPV) | mpv
+BOTH_MISSING: 67 | Eosinophil Count | eosinophil-count
+BOTH_MISSING: 68 | 8-Hydroxy-2'-deoxyguanosine (8-OHdG) | 8-ohdg
+BOTH_MISSING: 69 | Serum Folate | folate
+BOTH_MISSING: 70 | Vitamin B12 (Cobalamin) | vitamin-b12
+BOTH_MISSING: 71 | Serum Selenium | selenium
+BOTH_MISSING: 72 | Serum Zinc | zinc
+DIST_MISSING: 73 | Soluble Urokinase Plasminogen Activator Receptor (suPAR) | supar
+DIST_MISSING: 74 | Interleukin-18 (IL-18) | il-18
+DIST_MISSING: 75 | Monocyte Chemoattractant Protein-1 (MCP-1 / CCL2) | mcp-1
+DIST_MISSING: 76 | Neopterin | neopterin
+DIST_MISSING: 77 | Soluble CD14 (sCD14) | scd14
+DIST_MISSING: 78 | Soluble CD163 (sCD163) | scd163
+DIST_MISSING: 79 | Procalcitonin | procalcitonin
+DIST_MISSING: 80 | Pentraxin-3 (PTX3) | ptx3
+DIST_MISSING: 81 | D-dimer | d-dimer
+DIST_MISSING: 82 | Plasminogen Activator Inhibitor-1 (PAI-1) | pai-1
+DIST_MISSING: 83 | von Willebrand Factor (vWF) | vwf
+DIST_MISSING: 84 | Trimethylamine N-oxide (TMAO) | tmao
+DIST_MISSING: 85 | Non-HDL Cholesterol | non-hdl-c
+DIST_MISSING: 86 | Lipoprotein-Associated Phospholipase A2 (Lp-PLA2) | lp-pla2
+DIST_MISSING: 87 | Apolipoprotein B to A1 Ratio (ApoB/ApoA1) | apob-apoa1
+DIST_MISSING: 88 | Alpha-Klotho | alpha-klotho
+DIST_MISSING: 89 | Leukocyte Telomere Length | telomere-length
+DIST_MISSING: 90 | DNA Methylation Age Acceleration (PhenoAge/GrimAge) | dna-methylation-age
+DIST_MISSING: 91 | Mitochondrial DNA Copy Number | mt-dna-copy
+DIST_MISSING: 92 | Neurofilament Light Chain (NfL) | nfl
+DIST_MISSING: 93 | Total Testosterone | testosterone
+DIST_MISSING: 94 | Serum Cortisol | cortisol
+DIST_MISSING: 95 | C-peptide | c-peptide
+DIST_MISSING: 96 | Adiponectin | adiponectin
+DIST_MISSING: 97 | Mean Corpuscular Volume (MCV) | mcv
+DIST_MISSING: 98 | Monocyte Count | monocyte-count
+DIST_MISSING: 99 | Hematocrit | hematocrit
+DIST_MISSING: 100 | Transferrin Saturation | transferrin-sat
+DIST_MISSING: 101 | De Ritis Ratio (AST/ALT) | deritis-ratio
+DIST_MISSING: 102 | Total Protein | total-protein
+DIST_MISSING: 103 | Albumin:Globulin Ratio (A/G) | ag-ratio
+DIST_MISSING: 104 | Bone Mineral Density T-score (DXA) | bmd-tscore
+DIST_MISSING: 105 | Parathyroid Hormone (PTH) | pth
+DIST_MISSING: 106 | Body Mass Index (BMI) | bmi
+DIST_MISSING: 107 | Waist-to-Height Ratio (WHtR) | waist-height-ratio
+DIST_MISSING: 108 | Gait Speed | gait-speed
+DIST_MISSING: 109 | Appendicular Lean Mass / Sarcopenia Index | appendicular-lean-mass
+DIST_MISSING: 110 | Heart Rate Variability (SDNN) | hrv-sdnn
+DIST_MISSING: 111 | Orthostatic Blood Pressure Drop | orthostatic-bp-drop
+
+Summary: both_missing=22, dist_missing=39, hr_missing=0

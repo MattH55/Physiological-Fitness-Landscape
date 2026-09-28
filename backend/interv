@@ -1,0 +1,216 @@
+"""
+Relevance scoring: score and tier trial candidates from the sweep.
+
+Each trial hit gets a relevance score based on:
+  - Biomarker match strength (canonical > alias > assay term)
+  - Study design (RCT > observational > other)
+  - Status (completed with results > completed > active > other)
+  - Intervention type (drug/device > behavioral > other)
+  - Phase (Phase 3/4 > Phase 2 > Phase 1 > N/A)
+
+Tiers:
+  high:     score >= 80  (definitely relevant, extract results)
+  review:   score >= 50  (likely relevant, manual review)
+  candidate: score >= 25  (possibly relevant, keep in pool)
+  low:      score < 25   (probably not relevant, archive)
+"""
+
+import logging
+from dataclasses import dataclass, field
+from typing import Dict, List
+
+from .biomarker_ontology import get_ontology
+from .ctgov_sweep import SweepResult, TrialHit
+
+logger = logging.getLogger(__name__)
+
+
+@dataclass
+class ScoredCandidate:
+    """A trial hit with a relevance score and tier."""
+    nct_id: str
+    brief_title: str
+    overall_status: str
+    condition: str
+    intervention_name: str
+    intervention_type: str
+    study_type: str
+    phase: str
+    has_results: bool
+    start_date: str
+    completion_date: str
+    lead_sponsor: str
+    search_source: str
+    score: int = 0
+    tier: str = "low"
+    score_breakdown: Dict[str, int] = field(default_factory=dict)
+
+    def to_dict(self) -> dict:
+        return {
+            "nct_id": self.nct_id,
+            "brief_title": self.brief_title,
+            "overall_status": self.overall_status,
+            "condition": self.condition,
+            "intervention_name": self.intervention_name,
+            "intervention_type": self.intervention_type,
+            "study_type": self.study_type,
+            "phase": self.phase,
+            "has_results": self.has_results,
+            "start_date": self.start_date,
+            "completion_date": self.completion_date,
+            "lead_sponsor": self.lead_sponsor,
+            "search_source": self.search_source,
+            "score": self.score,
+            "tier": self.tier,
+            "score_breakdown": self.score_breakdown,
+        }
+
+
+def _score_biomarker_match(hit: TrialHit, biomarker_id: str) -> int:
+    """Score based on how strongly the biomarker matches."""
+    ontology = get_ontology(biomarker_id)
+    text = f"{hit.brief_title} {hit.condition} {hit.intervention_name}".lower()
+
+    # Canonical name match: 30 points
+    if ontology.canonical_name.lower() in text:
+        return 30
+
+    # Alias match: 20 points
+    for alias in ontology.aliases:
+        if alias.lower() in text:
+            return 20
+
+    # Assay term match: 15 points
+    for at in ontology.assay_terms:
+        if at.lower() in text:
+            return 15
+
+    # Historical name match: 10 points
+    for h in ontology.historical:
+        if h.lower() in text:
+            return 10
+
+    # Found via search but not in text (search engine matched): 5 points
+    return 5
+
+
+def _score_study_design(hit: TrialHit) -> int:
+    """Score based on study design quality."""
+    phase = hit.phase.lower()
+    study_type = hit.study_type.lower()
+
+    # Phase 3/4 RCT: 25 points
+    if "phase 3" in phase or "phase 4" in phase:
+        return 25
+    # Phase 2: 20 points
+    if "phase 2" in phase:
+        return 20
+    # Phase 1: 15 points
+    if "phase 1" in phase:
+        return 15
+    # Interventional (no phase): 15 points
+    if "interventional" in study_type:
+        return 15
+    # Observational: 10 points
+    if "observational" in study_type:
+        return 10
+    # Other: 5 points
+    return 5
+
+
+def _score_status(hit: TrialHit) -> int:
+    """Score based on trial status."""
+    status = hit.overall_status.upper()
+
+    if hit.has_results:
+        return 25  # Completed with posted results
+    if status == "COMPLETED":
+        return 20
+    if status in ("RECRUITING", "ACTIVE_NOT_RECRUITING"):
+        return 10
+    if status in ("ENROLLING_BY_INVITATION", "NOT_YET_RECRUITING"):
+        return 8
+    if status in ("SUSPENDED", "TERMINATED", "WITHDRAWN"):
+        return 3
+    return 5
+
+
+def _score_intervention(hit: TrialHit) -> int:
+    """Score based on intervention type."""
+    itype = hit.intervention_type.lower()
+
+    if "drug" in itype or "biological" in itype:
+        return 20
+    if "device" in itype:
+        return 18
+    if "procedure" in itype or "other" in itype:
+        return 12
+    if "behavioral" in itype or "dietary" in itype:
+        return 10
+    if "supplement" in itype:
+        return 15
+    return 5
+
+
+def score_trial(hit: TrialHit, biomarker_id: str) -> ScoredCandidate:
+    """Score a single trial hit."""
+    bm_score = _score_biomarker_match(hit, biomarker_id)
+    design_score = _score_study_design(hit)
+    status_score = _score_status(hit)
+    intr_score = _score_intervention(hit)
+
+    total = bm_score + design_score + status_score + intr_score
+
+    # Determine tier
+    if total >= 80:
+        tier = "high"
+    elif total >= 50:
+        tier = "review"
+    elif total >= 25:
+        tier = "candidate"
+    else:
+        tier = "low"
+
+    return ScoredCandidate(
+        nct_id=hit.nct_id,
+        brief_title=hit.brief_title,
+        overall_status=hit.overall_status,
+        condition=hit.condition,
+        intervention_name=hit.intervention_name,
+        intervention_type=hit.intervention_type,
+        study_type=hit.study_type,
+        phase=hit.phase,
+        has_results=hit.has_results,
+        start_date=hit.start_date,
+        completion_date=hit.completion_date,
+        lead_sponsor=hit.lead_sponsor,
+        search_source=hit.search_source,
+        score=total,
+        tier=tier,
+        score_breakdown={
+            "biomarker_match": bm_score,
+            "study_design": design_score,
+            "status": status_score,
+            "intervention": intr_score,
+        },
+    )
+
+
+def score_sweep_result(sweep: SweepResult) -> List[ScoredCandidate]:
+    """Score all hits in a sweep result. Returns sorted by score descending."""
+    candidates = []
+    for hit in sweep.hits:
+        scored = score_trial(hit, sweep.biomarker_id)
+        candidates.append(scored)
+
+    # Sort by score descending
+    candidates.sort(key=lambda c: c.score, reverse=True)
+    return candidates
+
+
+def tier_distribution(candidates: List[ScoredCandidate]) -> Dict[str, int]:
+    """Count candidates per tier."""
+    dist = {"high": 0, "review": 0, "candidate": 0, "low": 0}
+    for c in candidates:
+        dist[c.tier] = dist.get(c.tier, 0) + 1
+    return dist

@@ -1,0 +1,143 @@
+# DRUGSYNC-NPxP: DRUGSYNC architecture adapted for Non-Pharmacological modifiers
+# Faithful reproduction of Zhao & Luo 2024 with domain substitution:
+#   Drug -> Modifier, DGEP -> MIGEP, DDS -> Modifier Interaction
+
+# ============================================================
+# Reference paths (all relative to project root)
+# ============================================================
+project_root: "."
+
+reference:
+  genes_978: "data/reference/genes_978.txt"
+  gene_index: "data/reference/gene_index.csv"
+  ppi_edges: "data/reference/ppi_edges.csv"
+  canonical_gene_info: "data/lincs/gene_info.txt"
+
+# ============================================================
+# Gene expression representation
+# ============================================================
+expression:
+  n_genes: 978
+  canonical_version: "L1000-978-landmark-GSE70138-gene_info-2017-03-06"
+  min_coverage: 0.7  # minimum fraction of 978 genes present for a profile
+  normalization: "robust_z"  # median/MAD robust z-score
+
+# ============================================================
+# PPI graph (STRING-derived, reproduced from DRUGSYNC)
+# ============================================================
+ppi:
+  n_nodes: 979  # 978 genes + 1 virtual node
+  string_threshold: 700  # STRING score > 700 for edges
+  edge_weight_type: "normalized_score"  # score / 1000
+  add_virtual_node: true
+  virtual_node_id: 978  # zero-indexed, since 978 genes are 0..977
+  random_seed: 42
+
+# ============================================================
+# Stage 1 — MIGEP prediction / augmentation (DGEP prediction)
+# ============================================================
+migep_predictor:
+  enabled: true
+  input_dim: 3  # [G_ia, G_a, G_b] = [treated_A, baseline_A, baseline_B]
+  hidden_dims: [512, 256, 128]
+  output_dim: 978  # G_ib = predicted treated expression in context B
+  learning_rate: 0.001
+  batch_size: 32
+  n_epochs: 200
+  early_stopping_patience: 20
+  loss: "mse"
+  validation_split: 0.2
+  random_seed: 42
+
+# ============================================================
+# Stage 2 — Modifier interaction prediction (DRUGSYNC GCN)
+# ============================================================
+interaction_model:
+  mode: "binary"  # "binary" or "regression"
+
+  # GCN layers
+  gcn_input_dim: 2  # [MIGEP_A_gene, MIGEP_B_gene] per node
+  gcn_hidden_dim: 256
+  gcn_n_layers: 3
+  gcn_dropout: 0.2
+
+  # Fully connected layers (after GCN readout)
+  fc_input_dim: 256  # matches gcn_hidden_dim
+  fc_hidden_dims: [128, 64]
+  fc_n_layers: 3  # input + 2 hidden -> output
+  fc_dropout: 0.3
+
+  output_dim: 1
+
+  # Readout: "mean", "max", or "sum"
+  readout: "mean"
+
+  # Training
+  learning_rate: 0.0005
+  weight_decay: 0.0001
+  batch_size: 32
+  n_epochs: 300
+  early_stopping_patience: 30
+  random_seed: 42
+
+  # For binary mode
+  binary_threshold: 0.5
+
+# ============================================================
+# Validation settings
+# ============================================================
+validation:
+  n_folds: 5
+  random_seed: 42
+
+  splits:
+    leave_pairs_out: true
+    leave_modifiers_out: true
+    leave_contexts_out: true
+    leave_study_out: true
+
+# ============================================================
+# Training modes
+# ============================================================
+training:
+  mode_a:
+    name: "binary_classification"
+    loss: "bce"
+    metrics: ["roc_auc", "balanced_accuracy", "precision", "recall", "f1"]
+
+  mode_b:
+    name: "regression"
+    loss: "mse"
+    metrics: ["pearson_r", "r_squared", "rmse"]
+
+# ============================================================
+# Order invariance
+# ============================================================
+order_invariance:
+  tolerance: 0.01  # |pred(A,B) - pred(B,A)| < tolerance
+  enforce_symmetry: true
+
+# ============================================================
+# Interpretation
+# ============================================================
+interpretation:
+  n_top_genes: 20
+  use_gradients: false  # start without gradient-based explanation
+
+# ============================================================
+# Output and logging
+# ============================================================
+output:
+  predictions_dir: "results/interaction/"
+  models_dir: "models/interaction/"
+  migep_models_dir: "models/migep/"
+  figures_dir: "results/figures/"
+  log_level: "INFO"
+
+# ============================================================
+# Reproducibility
+# ============================================================
+reproducibility:
+  deterministic: true
+  random_seed: 42
+  pytorch_deterministic: true

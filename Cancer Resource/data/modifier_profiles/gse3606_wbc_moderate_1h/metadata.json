@@ -1,0 +1,19 @@
+{
+  "modifier_id": "gse3606_wbc_moderate_1h",
+  "protocol": "treadmill_moderate_1h_post",
+  "biological_context": "blood",
+  "tissue": "human white blood cells",
+  "study_id": "GSE3606",
+  "species": "human",
+  "dose": {
+    "unit": "hours_after_bout",
+    "duration_hr": 1.0,
+    "bout": "moderate"
+  },
+  "duration_hr": 1.0,
+  "timepoint_hr": 1.0,
+  "platform": "GPL571",
+  "n_replicates": 5,
+  "quality_score": 1.0,
+  "migep_source": "experimental"
+}

@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "alanine_aminotransferase",
+  "biomarker_name": "Alanine Aminotransferase (ALT)",
+  "biomarker_units": "U/L",
+  "interventions": [
+    {
+      "intervention_id": "weight_loss_7_10_body_weight_and_fructose_restriction",
+      "canonical_name": "Weight loss (7-10% body weight) and fructose restriction",
+      "intervention_type": "DIET",
+      "description": "Weight loss (7-10% body weight) and fructose restriction (Diet) — favorable effect on Alanine Aminotransferase (ALT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "weight_loss_7_10_body_weight_and_fructose_restriction_standard",
+          "regimen": {
+            "regimen_id": "weight_loss_7_10_body_weight_and_fructose_restriction_standard",
+            "intervention_id": "weight_loss_7_10_body_weight_and_fructose_restriction",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Weight loss (7-10% body weight) and fructose restriction",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "weight_loss_7_10_body_weight_and_fructose_restriction_alanine_aminotransferase_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -45.0,
+                "lower": -60.0,
+                "upper": -30.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "weight_loss_7_10_body_weight_and_fructose_restriction_alanine_aminotransferase_favorable",
+                "original_value": -45.0,
+                "original_lower": -60.0,
+                "original_upper": -30.0,
+                "original_unit": "%",
+                "canonical_value": -45.0,
+                "canonical_lower": -60.0,
+                "canonical_upper": -30.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-25865049_adults",
+                "evidence_id": "PMID-25865049",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-25865049",
+                "source_type": "RCT",
+                "title": "Vilar-Gomez E, et al. Gastroenterology. 2015;149:367-378. PMID: 25865049",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2015,
+                "doi": null,
+                "pmid": "25865049",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:29.613065",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "weight_loss_7_10_body_weight_and_fructose_restriction_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "pioglitazone_or_glp_1_ra_therapy_in_masldnash",
+      "canonical_name": "Pioglitazone or GLP-1 RA therapy in MASLD/NASH",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Pioglitazone or GLP-1 RA therapy in MASLD/NASH (Pharmacologic) — favorable effect on Alanine Aminotransferase (ALT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "pioglitazone_or_glp_1_ra_therapy_in_masldnash_standard",
+          "regimen": {
+            "regimen_id": "pioglitazone_or_glp_1_ra_therapy_in_masldnash_standard",
+            "intervention_id": "pioglitazone_or_glp_1_ra_therapy_in_masldnash",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Pioglitazone or GLP-1 RA therapy in MASLD/NASH",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "pioglitazone_or_glp_1_ra_therapy_in_masldnash_alanine_aminotransferase_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -45.0,
+                "lower": -55.0,
+                "upper": -35.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "pioglitazone_or_glp_1_ra_therapy_in_masldnash_alanine_aminotransferase_favorable",
+                "original_value": -45.0,
+                "original_lower": -55.0,
+                "original_upper": -35.0,
+                "original_unit": "%",
+                "canonical_value": -45.0,
+                "canonical_lower": -55.0,
+                "canonical_upper": -35.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-20427778_adults",
+                "evidence_id": "PMID-20427778",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-20427778",
+                "source_type": "RCT",
+                "title": "Sanyal AJ, et al. N Engl J Med. 2010;362:1675-1685. PMID: 20427778",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2010,
+                "doi": null,
+                "pmid": "20427778",
+                "nct_id": null,
+                "url": null,
+                "study_design": "rct",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:29.788393",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "pioglitazone_or_glp_1_ra_therapy_in_masldnash_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "daily_filtered_black_coffee_consumption_2_3_cupsday",
+      "canonical_name": "Daily filtered black coffee consumption (2-3 cups/day)",
+      "intervention_type": "DIET",
+      "description": "Daily filtered black coffee consumption (2-3 cups/day) (Diet) — favorable effect on Alanine Aminotransferase (ALT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "daily_filtered_black_coffee_consumption_2_3_cupsday_standard",
+          "regimen": {
+            "regimen_id": "daily_filtered_black_coffee_consumption_2_3_cupsday_standard",
+            "intervention_id": "daily_filtered_black_coffee_consumption_2_3_cupsday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Daily filtered black coffee consumption (2-3 cups/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "daily_filtered_black_coffee_consumption_2_3_cupsday_alanine_aminotransferase_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -20.0,
+                "lower": -25.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "daily_filtered_black_coffee_consumption_2_3_cupsday_alanine_aminotransferase_favorable",
+                "original_value": -20.0,
+                "original_lower": -25.0,
+                "original_upper": -15.0,
+                "original_unit": "%",
+                "canonical_value": -20.0,
+                "canonical_lower": -25.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-26806111_adults",
+                "evidence_id": "PMID-26806111",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-26806111",
+                "source_type": "META_ANALYSIS",
+                "title": "Kennedy OJ, et al. Aliment Pharmacol Ther. 2016;43:562-574. PMID: 26806111",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2016,
+                "doi": null,
+                "pmid": "26806111",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:29.971559",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "daily_filtered_black_coffee_consumption_2_3_cupsday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "excessive_acute_or_chronic_ethanol_consumption",
+      "canonical_name": "Excessive acute or chronic ethanol consumption",
+      "intervention_type": "DIET",
+      "description": "Excessive acute or chronic ethanol consumption (Diet) — unfavorable effect on Alanine Aminotransferase (ALT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "excessive_acute_or_chronic_ethanol_consumption_standard",
+          "regimen": {
+            "regimen_id": "excessive_acute_or_chronic_ethanol_consumption_standard",
+            "intervention_id": "excessive_acute_or_chronic_ethanol_consumption",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Excessive acute or chronic ethanol consumption",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "excessive_acute_or_chronic_ethanol_consumption_alanine_aminotransferase_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 250.0,
+                "lower": 100.0,
+                "upper": 400.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "excessive_acute_or_chronic_ethanol_consumption_alanine_aminotransferase_unfavorable",
+                "original_value": 250.0,
+                "original_lower": 100.0,
+                "original_upper": 400.0,
+                "original_unit": "%",
+                "canonical_value": 250.0,
+                "canonical_lower": 100.0,
+                "canonical_upper": 400.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-29628280_adults",
+                "evidence_id": "PMID-29628280",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-29628280",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "European Association for the Study of the Liver. J Hepatol. 2018;69:154-181. PMID: 29628280",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2018,
+                "doi": null,
+                "pmid": "29628280",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:30.122723",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "excessive_acute_or_chronic_ethanol_consumption_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "acetaminophen_overdose_or_hepatotoxic_drug_induced_liver_injury_dili",
+      "canonical_name": "Acetaminophen overdose or hepatotoxic drug-induced liver injury (DILI)",
+      "intervention_type": "PHARMACOLOGIC",
+      "description": "Acetaminophen overdose or hepatotoxic drug-induced liver injury (DILI) (Pharmacologic) — unfavorable effect on Alanine Aminotransferase (ALT)",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "acetaminophen_overdose_or_hepatotoxic_drug_induced_liver_injury_dili_standard",
+          "regimen": {
+            "regimen_id": "acetaminophen_overdose_or_hepatotoxic_drug_induced_liver_injury_dili_standard",
+            "intervention_id": "acetaminophen_overdose_or_hepatotoxic_drug_induced_liver_injury_dili",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Acetaminophen overdose or hepatotoxic drug-induced liver injury (DILI)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "acetaminophen_overdose_or_hepatotoxic_drug_induced_liver_injury_dili_alanine_aminotransferase_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 2750.0,
+                "lower": 500.0,
+                "upper": 5000.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "acetaminophen_overdose_or_hepatotoxic_drug_induced_liver_injury_dili_alanine_aminotransferase_unfavorable",
+                "original_value": 2750.0,
+                "original_lower": 500.0,
+                "original_upper": 5000.0,
+                "original_unit": "%",
+                "canonical_value": 2750.0,
+                "canonical_lower": 500.0,
+                "canonical_upper": 5000.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-33734133_adults",
+                "evidence_id": "PMID-33734133",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-33734133",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Chalasani NP, et al. Am J Gastroenterol. 2021;116:878-898. PMID: 33734133",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2021,
+                "doi": null,
+                "pmid": "33734133",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:30.320938",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "acetaminophen_overdose_or_hepatotoxic_drug_induced_liver_injury_dili_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

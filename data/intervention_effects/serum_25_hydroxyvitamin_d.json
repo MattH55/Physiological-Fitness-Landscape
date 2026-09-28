@@ -1,0 +1,712 @@
+{
+  "biomarker_id": "serum_25_hydroxyvitamin_d",
+  "biomarker_name": "Serum 25-Hydroxyvitamin D",
+  "biomarker_units": "nmol/L",
+  "interventions": [
+    {
+      "intervention_id": "oral_vitamin_d3_cholecalciferol_2000_5000_iuday",
+      "canonical_name": "Oral Vitamin D3 (Cholecalciferol 2000-5000 IU/day)",
+      "intervention_type": "NUTRACEUTICAL",
+      "description": "Oral Vitamin D3 (Cholecalciferol 2000-5000 IU/day) (Nutraceutical) — favorable effect on Serum 25-Hydroxyvitamin D",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "oral_vitamin_d3_cholecalciferol_2000_5000_iuday_standard",
+          "regimen": {
+            "regimen_id": "oral_vitamin_d3_cholecalciferol_2000_5000_iuday_standard",
+            "intervention_id": "oral_vitamin_d3_cholecalciferol_2000_5000_iuday",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Oral Vitamin D3 (Cholecalciferol 2000-5000 IU/day)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "oral_vitamin_d3_cholecalciferol_2000_5000_iuday_serum_25_hydroxyvitamin_d_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 35.0,
+                "lower": 35.0,
+                "upper": 35.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "ng/mL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "oral_vitamin_d3_cholecalciferol_2000_5000_iuday_serum_25_hydroxyvitamin_d_favorable",
+                "original_value": 35.0,
+                "original_lower": 35.0,
+                "original_upper": 35.0,
+                "original_unit": "ng/mL",
+                "canonical_value": 35.0,
+                "canonical_lower": 35.0,
+                "canonical_upper": 35.0,
+                "canonical_unit": "ng/mL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-16825677_adults",
+                "evidence_id": "PMID-16825677",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-16825677",
+                "source_type": "META_ANALYSIS",
+                "title": "Bischoff-Ferrari HA, et al. Am J Clin Nutr. 2006;84:18-28. PMID: 16825677",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2006,
+                "doi": null,
+                "pmid": "16825677",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:23.263880",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "oral_vitamin_d3_cholecalciferol_2000_5000_iuday_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "safe_sensible_midday_solar_ultraviolet_b_uvb_exposure_15_30_min",
+      "canonical_name": "Safe sensible midday solar ultraviolet B (UVB) exposure (15-30 min)",
+      "intervention_type": "ENVIRONMENTAL",
+      "description": "Safe sensible midday solar ultraviolet B (UVB) exposure (15-30 min) (Environmental) — favorable effect on Serum 25-Hydroxyvitamin D",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "safe_sensible_midday_solar_ultraviolet_b_uvb_exposure_15_30_min_standard",
+          "regimen": {
+            "regimen_id": "safe_sensible_midday_solar_ultraviolet_b_uvb_exposure_15_30_min_standard",
+            "intervention_id": "safe_sensible_midday_solar_ultraviolet_b_uvb_exposure_15_30_min",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Safe sensible midday solar ultraviolet B (UVB) exposure (15-30 min)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "safe_sensible_midday_solar_ultraviolet_b_uvb_exposure_15_30_min_serum_25_hydroxyvitamin_d_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 25.0,
+                "lower": 25.0,
+                "upper": 25.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "ng/mL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "safe_sensible_midday_solar_ultraviolet_b_uvb_exposure_15_30_min_serum_25_hydroxyvitamin_d_favorable",
+                "original_value": 25.0,
+                "original_lower": 25.0,
+                "original_upper": 25.0,
+                "original_unit": "ng/mL",
+                "canonical_value": 25.0,
+                "canonical_lower": 25.0,
+                "canonical_upper": 25.0,
+                "canonical_unit": "ng/mL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17634462_adults",
+                "evidence_id": "PMID-17634462",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17634462",
+                "source_type": "META_ANALYSIS",
+                "title": "Holick MF. N Engl J Med. 2007;357:266-281. PMID: 17634462",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2007,
+                "doi": null,
+                "pmid": "17634462",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:34:34.762069",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "safe_sensible_midday_solar_ultraviolet_b_uvb_exposure_15_30_min_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "dietary_wild_fatty_fish_consumption_salmon_mackerel_sardines",
+      "canonical_name": "Dietary wild fatty fish consumption (Salmon, Mackerel, Sardines)",
+      "intervention_type": "DIET",
+      "description": "Dietary wild fatty fish consumption (Salmon, Mackerel, Sardines) (Diet) — favorable effect on Serum 25-Hydroxyvitamin D",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "dietary_wild_fatty_fish_consumption_salmon_mackerel_sardines_standard",
+          "regimen": {
+            "regimen_id": "dietary_wild_fatty_fish_consumption_salmon_mackerel_sardines_standard",
+            "intervention_id": "dietary_wild_fatty_fish_consumption_salmon_mackerel_sardines",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Dietary wild fatty fish consumption (Salmon, Mackerel, Sardines)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "dietary_wild_fatty_fish_consumption_salmon_mackerel_sardines_serum_25_hydroxyvitamin_d_favorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": 12.0,
+                "lower": 12.0,
+                "upper": 12.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "ng/mL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "dietary_wild_fatty_fish_consumption_salmon_mackerel_sardines_serum_25_hydroxyvitamin_d_favorable",
+                "original_value": 12.0,
+                "original_lower": 12.0,
+                "original_upper": 12.0,
+                "original_unit": "ng/mL",
+                "canonical_value": 12.0,
+                "canonical_lower": 12.0,
+                "canonical_upper": 12.0,
+                "canonical_unit": "ng/mL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-17292601_adults",
+                "evidence_id": "PMID-17292601",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-17292601",
+                "source_type": "OBSERVATIONAL",
+                "title": "Lu Z, et al. J Steroid Biochem Mol Biol. 2007;103:642-644. PMID: 17292601",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2007,
+                "doi": null,
+                "pmid": "17292601",
+                "nct_id": null,
+                "url": null,
+                "study_design": "prospective_cohort",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:24.158204",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "dietary_wild_fatty_fish_consumption_salmon_mackerel_sardines_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "complete_sun_avoidance_chronic_indoor_confinement_and_lack_of_supplementation",
+      "canonical_name": "Complete sun avoidance, chronic indoor confinement, and lack of supplementation",
+      "intervention_type": "LIFESTYLE",
+      "description": "Complete sun avoidance, chronic indoor confinement, and lack of supplementation (Lifestyle) — unfavorable effect on Serum 25-Hydroxyvitamin D",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "complete_sun_avoidance_chronic_indoor_confinement_and_lack_of_supplementation_standard",
+          "regimen": {
+            "regimen_id": "complete_sun_avoidance_chronic_indoor_confinement_and_lack_of_supplementation_standard",
+            "intervention_id": "complete_sun_avoidance_chronic_indoor_confinement_and_lack_of_supplementation",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Complete sun avoidance, chronic indoor confinement, and lack of supplementation",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "complete_sun_avoidance_chronic_indoor_confinement_and_lack_of_supplementation_serum_25_hydroxyvitamin_d_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -15.0,
+                "lower": -15.0,
+                "upper": -15.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "ng/mL",
+                "scale": "absolute",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "complete_sun_avoidance_chronic_indoor_confinement_and_lack_of_supplementation_serum_25_hydroxyvitamin_d_unfavorable",
+                "original_value": -15.0,
+                "original_lower": -15.0,
+                "original_upper": -15.0,
+                "original_unit": "ng/mL",
+                "canonical_value": -15.0,
+                "canonical_lower": -15.0,
+                "canonical_upper": -15.0,
+                "canonical_unit": "ng/mL",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-24922127_adults",
+                "evidence_id": "PMID-24922127",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-24922127",
+                "source_type": "META_ANALYSIS",
+                "title": "Garland CF, et al. Am J Public Health. 2014;104:e43-e50. PMID: 24922127",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2014,
+                "doi": null,
+                "pmid": "24922127",
+                "nct_id": null,
+                "url": null,
+                "study_design": "meta_analysis",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:24.502332",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "complete_sun_avoidance_chronic_indoor_confinement_and_lack_of_supplementation_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "intervention_id": "severe_intestinal_malabsorption_celiac_disease_bariatric_roux_en_y_surgery",
+      "canonical_name": "Severe intestinal malabsorption (Celiac disease / Bariatric Roux-en-Y surgery)",
+      "intervention_type": "CLINICAL_PROCEDURE",
+      "description": "Severe intestinal malabsorption (Celiac disease / Bariatric Roux-en-Y surgery) (Clinical) — unfavorable effect on Serum 25-Hydroxyvitamin D",
+      "mechanism": null,
+      "synonyms": [],
+      "regimens": [
+        {
+          "regimen_id": "severe_intestinal_malabsorption_celiac_disease_bariatric_roux_en_y_surgery_standard",
+          "regimen": {
+            "regimen_id": "severe_intestinal_malabsorption_celiac_disease_bariatric_roux_en_y_surgery_standard",
+            "intervention_id": "severe_intestinal_malabsorption_celiac_disease_bariatric_roux_en_y_surgery",
+            "formulation": null,
+            "route": null,
+            "dose_value": null,
+            "dose_unit": null,
+            "dose_frequency": null,
+            "dose_frequency_value": null,
+            "dose_frequency_unit": null,
+            "timing": null,
+            "intensity": null,
+            "duration_value": null,
+            "duration_unit": null,
+            "cycles": null,
+            "titration": null,
+            "adherence_target": null,
+            "regimen_description": "Standard protocol for Severe intestinal malabsorption (Celiac disease / Bariatric Roux-en-Y surgery)",
+            "source_evidence_id": null,
+            "session_duration_value": null,
+            "session_duration_unit": null,
+            "sessions_per_week": null,
+            "intensity_value": null,
+            "intensity_unit": null,
+            "diet_pattern": null,
+            "energy_target": null,
+            "energy_target_unit": null,
+            "macronutrient_targets": {},
+            "adherence_measure": null,
+            "active_ingredient": null,
+            "dose_per_administration": null,
+            "dose_per_administration_unit": null
+          },
+          "effects": [
+            {
+              "effect_id": "severe_intestinal_malabsorption_celiac_disease_bariatric_roux_en_y_surgery_serum_25_hydroxyvitamin_d_unfavorable",
+              "effect": {
+                "type": "biomarker_change",
+                "value": -65.0,
+                "lower": -80.0,
+                "upper": -50.0,
+                "standard_error": null,
+                "p_value": null,
+                "unit": "%",
+                "scale": "percent",
+                "timepoint_value": null,
+                "timepoint_unit": null
+              },
+              "measurement": {
+                "effect_id": "severe_intestinal_malabsorption_celiac_disease_bariatric_roux_en_y_surgery_serum_25_hydroxyvitamin_d_unfavorable",
+                "original_value": -65.0,
+                "original_lower": -80.0,
+                "original_upper": -50.0,
+                "original_unit": "%",
+                "canonical_value": -65.0,
+                "canonical_lower": -80.0,
+                "canonical_upper": -50.0,
+                "canonical_unit": "%",
+                "conversion_factor": null,
+                "conversion_method": null
+              },
+              "baseline": {
+                "value": null,
+                "sd": null
+              },
+              "post": {
+                "value": null,
+                "sd": null
+              },
+              "sample_size": null,
+              "intervention_sample_size": null,
+              "comparator_sample_size": null,
+              "population": {
+                "population_id": "PMID-21646368_adults",
+                "evidence_id": "PMID-21646368",
+                "age_mean": null,
+                "age_sd": null,
+                "age_min": 18.0,
+                "age_max": 80.0,
+                "sex_distribution": {
+                  "male": 0.5,
+                  "female": 0.5
+                },
+                "race_ethnicity_distribution": {},
+                "bmi_mean": null,
+                "bmi_sd": null,
+                "baseline_condition": "general_population",
+                "disease_status": null,
+                "baseline_biomarker_mean": null,
+                "baseline_biomarker_sd": null,
+                "inclusion_criteria": null,
+                "exclusion_criteria": null
+              },
+              "evidence": {
+                "evidence_id": "PMID-21646368",
+                "source_type": "CLINICAL_GUIDELINE",
+                "title": "Holick MF, et al. J Clin Endocrinol Metab. 2011;96:1911-1930. PMID: 21646368",
+                "authors": null,
+                "journal": null,
+                "publication_year": 2011,
+                "doi": null,
+                "pmid": "21646368",
+                "nct_id": null,
+                "url": null,
+                "study_design": "clinical_guideline",
+                "evidence_level": null,
+                "population_description": null,
+                "sample_size": null,
+                "comparator_description": null,
+                "followup_value": null,
+                "followup_unit": null,
+                "risk_of_bias": null,
+                "certainty": null,
+                "extraction_status": null,
+                "source_date": null,
+                "created_at": "2026-08-22T08:35:25.071382",
+                "heterogeneity_i2": null,
+                "heterogeneity_tau2": null,
+                "number_of_studies": null
+              },
+              "comparator": {
+                "comparator_id": "severe_intestinal_malabsorption_celiac_disease_bariatric_roux_en_y_surgery_standard_care",
+                "comparator_type": "USUAL_CARE",
+                "comparator_name": "Standard care / no intervention",
+                "description": "Standard care / no intervention (control group)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

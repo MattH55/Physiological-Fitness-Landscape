@@ -1,0 +1,526 @@
+"""
+High-recall ClinicalTrials.gov sweep.
+
+Implements the two-stage discovery pipeline:
+  Stage 1: HIGH-RECALL SWEEP (tolerate false positives)
+  Stage 2: RELEVANCE SCREEN (score and rank candidates)
+
+The sweep runs a search matrix per biomarker:
+  A. Exact biomarker
+  B. Aliases
+  C. Biomarker + measurement terminology
+  D. Biomarker + effect terminology
+  E. Biomarker + generic intervention terminology
+  F. Biomarker + study terminology
+  G. Intervention-class searches (biomarker + intervention class)
+  H. Intervention expansion loop (extract interventions, search them)
+
+All raw search hits are preserved for audit.
+"""
+
+import json
+import os
+import time
+import logging
+from dataclasses import dataclass, field
+from typing import Dict, List, Optional, Set, Tuple
+
+from .biomarker_ontology import BiomarkerOntology, get_ontology
+from .clinicaltrials_client import search_studies, fetch_study, CLINICALTRIALS_BASE
+
+logger = logging.getLogger(__name__)
+
+# =======================================================================
+# Search matrix definitions
+# =======================================================================
+
+# Effect terminology (Search D)
+EFFECT_TERMS = [
+    "change", "increase", "decrease", "response", "effect",
+    "change from baseline", "difference",
+]
+
+# Generic intervention terminology (Search E)
+INTERVENTION_TERMS = [
+    "treatment", "intervention", "therapy", "drug",
+    "supplementation", "exercise", "diet", "lifestyle",
+]
+
+# Study terminology (Search F)
+STUDY_TERMS = [
+    "trial", "clinical trial", "randomized", "controlled",
+]
+
+# Intervention classes (Search G)
+INTERVENTION_CLASSES = [
+    "drug", "pharmacological", "supplement", "vitamin", "mineral",
+    "exercise", "physical activity", "diet", "dietary intervention",
+    "caloric restriction", "fasting", "weight loss", "sleep",
+    "behavioral", "surgery", "procedure", "hormone", "biologic",
+    "antibody", "cell therapy",
+]
+
+# All CT.gov study statuses -- don't filter during discovery
+ALL_STATUSES = [
+    "COMPLETED", "ACTIVE_NOT_RECRUITING", "RECRUITING",
+    "NOT_YET_RECRUITING", "TERMINATED", "SUSPENDED",
+    "WITHDRAWN", "UNKNOWN",
+]
+
+
+@dataclass
+class SearchHit:
+    """A single raw search hit from the CT.gov sweep."""
+    nct_id: str
+    biomarker_id: str
+    search_type: str          # A, B, C, D, E, F, G, H
+    matched_term: str
+    matched_query: str
+    study_summary: dict      # raw CT.gov study summary
+    has_results: bool = False
+    overall_status: str = ""
+    study_type: str = ""
+    conditions: List[str] = field(default_factory=list)
+    interventions: List[str] = field(default_factory=list)
+    retrieved_at: str = ""
+
+    def to_dict(self) -> dict:
+        return {
+            "nct_id": self.nct_id,
+            "biomarker_id": self.biomarker_id,
+            "search_type": self.search_type,
+            "matched_term": self.matched_term,
+            "matched_query": self.matched_query,
+            "study_summary": self.study_summary,
+            "has_results": self.has_results,
+            "overall_status": self.overall_status,
+            "study_type": self.study_type,
+            "conditions": self.conditions,
+            "interventions": self.interventions,
+            "retrieved_at": self.retrieved_at,
+        }
+
+
+@dataclass
+class SweepResult:
+    """Aggregated result of a full sweep for one biomarker."""
+    biomarker_id: str
+    hits: List[SearchHit] = field(default_factory=list)
+    unique_nct_ids: Set[str] = field(default_factory=set)
+    total_searches: int = 0
+    total_hits: int = 0
+    completed_with_results: int = 0
+    interventional: int = 0
+    observational: int = 0
+
+    def summary(self) -> dict:
+        return {
+            "biomarker_id": self.biomarker_id,
+            "total_searches": self.total_searches,
+            "total_hits": self.total_hits,
+            "unique_trials": len(self.unique_nct_ids),
+            "completed_with_results": self.completed_with_results,
+            "interventional": self.interventional,
+            "observational": self.observational,
+        }
+
+
+# =======================================================================
+# Search matrix builder
+# =======================================================================
+
+def build_search_matrix(ontology: BiomarkerOntology) -> List[Tuple[str, str, str]]:
+    """
+    Build the full search matrix for a biomarker.
+
+    Returns a list of (search_type, query_param, query_value) tuples.
+    Each tuple is one independent CT.gov search.
+
+    Search types:
+      A - exact biomarker (query.term)
+      B - aliases (query.term)
+      C - biomarker + measurement terminology (query.term)
+      D - biomarker + effect terminology (query.term)
+      E - biomarker + intervention terminology (query.term)
+      F - biomarker + study terminology (query.term)
+      G - biomarker + intervention class (query.term)
+      H - intervention expansion (query.term, filled in later)
+    """
+    searches: List[Tuple[str, str, str]] = []
+    canonical = ontology.canonical_name
+
+    # Search A: exact biomarker
+    searches.append(("A", "query.term", canonical))
+
+    # Search B: aliases
+    for alias in ontology.aliases:
+        searches.append(("B", "query.term", alias))
+
+    # Search C: biomarker + measurement terminology
+    for term in ontology.measurement_search_terms():
+        searches.append(("C", "query.term", term))
+
+    # Search D: biomarker + effect terminology
+    for effect in EFFECT_TERMS:
+        searches.append(("D", "query.term", f"{canonical} {effect}"))
+
+    # Search E: biomarker + intervention terminology
+    for intr in INTERVENTION_TERMS:
+        searches.append(("E", "query.term", f"{canonical} {intr}"))
+
+    # Search F: biomarker + study terminology
+    for study in STUDY_TERMS:
+        searches.append(("F", "query.term", f"{canonical} {study}"))
+
+    # Search G: biomarker + intervention class
+    for cls in INTERVENTION_CLASSES:
+        searches.append(("G", "query.term", f"{canonical} {cls}"))
+
+    # Also search outcome measures specifically
+    searches.append(("A", "query.outc", canonical))
+    for alias in ontology.aliases[:3]:  # limit to top 3 aliases for outc
+        searches.append(("B", "query.outc", alias))
+
+    return searches
+
+
+# =======================================================================
+# Sweep execution
+# =======================================================================
+
+def run_sweep(
+    biomarker_id: str,
+    page_size: int = 50,
+    max_pages: int = 3,
+    pause_seconds: float = 0.3,
+    include_observational: bool = True,
+    include_all_statuses: bool = True,
+) -> SweepResult:
+    """
+    Run the full high-recall sweep for one biomarker.
+
+    Args:
+        biomarker_id: database slug (e.g. "ldl_cholesterol")
+        page_size: results per page (max 1000 per CT.gov API)
+        max_pages: max pages per search
+        pause_seconds: delay between searches (be a good citizen)
+        include_observational: include observational studies in discovery
+        include_all_statuses: don't filter by study status
+
+    Returns:
+        SweepResult with all raw hits preserved.
+    """
+    ontology = get_ontology(biomarker_id)
+    searches = build_search_matrix(ontology)
+
+    result = SweepResult(biomarker_id=biomarker_id)
+    seen_nct: Set[str] = set()
+
+    for search_type, param, value in searches:
+        # Build query -- deliberately broad, no status filter during discovery
+        query = {param: value}
+
+        # Don't filter by status during discovery (Sweep 1 = everything)
+        # Status filtering happens in the relevance screen stage
+
+        try:
+            studies = search_studies(query, page_size=page_size, max_pages=max_pages)
+        except Exception as e:
+            logger.warning(f"Search failed [{search_type}] '{value}': {e}")
+            continue
+
+        result.total_searches += 1
+        n_new = 0
+
+        for study in studies:
+            nct_id = _extract_nct(study)
+            if not nct_id or nct_id in seen_nct:
+                continue
+
+            seen_nct.add(nct_id)
+            n_new += 1
+
+            # Extract summary fields
+            summary = _extract_study_summary(study)
+            hit = SearchHit(
+                nct_id=nct_id,
+                biomarker_id=biomarker_id,
+                search_type=search_type,
+                matched_term=value,
+                matched_query=f"{param}={value}",
+                study_summary=summary,
+                has_results=summary.get("has_results", False),
+                overall_status=summary.get("overall_status", ""),
+                study_type=summary.get("study_type", ""),
+                conditions=summary.get("conditions", []),
+                interventions=summary.get("interventions", []),
+                retrieved_at=time.strftime("%Y-%m-%dT%H:%M:%S"),
+            )
+            result.hits.append(hit)
+
+            # Track counts
+            if hit.has_results and hit.overall_status == "COMPLETED":
+                result.completed_with_results += 1
+            if hit.study_type == "INTERVENTIONAL":
+                result.interventional += 1
+            elif hit.study_type == "OBSERVATIONAL":
+                result.observational += 1
+
+        result.total_hits += n_new
+        result.unique_nct_ids.update(seen_nct)
+
+        if n_new > 0:
+            logger.info(f"  [{search_type}] '{value}': {n_new} new trials")
+
+        time.sleep(pause_seconds)
+
+    return result
+
+
+def _extract_nct(study: dict) -> Optional[str]:
+    """Extract NCT ID from a CT.gov study summary."""
+    proto = study.get("protocolSection", {})
+    ident = proto.get("identificationModule", {})
+    return ident.get("nctId")
+
+
+def _extract_study_summary(study: dict) -> dict:
+    """Extract key fields from a CT.gov study summary for storage."""
+    proto = study.get("protocolSection", {})
+    ident = proto.get("identificationModule", {})
+    status = proto.get("statusModule", {})
+    design = proto.get("designModule", {})
+    arms = proto.get("armsInterventionsModule", {})
+    conditions = proto.get("conditionsModule", {})
+    outcomes = proto.get("outcomesModule", {})
+    results = study.get("resultsSection", {})
+
+    # Conditions
+    cond_list = []
+    for c in conditions.get("conditions", []):
+        cond_list.append(c)
+    for c in conditions.get("conditions", []):
+        pass  # already captured
+
+    # Interventions
+    intr_list = []
+    for intr in arms.get("interventions", []):
+        intr_list.append({
+            "name": intr.get("name"),
+            "type": intr.get("type"),
+            "description": (intr.get("description") or "")[:500],
+        })
+
+    # Outcome measures
+    outcome_titles = []
+    for om in outcomes.get("outcomeMeasures", []):
+        outcome_titles.append({
+            "title": om.get("title"),
+            "type": om.get("type"),
+            "timepoint": om.get("timePoint"),
+        })
+
+    # Has results
+    has_results = bool(results)
+
+    return {
+        "nct_id": ident.get("nctId"),
+        "title": ident.get("briefTitle"),
+        "overall_status": status.get("overallStatus"),
+        "study_type": design.get("phases") and "INTERVENTIONAL" or
+                      (proto.get("designModule", {}).get("phases") and "INTERVENTIONAL" or "OBSERVATIONAL"),
+        "phases": design.get("phases", []),
+        "conditions": cond_list,
+        "interventions": intr_list,
+        "outcome_measures": outcome_titles,
+        "has_results": has_results,
+        "start_date": status.get("startDate", {}).get("date"),
+        "completion_date": status.get("completionDate", {}).get("date"),
+        "lead_sponsor": proto.get("centralContactModule", {}).get("leadSponsorName"),
+    }
+
+
+# =======================================================================
+# Intervention expansion loop (Search H)
+# =======================================================================
+
+def run_intervention_expansion(
+    sweep_result: SweepResult,
+    page_size: int = 50,
+    max_pages: int = 2,
+    pause_seconds: float = 0.3,
+    max_interventions: int = 20,
+) -> SweepResult:
+    """
+    Intervention expansion loop: extract interventions from discovered trials,
+    search each intervention independently, and look for the biomarker
+    in those newly discovered trials.
+
+    This recovers trials whose CT.gov record doesn't mention the biomarker
+    in the title or summary but do measure it as a secondary/exploratory
+    endpoint.
+    """
+    ontology = get_ontology(sweep_result.biomarker_id)
+    biomarker_terms = [t.lower() for t in ontology.all_search_terms()]
+
+    # Collect unique intervention names from discovered trials
+    seen_interventions: Set[str] = set()
+    candidate_interventions: List[str] = []
+
+    for hit in sweep_result.hits:
+        for intr in hit.interventions:
+            name = intr.get("name", "")
+            if name and name.lower() not in seen_interventions:
+                seen_interventions.add(name.lower())
+                candidate_interventions.append(name)
+
+    # Limit to avoid excessive API calls
+    candidate_interventions = candidate_interventions[:max_interventions]
+
+    if not candidate_interventions:
+        logger.info("No interventions to expand")
+        return sweep_result
+
+    logger.info(f"Expanding {len(candidate_interventions)} interventions...")
+
+    seen_nct = set(sweep_result.unique_nct_ids)
+    new_hits = 0
+
+    for intr_name in candidate_interventions:
+        # Search for the intervention WITHOUT the biomarker
+        query = {"query.intr": intr_name}
+        try:
+            studies = search_studies(query, page_size=page_size, max_pages=max_pages)
+        except Exception as e:
+            logger.warning(f"Intervention expansion failed for '{intr_name}': {e}")
+            continue
+
+        for study in studies:
+            nct_id = _extract_nct(study)
+            if not nct_id or nct_id in seen_nct:
+                continue
+
+            # Check if the biomarker appears anywhere in this trial
+            study_text = json.dumps(study).lower()
+            biomarker_found = any(term in study_text for term in biomarker_terms)
+
+            if biomarker_found:
+                seen_nct.add(nct_id)
+                summary = _extract_study_summary(study)
+                hit = SearchHit(
+                    nct_id=nct_id,
+                    biomarker_id=sweep_result.biomarker_id,
+                    search_type="H",
+                    matched_term=intr_name,
+                    matched_query=f"query.intr={intr_name}",
+                    study_summary=summary,
+                    has_results=summary.get("has_results", False),
+                    overall_status=summary.get("overall_status", ""),
+                    study_type=summary.get("study_type", ""),
+                    conditions=summary.get("conditions", []),
+                    interventions=summary.get("interventions", []),
+                    retrieved_at=time.strftime("%Y-%m-%dT%H:%M:%S"),
+                )
+                sweep_result.hits.append(hit)
+                sweep_result.unique_nct_ids.add(nct_id)
+                new_hits += 1
+
+        time.sleep(pause_seconds)
+
+    sweep_result.total_hits += new_hits
+    logger.info(f"Intervention expansion: {new_hits} new trials found")
+    return sweep_result
+
+
+# =======================================================================
+# Results-focused sweep (Sweep 2)
+# =======================================================================
+
+def run_results_sweep(
+    biomarker_id: str,
+    page_size: int = 50,
+    max_pages: int = 3,
+    pause_seconds: float = 0.3,
+) -> SweepResult:
+    """
+    Second sweep: focus on completed trials with posted results.
+    These get higher evidence priority.
+    """
+    ontology = get_ontology(biomarker_id)
+    result = SweepResult(biomarker_id=biomarker_id)
+    seen_nct: Set[str] = set()
+
+    # Search with results filter
+    for term in ontology.all_search_terms()[:5]:  # limit to top 5 terms
+        query = {
+            "query.term": term,
+            "filter.overallStatus": "COMPLETED",
+            "filter.hasResults": "true",
+        }
+        try:
+            studies = search_studies(query, page_size=page_size, max_pages=max_pages)
+        except Exception as e:
+            logger.warning(f"Results sweep failed for '{term}': {e}")
+            continue
+
+        result.total_searches += 1
+        for study in studies:
+            nct_id = _extract_nct(study)
+            if not nct_id or nct_id in seen_nct:
+                continue
+            seen_nct.add(nct_id)
+            summary = _extract_study_summary(study)
+            hit = SearchHit(
+                nct_id=nct_id,
+                biomarker_id=biomarker_id,
+                search_type="RESULTS",
+                matched_term=term,
+                matched_query=f"query.term={term} + COMPLETED + hasResults",
+                study_summary=summary,
+                has_results=True,
+                overall_status="COMPLETED",
+                study_type=summary.get("study_type", ""),
+                conditions=summary.get("conditions", []),
+                interventions=summary.get("interventions", []),
+                retrieved_at=time.strftime("%Y-%m-%dT%H:%M:%S"),
+            )
+            result.hits.append(hit)
+            result.unique_nct_ids.add(nct_id)
+            result.total_hits += 1
+            if summary.get("study_type") == "INTERVENTIONAL":
+                result.interventional += 1
+            else:
+                result.observational += 1
+
+        time.sleep(pause_seconds)
+
+    return result
+
+
+# =======================================================================
+# Save raw sweep results
+# =======================================================================
+
+def save_sweep_result(result: SweepResult, output_dir: str = None) -> str:
+    """Save raw sweep results to disk for audit."""
+    if output_dir is None:
+        output_dir = os.path.join(
+            os.path.dirname(__file__), "..", "..", "data", "raw", "ctgov_sweep"
+        )
+    output_dir = os.path.normpath(output_dir)
+    biomarker_dir = os.path.join(output_dir, result.biomarker_id)
+    os.makedirs(biomarker_dir, exist_ok=True)
+
+    date_str = time.strftime("%Y-%m-%d")
+    out_path = os.path.join(biomarker_dir, f"sweep_{date_str}.json")
+
+    data = {
+        "biomarker_id": result.biomarker_id,
+        "summary": result.summary(),
+        "hits": [h.to_dict() for h in result.hits],
+    }
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, default=str)
+
+    logger.info(f"Saved sweep result to {out_path}")
+    return out_path

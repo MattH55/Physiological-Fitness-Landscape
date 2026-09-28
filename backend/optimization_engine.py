@@ -40,10 +40,11 @@ def evaluate_hr(x: float, curve_type: str, reference_value: float, parameters: D
         return float(np.exp(np.clip(log_hr, -5.0, 5.0)))
 
     elif curve_type == "quadratic":
-        # ln(HR(x)) = a * (x - x_opt)^2
+        # ln(HR(x)) = a * (x - x_opt)^2 - a * (reference_value - x_opt)^2
+        # Normalized so HR(reference_value) == 1.0 (log_hr == 0.0 at the reference).
         a = parameters.get("a", 0.001)
         x_opt = optimal_value if optimal_value is not None else parameters.get("x_opt", reference_value)
-        log_hr = a * ((x - x_opt) ** 2)
+        log_hr = a * ((x - x_opt) ** 2) - a * ((reference_value - x_opt) ** 2)
         return float(np.exp(np.clip(log_hr, -5.0, 5.0)))
 
     elif curve_type == "log_log":
@@ -117,7 +118,8 @@ def compute_baseline_expected_hazard(
     curve_type: str,
     reference_value: float,
     parameters: Dict[str, Any],
-    optimal_value: Optional[float] = None
+    optimal_value: Optional[float] = None,
+    **_unused: Any,
 ) -> Tuple[float, np.ndarray]:
     """
     Computes E[HR_0] = \\sum_i p_i HR(x_i)
@@ -435,6 +437,15 @@ def evaluate_hr_function(
     elif f_type in ["log_linear_per_sd", "log_linear_per_unit", "linear", "linear_log"]:
         beta = float(params.get("beta", 0.3 if shape != "monotonic_decreasing" else -0.3))
         log_hr = beta * (x_clipped - ref_val)
+    elif f_type in ["log_log", "power"]:
+        # ln(HR) = beta * ln(x / reference). Normalized so HR(reference) == 1.0.
+        # Must mirror evaluate_hr() exactly: the two evaluators are used
+        # interchangeably across the VOI/Monte-Carlo stack and any divergence
+        # silently desynchronizes baseline EHR from the curve it describes.
+        beta = float(params.get("beta", 0.3 if shape != "monotonic_decreasing" else -0.3))
+        x_safe = np.maximum(x_clipped, 1e-4)
+        ref_safe = max(ref_val, 1e-4)
+        log_hr = beta * (np.log(x_safe) - math.log(ref_safe))
     else:
         beta = float(params.get("beta", 0.3 if shape != "monotonic_decreasing" else -0.3))
         log_hr = beta * (x_clipped - ref_val)

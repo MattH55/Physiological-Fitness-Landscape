@@ -1,0 +1,1192 @@
+{
+ "high_sensitivity_crp": {
+  "mesh_term": "C-Reactive Protein",
+  "mesh_id": "D002097",
+  "uid": "68002097"
+ },
+ "interleukin_6": {
+  "mesh_term": "Interleukin-6",
+  "mesh_id": "D015850",
+  "uid": "68015850"
+ },
+ "tumor_necrosis_factor_alpha": {
+  "mesh_term": "Tumor Necrosis Factor-alpha",
+  "mesh_id": "D014409",
+  "uid": "68014409"
+ },
+ "fibrinogen": {
+  "mesh_term": "Fibrinogen",
+  "mesh_id": "D005340",
+  "uid": "68005340"
+ },
+ "erythrocyte_sedimentation_rate": {
+  "mesh_term": "Blood Sedimentation",
+  "mesh_id": "D001799",
+  "uid": "68001799"
+ },
+ "neutrophil_lymphocyte_ratio": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "serum_ferritin": {
+  "mesh_term": "Ferritins",
+  "mesh_id": "D005293",
+  "uid": "68005293"
+ },
+ "serum_creatinine": {
+  "mesh_term": "Creatinine",
+  "mesh_id": "D003404",
+  "uid": "68003404"
+ },
+ "blood_urea_nitrogen": {
+  "mesh_term": "Blood Urea Nitrogen",
+  "mesh_id": "D001806",
+  "uid": "68001806"
+ },
+ "cystatin_c": {
+  "mesh_term": "Cystatin C",
+  "mesh_id": "D055316",
+  "uid": "68055316"
+ },
+ "estimated_gfr": {
+  "mesh_term": "ErbB Receptors",
+  "mesh_id": "D066246",
+  "uid": "68066246"
+ },
+ "serum_uric_acid": {
+  "mesh_term": "Uric Acid",
+  "mesh_id": "D014527",
+  "uid": "68014527"
+ },
+ "total_cholesterol": {
+  "mesh_term": "Cholesterol",
+  "mesh_id": "D002784",
+  "uid": "68002784"
+ },
+ "hdl_cholesterol": {
+  "mesh_term": "Cholesterol, HDL",
+  "mesh_id": "D008076",
+  "uid": "68008076"
+ },
+ "ldl_cholesterol": {
+  "mesh_term": "Cholesterol, LDL",
+  "mesh_id": "D008078",
+  "uid": "68008078"
+ },
+ "triglycerides": {
+  "mesh_term": "Triglycerides",
+  "mesh_id": "D014280",
+  "uid": "68014280"
+ },
+ "apolipoprotein_b": {
+  "mesh_term": "Apolipoproteins B",
+  "mesh_id": "D001055",
+  "uid": "68001055"
+ },
+ "apolipoprotein_a1": {
+  "mesh_term": "Apolipoprotein A-I",
+  "mesh_id": "D016632",
+  "uid": "68016632"
+ },
+ "lipoprotein_a": {
+  "mesh_term": "Lipoprotein(a)",
+  "mesh_id": "D017270",
+  "uid": "68017270"
+ },
+ "fasting_glucose": {
+  "mesh_term": "Glucose",
+  "mesh_id": "D005947",
+  "uid": "68005947"
+ },
+ "hba1c": {
+  "mesh_term": "Glycated Hemoglobin",
+  "mesh_id": "D006442",
+  "uid": "68006442"
+ },
+ "fasting_insulin": {
+  "mesh_term": "Insulin",
+  "mesh_id": "D007328",
+  "uid": "68007328"
+ },
+ "homa_ir": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "alanine_aminotransferase": {
+  "mesh_term": "Alanine Transaminase",
+  "mesh_id": "D000410",
+  "uid": "68000410"
+ },
+ "aspartate_aminotransferase": {
+  "mesh_term": "Aspartate Aminotransferases",
+  "mesh_id": "D001219",
+  "uid": "68001219"
+ },
+ "gamma_glutamyl_transferase": {
+  "mesh_term": "gamma-Glutamyltransferase",
+  "mesh_id": "D005723",
+  "uid": "68005723"
+ },
+ "alkaline_phosphatase": {
+  "mesh_term": "Alkaline Phosphatase",
+  "mesh_id": "D000469",
+  "uid": "68000469"
+ },
+ "total_bilirubin": {
+  "mesh_term": "Bilirubin",
+  "mesh_id": "D001663",
+  "uid": "68001663"
+ },
+ "serum_albumin": {
+  "mesh_term": "Serum Albumin",
+  "mesh_id": "D012709",
+  "uid": "68012709"
+ },
+ "serum_sodium": {
+  "mesh_term": "Sodium",
+  "mesh_id": "D012964",
+  "uid": "68012964"
+ },
+ "serum_potassium": {
+  "mesh_term": "Potassium, Dietary",
+  "mesh_id": "D017419",
+  "uid": "68017419"
+ },
+ "serum_calcium": {
+  "mesh_term": "Calcium",
+  "mesh_id": "D002118",
+  "uid": "68002118"
+ },
+ "serum_phosphate": {
+  "mesh_term": "Phosphates",
+  "mesh_id": "D010710",
+  "uid": "68010710"
+ },
+ "nt_pro_bnp": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "hs_troponin_t": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "systolic_blood_pressure": {
+  "mesh_term": "Blood Pressure",
+  "mesh_id": "D001794",
+  "uid": "68001794"
+ },
+ "diastolic_blood_pressure": {
+  "mesh_term": "Blood Pressure",
+  "mesh_id": "D001794",
+  "uid": "68001794"
+ },
+ "resting_heart_rate": {
+  "mesh_term": "Pulse",
+  "mesh_id": "D011674",
+  "uid": "68011674"
+ },
+ "pulse_wave_velocity": {
+  "mesh_term": "Carotid-Femoral Pulse Wave Velocity",
+  "mesh_id": "2031031",
+  "uid": "2031031"
+ },
+ "grip_strength": {
+  "mesh_term": "Hand Strength",
+  "mesh_id": "D018737",
+  "uid": "68018737"
+ },
+ "vo2_max": {
+  "mesh_term": "Cardiorespiratory Fitness",
+  "mesh_id": "2016739",
+  "uid": "2016739"
+ },
+ "hemoglobin": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "white_blood_cells": {
+  "mesh_term": "Leukocyte Count",
+  "mesh_id": "D007958",
+  "uid": "68007958"
+ },
+ "red_cell_distribution_width": {
+  "mesh_term": "Erythrocyte Indices",
+  "mesh_id": "D004909",
+  "uid": "68004909"
+ },
+ "platelet_count": {
+  "mesh_term": "Platelet Count",
+  "mesh_id": "D010976",
+  "uid": "68010976"
+ },
+ "urine_albumin_creatinine_ratio": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "urine_creatinine": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "urine_specific_gravity": {
+  "mesh_term": "Specific Gravity",
+  "mesh_id": "D013046",
+  "uid": "68013046"
+ },
+ "urine_flow_rate": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "serum_25_hydroxyvitamin_d": {
+  "mesh_term": "Calcifediol",
+  "mesh_id": "D002112",
+  "uid": "68002112"
+ },
+ "gdf-15": {
+  "mesh_term": "Growth Differentiation Factor 15",
+  "mesh_id": "D055436",
+  "uid": "68055436"
+ },
+ "stnfr1": {
+  "mesh_term": "Receptors, Tumor Necrosis Factor, Type I",
+  "mesh_id": "D047888",
+  "uid": "68047888"
+ },
+ "lmr": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "ykl-40": {
+  "mesh_term": "Chitinase-3-Like Protein 1",
+  "mesh_id": "2016488",
+  "uid": "2016488"
+ },
+ "beta2-microglobulin": {
+  "mesh_term": "beta 2-Microglobulin",
+  "mesh_id": "D001613",
+  "uid": "68001613"
+ },
+ "galectin-3": {
+  "mesh_term": "Galectin 3",
+  "mesh_id": "D037502",
+  "uid": "68037502"
+ },
+ "sst2": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "mr-proadm": {
+  "mesh_term": "Adrenomedullin",
+  "mesh_id": "D053607",
+  "uid": "68053607"
+ },
+ "copeptin": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "homocysteine": {
+  "mesh_term": "Homocysteine",
+  "mesh_id": "D006710",
+  "uid": "68006710"
+ },
+ "fib-4": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "free-t3": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "tsh": {
+  "mesh_term": "Thyrotropin",
+  "mesh_id": "D013972",
+  "uid": "68013972"
+ },
+ "igf-1": {
+  "mesh_term": "Insulin-Like Growth Factor I",
+  "mesh_id": "D007334",
+  "uid": "68007334"
+ },
+ "dhea-s": {
+  "mesh_term": "Dehydroepiandrosterone Sulfate",
+  "mesh_id": "D019314",
+  "uid": "68019314"
+ },
+ "mpv": {
+  "mesh_term": "Mean Platelet Volume",
+  "mesh_id": "D063847",
+  "uid": "68063847"
+ },
+ "eosinophil-count": {
+  "mesh_term": "Eosinophils",
+  "mesh_id": "D004804",
+  "uid": "68004804"
+ },
+ "8-ohdg": {
+  "mesh_term": "8-Hydroxy-2'-Deoxyguanosine",
+  "mesh_id": "2030930",
+  "uid": "2030930"
+ },
+ "folate": {
+  "mesh_term": "Folic Acid",
+  "mesh_id": "D005492",
+  "uid": "68005492"
+ },
+ "vitamin-b12": {
+  "mesh_term": "Vitamin B 12",
+  "mesh_id": "D014805",
+  "uid": "68014805"
+ },
+ "selenium": {
+  "mesh_term": "Selenium",
+  "mesh_id": "D012643",
+  "uid": "68012643"
+ },
+ "zinc": {
+  "mesh_term": "Zinc",
+  "mesh_id": "D015032",
+  "uid": "68015032"
+ },
+ "supar": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "il-18": {
+  "mesh_term": "Interleukin-18",
+  "mesh_id": "D020382",
+  "uid": "68020382"
+ },
+ "mcp-1": {
+  "mesh_term": "Chemokine CCL2",
+  "mesh_id": "D018932",
+  "uid": "68018932"
+ },
+ "neopterin": {
+  "mesh_term": "Neopterin",
+  "mesh_id": "D019798",
+  "uid": "68019798"
+ },
+ "scd14": {
+  "mesh_term": "Lipopolysaccharide Receptors",
+  "mesh_id": "D018950",
+  "uid": "68018950"
+ },
+ "scd163": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "procalcitonin": {
+  "mesh_term": "Procalcitonin",
+  "mesh_id": "2028130",
+  "uid": "2028130"
+ },
+ "ptx3": {
+  "mesh_term": "Pentraxins",
+  "mesh_id": "2108947",
+  "uid": "2108947"
+ },
+ "d-dimer": {
+  "mesh_term": "Fibrin Fibrinogen Degradation Products",
+  "mesh_id": "D005338",
+  "uid": "68005338"
+ },
+ "pai-1": {
+  "mesh_term": "Plasminogen Activator Inhibitor 1",
+  "mesh_id": "D017395",
+  "uid": "68017395"
+ },
+ "vwf": {
+  "mesh_term": "von Willebrand Factor",
+  "mesh_id": "D014841",
+  "uid": "68014841"
+ },
+ "tmao": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "non-hdl-c": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "lp-pla2": {
+  "mesh_term": "1-Alkyl-2-acetylglycerophosphocholine Esterase",
+  "mesh_id": "D043203",
+  "uid": "68043203"
+ },
+ "apob-apoa1": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "alpha-klotho": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "telomere-length": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "dna-methylation-age": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "mt-dna-copy": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "nfl": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "testosterone": {
+  "mesh_term": "Testosterone",
+  "mesh_id": "D013739",
+  "uid": "68013739"
+ },
+ "cortisol": {
+  "mesh_term": "Hydrocortisone",
+  "mesh_id": "D006854",
+  "uid": "68006854"
+ },
+ "c-peptide": {
+  "mesh_term": "C-Peptide",
+  "mesh_id": "D002096",
+  "uid": "68002096"
+ },
+ "adiponectin": {
+  "mesh_term": "Adiponectin",
+  "mesh_id": "D052242",
+  "uid": "68052242"
+ },
+ "mcv": {
+  "mesh_term": "Erythrocyte Indices",
+  "mesh_id": "D004909",
+  "uid": "68004909"
+ },
+ "monocyte-count": {
+  "mesh_term": "Monocytes",
+  "mesh_id": "D009000",
+  "uid": "68009000"
+ },
+ "hematocrit": {
+  "mesh_term": "Hematocrit",
+  "mesh_id": "D006400",
+  "uid": "68006400"
+ },
+ "transferrin-sat": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "deritis-ratio": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "total-protein": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "ag-ratio": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "bmd-tscore": {
+  "mesh_term": "Bone Density",
+  "mesh_id": "D015519",
+  "uid": "68015519"
+ },
+ "pth": {
+  "mesh_term": "Parathyroid Hormone",
+  "mesh_id": "D010281",
+  "uid": "68010281"
+ },
+ "bmi": {
+  "mesh_term": "Body Mass Index",
+  "mesh_id": "D015992",
+  "uid": "68015992"
+ },
+ "waist-height-ratio": {
+  "mesh_term": "Waist-Height Ratio",
+  "mesh_id": "D065927",
+  "uid": "68065927"
+ },
+ "gait-speed": {
+  "mesh_term": "Walking Speed",
+  "mesh_id": "2016791",
+  "uid": "2016791"
+ },
+ "appendicular-lean-mass": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "hrv-sdnn": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "orthostatic-bp-drop": {
+  "mesh_term": "Hypotension, Orthostatic",
+  "mesh_id": "D007024",
+  "uid": "68007024"
+ },
+ "alpha-1-microglobulin": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "angiopoietin-2": {
+  "mesh_term": "Angiopoietin-2",
+  "mesh_id": "D042702",
+  "uid": "68042702"
+ },
+ "antinuclear-antibodies": {
+  "mesh_term": "Antibodies, Antinuclear",
+  "mesh_id": "D000974",
+  "uid": "68000974"
+ },
+ "arm-circumference": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "ascorbic-acid": {
+  "mesh_term": "Ascorbic Acid",
+  "mesh_id": "D001205",
+  "uid": "68001205"
+ },
+ "asymmetric-dimethylarginine": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "basal-metabolic-rate": {
+  "mesh_term": "Basal Metabolism",
+  "mesh_id": "D001481",
+  "uid": "68001481"
+ },
+ "basophil-count": {
+  "mesh_term": "Basophils",
+  "mesh_id": "D001491",
+  "uid": "68001491"
+ },
+ "beta-cryptoxanthin": {
+  "mesh_term": "Beta-Cryptoxanthin",
+  "mesh_id": "2016782",
+  "uid": "2016782"
+ },
+ "beta-trace-protein": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "body-fat-percentage": {
+  "mesh_term": "Fat Body",
+  "mesh_id": "D005216",
+  "uid": "68005216"
+ },
+ "body-water-mass": {
+  "mesh_term": "Body Water",
+  "mesh_id": "D001834",
+  "uid": "68001834"
+ },
+ "broadband-ultrasound-attenuation": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "cd4-cd8-ratio": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "cd8-cell-count": {
+  "mesh_term": "CD8-Positive T-Lymphocytes",
+  "mesh_id": "D018414",
+  "uid": "68018414"
+ },
+ "chronotropic-index": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "citrate": {
+  "mesh_term": "Citric Acid",
+  "mesh_id": "D019343",
+  "uid": "68019343"
+ },
+ "cotinine": {
+  "mesh_term": "Cotinine",
+  "mesh_id": "D003367",
+  "uid": "68003367"
+ },
+ "distance-from-rump-to-crown": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "estradiol": {
+  "mesh_term": "Estradiol",
+  "mesh_id": "D004958",
+  "uid": "68004958"
+ },
+ "factor-viic": {
+  "mesh_term": "Factor VII",
+  "mesh_id": "D005167",
+  "uid": "68005167"
+ },
+ "factor-viii": {
+  "mesh_term": "Factor VIII",
+  "mesh_id": "D005169",
+  "uid": "68005169"
+ },
+ "fat-free-mass": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "fat-mass": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "fev1-fev6-ratio": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "follicle-stimulating-hormone": {
+  "mesh_term": "Follicle Stimulating Hormone",
+  "mesh_id": "D005640",
+  "uid": "68005640"
+ },
+ "forced-expiratory-volume-1": {
+  "mesh_term": "Forced Expiratory Volume",
+  "mesh_id": "D005541",
+  "uid": "68005541"
+ },
+ "growth-hormone": {
+  "mesh_term": "Growth Hormone",
+  "mesh_id": "D013006",
+  "uid": "68013006"
+ },
+ "h-fabp": {
+  "mesh_term": "Fatty Acid Binding Protein 3",
+  "mesh_id": "2023231",
+  "uid": "2023231"
+ },
+ "heart-rate-recovery": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "hip-circumference": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "homoarginine": {
+  "mesh_term": "Homoarginine",
+  "mesh_id": "D006709",
+  "uid": "68006709"
+ },
+ "immature-reticulocyte-fraction": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "immunoglobulin-a": {
+  "mesh_term": "Immunoglobulin A",
+  "mesh_id": "D007070",
+  "uid": "68007070"
+ },
+ "immunoglobulin-g": {
+  "mesh_term": "Immunoglobulin G",
+  "mesh_id": "D007074",
+  "uid": "68007074"
+ },
+ "immunoglobulin-m": {
+  "mesh_term": "Immunoglobulin M",
+  "mesh_id": "D007075",
+  "uid": "68007075"
+ },
+ "leptin": {
+  "mesh_term": "Leptin",
+  "mesh_id": "D020738",
+  "uid": "68020738"
+ },
+ "lutein-zeaxanthin": {
+  "mesh_term": "Lutein",
+  "mesh_id": "D014975",
+  "uid": "68014975"
+ },
+ "lycopene": {
+  "mesh_term": "Lycopene",
+  "mesh_id": "2027968",
+  "uid": "2027968"
+ },
+ "lymphocyte-count": {
+  "mesh_term": "Lymphocyte Count",
+  "mesh_id": "D018655",
+  "uid": "68018655"
+ },
+ "lymphocyte-percentage": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "mean-arterial-pressure": {
+  "mesh_term": "Arterial Pressure",
+  "mesh_id": "D062186",
+  "uid": "68062186"
+ },
+ "mean-reticulocyte-volume": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "mean-sphered-cell-volume": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "metabolic-syndrome": {
+  "mesh_term": "Metabolic Syndrome",
+  "mesh_id": "D024821",
+  "uid": "68024821"
+ },
+ "monocyte-percentage": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "neutrophil-count": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "neutrophil-percentage": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "osteoprotegerin": {
+  "mesh_term": "Osteoprotegerin",
+  "mesh_id": "D053244",
+  "uid": "68053244"
+ },
+ "peroxiredoxin-4": {
+  "mesh_term": "Peroxiredoxins",
+  "mesh_id": "D054464",
+  "uid": "68054464"
+ },
+ "plasma-viscosity": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "platelet-distribution-width": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "pr-interval": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "predicted-mass": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "prolactin": {
+  "mesh_term": "Prolactin",
+  "mesh_id": "D011388",
+  "uid": "68011388"
+ },
+ "proteinuria": {
+  "mesh_term": "Proteinuria",
+  "mesh_id": "D011507",
+  "uid": "68011507"
+ },
+ "qrs-duration": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "qrs-t-angle": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "qt-interval": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "qtc-interval": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "red-blood-cell-count": {
+  "mesh_term": "Erythrocyte Count",
+  "mesh_id": "D004906",
+  "uid": "68004906"
+ },
+ "reticulocyte-count": {
+  "mesh_term": "Reticulocyte Count",
+  "mesh_id": "D017701",
+  "uid": "68017701"
+ },
+ "reticulocyte-percentage": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "retinol": {
+  "mesh_term": "Vitamin A",
+  "mesh_id": "D014801",
+  "uid": "68014801"
+ },
+ "rheumatoid-factor": {
+  "mesh_term": "Rheumatoid Factor",
+  "mesh_id": "D012217",
+  "uid": "68012217"
+ },
+ "serum-iron": {
+  "mesh_term": "Iron",
+  "mesh_id": "D007501",
+  "uid": "68007501"
+ },
+ "serum-lead": {
+  "mesh_term": "Lead",
+  "mesh_id": "D007854",
+  "uid": "68007854"
+ },
+ "serum-magnesium": {
+  "mesh_term": "Magnesium",
+  "mesh_id": "D008274",
+  "uid": "68008274"
+ },
+ "side-step-test": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "sit-ups": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "soluble-icam-1": {
+  "mesh_term": "Intercellular Adhesion Molecule-1",
+  "mesh_id": "D018799",
+  "uid": "68018799"
+ },
+ "steps-per-day": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "stromal-cell-derived-factor-1": {
+  "mesh_term": "Chemokine CXCL12",
+  "mesh_id": "D054377",
+  "uid": "68054377"
+ },
+ "t-cell-count": {
+  "mesh_term": "T-Lymphocytes",
+  "mesh_id": "D013601",
+  "uid": "68013601"
+ },
+ "thyroxine": {
+  "mesh_term": "Thyroxine",
+  "mesh_id": "D013974",
+  "uid": "68013974"
+ },
+ "trans-lycopene": {
+  "mesh_term": "Lycopene",
+  "mesh_id": "2027968",
+  "uid": "2027968"
+ },
+ "trefoil-factor-3": {
+  "mesh_term": "Trefoil Factor-3",
+  "mesh_id": "2016404",
+  "uid": "2016404"
+ },
+ "visceral-fat-mass": {
+  "mesh_term": "Intra-Abdominal Fat",
+  "mesh_id": "D050152",
+  "uid": "68050152"
+ },
+ "waist-circumference": {
+  "mesh_term": "Waist Circumference",
+  "mesh_id": "D055105",
+  "uid": "68055105"
+ },
+ "waist-to-hip-ratio": {
+  "mesh_term": "Waist-Hip Ratio",
+  "mesh_id": "D049629",
+  "uid": "68049629"
+ },
+ "waist-to-thigh-ratio": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "weight": {
+  "mesh_term": "Body Weight",
+  "mesh_id": "D001835",
+  "uid": "68001835"
+ },
+ "ankle-brachial-index": {
+  "mesh_term": "Ankle Brachial Index",
+  "mesh_id": "D055109",
+  "uid": "68055109"
+ },
+ "carotid-intima-media-thickness": {
+  "mesh_term": "Carotid Intima-Media Thickness",
+  "mesh_id": "D059168",
+  "uid": "68059168"
+ },
+ "coronary-artery-calcium-score": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "estradiol-shbg-ratio": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "exercise-capacity-mets": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "forced-vital-capacity": {
+  "mesh_term": "Vital Capacity",
+  "mesh_id": "D014797",
+  "uid": "68014797"
+ },
+ "interleukin-1-beta": {
+  "mesh_term": "Interleukin-1beta",
+  "mesh_id": "D053583",
+  "uid": "68053583"
+ },
+ "interleukin-10": {
+  "mesh_term": "Interleukin-10",
+  "mesh_id": "D016753",
+  "uid": "68016753"
+ },
+ "interleukin-8": {
+  "mesh_term": "Interleukin-8",
+  "mesh_id": "D016209",
+  "uid": "68016209"
+ },
+ "lipid-accumulation-product": {
+  "mesh_term": "Lipid Accumulation Product",
+  "mesh_id": "D064237",
+  "uid": "68064237"
+ },
+ "myeloperoxidase": {
+  "mesh_term": "Peroxidase",
+  "mesh_id": "D009195",
+  "uid": "68009195"
+ },
+ "osteocalcin": {
+  "mesh_term": "Osteocalcin",
+  "mesh_id": "D015675",
+  "uid": "68015675"
+ },
+ "peak-expiratory-flow": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "plateletcrit": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "proinsulin": {
+  "mesh_term": "Proinsulin",
+  "mesh_id": "D011384",
+  "uid": "68011384"
+ },
+ "pulse-pressure": {
+  "mesh_term": "Blood Pressure",
+  "mesh_id": "D001794",
+  "uid": "68001794"
+ },
+ "remnant-cholesterol": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "skinfold-thickness": {
+  "mesh_term": "Skinfold Thickness",
+  "mesh_id": "D012885",
+  "uid": "68012885"
+ },
+ "symmetric-dimethylarginine": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "testosterone-shbg-ratio": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "abdominal-aortic-calcification": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "alpha-1-antichymotrypsin": {
+  "mesh_term": "alpha 1-Antichymotrypsin",
+  "mesh_id": "D000514",
+  "uid": "68000514"
+ },
+ "anion-gap-albumin-adjusted": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "bicarbonate": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "calf-circumference": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "cardiac-calcification": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "ctx-bone-resorption": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "extracoronary-calcification-sites": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "global-longitudinal-strain": {
+  "mesh_term": "Global Longitudinal Strain",
+  "mesh_id": "2103312",
+  "uid": "2103312"
+ },
+ "interventricular-septum-thickness": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "kidney-injury-molecule-1": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "left-ventricular-ejection-fraction": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "ngal": {
+  "mesh_term": "Lipocalin-2",
+  "mesh_id": "2016374",
+  "uid": "2016374"
+ },
+ "pericardial-fat": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "renal-artery-calcification": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "severe-diastolic-dysfunction": {
+  "mesh_term": "Ventricular Dysfunction, Left",
+  "mesh_id": "D018487",
+  "uid": "68018487"
+ },
+ "skeletal-muscle-fat-infiltration": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "standing-height": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "thoracic-aorta-calcification": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "total-thiols": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "vertical-jump": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "alpha-1-antitrypsin": {
+  "mesh_term": "alpha 1-Antitrypsin",
+  "mesh_id": "D000515",
+  "uid": "68000515"
+ },
+ "cardiac-troponin-i": {
+  "mesh_term": "Troponin I",
+  "mesh_id": "D019210",
+  "uid": "68019210"
+ },
+ "serum-chloride": {
+  "mesh_term": null,
+  "mesh_id": null,
+  "uid": null
+ },
+ "vitamin-e": {
+  "mesh_term": "Vitamin E",
+  "mesh_id": "D014810",
+  "uid": "68014810"
+ }
+}

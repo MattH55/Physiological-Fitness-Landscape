@@ -11,6 +11,9 @@ import json
 import sqlite3
 from pathlib import Path
 
+from backend.life_tables import serialize_life_tables
+from backend.voi import voi_config_dict
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 DB_PATH = BASE_DIR / "data" / "mortality_biomarkers.db"
 FRONTEND_HTML_PATH = BASE_DIR / "frontend" / "index.html"
@@ -45,6 +48,22 @@ def compile_database_payload():
 
     c.execute("SELECT * FROM source")
     sources = [dict(row) for row in c.fetchall()]
+    source_by_id = {s["id"]: s for s in sources}
+
+    def _attach_source(row):
+        if not row:
+            return row
+        sid = row.get("source_id")
+        if sid is not None and sid in source_by_id:
+            row["source"] = source_by_id[sid]
+        return row
+
+    for a in associations:
+        _attach_source(a)
+    for d in distributions:
+        _attach_source(d)
+    for i in interventions:
+        _attach_source(i)
 
     try:
         c.execute("SELECT * FROM disease ORDER BY category, name")
@@ -53,7 +72,25 @@ def compile_database_payload():
         disease_rows = []
 
     try:
-        c.execute("SELECT * FROM disease_alteration ORDER BY alteration_type_code, name")
+        # Order so that gene alterations (Type A Molecular / subtype 'Gene') are LOWEST priority.
+        # Priority: Functional (E) -> Lab/Clinical (B) -> Pathology (D) -> Scales & PROs (C) -> Molecular (A) last.
+        # Within any type, subtype 'Gene' rows are pushed to the end.
+        c.execute(
+            """
+            SELECT * FROM disease_alteration
+            ORDER BY
+                CASE alteration_type_code
+                    WHEN 'E' THEN 1
+                    WHEN 'B' THEN 2
+                    WHEN 'D' THEN 3
+                    WHEN 'C' THEN 4
+                    WHEN 'A' THEN 5
+                    ELSE 6
+                END,
+                CASE WHEN subtype = 'Gene' THEN 1 ELSE 0 END,
+                name
+            """
+        )
         disease_alterations = [dict(row) for row in c.fetchall()]
     except Exception:
         disease_alterations = []
@@ -108,6 +145,57 @@ def compile_database_payload():
     except Exception:
         hr_func_rows = []
 
+    # Test prices (findlabtest.com cash-pay scrape / CMS CLFS) keyed by biomarker_id.
+    # cash_pay_median/cash_pay_source_count come from the real
+    # backend.ingest_find_a_lab_test scrape (price-data-sources-build-spec.md);
+    # reference_price is the real CMS CLFS national rate from
+    # backend.ingest_cms_clfs. Both fall back to the older
+    # reference_consumer_price/cms_clfs fields for tests seeded before that
+    # pipeline existed.
+    price_by_bm = {}
+    try:
+        c.execute(
+            """
+            SELECT t.canonical_biomarker_id, t.test_id, t.loinc_code,
+                   s.reference_consumer_price, s.cms_clfs,
+                   s.cash_pay_median, s.cash_pay_min, s.cash_pay_max, s.cash_pay_source_count,
+                   s.cash_pay_standalone_median, s.cash_pay_standalone_min,
+                   s.cash_pay_standalone_max, s.cash_pay_standalone_count,
+                   s.reference_price, s.reference_price_source
+            FROM lab_tests t
+            LEFT JOIN test_cost_summary s ON s.test_id = t.test_id
+            WHERE t.canonical_biomarker_id IS NOT NULL
+            """
+        )
+        for row in c.fetchall():
+            bid = row["canonical_biomarker_id"]
+            mapping = dict(price_by_bm.get(bid) or {})
+            loinc_map = dict(mapping.get("loincToTestId") or {})
+            if row["loinc_code"] and row["test_id"]:
+                loinc_map[row["loinc_code"]] = row["test_id"]
+            cash_median = row["cash_pay_median"] if row["cash_pay_median"] is not None else row["reference_consumer_price"]
+            if cash_median is not None:
+                mapping["testPriceUSD"] = cash_median
+                mapping["testPriceMin"] = row["cash_pay_min"]
+                mapping["testPriceMax"] = row["cash_pay_max"]
+                mapping["testPriceSourceCount"] = row["cash_pay_source_count"]
+                # Standalone-analyte subset (multi-analyte panels excluded) —
+                # the figure actually comparable to this one biomarker's test
+                # cost, since a panel's price also buys several other analytes.
+                # Stays None when the source has no standalone product at all
+                # (e.g. 25-hydroxyvitamin D, only sold in panels).
+                mapping["testPriceStandaloneMedian"] = row["cash_pay_standalone_median"]
+                mapping["testPriceStandaloneMin"] = row["cash_pay_standalone_min"]
+                mapping["testPriceStandaloneMax"] = row["cash_pay_standalone_max"]
+                mapping["testPriceStandaloneCount"] = row["cash_pay_standalone_count"]
+            cms_rate = row["reference_price"] if row["reference_price"] is not None else row["cms_clfs"]
+            if cms_rate is not None:
+                mapping["cmsReimbursementUSD"] = cms_rate
+            mapping["loincToTestId"] = loinc_map
+            price_by_bm[bid] = mapping
+    except Exception:
+        price_by_bm = {}
+
     # Build maps
     assoc_map = {}
     for a in associations:
@@ -135,11 +223,11 @@ def compile_database_payload():
 
     dist_fit_map = {}
     for df in dist_fit_rows:
-        dist_fit_map.setdefault(df["biomarker_id"], []).append(df)
+        dist_fit_map.setdefault(df["biomarker_id"], []).append(_attach_source(df))
 
     hr_func_map = {}
     for hf in hr_func_rows:
-        hr_func_map.setdefault(hf["biomarker_id"], []).append(hf)
+        hr_func_map.setdefault(hf["biomarker_id"], []).append(_attach_source(hf))
 
     scenario_by_id = {s["id"]: s for s in scenarios}
 
@@ -205,6 +293,8 @@ def compile_database_payload():
         enriched_b["population_distributions"] = b_dists
         enriched_b["interventions"] = b_itvs
         enriched_b["curves"] = b_curves
+        enriched_b["distribution_fits"] = dist_fit_map.get(b_id, [])
+        enriched_b["hr_functions"] = hr_func_map.get(b_id, [])
         enriched_b["optimization_models"] = b_models
         enriched_b["expected_values"] = enriched_evs
         enriched_b["max_hazard_ratio"] = max_hr
@@ -214,6 +304,49 @@ def compile_database_payload():
         enriched_b["population_sd"] = overall_dist.get("sd") if overall_dist else None
         enriched_b["interventions_count"] = len(b_itvs)
         enriched_b["has_nhanes"] = bool(b["nhanes_code"])
+
+        priced = price_by_bm.get(b_id) or {}
+        enriched_b["testPriceUSD"] = b.get("test_price_usd") if b.get("test_price_usd") is not None else priced.get("testPriceUSD")
+        enriched_b["cmsReimbursementUSD"] = b.get("cms_reimbursement_usd") if b.get("cms_reimbursement_usd") is not None else priced.get("cmsReimbursementUSD")
+        enriched_b["testPriceMin"] = priced.get("testPriceMin")
+        enriched_b["testPriceMax"] = priced.get("testPriceMax")
+        enriched_b["testPriceSourceCount"] = priced.get("testPriceSourceCount")
+        # Standalone-analyte figures: None (not 0) when no standalone product
+        # exists in the source, so the pane can say "panel-only" instead of
+        # implying a free test.
+        enriched_b["testPriceStandaloneMedian"] = priced.get("testPriceStandaloneMedian")
+        enriched_b["testPriceStandaloneMin"] = priced.get("testPriceStandaloneMin")
+        enriched_b["testPriceStandaloneMax"] = priced.get("testPriceStandaloneMax")
+        enriched_b["testPriceStandaloneCount"] = priced.get("testPriceStandaloneCount")
+        # True when c_test comes from panel prices only — the pane must say so,
+        # since a panel's price also buys the other analytes it contains.
+        enriched_b["testPriceBlendedMedian"] = priced.get("testPriceUSD")
+        enriched_b["testPriceIsPanelDerived"] = (
+            priced.get("testPriceStandaloneMedian") is None
+            and enriched_b.get("testPriceUSD") is not None
+        )
+        loinc_map = b.get("loinc_to_test_id")
+        if isinstance(loinc_map, str):
+            try:
+                loinc_map = json.loads(loinc_map)
+            except Exception:
+                loinc_map = {}
+        enriched_b["loincToTestId"] = loinc_map or priced.get("loincToTestId") or {}
+        # findlabtest.com (no "a" — "findalabtest.com" does not exist and
+        # was a longstanding typo here) is a price-comparison aggregator,
+        # not the payer of record; cite it as such rather than as a single
+        # store. n_sources counts observed price points, not distinct
+        # providers: several cards can belong to the same lab, so label it
+        # "price points" rather than overstating provider coverage.
+        n_sources = priced.get("testPriceSourceCount")
+        n_standalone = priced.get("testPriceStandaloneCount")
+        enriched_b["testPriceSourceUrl"] = "https://www.findlabtest.com"
+        if n_sources:
+            label = f"findlabtest.com (median across {n_sources} price points"
+            label += f"; {n_standalone} standalone)" if n_standalone else "; panel-only)"
+        else:
+            label = "findlabtest.com"
+        enriched_b["testPriceSourceLabel"] = label
 
         # Top 1.0-SD optimization metric for quick preview
         ev_100 = next((ev for ev in enriched_evs if ev.get("scenario_slug") == "sd_100"), None)
@@ -262,7 +395,9 @@ def compile_database_payload():
         "sources": sources,
         "diseases": enriched_diseases,
         "biomarker_diseases": biomarker_disease_alterations_map,
-        "stats": stats
+        "stats": stats,
+        "lifeTables": serialize_life_tables(),
+        "voiConfig": voi_config_dict(),
     }
 
 
@@ -335,6 +470,35 @@ def generate_standalone_html():
         }}
         .metric-card-gradient {{
             background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.85) 100%);
+        }}
+        .plot-provenance {{
+            margin-top: 8px;
+            padding: 8px 10px;
+            font-size: 10px;
+            line-height: 1.5;
+            color: #94a3b8;
+            background: rgba(2, 6, 23, 0.65);
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+        }}
+        .plot-provenance .prov-row + .prov-row {{
+            margin-top: 4px;
+        }}
+        .plot-provenance .prov-label {{
+            display: inline-block;
+            min-width: 7.5rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-weight: 700;
+            font-size: 9px;
+        }}
+        .plot-provenance a {{
+            color: #67e8f9;
+            text-decoration: none;
+        }}
+        .plot-provenance a:hover {{
+            text-decoration: underline;
         }}
     </style>
 </head>
@@ -552,7 +716,32 @@ def generate_standalone_html():
                                     </div>
                                 </div>
 
+                                <!-- Age / Sex selectors for age-conditional HR curves -->
+                                <div class="flex flex-wrap items-center gap-3 text-xs">
+                                    <label class="flex items-center gap-1.5 text-slate-400">
+                                        <span>Age:</span>
+                                        <select id="landscape-age-select" class="bg-slate-800 border border-slate-700 rounded px-2 py-1 text-xs text-white focus:outline-none focus:ring-1 focus:ring-indigo-500">
+                                            <option value="30">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50" selected>50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                        </select>
+                                    </label>
+                                    <label class="flex items-center gap-1.5 text-slate-400">
+                                        <span>Sex:</span>
+                                        <select id="landscape-sex-select" class="bg-slate-800 border border-slate-700 rounded px-2 py-1 text-xs text-white focus:outline-none focus:ring-1 focus:ring-indigo-500">
+                                            <option value="all" selected>All</option>
+                                            <option value="M">Male</option>
+                                            <option value="F">Female</option>
+                                        </select>
+                                    </label>
+                                    <span id="landscape-curve-specificity" class="text-[10px] px-2 py-0.5 rounded font-mono bg-slate-800 text-slate-400 border border-slate-700">pooled</span>
+                                </div>
+
                                 <div id="plot-landscape" class="w-full h-[380px] rounded-lg bg-slate-950/70 border border-slate-800"></div>
+                                <div id="prov-landscape" class="plot-provenance"></div>
 
                                 <!-- Landscape Metric Callouts -->
                                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
@@ -645,6 +834,89 @@ def generate_standalone_html():
                                     </div>
                                 </div>
 
+                                <!-- Value of Information / EHIV panel (shares the SD-shift slider above) -->
+                                <div id="voi-panel" class="bg-slate-950/70 border border-cyan-800/40 p-4 rounded-xl space-y-4">
+                                    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+                                        <div>
+                                            <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                                                <i class="fa-solid fa-scale-balanced text-cyan-400"></i>
+                                                Value of Information
+                                            </h4>
+                                            <p class="text-xs text-slate-400 mt-1 max-w-2xl">
+                                                Expected years of life lost and dollar-valued information from measuring this biomarker,
+                                                using the same SD-shift as the simulator above. Life tables: CDC NVSS US 2022 (period).
+                                                Uses age/sex from the Fitness Landscape filters.
+                                            </p>
+                                        </div>
+                                        <div class="text-[10px] font-mono text-slate-500" id="voi-filter-caption">age 50 · sex all</div>
+                                    </div>
+
+                                    <div class="flex flex-wrap items-end gap-4">
+                                        <label class="flex flex-col gap-1 text-xs text-slate-300">
+                                            <span class="flex items-center gap-1.5">
+                                                λ (willingness-to-pay, $/DALY)
+                                                <span class="relative group cursor-help text-slate-500" title="λ is a normative policy choice, not an empirical estimate. Common ranges are 1–3× per-capita GDP or an ICER-style $/DALY threshold. Changing λ rescales EHIV; it does not change the underlying DALY VOI.">
+                                                    <i class="fa-solid fa-circle-info text-cyan-500/80"></i>
+                                                </span>
+                                            </span>
+                                            <input type="number" id="voi-lambda-input" min="0" step="10000" value="150000"
+                                                class="bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white w-36 focus:outline-none focus:ring-1 focus:ring-cyan-500"
+                                                oninput="handleVoiLambdaInput(this.value)">
+                                        </label>
+                                        <div class="flex flex-wrap gap-1" id="voi-lambda-presets"></div>
+                                        <label class="flex flex-col gap-1 text-xs text-slate-300">
+                                            <span>c<sub>int</sub> (intervention cost, DALYs)</span>
+                                            <input type="number" id="voi-cint-input" min="0" step="0.01" value="0"
+                                                class="bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-white w-28 focus:outline-none focus:ring-1 focus:ring-cyan-500"
+                                                oninput="handleVoiCIntInput(this.value)">
+                                        </label>
+                                    </div>
+
+                                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+                                        <div class="bg-slate-900/80 border border-slate-800 p-3 rounded-lg">
+                                            <div class="text-[10px] text-slate-400">EHIV (net $)</div>
+                                            <div id="voi-ehiv" class="text-xl font-black text-cyan-300 mt-1">--</div>
+                                            <div id="voi-ehiv-badge" class="mt-1"></div>
+                                        </div>
+                                        <div class="bg-slate-900/80 border border-slate-800 p-3 rounded-lg">
+                                            <div class="text-[10px] text-slate-400">VOI (DALYs / person)</div>
+                                            <div id="voi-dalys" class="text-lg font-bold text-slate-100 mt-1">--</div>
+                                            <div class="text-[9px] text-slate-500">E[max(0, ΔDALY(x) − ΔDALY(x′)) − c<sub>int</sub>]</div>
+                                        </div>
+                                        <div class="bg-slate-900/80 border border-slate-800 p-3 rounded-lg">
+                                            <div class="text-[10px] text-slate-400">λ · VOI</div>
+                                            <div id="voi-lambda-voi" class="text-lg font-bold text-slate-100 mt-1">--</div>
+                                            <div class="text-[9px] text-slate-500">Dollar-valued information before test cost</div>
+                                        </div>
+                                        <div class="bg-slate-900/80 border border-slate-800 p-3 rounded-lg">
+                                            <div class="text-[10px] text-slate-400">c<sub>test</sub></div>
+                                            <div id="voi-ctest" class="text-lg font-bold text-slate-100 mt-1">--</div>
+                                            <div id="voi-ctest-cite" class="text-[9px] text-slate-500"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-3 gap-3 text-xs">
+                                        <div class="bg-slate-900/50 border border-slate-800 p-2.5 rounded-lg">
+                                            <div class="text-[10px] text-slate-400">EYLL at mean x</div>
+                                            <div id="voi-eyll" class="font-mono text-slate-200 mt-0.5">--</div>
+                                        </div>
+                                        <div class="bg-slate-900/50 border border-slate-800 p-2.5 rounded-lg">
+                                            <div class="text-[10px] text-slate-400">ΔDALY(x) (mortality-only)</div>
+                                            <div id="voi-ddaly" class="font-mono text-slate-200 mt-0.5">--</div>
+                                        </div>
+                                        <div class="bg-slate-900/50 border border-slate-800 p-2.5 rounded-lg">
+                                            <div class="text-[10px] text-slate-400">VOI(x) at mean</div>
+                                            <div id="voi-indiv" class="font-mono text-slate-200 mt-0.5">--</div>
+                                        </div>
+                                    </div>
+                                    <p class="text-[10px] text-slate-500">
+                                        EHIV = λ · E[VOI] − c<sub>test</sub>. λ is not a scientific estimate of “correct” value —
+                                        it is the decision-maker’s willingness to pay per DALY. Population VOI on the leaderboard
+                                        sums exclusive age × sex cells (overlapping NHANES aggregations are excluded).
+                                    </p>
+                                    <div id="prov-voi" class="plot-provenance"></div>
+                                </div>
+
                                 <!-- Shifted Distribution & Benefit Chart -->
                                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
                                     <div class="bg-slate-950/70 border border-slate-800 p-3 rounded-lg">
@@ -653,6 +925,7 @@ def generate_standalone_html():
                                             <span class="text-[10px] text-slate-400 font-normal">Baseline vs. Shifted Density</span>
                                         </div>
                                         <div id="plot-sim-shift" class="w-full h-[240px]"></div>
+                                        <div id="prov-sim-shift" class="plot-provenance"></div>
                                     </div>
                                     <div class="bg-slate-950/70 border border-slate-800 p-3 rounded-lg">
                                         <div class="text-xs font-bold text-white mb-2 flex items-center justify-between">
@@ -660,6 +933,7 @@ def generate_standalone_html():
                                             <span class="text-[10px] text-slate-400 font-normal">Quantiles & Heterogeneity</span>
                                         </div>
                                         <div id="plot-sim-benefit" class="w-full h-[240px]"></div>
+                                        <div id="prov-sim-benefit" class="plot-provenance"></div>
                                     </div>
                                 </div>
 
@@ -697,6 +971,7 @@ def generate_standalone_html():
                                     <p class="text-xs text-slate-400">Point estimates and 95% confidence intervals from prospective cohort studies.</p>
                                 </div>
                                 <div id="plot-forest" class="w-full h-[380px] rounded-lg bg-slate-950/70 border border-slate-800"></div>
+                                <div id="prov-forest" class="plot-provenance"></div>
                                 <div id="forest-table-container" class="overflow-x-auto rounded-lg border border-slate-800 bg-slate-950/50"></div>
                             </div>
 
@@ -750,6 +1025,7 @@ def generate_standalone_html():
                                     <p class="text-xs text-slate-400">Stratified median and 75th percentile values across representative adult cohorts.</p>
                                 </div>
                                 <div id="plot-demographics" class="w-full h-[350px] rounded-lg bg-slate-950/70 border border-slate-800"></div>
+                                <div id="prov-demographics" class="plot-provenance"></div>
                                 <div id="demographics-table-container" class="overflow-x-auto rounded-lg border border-slate-800 bg-slate-950/50"></div>
                             </div>
                         </div>
@@ -792,11 +1068,11 @@ def generate_standalone_html():
                 <!-- Multi-Scale Category Legend -->
                 <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-800 text-[11px] text-slate-400">
                     <span class="font-semibold text-slate-300">Alteration Types:</span>
-                    <span class="badge-type-a px-2 py-0.5 rounded font-mono text-[10px]">Type A: Molecular / Genomic</span>
                     <span class="badge-type-b px-2 py-0.5 rounded font-mono text-[10px]">Type B: Lab / Clinical</span>
                     <span class="badge-type-c px-2 py-0.5 rounded font-mono text-[10px]">Type C: Scales & PROs</span>
                     <span class="badge-type-d px-2 py-0.5 rounded font-mono text-[10px]">Type D: Pathology / Imaging</span>
                     <span class="badge-type-e px-2 py-0.5 rounded font-mono text-[10px]">Type E: Functional Tests</span>
+                    <span class="badge-type-a px-2 py-0.5 rounded font-mono text-[10px]">Type A: Molecular / Genomic</span>
                 </div>
             </div>
 
@@ -824,12 +1100,19 @@ def generate_standalone_html():
                         <select id="leaderboard-scenario-select" class="bg-slate-950 border border-slate-750 text-xs text-slate-200 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-purple-500" onchange="renderOptimizationLeaderboard()">
                             <!-- Scenario options -->
                         </select>
+                        <label class="text-xs text-slate-300 font-medium">Sort:</label>
+                        <select id="leaderboard-sort-select" class="bg-slate-950 border border-slate-750 text-xs text-slate-200 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-cyan-500" onchange="handleLeaderboardSort(this.value)">
+                            <option value="rhr" selected>RHR (default)</option>
+                            <option value="ehiv">EHIV ($)</option>
+                            <option value="pop_voi">Population VOI (DALYs)</option>
+                        </select>
                     </div>
                 </div>
 
                 <!-- Leaderboard Chart -->
                 <div class="bg-slate-950/70 p-3 rounded-lg border border-slate-800">
                     <div id="plot-leaderboard" class="w-full h-[400px]"></div>
+                    <div id="prov-leaderboard" class="plot-provenance"></div>
                 </div>
             </div>
 
@@ -871,6 +1154,7 @@ def generate_standalone_html():
             <div class="bg-slate-900 p-5 rounded-xl border border-slate-800 shadow-sm space-y-3">
                 <h3 class="text-sm font-bold text-white">Comparative All-Cause Mortality Hazard Ratios</h3>
                 <div id="plot-compare-forest" class="w-full h-[380px] rounded-lg bg-slate-950/70 border border-slate-800"></div>
+                <div id="prov-compare" class="plot-provenance"></div>
             </div>
 
             <div class="bg-slate-900 rounded-xl border border-slate-800 shadow-sm overflow-hidden">
@@ -917,6 +1201,7 @@ def generate_standalone_html():
                     <div class="flex items-center gap-4 mt-3 text-xs text-slate-400">
                         <span>Organ: <strong id="modal-disease-organ" class="text-slate-200">System</strong></span>
                         <span>US DALYs: <strong id="modal-disease-dalys" class="text-rose-400 font-mono">--</strong></span>
+                        <a id="modal-disease-repurpos-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-indigo-400 hover:text-indigo-300 font-semibold underline underline-offset-2 transition"><i class="fa-solid fa-arrow-up-right-from-square"></i> View on RepurpOS Disease Intelligence</a>
                         <span>Multi-Scale Alterations: <strong id="modal-disease-alt-count" class="text-indigo-400 font-mono">0</strong></span>
                     </div>
                 </div>
@@ -930,9 +1215,6 @@ def generate_standalone_html():
                 <button class="modal-tab-btn active px-3 py-2 text-xs font-semibold rounded-t-lg bg-indigo-600 text-white transition flex items-center gap-1.5" data-modal-tab="all">
                     <i class="fa-solid fa-layer-group"></i> All Alterations (<span id="modal-count-all">0</span>)
                 </button>
-                <button class="modal-tab-btn px-3 py-2 text-xs font-semibold rounded-t-lg text-slate-400 hover:text-white hover:bg-slate-800/50 transition flex items-center gap-1.5" data-modal-tab="A">
-                    <span class="w-2 h-2 rounded-full bg-rose-500"></span> Type A: Molecular (<span id="modal-count-a">0</span>)
-                </button>
                 <button class="modal-tab-btn px-3 py-2 text-xs font-semibold rounded-t-lg text-slate-400 hover:text-white hover:bg-slate-800/50 transition flex items-center gap-1.5" data-modal-tab="B">
                     <span class="w-2 h-2 rounded-full bg-cyan-500"></span> Type B: Lab/Clinical (<span id="modal-count-b">0</span>)
                 </button>
@@ -944,6 +1226,9 @@ def generate_standalone_html():
                 </button>
                 <button class="modal-tab-btn px-3 py-2 text-xs font-semibold rounded-t-lg text-slate-400 hover:text-white hover:bg-slate-800/50 transition flex items-center gap-1.5" data-modal-tab="E">
                     <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Type E: Functional (<span id="modal-count-e">0</span>)
+                </button>
+                <button class="modal-tab-btn px-3 py-2 text-xs font-semibold rounded-t-lg text-slate-400 hover:text-white hover:bg-slate-800/50 transition flex items-center gap-1.5" data-modal-tab="A">
+                    <span class="w-2 h-2 rounded-full bg-rose-500"></span> Type A: Molecular (<span id="modal-count-a">0</span>)
                 </button>
             </div>
 
@@ -957,7 +1242,7 @@ def generate_standalone_html():
     <!-- Footer -->
     <footer class="bg-slate-900/60 border-t border-slate-800 py-4 text-center text-xs text-slate-500">
         <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-            <span>Physiological Fitness Landscape &bull; Open-Source Preventive Medicine</span>
+            <span>Physiological Fitness Landscape</span>
             <span>Calibrated with NHANES Empirical Distributions & Non-Linear Spline Hazard Functions</span>
         </div>
     </footer>
@@ -1005,7 +1290,14 @@ def generate_standalone_html():
         }},
         sourceSearch: '',
         currentSimShiftSD: 1.0,
-        currentSimScenarioSlug: 'sd_100'
+        currentSimScenarioSlug: 'sd_100',
+        landscapeAge: 50,
+        landscapeSex: 'all',
+        voiLambda: (EMBEDDED_DATA.voiConfig && EMBEDDED_DATA.voiConfig.lambdaDefault) || 150000,
+        voiCIntDaly: (EMBEDDED_DATA.voiConfig && EMBEDDED_DATA.voiConfig.cIntDalyDefault) || 0,
+        leaderboardSort: 'rhr',
+        lifeTables: EMBEDDED_DATA.lifeTables || {{}},
+        voiConfig: EMBEDDED_DATA.voiConfig || {{}}
     }};
 
     const plotlyDarkTheme = {{
@@ -1034,37 +1326,154 @@ def generate_standalone_html():
         displayModeBar: false
     }};
 
+    function escapeHtml(s) {{
+        if (s == null) return '';
+        return String(s)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
+    }}
+
+    function sourceHref(src) {{
+        if (!src) return null;
+        if (src.pmid && /^\\d+$/.test(String(src.pmid))) {{
+            return 'https://pubmed.ncbi.nlm.nih.gov/' + src.pmid;
+        }}
+        if (src.doi) return 'https://doi.org/' + src.doi;
+        if (src.url) return src.url;
+        return null;
+    }}
+
+    function sourceShortHtml(src, fallback) {{
+        if (!src) return escapeHtml(fallback || 'Source not recorded');
+        let text = src.citation || fallback || 'Untitled source';
+        if (text.length > 180) text = text.slice(0, 177) + '…';
+        const href = sourceHref(src);
+        const bits = [];
+        if (href) bits.push(`<a href="${{href}}" target="_blank" rel="noopener">${{escapeHtml(text)}}</a>`);
+        else bits.push(escapeHtml(text));
+        if (src.year) bits.push(`<span class="font-mono text-slate-500">${{src.year}}</span>`);
+        if (src.pmid && /^\\d+$/.test(String(src.pmid))) {{
+            bits.push(`<a class="font-mono" href="https://pubmed.ncbi.nlm.nih.gov/${{src.pmid}}" target="_blank" rel="noopener">PMID ${{src.pmid}}</a>`);
+        }} else if (src.doi) {{
+            bits.push(`<span class="font-mono text-slate-500">${{escapeHtml(src.doi)}}</span>`);
+        }}
+        return bits.join(' · ');
+    }}
+
+    function setProvenance(elId, rows) {{
+        const el = document.getElementById(elId);
+        if (!el) return;
+        const html = (rows || []).filter(r => r && r.html).map(r =>
+            `<div class="prov-row"><span class="prov-label">${{escapeHtml(r.label)}}</span> ${{r.html}}</div>`
+        ).join('');
+        el.innerHTML = html || '<div class="prov-row text-slate-600">No provenance recorded for this plot.</div>';
+    }}
+
+    function overallDist(detail) {{
+        const dists = (detail && detail.population_distributions) || [];
+        return dists.find(d => d.sex === 'all' && d.age_band === 'all') || dists[0] || null;
+    }}
+
+    function nhanesProvenanceRow(detail) {{
+        const d = overallDist(detail);
+        if (!d) return {{ label: 'Population', html: 'No NHANES distribution on file for this marker.' }};
+        const cycle = d.survey_cycle ? `NHANES ${{d.survey_cycle}}` : 'NHANES';
+        const n = d.sample_n ? ` (n=${{d.sample_n}})` : '';
+        const src = d.source ? sourceShortHtml(d.source, 'NCHS / CDC NHANES') : 'NCHS / CDC National Health and Nutrition Examination Survey';
+        return {{ label: 'Population', html: `${{escapeHtml(cycle)}}${{n}}. ${{src}}` }};
+    }}
+
+    function hrProvenanceRow(detail, curve) {{
+        const assocs = (detail && detail.associations) || [];
+        const primary = assocs.find(a => a.source) || assocs[0];
+        const parts = [];
+        if (primary && primary.source) {{
+            parts.push(sourceShortHtml(primary.source));
+            if (primary.cohort_description) {{
+                parts.push(escapeHtml(primary.cohort_description));
+            }}
+            if (primary.hr_type) {{
+                parts.push(escapeHtml(`reported as ${{primary.hr_type}} HR=${{primary.hazard_ratio}}`));
+            }}
+        }} else if (curve && curve.citation_summary) {{
+            parts.push(escapeHtml(curve.citation_summary));
+        }} else {{
+            parts.push('Synthesized continuous HR function from published mortality associations.');
+        }}
+        if (curve && curve.citation_summary && primary && primary.source) {{
+            parts.push('Model: ' + escapeHtml(curve.citation_summary));
+        }}
+        if (curve && ((curve.sex && curve.sex !== 'all') || (curve.age_band && curve.age_band !== 'all'))) {{
+            parts.push(`Stratum ${{escapeHtml(curve.sex || 'all')}}/${{escapeHtml(curve.age_band || 'all')}} derived from the pooled HR using NHANES moments.`);
+        }}
+        return {{ label: 'Hazard function', html: parts.join(' · ') }};
+    }}
+
+    function methodProvenanceRow(text) {{
+        return {{ label: 'Method', html: escapeHtml(text) }};
+    }}
+
     // --- CLIENT-SIDE NUMERICAL INTEGRATION & SIMULATION ENGINE ---
 
-    function evaluateHR(x, curve) {{
+    function evaluateHR(x, curve, age, sex) {{
         if (!curve) return 1.0;
-        const curveType = curve.curve_type || 'linear';
-        const p1 = curve.param_1 || 0.0;
-        const p2 = curve.param_2 || 0.0;
-        const p3 = curve.param_3 || 0.0;
-        const p4 = curve.param_4 || 0.0;
-        const ref = curve.reference_value || 0.0;
-        const scale = curve.unit_scale || 1.0;
+        if (x === null || x === undefined || isNaN(x) || !isFinite(x)) return 1.0;
 
-        const delta = (x - ref) / (scale > 0 ? scale : 1.0);
+        const curveType = curve.curve_type || 'linear_log';
+        const ref = (curve.reference_value != null) ? curve.reference_value : 0.0;
+        const optimal = (curve.optimal_value != null) ? curve.optimal_value : null;
 
+        // Parse the parameters JSON blob (e.g. a string like a beta or a/x_opt object)
+        let params = curve.parameters;
+        if (typeof params === 'string') {{
+            try {{ params = JSON.parse(params); }} catch (e) {{ params = {{}}; }}
+        }}
+        if (!params || typeof params !== 'object') params = {{}};
+
+        const clip = (v) => Math.max(-5.0, Math.min(5.0, v));
         let logHR = 0.0;
-        if (curveType === 'linear') {{
-            logHR = p1 * delta;
+
+        if (curveType === 'linear_log' || curveType === 'log_linear_per_sd' || curveType === 'log_linear_per_unit' || curveType === 'linear') {{
+            // ln(HR(x)) = beta * (x - reference_value)
+            const beta = params.beta != null ? params.beta : 0.0;
+            logHR = beta * (x - ref);
         }} else if (curveType === 'quadratic') {{
-            logHR = p1 * delta + p2 * Math.pow(delta, 2);
-        }} else if (curveType === 'cubic_spline') {{
-            logHR = p1 * delta + p2 * Math.pow(delta, 2) + p3 * Math.pow(delta, 3);
-        }} else if (curveType === 'j_shaped') {{
-            logHR = p1 * Math.pow(Math.max(0, -delta), 2) + p2 * Math.pow(Math.max(0, delta), 1.5);
-        }} else if (curveType === 'u_shaped') {{
-            logHR = p1 * Math.pow(delta, 2) + p2 * Math.pow(delta, 4);
+            // ln(HR(x)) = a * (x - x_opt)^2 - a * (ref - x_opt)^2  (HR(ref) == 1.0)
+            const a = params.a != null ? params.a : 0.001;
+            const xOpt = (optimal != null) ? optimal : (params.x_opt != null ? params.x_opt : ref);
+            logHR = a * Math.pow(x - xOpt, 2) - a * Math.pow(ref - xOpt, 2);
+        }} else if (curveType === 'log_log') {{
+            // ln(HR(x)) = beta * (ln(x) - ln(reference_value))
+            const beta = params.beta != null ? params.beta : 0.0;
+            const xSafe = Math.max(x, 1e-4);
+            const refSafe = Math.max(ref, 1e-4);
+            logHR = beta * (Math.log(xSafe) - Math.log(refSafe));
+        }} else if (curveType === 'piecewise') {{
+            // f(v) = slope_low*(x_opt - v) if v < x_opt else slope_high*(v - x_opt)
+            // ln(HR(x)) = f(x) - f(ref)  (HR(ref) == 1.0)
+            const xOpt = (optimal != null) ? optimal : (params.x_opt != null ? params.x_opt : ref);
+            const slopeLow = params.slope_low != null ? params.slope_low : 0.0;
+            const slopeHigh = params.slope_high != null ? params.slope_high : 0.0;
+            const f = (v) => (v < xOpt) ? slopeLow * (xOpt - v) : slopeHigh * (v - xOpt);
+            logHR = f(x) - f(ref);
+        }} else if (curveType === 'age_interaction') {{
+            // ln(HR(x, age)) = beta_x * (x - ref) + beta_age * (age - ref_age) + beta_x_age * (x - ref) * (age - ref_age)
+            const betaX = params.beta_x != null ? params.beta_x : 0.0;
+            const betaAge = params.beta_age != null ? params.beta_age : 0.0;
+            const betaXAge = params.beta_x_age != null ? params.beta_x_age : 0.0;
+            const refAge = params.reference_age != null ? params.reference_age : 50.0;
+            const a = (age != null) ? age : refAge;
+            logHR = betaX * (x - ref) + betaAge * (a - refAge) + betaXAge * (x - ref) * (a - refAge);
         }} else {{
-            logHR = p1 * delta;
+            // Fallback linear log
+            const beta = params.beta != null ? params.beta : 0.0;
+            logHR = beta * (x - ref);
         }}
 
         // Clamp to physiologically plausible range [0.10, 20.0]
-        const hr = Math.exp(logHR);
+        const hr = Math.exp(clip(logHR));
         return Math.max(0.10, Math.min(20.0, hr));
     }}
 
@@ -1107,10 +1516,361 @@ def generate_standalone_html():
         }}
 
         const normP = pVals.map(p => p / totalP);
-        return {{ x: xVals, p: normP, mean, sd, p10, p90, p50 }};
+        return {{ x: xVals, p: normP, mean, sd, p10, p90, p50, p5: dist.p5, p95: dist.p95 }};
     }}
 
-    function runClientSimulation(biomarker, shiftSD, isPercentileShift = false) {{
+    // X-axis range that just covers the observed biomarker distribution.
+    // Prefer empirical p5–p95 with a small pad; do not expand out to the
+    // physiological / HR-curve domain (those are often many times wider).
+    function distributionDisplayRange(dist, bins, validMin, validMax) {{
+        const mean = (dist && dist.mean != null) ? dist.mean
+            : (bins && bins.mean != null ? bins.mean : 0);
+        let sd = (dist && dist.sd != null && dist.sd > 0) ? dist.sd
+            : (bins && bins.sd != null && bins.sd > 0 ? bins.sd : 0);
+        const p5 = (dist && dist.p5 != null) ? dist.p5 : (bins && bins.p5 != null ? bins.p5 : null);
+        const p95 = (dist && dist.p95 != null) ? dist.p95 : (bins && bins.p95 != null ? bins.p95 : null);
+        const p10 = (dist && dist.p10 != null) ? dist.p10 : (bins && bins.p10 != null ? bins.p10 : null);
+        const p90 = (dist && dist.p90 != null) ? dist.p90 : (bins && bins.p90 != null ? bins.p90 : null);
+        if (sd <= 0) {{
+            if (p95 != null && p5 != null && p95 > p5) sd = (p95 - p5) / 3.29;
+            else if (p90 != null && p10 != null && p90 > p10) sd = (p90 - p10) / 2.56;
+            else sd = Math.max(Math.abs(mean) * 0.15, 1e-6);
+        }}
+        let lo, hi;
+        if (p5 != null && p95 != null && p95 > p5) {{
+            const pad = Math.max((p95 - p5) * 0.08, sd * 0.2);
+            lo = p5 - pad;
+            hi = p95 + pad;
+        }} else if (p10 != null && p90 != null && p90 > p10) {{
+            const pad = Math.max((p90 - p10) * 0.12, sd * 0.25);
+            lo = p10 - pad;
+            hi = p90 + pad;
+        }} else {{
+            lo = mean - 2.8 * sd;
+            hi = mean + 2.8 * sd;
+        }}
+        // Clip to physiological bounds if the distribution tails exceed them;
+        // never expand the axis out to the full valid domain.
+        if (validMin != null && isFinite(validMin)) lo = Math.max(lo, validMin);
+        if (validMax != null && isFinite(validMax)) hi = Math.min(hi, validMax);
+        // Non-negative lab values should not show a large empty negative region.
+        if (mean >= 0 && (p5 == null || p5 >= 0) && lo < 0) lo = Math.max(0, lo);
+        if (!(hi > lo)) {{
+            lo = mean - Math.abs(sd);
+            hi = mean + Math.abs(sd);
+            if (!(hi > lo)) {{ hi = lo + 1; }}
+        }}
+        return [lo, hi];
+    }}
+
+    // Re-normalize bins.p to a proper TRUNCATED density over the visible
+    // [dataMin, dataMax] domain. Points that fall outside the domain are
+    // excluded, and the remaining bins are scaled so the visible mass sums
+    // to 1.0 (probability-consistent integration for HR expectations).
+    function truncateBinsToDomain(bins, domainMin, domainMax) {{
+        if (domainMin == null && domainMax == null) return bins;
+        const mask = bins.x.map(x =>
+            (domainMin == null || x >= domainMin) &&
+            (domainMax == null || x <= domainMax));
+        const totalP = mask.reduce((s, m, i) => s + (m ? bins.p[i] : 0), 0);
+        if (totalP <= 0) return bins; // No mass in domain: fall back to original
+        const truncatedP = bins.p.map((p, i) => (mask[i] ? p / totalP : 0));
+        return {{ ...bins, p: truncatedP }};
+    }}
+
+    // --- VOI / EHIV (DALY-dollar) engine: eq. (5)–(13) ---
+
+    function lookupS0FromBirth(age, sex) {{
+        const tables = AppState.lifeTables || {{}};
+        const clampAge = Math.max(0, Math.min(age, tables.max_age || 110));
+        const lerp = (arr) => {{
+            if (!arr || !arr.length) return 0;
+            if (clampAge <= 0) return arr[0];
+            const lo = Math.floor(clampAge);
+            const hi = Math.min(lo + 1, arr.length - 1);
+            const t = clampAge - lo;
+            return arr[lo] * (1 - t) + arr[hi] * t;
+        }};
+        if (sex === 'F') return lerp((tables.F || {{}}).S0);
+        if (sex === 'M') return lerp((tables.M || {{}}).S0);
+        return 0.5 * (lerp((tables.M || {{}}).S0) + lerp((tables.F || {{}}).S0));
+    }}
+
+    function conditionalSurvivalFromAge(age, sex) {{
+        const maxAge = (AppState.lifeTables && AppState.lifeTables.max_age) || 110;
+        const sStart = lookupS0FromBirth(age, sex);
+        const out = [];
+        if (sStart <= 0) return [1.0];
+        for (let t = 0; age + t <= maxAge; t++) {{
+            out.push(Math.max(0, Math.min(1, lookupS0FromBirth(age + t, sex) / sStart)));
+        }}
+        if (!out.length) out.push(1.0);
+        out[out.length - 1] = 0;
+        return out;
+    }}
+
+    function eyllFromSurvival(hrX, hrRef, s0cond) {{
+        let total = 0;
+        for (let i = 0; i < s0cond.length; i++) {{
+            const s = s0cond[i];
+            total += Math.pow(s, hrRef) - Math.pow(s, hrX);
+        }}
+        return total;
+    }}
+
+    function formatUSD(v) {{
+        if (v == null || !isFinite(v)) return '--';
+        const abs = Math.abs(v);
+        const sign = v < 0 ? '-' : '';
+        if (abs >= 1e9) return sign + '$' + (abs / 1e9).toFixed(2) + 'B';
+        if (abs >= 1e6) return sign + '$' + (abs / 1e6).toFixed(2) + 'M';
+        if (abs >= 1e3) return sign + '$' + (abs / 1e3).toFixed(1) + 'k';
+        return sign + '$' + abs.toFixed(0);
+    }}
+
+    function formatDalys(v) {{
+        if (v == null || !isFinite(v)) return '--';
+        if (Math.abs(v) >= 1e6) return (v / 1e6).toFixed(2) + 'M';
+        if (Math.abs(v) >= 1e3) return (v / 1e3).toFixed(1) + 'k';
+        return v.toFixed(3);
+    }}
+
+    function computeVOIFromSim(biomarker, sim, age, sex, epsilon, cIntDaly, lam) {{
+        if (!sim || !biomarker) return null;
+        const curves = biomarker.curves || [];
+        const primaryCurve = curves[0] || null;
+        if (!primaryCurve) return null;
+        const xRef = (primaryCurve.reference_value != null) ? primaryCurve.reference_value : (sim.bins.p50 != null ? sim.bins.p50 : sim.bins.mean);
+        const s0 = conditionalSurvivalFromAge(age, sex);
+        const yld = 0; // named extension point — morbidity/YLD not built
+        let eVoi = 0, eEyll = 0, eEyllS = 0, eDaly = 0;
+        const n = sim.bins.x.length;
+        for (let i = 0; i < n; i++) {{
+            const p = sim.bins.p[i];
+            if (p <= 0) continue;
+            const hr0 = evaluateHR(sim.bins.x[i], primaryCurve, age, sex);
+            const hrS = evaluateHR(sim.shiftedX[i], primaryCurve, age, sex);
+            const hrRef = evaluateHR(xRef, primaryCurve, age, sex);
+            const eyll0 = eyllFromSurvival(hr0, hrRef, s0);
+            const eyllS = eyllFromSurvival(hrS, hrRef, s0);
+            const d0 = eyll0 + yld;
+            const d1 = eyllS + yld;
+            const voi = Math.max(0, d0 - d1 - cIntDaly);
+            eVoi += p * voi;
+            eEyll += p * eyll0;
+            eEyllS += p * eyllS;
+            eDaly += p * d0;
+        }}
+        const meanX = sim.bins.mean;
+        const meanIdx = sim.bins.x.reduce((best, x, i) => Math.abs(x - meanX) < Math.abs(sim.bins.x[best] - meanX) ? i : best, 0);
+        const hrMean = evaluateHR(sim.bins.x[meanIdx], primaryCurve, age, sex);
+        const hrMeanS = evaluateHR(sim.shiftedX[meanIdx], primaryCurve, age, sex);
+        const hrRef = evaluateHR(xRef, primaryCurve, age, sex);
+        const eyllMean = eyllFromSurvival(hrMean, hrRef, s0);
+        const eyllMeanS = eyllFromSurvival(hrMeanS, hrRef, s0);
+        const voiMean = Math.max(0, (eyllMean + yld) - (eyllMeanS + yld) - cIntDaly);
+        const cTest = (biomarker.testPriceUSD != null) ? biomarker.testPriceUSD : 0;
+        const lambdaVoi = lam * eVoi;
+        const ehivVal = lambdaVoi - cTest;
+        return {{
+            expectedVoi: eVoi,
+            expectedEyll: eEyll,
+            expectedEyllShifted: eEyllS,
+            expectedDeltaDaly: eDaly,
+            eyllMean,
+            deltaDalyMean: eyllMean + yld,
+            voiMean,
+            cTest,
+            cTestKnown: biomarker.testPriceUSD != null,
+            cms: biomarker.cmsReimbursementUSD,
+            lambdaVoi,
+            ehiv: ehivVal,
+            favorable: ehivVal > 0,
+            lam,
+            epsilon,
+            cIntDaly,
+            age,
+            sex
+        }};
+    }}
+
+    function exclusiveStrataForBiomarker(biomarker) {{
+        const dists = biomarker.population_distributions || [];
+        const byKey = {{}};
+        dists.forEach(d => {{
+            const sex = d.sex || 'all';
+            const band = d.age_band || 'all';
+            const key = sex + '|' + band;
+            if (!byKey[key] || (d.sample_n || 0) > (byKey[key].sample_n || 0)) byKey[key] = d;
+        }});
+        const included = [];
+        const usedBands = new Set();
+        ['20-39', '40-59', '60+'].forEach(band => {{
+            const m = byKey['M|' + band];
+            const f = byKey['F|' + band];
+            const both = byKey['all|' + band];
+            if (m && f) {{ included.push(m, f); usedBands.add(band); }}
+            else if (m) {{ included.push(m); usedBands.add(band); }}
+            else if (f) {{ included.push(f); usedBands.add(band); }}
+            else if (both) {{ included.push(both); usedBands.add(band); }}
+        }});
+        if (usedBands.size === 0) {{
+            const mAll = byKey['M|all'];
+            const fAll = byKey['F|all'];
+            const allAll = byKey['all|all'];
+            if (mAll && fAll) included.push(mAll, fAll);
+            else if (mAll) included.push(mAll);
+            else if (fAll) included.push(fAll);
+            else if (allAll) included.push(allAll);
+        }}
+        return included;
+    }}
+
+    function populationN(sex, ageBand) {{
+        const table = (AppState.lifeTables && AppState.lifeTables.population_n) || {{}};
+        if (sex === 'M' || sex === 'F') {{
+            const direct = table[sex + '|' + ageBand];
+            if (direct) return direct;
+            if (ageBand === 'all') {{
+                return ['20-39', '40-59', '60+'].reduce((s, b) => s + (table[sex + '|' + b] || 0), 0);
+            }}
+            return 0;
+        }}
+        if (ageBand === 'all') {{
+            return Object.values(table).reduce((s, n) => s + (n || 0), 0);
+        }}
+        return (table['M|' + ageBand] || 0) + (table['F|' + ageBand] || 0);
+    }}
+
+    function ageBandMidpoint(band) {{
+        const m = (AppState.lifeTables && AppState.lifeTables.age_band_midpoint) || {{ '20-39': 30, '40-59': 50, '60+': 70, all: 50 }};
+        return m[band] != null ? m[band] : 50;
+    }}
+
+    function computePopulationVOI(biomarker, shiftSD, isPercentile, lam, cIntDaly) {{
+        const strata = exclusiveStrataForBiomarker(biomarker);
+        const cTest = (biomarker.testPriceUSD != null) ? biomarker.testPriceUSD : 0;
+        let totalVoi = 0, totalEhiv = 0, totalN = 0;
+        const byStratum = [];
+        strata.forEach(d => {{
+            if (d.sample_n != null && d.sample_n < 50) return;
+            const clone = {{ ...biomarker, population_distributions: [d] }};
+            const sim = runClientSimulation(clone, shiftSD, isPercentile, 80);
+            if (!sim) return;
+            const age = ageBandMidpoint(d.age_band || 'all');
+            const sex = d.sex || 'all';
+            const voi = computeVOIFromSim(biomarker, sim, age, sex, shiftSD, cIntDaly, lam);
+            if (!voi) return;
+            const n = populationN(sex, d.age_band || 'all');
+            totalVoi += n * voi.expectedVoi;
+            totalEhiv += n * voi.ehiv;
+            totalN += n;
+            byStratum.push({{ sex, age_band: d.age_band, n, expectedVoi: voi.expectedVoi, ehiv: voi.ehiv }});
+        }});
+        return {{ totalVoi, totalEhiv, totalN, byStratum, cTest }};
+    }}
+
+    function handleVoiLambdaInput(val) {{
+        AppState.voiLambda = Math.max(0, parseFloat(val) || 0);
+        runAndDisplaySimulation();
+    }}
+
+    function handleVoiCIntInput(val) {{
+        AppState.voiCIntDaly = Math.max(0, parseFloat(val) || 0);
+        runAndDisplaySimulation();
+    }}
+
+    function handleLeaderboardSort(val) {{
+        AppState.leaderboardSort = val || 'rhr';
+        renderOptimizationLeaderboard();
+    }}
+
+    function initVoiLambdaPresets() {{
+        const wrap = document.getElementById('voi-lambda-presets');
+        if (!wrap) return;
+        const presets = (AppState.voiConfig && AppState.voiConfig.lambdaPresets) || [];
+        wrap.innerHTML = '';
+        presets.forEach(p => {{
+            const btn = document.createElement('button');
+            btn.className = 'px-2 py-1 text-[10px] bg-slate-800 hover:bg-slate-700 text-slate-300 rounded border border-slate-700';
+            btn.textContent = p.label;
+            btn.onclick = () => {{
+                AppState.voiLambda = p.value;
+                const inp = document.getElementById('voi-lambda-input');
+                if (inp) inp.value = p.value;
+                runAndDisplaySimulation();
+            }};
+            wrap.appendChild(btn);
+        }});
+        const inp = document.getElementById('voi-lambda-input');
+        if (inp) inp.value = AppState.voiLambda;
+    }}
+
+    function renderVOIPanel(biomarker, sim) {{
+        const age = AppState.landscapeAge || 50;
+        const sex = AppState.landscapeSex || 'all';
+        const caption = document.getElementById('voi-filter-caption');
+        if (caption) caption.textContent = `age ${{age}} · sex ${{sex}}`;
+        if (!sim) return;
+        const voi = computeVOIFromSim(biomarker, sim, age, sex, AppState.currentSimShiftSD, AppState.voiCIntDaly, AppState.voiLambda);
+        if (!voi) return;
+        const ehivEl = document.getElementById('voi-ehiv');
+        if (ehivEl) ehivEl.textContent = formatUSD(voi.ehiv);
+        const badge = document.getElementById('voi-ehiv-badge');
+        if (badge) {{
+            badge.innerHTML = voi.favorable
+                ? '<span class="text-[10px] px-1.5 py-0.5 rounded font-mono bg-emerald-500/20 text-emerald-300">favorable</span>'
+                : '<span class="text-[10px] px-1.5 py-0.5 rounded font-mono bg-rose-500/20 text-rose-300">unfavorable</span>';
+        }}
+        const dalysEl = document.getElementById('voi-dalys');
+        if (dalysEl) dalysEl.textContent = formatDalys(voi.expectedVoi);
+        const lamVoiEl = document.getElementById('voi-lambda-voi');
+        if (lamVoiEl) lamVoiEl.textContent = formatUSD(voi.lambdaVoi);
+        const ctestEl = document.getElementById('voi-ctest');
+        if (ctestEl) ctestEl.textContent = voi.cTestKnown ? formatUSD(voi.cTest) : 'Not priced';
+        const cite = document.getElementById('voi-ctest-cite');
+        if (cite) {{
+            if (voi.cTestKnown) {{
+                const basis = biomarker.testPriceIsPanelDerived
+                    ? ' — panel prices only; no standalone test sold'
+                    : '';
+                cite.innerHTML = `<a href="${{biomarker.testPriceSourceUrl || 'https://www.findlabtest.com'}}" target="_blank" class="text-cyan-400 hover:underline">${{biomarker.testPriceSourceLabel || 'findlabtest.com'}} <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i></a><span class="text-amber-300/80">${{basis}}</span>`;
+            }} else {{
+                cite.textContent = 'No findlabtest.com price mapped for this marker';
+            }}
+        }}
+        const eyllEl = document.getElementById('voi-eyll');
+        if (eyllEl) eyllEl.textContent = formatDalys(voi.eyllMean) + ' yr';
+        const ddalyEl = document.getElementById('voi-ddaly');
+        if (ddalyEl) ddalyEl.textContent = formatDalys(voi.deltaDalyMean);
+        const indivEl = document.getElementById('voi-indiv');
+        if (indivEl) indivEl.textContent = formatDalys(voi.voiMean);
+        biomarker._lastVoi = voi;
+        const lt = (AppState.voiConfig && AppState.voiConfig.lifeTableSource) ||
+            'CDC NVSS United States Life Tables, 2022 (period, sex-specific).';
+        // Panel-only markers (e.g. 25-OH vitamin D, where every observed
+        // findlabtest.com product bundles other analytes) must not present
+        // their price as the cost of this test alone.
+        const blendedNote = biomarker.testPriceIsPanelDerived
+            ? 'findlabtest.com self-pay median' + formatUSD(biomarker.testPriceBlendedMedian != null ? biomarker.testPriceBlendedMedian : voi.cTest) + ' — panel-only: every observed product bundles other analytes, so this overstates the cost of this test alone'
+            : 'findlabtest.com self-pay median' + formatUSD(voi.cTest) + ' (standalone product)';
+        const priceHtml = voi.cTestKnown
+            ? sourceShortHtml({{}})
+            : 'No priced test mapped; c<sub>test</sub> treated as $0.';
+        if (voi.cTestKnown) {{
+            priceHtml.citation = blendedNote;
+            priceHtml.url = biomarker.testPriceSourceUrl || 'https://www.findlabtest.com';
+        }}
+        setProvenance('prov-voi', [
+            hrProvenanceRow(biomarker, (biomarker.curves || [])[0]),
+            nhanesProvenanceRow(biomarker),
+            {{ label: 'Life table', html: escapeHtml(lt) }},
+            {{ label: 'Test price', html: priceHtml }},
+            methodProvenanceRow('EYLL from S0(t)^HR; VOI = max(0, ΔDALY(x) − ΔDALY(x′) − c_int); EHIV = λ·E[VOI] − c_test.')
+        ]);
+    }}
+
+    function runClientSimulation(biomarker, shiftSD, isPercentileShift = false, numBins = 300) {{
         const dists = biomarker.population_distributions || [];
         const overallDist = dists.find(d => d.sex === 'all' && d.age_band === 'all') || dists[0];
         const curves = biomarker.curves || [];
@@ -1120,16 +1880,28 @@ def generate_standalone_html():
             return null;
         }}
 
-        const bins = generatePopulationBins(overallDist);
+        // Prefer the parametric distribution_fit's valid domain (it carries
+        // the physiologically sensible [domain_min, domain_max]); fall back
+        // to the biomarker's valid_domain_min/max.
+        const fits = biomarker.distribution_fits || [];
+        const overallFit = fits.find(f => f.sex === 'all' && f.age_band === 'all') || null;
+        const fitMin = overallFit && overallFit.domain_min != null ? overallFit.domain_min : biomarker.valid_domain_min;
+        const fitMax = overallFit && overallFit.domain_max != null ? overallFit.domain_max : biomarker.valid_domain_max;
+
+        const bins = generatePopulationBins(overallDist, numBins);
         const direction = biomarker.directionality || 'MONOTONIC_INCREASING';
-        const dMin = biomarker.valid_domain_min;
-        const dMax = biomarker.valid_domain_max;
+        const dMin = fitMin;
+        const dMax = fitMax;
+
+        // Re-normalize the probability mass to the physiologically valid
+        // domain so HR expectations integrate to a proper density.
+        const truncatedBins = truncateBinsToDomain(bins, dMin, dMax);
 
         // Baseline numerical integration E[HR_0]
         let eHr0 = 0.0;
-        for (let i = 0; i < bins.x.length; i++) {{
-            const hr = evaluateHR(bins.x[i], primaryCurve);
-            eHr0 += bins.p[i] * hr;
+        for (let i = 0; i < truncatedBins.x.length; i++) {{
+            const hr = evaluateHR(truncatedBins.x[i], primaryCurve);
+            eHr0 += truncatedBins.p[i] * hr;
         }}
 
         // Calculate shifted x values
@@ -1141,8 +1913,8 @@ def generate_standalone_html():
         const p25 = overallDist.p25 || (bins.mean - 0.674 * bins.sd);
         const p50 = overallDist.p50 || bins.mean;
 
-        for (let i = 0; i < bins.x.length; i++) {{
-            const x0 = bins.x[i];
+        for (let i = 0; i < truncatedBins.x.length; i++) {{
+            const x0 = truncatedBins.x[i];
             let xShifted = x0;
 
             if (isPercentileShift) {{
@@ -1184,7 +1956,7 @@ def generate_standalone_html():
 
             if (wasClamped) {{
                 clampedCount++;
-                totalClampedProb += bins.p[i];
+                totalClampedProb += truncatedBins.p[i];
             }}
 
             shiftedX.push(xShifted);
@@ -1193,7 +1965,7 @@ def generate_standalone_html():
             const hr0 = evaluateHR(x0, primaryCurve);
             const hrShifted = evaluateHR(xShifted, primaryCurve);
             const benefit = hr0 - hrShifted;
-            individualBenefits.push({{ benefit, weight: bins.p[i], hr0, hrShifted }});
+            individualBenefits.push({{ benefit, weight: truncatedBins.p[i], hr0, hrShifted }});
         }}
 
         // Shifted numerical integration E[HR_delta]
@@ -1203,11 +1975,11 @@ def generate_standalone_html():
 
         for (let i = 0; i < shiftedX.length; i++) {{
             const hrShifted = evaluateHR(shiftedX[i], primaryCurve);
-            eHrDelta += bins.p[i] * hrShifted;
+            eHrDelta += truncatedBins.p[i] * hrShifted;
 
             const b = individualBenefits[i].benefit;
-            if (b > 1e-4) benefitingProb += bins.p[i];
-            else if (b < -1e-4) harmedProb += bins.p[i];
+            if (b > 1e-4) benefitingProb += truncatedBins.p[i];
+            else if (b < -1e-4) harmedProb += truncatedBins.p[i];
         }}
 
         const deltaHR = eHr0 - eHrDelta;
@@ -1237,7 +2009,7 @@ def generate_standalone_html():
             fraction_harmed: harmedProb,
             fraction_out_of_domain: totalClampedProb,
             domain_status: domainStatus,
-            bins,
+            bins: truncatedBins,
             shiftedX,
             individualBenefits,
             q10: getWeightedQuantile(0.10),
@@ -1267,6 +2039,8 @@ def generate_standalone_html():
         setupFilterListeners();
         setupDiseaseListeners();
         setupCompareListeners();
+        setupLandscapeAgeSexListeners();
+        initVoiLambdaPresets();
 
         // Select first biomarker by default
         if (AppState.biomarkers.length > 0) {{
@@ -1747,19 +2521,170 @@ def generate_standalone_html():
         const dists = detail.population_distributions || [];
         const overallDist = dists.find(d => d.sex === 'all' && d.age_band === 'all') || dists[0];
         const curves = detail.curves || [];
-        const primaryCurve = curves[0] || null;
+        const age = AppState.landscapeAge;
+        const sex = AppState.landscapeSex;
+
+        // Select the best curve for the given age/sex using stratum-specific curves:
+        // 1. Prefer age_interaction curves (parametric, evaluated at the selected age)
+        // 2. Prefer stratum-specific curves matching both age_band AND sex
+        // 3. Fall back to age-band-specific curves (sex='all')
+        // 4. Fall back to sex-specific curves (age_band='all')
+        // 5. Fall back to the pooled curve (age_band='all', sex='all')
+        let primaryCurve = null;
+        let curveSpecificity = 'pooled';
+
+        // Determine the age band from the selected age
+        const ageBand = age < 40 ? '20-39' : (age < 60 ? '40-59' : '60+');
+
+        const ageInteractionCurves = curves.filter(c => c.curve_type === 'age_interaction');
+        const stratumCurves = curves.filter(c => c.curve_type !== 'age_interaction');
+
+        if (ageInteractionCurves.length > 0) {{
+            primaryCurve = ageInteractionCurves[0];
+            curveSpecificity = sex === 'all' ? `age=${{age}}` : `age=${{age}}, sex=${{sex}}`;
+        }} else if (sex !== 'all') {{
+            // Try age_band + sex match first
+            const ageSexMatch = stratumCurves.find(c => c.age_band === ageBand && c.sex === sex);
+            if (ageSexMatch) {{
+                primaryCurve = ageSexMatch;
+                curveSpecificity = `age=${{ageBand}}, sex=${{sex}}`;
+            }} else {{
+                // Fall back to age_band only
+                const ageMatch = stratumCurves.find(c => c.age_band === ageBand && (!c.sex || c.sex === 'all'));
+                if (ageMatch) {{
+                    primaryCurve = ageMatch;
+                    curveSpecificity = `age=${{ageBand}}`;
+                }} else {{
+                    // Fall back to sex only
+                    const sexMatch = stratumCurves.find(c => c.sex === sex && (!c.age_band || c.age_band === 'all'));
+                    if (sexMatch) {{
+                        primaryCurve = sexMatch;
+                        curveSpecificity = `sex=${{sex}}`;
+                    }} else {{
+                        primaryCurve = stratumCurves.find(c => (!c.age_band || c.age_band === 'all') && (!c.sex || c.sex === 'all')) || stratumCurves[0];
+                        curveSpecificity = 'pooled';
+                    }}
+                }}
+            }}
+        }} else {{
+            // Sex is 'all': try age_band match
+            const ageMatch = stratumCurves.find(c => c.age_band === ageBand && (!c.sex || c.sex === 'all'));
+            if (ageMatch) {{
+                primaryCurve = ageMatch;
+                curveSpecificity = `age=${{ageBand}}`;
+            }} else {{
+                primaryCurve = stratumCurves.find(c => (!c.age_band || c.age_band === 'all') && (!c.sex || c.sex === 'all')) || stratumCurves[0];
+                curveSpecificity = 'pooled';
+            }}
+        }}
 
         if (!overallDist || !primaryCurve) {{
             plotDiv.innerHTML = `<div class="p-8 text-center text-xs text-slate-500">Distribution or Spline Curve Data Unavailable</div>`;
             return;
         }}
 
-        const bins = generatePopulationBins(overallDist);
-        const hrVals = bins.x.map(x => evaluateHR(x, primaryCurve));
+        // Prefer the parametric distribution_fit for the selected stratum
+        // (it carries fit_type, parameters, AND the valid plotting domain),
+        // falling back to the legacy population_distributions mean/sd.
+        const fits = detail.distribution_fits || [];
+        const fitForStratum = () => {{
+            if (ageBand === 'all') return null;
+            return fits.find(f => f.sex === sex && f.age_band === ageBand)
+                || fits.find(f => f.age_band === ageBand)
+                || fits.find(f => f.sex === sex && f.age_band === 'all')
+                || fits.find(f => f.sex === 'all' && f.age_band === ageBand);
+        }};
+        const overallFit = fits.find(f => f.sex === 'all' && f.age_band === 'all') || null;
+        const paramFit = fitForStratum() || overallFit;
+
+        // Extract mean/sd/p50/etc. for use in generatePopulationBins().
+        // For a lognormal fit the parameters are on the log-scale, so
+        // back-transform them to the arithmetic mean and standard
+        // deviation of the original variable.
+        const pdfParams = (fit) => {{
+            const p = fit.parameters || {{}};
+            const fitType = fit.fit_type || 'normal';
+            if (fitType === 'lognormal') {{
+                const mu = p.mu != null ? p.mu : p.mean;
+                const sigma = p.sigma != null ? p.sigma : p.sd;
+                const logMean = Math.exp(mu);
+                const logSd = Math.sqrt(Math.exp(sigma * sigma) - 1.0);
+                const mean = logMean * (1 + sigma * sigma / 2);
+                const sd = Math.sqrt((Math.exp(sigma * sigma) - 1.0)
+                    * Math.exp(Math.pow(mu, 2) + sigma * sigma));
+                return {{ mean, sd, p50: logMean }};
+            }}
+            return {{ mean: p.mean != null ? p.mean : p.mu, sd: p.sd != null ? p.sd : p.sigma, p50: p.median }};
+        }};
+
+        let distLike;
+        let paramDomain = null;
+        if (paramFit && overallFit) {{
+            // Use the matched stratum's parameters but the overall stratum's
+            // p-quantiles if available; fall back to deriving quantiles.
+            const fitParams = pdfParams(paramFit);
+            const fallbackD = dists.find(d => d.sex === 'all' && d.age_band === 'all') || dists[0];
+            distLike = {{
+                mean: fitParams.mean,
+                sd: fitParams.sd,
+                p50: fitParams.p50 != null ? fitParams.p50 : (fallbackD ? fallbackD.p50 : fitParams.mean),
+                p5: fallbackD ? fallbackD.p5 : null,
+                p10: fallbackD ? fallbackD.p10 : null,
+                p25: fallbackD ? fallbackD.p25 : null,
+                p75: fallbackD ? fallbackD.p75 : null,
+                p90: fallbackD ? fallbackD.p90 : null,
+                p95: fallbackD ? fallbackD.p95 : null
+            }};
+            paramDomain = [paramFit.domain_min, paramFit.domain_max];
+        }} else if (overallFit) {{
+            const fitParams = pdfParams(overallFit);
+            distLike = {{
+                mean: fitParams.mean,
+                sd: fitParams.sd,
+                p50: fitParams.p50,
+                p5: overallDist.p5, p10: overallDist.p10,
+                p25: overallDist.p25, p75: overallDist.p75,
+                p90: overallDist.p90, p95: overallDist.p95
+            }};
+            paramDomain = [overallFit.domain_min, overallFit.domain_max];
+        }} else {{
+            // Fall back to legacy population_distributions payload
+            distLike = overallDist;
+        }}
+
+        const bins = generatePopulationBins(distLike);
+        const hrLabel = (curveSpecificity === 'pooled') ? 'Mortality Hazard Ratio HR(x)' : `Mortality HR(x) | ${{curveSpecificity}}`;
+
+        // Update the curve specificity badge
+        const specBadge = document.getElementById('landscape-curve-specificity');
+        if (specBadge) specBadge.textContent = curveSpecificity;
+
+        // Plot only the observed population support (p5–p95 + small pad).
+        // Physiological / HR-curve domains are often many times wider and
+        // leave the density as a thin spike in empty space.
+        const validMin = (detail.valid_domain_min != null) ? detail.valid_domain_min
+            : (primaryCurve.valid_min != null ? primaryCurve.valid_min : null);
+        const validMax = (detail.valid_domain_max != null) ? detail.valid_domain_max
+            : (primaryCurve.valid_max != null ? primaryCurve.valid_max : null);
+        const [dataMin, dataMax] = distributionDisplayRange(distLike, bins, validMin, validMax);
+
+        // The density trace must integrate to 1.0 over the PLOTTED range only.
+        // Re-grid the population density onto a fine grid spanning exactly
+        // [dataMin, dataMax] and re-normalize the visible mass to 1.0, so the
+        // drawn distribution is a proper truncated density (not a clipped one).
+        const NUM_PLOT_BINS = 300;
+        const plotStep = (dataMax - dataMin) / (NUM_PLOT_BINS - 1);
+        const plotX = [];
+        for (let i = 0; i < NUM_PLOT_BINS; i++) plotX.push(dataMin + i * plotStep);
 
         const traceDensity = {{
-            x: bins.x,
-            y: bins.p,
+            x: plotX,
+            y: bins.p.map((_, i) => {{
+                const x = plotX[i];
+                const z = (x - bins.mean) / bins.sd;
+                const pdf = Math.exp(-0.5 * z * z) / (bins.sd * Math.sqrt(2 * Math.PI));
+                return pdf;
+            }}),
             type: 'scatter',
             mode: 'lines',
             name: 'NHANES Population Density',
@@ -1769,20 +2694,78 @@ def generate_standalone_html():
             fillcolor: 'rgba(16, 185, 129, 0.12)'
         }};
 
+        // Normalize traceDensity.y so the visible density integrates to 1.0
+        // over the plotted range (truncated-normal semantics), then scale the
+        // right-hand density axis so the peak reads ~1.0 for a clean display.
+        const visTotal = traceDensity.y.reduce((a, c) => a + c, 0) || 1;
+        traceDensity.y = traceDensity.y.map(p => p / visTotal);
+
+        // Build the HR trace ONLY over x-values within the data boundary,
+        // sampled on the same fine grid as the density trace.
+        const hrY = plotX.map(x => evaluateHR(x, primaryCurve, age, sex));
+
         const traceHR = {{
-            x: bins.x,
-            y: hrVals,
+            x: plotX,
+            y: hrY,
             type: 'scatter',
             mode: 'lines',
-            name: 'Mortality Hazard Ratio HR(x)',
-            line: {{ color: '#818cf8', width: 3.5 }}
+            name: hrLabel,
+            line: {{ color: '#818cf8', width: 3.5 }},
+            connectgaps: false
         }};
 
+        // --- Selection boxes: Male / Female & Age-group distribution overlays ---
+        // Build a truncated-normal density trace on the SAME x-grid as the
+        // overall density, normalized so the VISIBLE mass sums to 1.0 as well.
+        const buildOverlayTrace = (d, label, color) => {{
+            if (!d) return null;
+            const b = generatePopulationBins(d);
+            const ys = plotX.map(x => {{
+                const z = (x - b.mean) / b.sd;
+                return Math.exp(-0.5 * z * z) / (b.sd * Math.sqrt(2 * Math.PI));
+            }});
+            const total = ys.reduce((a, c) => a + c, 0) || 1;
+            return {{
+                x: plotX,
+                y: ys.map(p => p / total),
+                type: 'scatter',
+                mode: 'lines',
+                name: label,
+                yaxis: 'y2',
+                line: {{ color: color, width: 1.5, dash: 'dot' }},
+                opacity: 0.9
+            }};
+        }};
+
+        const overlayTraces = [];
+        const isMale = (d) => d.sex === 'M' || d.sex === 'male';
+        const isFemale = (d) => d.sex === 'F' || d.sex === 'female';
+
+        // Sex selection boxes (Male vs Female)
+        const maleDist = dists.find(d => isMale(d) && d.age_band === 'all') || dists.find(d => isMale(d));
+        const femaleDist = dists.find(d => isFemale(d) && d.age_band === 'all') || dists.find(d => isFemale(d));
+        const maleT = buildOverlayTrace(maleDist, 'Male Distribution', '#f472b6');
+        const femaleT = buildOverlayTrace(femaleDist, 'Female Distribution', '#a78bfa');
+        if (maleT) overlayTraces.push(maleT);
+        if (femaleT) overlayTraces.push(femaleT);
+
+        // Age-group selection boxes
+        const ageColors = {{ '20-39': '#34d399', '40-59': '#fbbf24', '60+': '#fb923c' }};
+        ['20-39', '40-59', '60+'].forEach(age => {{
+            const ad = dists.find(d => d.sex === 'all' && d.age_band === age) || dists.find(d => d.age_band === age);
+            const t = buildOverlayTrace(ad, `Age ${{age}}`, ageColors[age] || '#94a3b8');
+            if (t) overlayTraces.push(t);
+        }});
+
+        // Clamp the x-axis to the range where actual data exists [dataMin, dataMax].
+        // The density trace is truncated to exactly this range and renormalized
+        // to integrate to 1.0, so the area under the plotted curve = 1.
         const layout = {{
             ...plotlyDarkTheme,
             xaxis: {{
                 ...plotlyDarkTheme.xaxis,
-                title: `${{detail.name}} (${{detail.units}})`
+                title: `${{detail.name}} (${{detail.units}})`,
+                range: [dataMin, dataMax]
             }},
             yaxis: {{
                 ...plotlyDarkTheme.yaxis,
@@ -1795,22 +2778,48 @@ def generate_standalone_html():
                 side: 'right',
                 showgrid: false,
                 zeroline: false,
-                tickfont: {{ color: '#10b981' }}
+                tickfont: {{ color: '#10b981' }},
+                rangemode: 'normal',
+                range: [0, Math.max(
+                    ...traceDensity.y,
+                    ...overlayTraces.flatMap(t => t.y || []),
+                    1e-6
+                ) * 1.12]
             }},
-            shapes: [
-                {{
-                    type: 'line',
-                    x0: bins.x[0],
-                    x1: bins.x[bins.x.length - 1],
-                    y0: 1.0,
-                    y1: 1.0,
-                    line: {{ color: 'rgba(255, 255, 255, 0.25)', width: 1, dash: 'dash' }}
-                }}
-            ],
+            shapes: [],
             legend: {{ orientation: 'h', y: 1.12, x: 0.1 }}
         }};
 
-        Plotly.newPlot(plotDiv, [traceDensity, traceHR], layout, plotlyConfig);
+        Plotly.newPlot(plotDiv, [traceDensity, ...overlayTraces, traceHR], layout, plotlyConfig);
+        setProvenance('prov-landscape', [
+            hrProvenanceRow(detail, primaryCurve),
+            nhanesProvenanceRow(detail),
+            methodProvenanceRow('Continuous HR(x) overlaid on the NHANES empirical / fitted density. Axis limited to observed p5–p95.')
+        ]);
+    }}
+
+    // --- Age/Sex selector listeners for landscape plot ---
+    function setupLandscapeAgeSexListeners() {{
+        const ageSelect = document.getElementById('landscape-age-select');
+        const sexSelect = document.getElementById('landscape-sex-select');
+        if (ageSelect) {{
+            ageSelect.addEventListener('change', (e) => {{
+                AppState.landscapeAge = parseInt(e.target.value, 10);
+                if (AppState.selectedBiomarkerDetail) {{
+                    renderLandscapePlot(AppState.selectedBiomarkerDetail);
+                    runAndDisplaySimulation();
+                }}
+            }});
+        }}
+        if (sexSelect) {{
+            sexSelect.addEventListener('change', (e) => {{
+                AppState.landscapeSex = e.target.value;
+                if (AppState.selectedBiomarkerDetail) {{
+                    renderLandscapePlot(AppState.selectedBiomarkerDetail);
+                    runAndDisplaySimulation();
+                }}
+            }});
+        }}
     }}
 
     // --- SUBVIEW 2: OPTIMIZATION SIMULATOR ---
@@ -1908,7 +2917,9 @@ def generate_standalone_html():
         // Render Shift Plot
         renderSimShiftPlot(b, sim);
         // Render Benefit Plot
-        renderSimBenefitPlot(sim);
+        renderSimBenefitPlot(sim, b);
+        // VOI panel shares this sim / slider state
+        renderVOIPanel(b, sim);
     }}
 
     function renderSimShiftPlot(detail, sim) {{
@@ -1937,18 +2948,37 @@ def generate_standalone_html():
             fillcolor: 'rgba(192, 132, 252, 0.15)'
         }};
 
+        const [baseLo, baseHi] = distributionDisplayRange(detail, bins, detail.valid_domain_min, detail.valid_domain_max);
+        let shiftLo = baseLo, shiftHi = baseHi;
+        if (sim.shiftedX && sim.shiftedX.length) {{
+            const sMin = Math.min(...sim.shiftedX);
+            const sMax = Math.max(...sim.shiftedX);
+            const span = baseHi - baseLo;
+            shiftLo = Math.min(baseLo, Math.max(sMin, baseLo - 0.35 * span));
+            shiftHi = Math.max(baseHi, Math.min(sMax, baseHi + 0.35 * span));
+        }}
         const layout = {{
             ...plotlyDarkTheme,
             margin: {{ l: 40, r: 20, t: 15, b: 35 }},
-            xaxis: {{ ...plotlyDarkTheme.xaxis, title: `${{detail.name}} (${{detail.units}})` }},
+            xaxis: {{
+                ...plotlyDarkTheme.xaxis,
+                title: `${{detail.name}} (${{detail.units}})`,
+                range: [shiftLo, shiftHi]
+            }},
             yaxis: {{ ...plotlyDarkTheme.yaxis, title: 'Density' }},
             legend: {{ orientation: 'h', y: 1.18, x: 0.05 }}
         }};
 
         Plotly.newPlot(plotDiv, [traceBase, traceShifted], layout, plotlyConfig);
+        const curve = (detail.curves || [])[0];
+        setProvenance('prov-sim-shift', [
+            hrProvenanceRow(detail, curve),
+            nhanesProvenanceRow(detail),
+            methodProvenanceRow('Counterfactual population shift of the NHANES density toward the favorable direction; not a causal intervention estimate.')
+        ]);
     }}
 
-    function renderSimBenefitPlot(sim) {{
+    function renderSimBenefitPlot(sim, detail) {{
         const plotDiv = document.getElementById('plot-sim-benefit');
         const benefits = sim.individualBenefits.map(b => b.benefit);
         const weights = sim.individualBenefits.map(b => b.weight);
@@ -1982,6 +3012,14 @@ def generate_standalone_html():
         }};
 
         Plotly.newPlot(plotDiv, [trace], layout, plotlyConfig);
+        if (detail) {{
+            const curve = (detail.curves || [])[0];
+            setProvenance('prov-sim-benefit', [
+                hrProvenanceRow(detail, curve),
+                nhanesProvenanceRow(detail),
+                methodProvenanceRow('Individual ΔHR_i = HR(x_i) − HR(x_i shifted), weighted by the NHANES density.')
+            ]);
+        }}
     }}
 
     // --- VIEW 2: OPTIMIZATION LEADERBOARD ---
@@ -1992,66 +3030,83 @@ def generate_standalone_html():
         const tableContainer = document.getElementById('leaderboard-table-container');
 
         // Extract leaderboard data across all biomarkers for this scenario
+        const isPerc = scenarioSlug === 'percentile_p25_to_p50';
+        let shift = 1.0;
+        if (scenarioSlug === 'sd_025') shift = 0.25;
+        else if (scenarioSlug === 'sd_050') shift = 0.50;
+        else if (scenarioSlug === 'sd_150') shift = 1.50;
+        else if (scenarioSlug === 'sd_200') shift = 2.00;
+        else if (scenarioSlug === 'sd_100') shift = 1.00;
+
         const items = [];
         AppState.biomarkers.forEach(b => {{
             const ev = (b.expected_values || []).find(e => e.scenario_slug === scenarioSlug);
-            if (ev) {{
-                items.push({{
-                    biomarker: b,
-                    rhr: ev.relative_hazard_reduction || 0.0,
-                    delta_hr: ev.delta_hr || 0.0,
-                    baseline_expected_hr: ev.baseline_expected_hr || 1.0,
-                    optimized_expected_hr: ev.optimized_expected_hr || 1.0,
-                    fraction_benefiting: ev.fraction_benefiting || 0.0,
-                    domain_status: ev.domain_status || 'IN_DOMAIN'
-                }});
-            }} else {{
-                // Run client simulation if not precalculated
-                const isPerc = scenarioSlug === 'percentile_p25_to_p50';
-                let shift = 1.0;
-                if (scenarioSlug === 'sd_025') shift = 0.25;
-                else if (scenarioSlug === 'sd_050') shift = 0.50;
-                else if (scenarioSlug === 'sd_150') shift = 1.50;
-                else if (scenarioSlug === 'sd_200') shift = 2.00;
-
-                const sim = runClientSimulation(b, shift, isPerc);
-                if (sim) {{
-                    items.push({{
-                        biomarker: b,
-                        rhr: sim.relative_hazard_reduction,
-                        delta_hr: sim.delta_hr,
-                        baseline_expected_hr: sim.baseline_expected_hr,
-                        optimized_expected_hr: sim.optimized_expected_hr,
-                        fraction_benefiting: sim.fraction_benefiting,
-                        domain_status: sim.domain_status
-                    }});
-                }}
+            const sim = runClientSimulation(b, shift, isPerc);
+            if (!ev && !sim) return;
+            const voi = sim ? computeVOIFromSim(b, sim, 50, 'all', shift, AppState.voiCIntDaly, AppState.voiLambda) : null;
+            const popKey = [scenarioSlug, AppState.voiLambda, AppState.voiCIntDaly].join('|');
+            if (!b._popVoiCache || b._popVoiCache.key !== popKey) {{
+                b._popVoiCache = {{ key: popKey, val: computePopulationVOI(b, shift, isPerc, AppState.voiLambda, AppState.voiCIntDaly) }};
             }}
+            const pop = b._popVoiCache.val;
+            items.push({{
+                biomarker: b,
+                rhr: (ev && ev.relative_hazard_reduction != null) ? ev.relative_hazard_reduction : (sim ? sim.relative_hazard_reduction : 0),
+                delta_hr: (ev && ev.delta_hr != null) ? ev.delta_hr : (sim ? sim.delta_hr : 0),
+                baseline_expected_hr: (ev && ev.baseline_expected_hr != null) ? ev.baseline_expected_hr : (sim ? sim.baseline_expected_hr : 1),
+                optimized_expected_hr: (ev && ev.optimized_expected_hr != null) ? ev.optimized_expected_hr : (sim ? sim.optimized_expected_hr : 1),
+                fraction_benefiting: (ev && ev.fraction_benefiting != null) ? ev.fraction_benefiting : (sim ? sim.fraction_benefiting : 0),
+                domain_status: (ev && ev.domain_status) ? ev.domain_status : (sim ? sim.domain_status : 'IN_DOMAIN'),
+                ehiv: voi ? voi.ehiv : 0,
+                popVoi: pop ? pop.totalVoi : 0,
+                popEhiv: pop ? pop.totalEhiv : 0
+            }});
         }});
 
-        items.sort((a, b) => b.rhr - a.rhr);
+        const sortBy = AppState.leaderboardSort || 'rhr';
+        if (sortBy === 'ehiv') items.sort((a, b) => b.ehiv - a.ehiv);
+        else if (sortBy === 'pop_voi') items.sort((a, b) => b.popVoi - a.popVoi);
+        else items.sort((a, b) => b.rhr - a.rhr);
 
-        // Render Bar Chart (Top 15)
+        // Render Bar Chart (Top 15) — axis follows the active sort
         const top15 = items.slice(0, 15).reverse();
+        const barX = sortBy === 'ehiv' ? top15.map(i => i.ehiv)
+            : sortBy === 'pop_voi' ? top15.map(i => i.popVoi)
+            : top15.map(i => i.rhr * 100);
+        const barTitle = sortBy === 'ehiv' ? 'EHIV ($ / person)'
+            : sortBy === 'pop_voi' ? 'Population VOI (DALYs)'
+            : 'Relative Expected Hazard Reduction (RHR %)';
         const trace = {{
-            x: top15.map(i => i.rhr * 100),
+            x: barX,
             y: top15.map(i => i.biomarker.name),
             type: 'bar',
             orientation: 'h',
             marker: {{
-                color: top15.map(i => i.rhr > 0.15 ? '#a855f7' : '#6366f1'),
-                line: {{ color: '#c084fc', width: 1 }}
+                color: top15.map(i => (sortBy === 'rhr' ? (i.rhr > 0.15) : (i.ehiv > 0)) ? '#22d3ee' : '#6366f1'),
+                line: {{ color: '#67e8f9', width: 1 }}
             }}
         }};
 
         const layout = {{
             ...plotlyDarkTheme,
             margin: {{ l: 180, r: 30, t: 20, b: 40 }},
-            xaxis: {{ ...plotlyDarkTheme.xaxis, title: 'Relative Expected Hazard Reduction (RHR %)' }},
+            xaxis: {{ ...plotlyDarkTheme.xaxis, title: barTitle }},
             yaxis: {{ ...plotlyDarkTheme.yaxis, automargin: true }}
         }};
 
         Plotly.newPlot(plotDiv, [trace], layout, plotlyConfig);
+        const lt = (AppState.voiConfig && AppState.voiConfig.lifeTableSource) || 'CDC NVSS US Life Tables, 2022';
+        setProvenance('prov-leaderboard', [
+            {{
+                label: 'RHR',
+                html: 'Per-biomarker 1-SD (or selected-scenario) relative hazard reduction from the continuous HR function integrated over NHANES. Default sort is RHR.'
+            }},
+            {{
+                label: 'EHIV / VOI',
+                html: 'Dollar-valued information using ' + escapeHtml(lt) + '; test prices from findlabtest.com where mapped. λ is a policy willingness-to-pay, not an empirical estimate.'
+            }},
+            methodProvenanceRow('Derived analytics — not a new primary study. Click a row for the marker-level sources.')
+        ]);
 
         // Render Leaderboard Table
         let tableHTML = `
@@ -2066,6 +3121,8 @@ def generate_standalone_html():
                         <th class="p-3">Optimized E[HR_δ]</th>
                         <th class="p-3">&Delta; HR</th>
                         <th class="p-3 text-purple-400 font-bold">Rel. Reduction ($RHR$)</th>
+                        <th class="p-3 text-cyan-400 font-bold">EHIV ($/person)</th>
+                        <th class="p-3 text-cyan-400 font-bold">Population VOI (DALYs)</th>
                         <th class="p-3">% Benefiting</th>
                         <th class="p-3">Domain Status</th>
                     </tr>
@@ -2093,6 +3150,8 @@ def generate_standalone_html():
                     <td class="p-3 font-mono text-slate-300">${{item.optimized_expected_hr.toFixed(3)}}</td>
                     <td class="p-3 font-mono text-indigo-400 font-bold">-${{item.delta_hr.toFixed(3)}}</td>
                     <td class="p-3 font-mono text-purple-400 font-black">-${{rhrPct}}%</td>
+                    <td class="p-3 font-mono ${{item.ehiv > 0 ? 'text-emerald-400' : 'text-rose-400'}}">${{formatUSD(item.ehiv)}}</td>
+                    <td class="p-3 font-mono text-cyan-300">${{formatDalys(item.popVoi)}}</td>
                     <td class="p-3 font-mono text-emerald-400">${{benPct}}%</td>
                     <td class="p-3">${{domBadge}}</td>
                 </tr>
@@ -2117,10 +3176,15 @@ def generate_standalone_html():
 
         if (assocs.length === 0) {{
             plotDiv.innerHTML = `<div class="p-8 text-center text-xs text-slate-500">No Mortality Associations Available</div>`;
+            setProvenance('prov-forest', [{{ label: 'Estimates', html: 'No published mortality associations are linked to this marker.' }}]);
             return;
         }}
 
-        const labels = assocs.map(a => `${{a.strata_name}} (${{a.mortality_type}})`).reverse();
+        const labels = assocs.map(a => {{
+            const cohort = a.cohort_description || a.population_type || 'Cohort';
+            const yr = (a.source && a.source.year) ? ` ${{a.source.year}}` : '';
+            return `${{cohort}}${{yr}}`;
+        }}).reverse();
         const hrs = assocs.map(a => a.hazard_ratio).reverse();
         const ciLows = assocs.map(a => a.ci_lower).reverse();
         const ciHighs = assocs.map(a => a.ci_upper).reverse();
@@ -2172,6 +3236,44 @@ def generate_standalone_html():
         }};
 
         Plotly.newPlot(plotDiv, [trace], layout, plotlyConfig);
+
+        const uniqueSources = [];
+        const seen = new Set();
+        assocs.forEach(a => {{
+            const key = (a.source && (a.source.pmid || a.source.doi || a.source.citation)) || a.source_id;
+            if (key && !seen.has(key)) {{
+                seen.add(key);
+                uniqueSources.push(a.source);
+            }}
+        }});
+        setProvenance('prov-forest', [
+            {{
+                label: 'Estimates',
+                html: 'Study-level all-cause (or cause-specific) HRs with 95% CIs. Not the continuous HR(x) spline on the Fitness Landscape tab.'
+            }},
+            ...uniqueSources.slice(0, 6).map(src => ({{
+                label: 'Source',
+                html: sourceShortHtml(src)
+            }}))
+        ]);
+
+        const tableEl = document.getElementById('forest-table-container');
+        if (tableEl) {{
+            let html = `<table class="w-full text-left text-xs"><thead class="bg-slate-950 text-slate-400 uppercase text-[10px] border-b border-slate-800"><tr>
+                <th class="p-2.5">Cohort</th><th class="p-2.5">HR type</th><th class="p-2.5">HR (95% CI)</th><th class="p-2.5">Source</th>
+            </tr></thead><tbody class="divide-y divide-slate-800">`;
+            assocs.forEach(a => {{
+                const ci = (a.ci_lower != null && a.ci_upper != null) ? `${{a.ci_lower.toFixed(2)}}–${{a.ci_upper.toFixed(2)}}` : '—';
+                html += `<tr class="hover:bg-slate-850/60">
+                    <td class="p-2.5 text-slate-200">${{escapeHtml(a.cohort_description || '—')}}</td>
+                    <td class="p-2.5 font-mono text-slate-400">${{escapeHtml(a.hr_type || '')}}</td>
+                    <td class="p-2.5 font-mono text-rose-300">${{(a.hazard_ratio || 0).toFixed(2)}} (${{ci}})</td>
+                    <td class="p-2.5">${{sourceShortHtml(a.source, '—')}}</td>
+                </tr>`;
+            }});
+            html += '</tbody></table>';
+            tableEl.innerHTML = html;
+        }}
     }}
 
     // --- SUBVIEW 4: INTERVENTIONS ---
@@ -2216,9 +3318,10 @@ def generate_standalone_html():
             </div>
             <p class="text-[11px] text-slate-300">${{i.description || ''}}</p>
             <div class="text-[10px] text-slate-500 flex items-center justify-between pt-1">
-                <span>Expected Impact: <strong class="text-slate-300 font-mono">${{i.expected_effect || 'Variable'}}</strong></span>
-                <span>Evidence: <strong class="text-slate-300">${{i.evidence_level || 'Moderate'}}</strong></span>
+                <span>Expected Impact: <strong class="text-slate-300 font-mono">${{i.quantified_effect || i.expected_effect || 'Variable'}}</strong></span>
+                <span>Evidence: <strong class="text-slate-300">${{i.evidence_strength || i.evidence_level || 'Moderate'}}</strong></span>
             </div>
+            <div class="text-[10px] text-slate-500 pt-1">${{sourceShortHtml(i.source, '')}}</div>
         `;
         return card;
     }}
@@ -2255,6 +3358,10 @@ def generate_standalone_html():
         }};
 
         Plotly.newPlot(plotDiv, [trace], layout, plotlyConfig);
+        setProvenance('prov-demographics', [
+            nhanesProvenanceRow(detail),
+            methodProvenanceRow('Age- and sex-stratified NHANES medians (P50). Error bars omitted; P25/P75 are in the table when present.')
+        ]);
     }}
 
     // --- VIEW 3: COMPARE VIEW ---
@@ -2323,6 +3430,15 @@ def generate_standalone_html():
         }};
 
         Plotly.newPlot(plotDiv, [trace], layout, plotlyConfig);
+        const srcBits = biomarkers.map(b => {{
+            const a = (b.associations || []).find(x => x.source) || (b.associations || [])[0];
+            if (!a) return null;
+            return {{ label: b.name, html: sourceShortHtml(a.source, a.cohort_description || 'unpublished association') }};
+        }}).filter(Boolean);
+        setProvenance('prov-compare', [
+            {{ label: 'Metric', html: 'Peak observed HR from the mortality-association registry for each selected marker (not the continuous spline).' }},
+            ...srcBits.slice(0, 8)
+        ]);
     }}
 
     function renderCompareTable(biomarkers) {{
@@ -2342,6 +3458,7 @@ def generate_standalone_html():
                         <th class="p-3">Population Median</th>
                         <th class="p-3">Peak HR</th>
                         <th class="p-3 text-purple-400 font-bold">1.0-SD Potential</th>
+                        <th class="p-3 text-cyan-400 font-bold">EHIV</th>
                         <th class="p-3">Causal Tier</th>
                     </tr>
                 </thead>
@@ -2351,6 +3468,9 @@ def generate_standalone_html():
         biomarkers.forEach(b => {{
             const rhrPct = ((b.rel_hazard_red_100 || 0) * 100).toFixed(1);
             const causalBadge = getCausalBadgeHTML(b.causal_status);
+            const sim = runClientSimulation(b, 1.0, false);
+            const voi = sim ? computeVOIFromSim(b, sim, AppState.landscapeAge || 50, AppState.landscapeSex || 'all', 1.0, AppState.voiCIntDaly, AppState.voiLambda) : null;
+            const ehivTxt = voi ? formatUSD(voi.ehiv) : '--';
 
             tableHTML += `
                 <tr class="hover:bg-slate-850/60 transition cursor-pointer" onclick="selectBiomarkerAndNavigate('${{b.slug}}')">
@@ -2360,6 +3480,7 @@ def generate_standalone_html():
                     <td class="p-3 font-mono text-slate-200">${{b.population_median ?? '--'}}</td>
                     <td class="p-3 font-mono text-rose-400 font-bold">${{b.max_hazard_ratio ? b.max_hazard_ratio.toFixed(2) : '--'}}</td>
                     <td class="p-3 font-mono text-purple-400 font-black">-${{rhrPct}}%</td>
+                    <td class="p-3 font-mono ${{voi && voi.ehiv > 0 ? 'text-emerald-400' : 'text-rose-400'}}">${{ehivTxt}}</td>
                     <td class="p-3">${{causalBadge}}</td>
                 </tr>
             `;
@@ -2526,11 +3647,11 @@ def generate_standalone_html():
 
                     <!-- Multi-scale pill breakdown -->
                     <div class="flex items-center gap-1 flex-wrap">
-                        ${{typeACount > 0 ? `<span class="badge-type-a px-1.5 py-0.5 rounded font-mono text-[9px]">A: ${{typeACount}}</span>` : ''}}
                         ${{typeBCount > 0 ? `<span class="badge-type-b px-1.5 py-0.5 rounded font-mono text-[9px]">B: ${{typeBCount}}</span>` : ''}}
                         ${{typeCCount > 0 ? `<span class="badge-type-c px-1.5 py-0.5 rounded font-mono text-[9px]">C: ${{typeCCount}}</span>` : ''}}
                         ${{typeDCount > 0 ? `<span class="badge-type-d px-1.5 py-0.5 rounded font-mono text-[9px]">D: ${{typeDCount}}</span>` : ''}}
                         ${{typeECount > 0 ? `<span class="badge-type-e px-1.5 py-0.5 rounded font-mono text-[9px]">E: ${{typeECount}}</span>` : ''}}
+                        ${{typeACount > 0 ? `<span class="badge-type-a px-1.5 py-0.5 rounded font-mono text-[9px]">A: ${{typeACount}}</span>` : ''}}
                     </div>
                 </div>
             `;
@@ -2554,6 +3675,11 @@ def generate_standalone_html():
         document.getElementById('modal-disease-desc').textContent = disease.description || 'No detailed description available.';
         document.getElementById('modal-disease-organ').textContent = disease.primary_organ_system || 'Systemic';
         document.getElementById('modal-disease-dalys').textContent = disease.us_dalys != null ? `${{disease.us_dalys.toLocaleString()}} DALYs/yr` : 'Not calibrated';
+
+        const repurposLink = document.getElementById('modal-disease-repurpos-link');
+        if (repurposLink) {{
+            repurposLink.href = `https://research.opensourcemed.info/disease-intelligence/${{disease.slug}}.html`;
+        }}
 
         const alts = disease.alterations || [];
         document.getElementById('modal-disease-alt-count').textContent = alts.length;
