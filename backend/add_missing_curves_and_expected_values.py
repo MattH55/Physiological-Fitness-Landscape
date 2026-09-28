@@ -126,10 +126,18 @@ def fit_curve_for_biomarker(c: sqlite3.Connection, bid: int):
         params = {"beta": round(beta, 6)}
         optimal_value = None
 
-    if direction == "higher_better":
-        params["beta"] = -abs(params["beta"])
-    elif direction == "lower_better":
-        params["beta"] = abs(params["beta"])
+    # Slope sign follows the cited study's direction when it is monotonic; the
+    # biomarker's directionality label is only a fallback (several labels
+    # contradicted their own evidence and produced inverted curves).
+    assoc_dir = (direction_assoc or "").lower()
+    if assoc_dir in ("higher_worse", "lower_worse") and hr_type != "default_assumed":
+        increasing = assoc_dir == "higher_worse"
+    elif direction in ("higher_better", "lower_better"):
+        increasing = direction == "lower_better"
+    else:
+        increasing = None
+    if "beta" in params and increasing is not None:
+        params["beta"] = abs(params["beta"]) if increasing else -abs(params["beta"])
 
     return {
         "biomarker_id": bid,
@@ -245,12 +253,14 @@ def insert_missing_curves(c: sqlite3.Connection, dry_run=False):
 # Part 2: Recompute expected values for all biomarkers
 # =======================================================================
 
-def compute_and_insert_expected_values(c: sqlite3.Connection, dry_run=False):
+def compute_and_insert_expected_values(c: sqlite3.Connection, dry_run=False, biomarker_ids=None):
     print("\n[Part 2] Computing expected values for all biomarkers...")
     scenarios = c.execute(
         "SELECT id, slug, shift_type, shift_magnitude FROM optimization_scenario"
     ).fetchall()
     all_bm = [r[0] for r in c.execute("SELECT id FROM biomarker ORDER BY id")]
+    if biomarker_ids is not None:
+        all_bm = [b for b in all_bm if b in set(biomarker_ids)]
     cur = c.cursor()
     ok = 0
     fail = 0
